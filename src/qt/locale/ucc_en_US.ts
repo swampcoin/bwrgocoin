@@ -4170,8 +4170,8 @@ for example: alertnotify=echo %%s | mail -s "UCC Alert" admin@foo.com
         <translation>You must specify a masternodeprivkey in the configuration. Please see documentation for help.</translation>
     </message>
     <message>
-        <source>(1945 could be used only on mainnet)</source>
-        <translation>(1945 could be used only on mainnet)</translation>
+        <source>(41112 could be used only on mainnet)</source>
+        <translation>(41112 could be used only on mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4182,8 +4182,8 @@ for example: alertnotify=echo %%s | mail -s "UCC Alert" admin@foo.com
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 1945 for mainnet)</source>
-        <translation>(must be 1945 for mainnet)</translation>
+        <source>(must be 41112 for mainnet)</source>
+        <translation>(must be 41112 for mainnet)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

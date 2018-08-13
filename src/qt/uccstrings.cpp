@@ -206,10 +206,10 @@ QT_TRANSLATE_NOOP("ucc-core", ""
 QT_TRANSLATE_NOOP("ucc-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("ucc-core", "(1945 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("ucc-core", "(41112 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("ucc-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("ucc-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("ucc-core", "(must be 1945 for mainnet)"),
+QT_TRANSLATE_NOOP("ucc-core", "(must be 41112 for mainnet)"),
 QT_TRANSLATE_NOOP("ucc-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("ucc-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("ucc-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
