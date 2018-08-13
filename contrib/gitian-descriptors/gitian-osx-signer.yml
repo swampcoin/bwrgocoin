@@ -1,5 +1,5 @@
 ---
-name: "xdna-dmg-signer"
+name: "ucc-dmg-signer"
 suites:
 - "trusty"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/xdna-project/xdna-detached-sigs.git"
+- "url": "https://github.com/ucc-project/ucc-detached-sigs.git"
   "dir": "signature"
 files:
-- "xdna-osx-unsigned.tar.gz"
+- "ucc-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -27,11 +27,11 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=xdna-osx-unsigned.tar.gz
-  SIGNED=xdna-osx-signed.dmg
+  UNSIGNED=ucc-osx-unsigned.tar.gz
+  SIGNED=ucc-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"
   ./detached-sig-apply.sh ${UNSIGNED} signature/osx
-  ${WRAP_DIR}/genisoimage -no-cache-inodes -D -l -probe -V "XDNA-Qt" -no-pad -r -dir-mode 0755 -apple -o uncompressed.dmg signed-app
+  ${WRAP_DIR}/genisoimage -no-cache-inodes -D -l -probe -V "UCC-Qt" -no-pad -r -dir-mode 0755 -apple -o uncompressed.dmg signed-app
   ${WRAP_DIR}/dmg dmg uncompressed.dmg ${OUTDIR}/${SIGNED}

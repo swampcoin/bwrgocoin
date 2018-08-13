@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/xdna-config.h"
+#include "config/ucc-config.h"
 #endif
 
 #include "optionsmodel.h"
@@ -62,7 +62,7 @@ void OptionsModel::Init()
 
     // Display
     if (!settings.contains("nDisplayUnit"))
-        settings.setValue("nDisplayUnit", BitcoinUnits::XDNA);
+        settings.setValue("nDisplayUnit", BitcoinUnits::UCC);
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
 
     if (!settings.contains("strThirdPartyTxUrls"))
@@ -76,11 +76,11 @@ void OptionsModel::Init()
     if (!settings.contains("nObfuscationRounds"))
         settings.setValue("nObfuscationRounds", 2);
 
-    if (!settings.contains("nAnonymizeXDnaAmount"))
-        settings.setValue("nAnonymizeXDnaAmount", 1000);
+    if (!settings.contains("nAnonymizeUccAmount"))
+        settings.setValue("nAnonymizeUccAmount", 1000);
     
     nObfuscationRounds = settings.value("nObfuscationRounds").toLongLong();
-    nAnonymizeXDnaAmount = settings.value("nAnonymizeXDnaAmount").toLongLong();
+    nAnonymizeUccAmount = settings.value("nAnonymizeUccAmount").toLongLong();
 
     if (!settings.contains("fShowMasternodesTab"))
         settings.setValue("fShowMasternodesTab", masternodeConfig.getCount());
@@ -147,8 +147,8 @@ void OptionsModel::Init()
 
     if (settings.contains("nObfuscationRounds"))
         SoftSetArg("-obfuscationrounds", settings.value("nObfuscationRounds").toString().toStdString());
-    if (settings.contains("nAnonymizeXDnaAmount"))
-        SoftSetArg("-anonymizexdnaamount", settings.value("nAnonymizeXDnaAmount").toString().toStdString());
+    if (settings.contains("nAnonymizeUccAmount"))
+        SoftSetArg("-anonymizeuccamount", settings.value("nAnonymizeUccAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }
@@ -159,7 +159,7 @@ void OptionsModel::Reset()
 
     // Remove all entries from our QSettings object
     settings.clear();
-    resetSettings = true; // Needed in xdna.cpp during shotdown to also remove the window positions
+    resetSettings = true; // Needed in ucc.cpp during shotdown to also remove the window positions
 
     // default setting for OptionsModel::StartAtStartup - disabled
     if (GUIUtil::GetStartOnSystemStartup())
@@ -228,8 +228,8 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
             return settings.value("nThreadsScriptVerif");
         case ObfuscationRounds:
             return QVariant(nObfuscationRounds);
-        case AnonymizeXDnaAmount:
-            return QVariant(nAnonymizeXDnaAmount);
+        case AnonymizeUccAmount:
+            return QVariant(nAnonymizeUccAmount);
         case Listen:
             return settings.value("fListen");
         default:
@@ -338,10 +338,10 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
             settings.setValue("nObfuscationRounds", nObfuscationRounds);
             emit obfuscationRoundsChanged(nObfuscationRounds);
             break;
-        case AnonymizeXDnaAmount:
-            nAnonymizeXDnaAmount = value.toInt();
-            settings.setValue("nAnonymizeXDnaAmount", nAnonymizeXDnaAmount);
-            emit anonymizeXDnaAmountChanged(nAnonymizeXDnaAmount);
+        case AnonymizeUccAmount:
+            nAnonymizeUccAmount = value.toInt();
+            settings.setValue("nAnonymizeUccAmount", nAnonymizeUccAmount);
+            emit anonymizeUccAmountChanged(nAnonymizeUccAmount);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();

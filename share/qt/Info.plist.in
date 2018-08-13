@@ -11,7 +11,7 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>xdna.icns</string>
+  <string>ucc.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
@@ -29,10 +29,10 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>XDNA-Qt</string>
+  <string>UCC-Qt</string>
 
   <key>CFBundleIdentifier</key>
-  <string>io.xdna.XDNA-Qt</string>
+  <string>io.ucc.UCC-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -40,10 +40,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.xdna.XDnaPayment</string>
+      <string>io.ucc.UccPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>xdna</string>
+        <string>ucc</string>
       </array>
     </dict>
   </array>
@@ -52,9 +52,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>io.xdna.paymentrequest</string>
+      <string>io.ucc.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>XDNA payment request</string>
+      <string>UCC payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -62,10 +62,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-xdna-payment-request</string>
+        <string>application/x-ucc-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>xdnapaymentrequest</string>
+          <string>uccpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -78,7 +78,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>io.xdna.paymentrequest</string>
+        <string>io.ucc.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

@@ -54,7 +54,7 @@
          <enum>Qt::StrongFocus</enum>
         </property>
         <property name="toolTip">
-         <string>The XDNA address to send the payment to</string>
+         <string>The UCC address to send the payment to</string>
         </property>
        </widget>
       </item>
@@ -67,7 +67,7 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="../xdna.qrc">
+         <iconset resource="../ucc.qrc">
           <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
         </property>
         <property name="shortcut">
@@ -84,7 +84,7 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="../xdna.qrc">
+         <iconset resource="../ucc.qrc">
           <normaloff>:/icons/editpaste</normaloff>:/icons/editpaste</iconset>
         </property>
         <property name="shortcut">
@@ -101,7 +101,7 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="../xdna.qrc">
+         <iconset resource="../ucc.qrc">
           <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
         </property>
        </widget>
@@ -157,7 +157,7 @@
     <item row="3" column="1">
      <widget class="QLabel" name="messageTextLabel">
       <property name="toolTip">
-       <string>A message that was attached to the XDNA: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the XDNA network.</string>
+       <string>A message that was attached to the UCC: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the UCC network.</string>
       </property>
       <property name="textFormat">
        <enum>Qt::PlainText</enum>
@@ -625,7 +625,7 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="../xdna.qrc">
+         <iconset resource="../ucc.qrc">
           <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
         </property>
        </widget>
@@ -1161,7 +1161,7 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="../xdna.qrc">
+         <iconset resource="../ucc.qrc">
           <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
         </property>
        </widget>
@@ -1234,7 +1234,7 @@
   <tabstop>deleteButton_s</tabstop>
  </tabstops>
  <resources>
-  <include location="../xdna.qrc"/>
+  <include location="../ucc.qrc"/>
  </resources>
  <connections/>
 </ui>

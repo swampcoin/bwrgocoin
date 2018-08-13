@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/xdna-config.h"
+#include "config/ucc-config.h"
 #endif
 
 #include "optionsdialog.h"
@@ -44,7 +44,7 @@ OptionsDialog::OptionsDialog(QWidget* parent, bool enableWallet) : QDialog(paren
     ui->percentage_label->setVisible(false);
     ui->obfuscationRounds->setVisible(false);
     ui->label_2->setVisible(false);
-    ui->anonymizeXDna->setVisible(false);
+    ui->anonymizeUcc->setVisible(false);
 
 
     /* Main elements init */
@@ -230,7 +230,7 @@ void OptionsDialog::setMapper()
 
     /* Obfuscation Rounds */
     mapper->addMapping(ui->obfuscationRounds, OptionsModel::ObfuscationRounds);
-    mapper->addMapping(ui->anonymizeXDna, OptionsModel::AnonymizeXDnaAmount);
+    mapper->addMapping(ui->anonymizeUcc, OptionsModel::AnonymizeUccAmount);
 
     /* Masternode Tab */
     mapper->addMapping(ui->showMasternodesTab, OptionsModel::ShowMasternodesTab);

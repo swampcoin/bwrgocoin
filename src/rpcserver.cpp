@@ -243,10 +243,10 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop XDNA server.");
+            "\nStop UCC server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "XDNA server stopping";
+    return "UCC server stopping";
 }
 
 
@@ -323,25 +323,25 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* XDNA features */
-        {"xdna", "masternode", &masternode, true, true, false},
-        {"xdna", "listmasternodes", &listmasternodes, true, true, false},
-        {"xdna", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"xdna", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"xdna", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"xdna", "masternodedebug", &masternodedebug, true, true, false},
-        {"xdna", "startmasternode", &startmasternode, true, true, false},
-        {"xdna", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"xdna", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"xdna", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"xdna", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"xdna", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"xdna", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"xdna", "mnsync", &mnsync, true, true, false},
-        {"xdna", "spork", &spork, true, true, false},
-        {"xdna", "getpoolinfo", &getpoolinfo, true, true, false},
+        /* UCC features */
+        {"ucc", "masternode", &masternode, true, true, false},
+        {"ucc", "listmasternodes", &listmasternodes, true, true, false},
+        {"ucc", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"ucc", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"ucc", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"ucc", "masternodedebug", &masternodedebug, true, true, false},
+        {"ucc", "startmasternode", &startmasternode, true, true, false},
+        {"ucc", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"ucc", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"ucc", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"ucc", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"ucc", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"ucc", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"ucc", "mnsync", &mnsync, true, true, false},
+        {"ucc", "spork", &spork, true, true, false},
+        {"ucc", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
-        {"xdna", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
+        {"ucc", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -606,16 +606,16 @@ void StartRPCThreads()
         unsigned char rand_pwd[32];
         GetRandBytes(rand_pwd, 32);
         uiInterface.ThreadSafeMessageBox(strprintf(
-                                             _("To use xdnad, or the -server option to xdna-qt, you must set an rpcpassword in the configuration file:\n"
+                                             _("To use uccd, or the -server option to ucc-qt, you must set an rpcpassword in the configuration file:\n"
                                                "%s\n"
                                                "It is recommended you use the following random password:\n"
-                                               "rpcuser=xdnarpc\n"
+                                               "rpcuser=uccrpc\n"
                                                "rpcpassword=%s\n"
                                                "(you do not need to remember this password)\n"
                                                "The username and password MUST NOT be the same.\n"
                                                "If the file does not exist, create it with owner-readable-only file permissions.\n"
                                                "It is also recommended to set alertnotify so you are notified of problems;\n"
-                                               "for example: alertnotify=echo %%s | mail -s \"XDNA Alert\" admin@foo.com\n"),
+                                               "for example: alertnotify=echo %%s | mail -s \"UCC Alert\" admin@foo.com\n"),
                                              GetConfigFile().string(),
                                              EncodeBase58(&rand_pwd[0], &rand_pwd[0] + 32)),
             "", CClientUIInterface::MSG_ERROR | CClientUIInterface::SECURE);
@@ -1066,7 +1066,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> xdna-cli " + methodname + " " + args + "\n";
+    return "> ucc-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

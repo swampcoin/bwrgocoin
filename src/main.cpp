@@ -41,7 +41,7 @@ using namespace boost;
 using namespace std;
 
 #if defined(NDEBUG)
-#error "XDNA cannot be compiled without assertions."
+#error "UCC cannot be compiled without assertions."
 #endif
 
 /**
@@ -72,7 +72,7 @@ bool fAlerts = DEFAULT_ALERTS;
 unsigned int nStakeMinAge = 60 * 60;
 int64_t nReserveBalance = 0;
 
-/** Fees smaller than this (in uxdna) are considered zero fee (for relaying and mining)
+/** Fees smaller than this (in uucc) are considered zero fee (for relaying and mining)
  * We are ~100 times smaller then bitcoin now (2015-06-23), set minRelayTxFee only 10 times higher
  * so it's still 10 times lower comparing to bitcoin.
  */
@@ -2079,7 +2079,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    RenameThread("xdna-scriptch");
+    RenameThread("ucc-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -3141,8 +3141,8 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
 
             if(nHeight > 1) { // exclude premine
                 // The first transaction must have Fund and Dev scripts.
-                CScript scriptDevPubKeyIn  = CScript() << Params().xDNADevKey() << OP_CHECKSIG;
-                CScript scriptFundPubKeyIn = CScript() << Params().xDNAFundKey() << OP_CHECKSIG;
+                CScript scriptDevPubKeyIn  = CScript() << Params().xUCCDevKey() << OP_CHECKSIG;
+                CScript scriptFundPubKeyIn = CScript() << Params().xUCCFundKey() << OP_CHECKSIG;
                 CTxDestination DevAddress;
                 CTxDestination FundAddress;
                 ExtractDestination(scriptDevPubKeyIn, DevAddress);
@@ -3210,7 +3210,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                 nHeight = (*mi).second->nHeight + 1;
         }
 
-        // XDNA
+        // UCC
         // It is entierly possible that we don't have enough data and this could fail
         // (i.e. the block could indeed be valid). Store the block for later consideration
         // but issue an initial reject message.

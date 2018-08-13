@@ -9,7 +9,7 @@
 #define BITCOIN_QT_BITCOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/xdna-config.h"
+#include "config/ucc-config.h"
 #endif
 
 #include "amount.h"

@@ -239,7 +239,7 @@
                 </spacer>
                </item>
                <item>
-                <widget class="QPushButton" name="blabel_XDNA">
+                <widget class="QPushButton" name="blabel_UCC">
                  <property name="font">
                   <font>
                    <pointsize>20</pointsize>
@@ -251,7 +251,7 @@
                   <cursorShape>PointingHandCursor</cursorShape>
                  </property>
                  <property name="text">
-                  <string>XDNA</string>
+                  <string>UCC</string>
                  </property>
                  <property name="flat">
                   <bool>true</bool>
@@ -308,9 +308,9 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="label_XDNA2">
+                <widget class="QLabel" name="label_UCC2">
                  <property name="text">
-                  <string>XDNA</string>
+                  <string>UCC</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
@@ -352,9 +352,9 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="label_XDNA3">
+                <widget class="QLabel" name="label_UCC3">
                  <property name="text">
-                  <string>XDNA</string>
+                  <string>UCC</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
@@ -396,9 +396,9 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="label_XDNA4">
+                <widget class="QLabel" name="label_UCC4">
                  <property name="text">
-                  <string>XDNA</string>
+                  <string>UCC</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
@@ -1056,7 +1056,7 @@
                        <item row="3" column="1">
                         <widget class="QLabel" name="labelAmountRounds">
                          <property name="text">
-                          <string>0 XDNA / 0 Rounds</string>
+                          <string>0 UCC / 0 Rounds</string>
                          </property>
                         </widget>
                        </item>

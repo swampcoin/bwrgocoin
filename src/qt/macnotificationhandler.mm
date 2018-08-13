@@ -14,7 +14,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"io.xdna.Xdna-Qt";
+        return @"io.ucc.Ucc-Qt";
     } else {
         return [self __bundleIdentifier];
     }

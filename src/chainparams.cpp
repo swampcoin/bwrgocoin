@@ -110,8 +110,8 @@ public:
         pchMessageStart[2] = 0xfe;
         pchMessageStart[3] = 0xe8;
         vAlertPubKey = ParseHex("04A2B684CBABE97BA08A35EA388B06A6B03E13DFBA974466880AF4CAE1C5B606A751BF7C5CBDE5AB90722CF5B1EC1AADA6D24D607870B6D6B5D684082655404C8D");
-        vXDNADevKey = ParseHex("022168bed33339fdc945077c9056a42ceacda589b9d2c7733a72e75e7ee29ef586"); // DevPubKey for fees
-        vXDNAFundKey = ParseHex("03b7a94485bb264d12fbffdddff462060e51a27e55f256b62648c25c1fb8bb565c"); // FundPubKey for fees
+        vUCCDevKey = ParseHex("022168bed33339fdc945077c9056a42ceacda589b9d2c7733a72e75e7ee29ef586"); // DevPubKey for fees
+        vUCCFundKey = ParseHex("03b7a94485bb264d12fbffdddff462060e51a27e55f256b62648c25c1fb8bb565c"); // FundPubKey for fees
         nDevFee = 1; // DevFee %
         nFundFee = 2; //FundFee %
         nDefaultPort = 1945;
@@ -161,7 +161,7 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetSpacing = 1 * 60;  // XDNA: 1 minute
+        nTargetSpacing = 1 * 60;  // UCC: 1 minute
         nAntiInstamineTime = 720; // 720 blocks with 1 reward for instamine prevention
         nMaturity = 60;
         nMasternodeCountDrift = 3;
@@ -203,7 +203,7 @@ public:
         assert(hashGenesisBlock == uint256("000003b39d72ad4da1eb2ef2d044032dd95750cc25c435ecad2a236dd22b99fe"));
         assert(genesis.hashMerkleRoot == uint256("89370975b13f97d8f9cfc373b0e9d5cc0e2e06b8dc283c76824e4df03ca2d60a"));
 
-        vSeeds.push_back(CDNSSeedData("xdna.io", "seeds.seeder01.xdna.io"));     // Primary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("uccnetwork.org", "seeds.seeder01.uccnetwork.org"));     // Primary DNS Seeder
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 75);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 8);
@@ -282,7 +282,7 @@ public:
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
-        nTargetSpacing = 1 * 60;  // XDNA: 1 minute
+        nTargetSpacing = 1 * 60;  // UCC: 1 minute
         nLastPOWBlock = std::numeric_limits<decltype(nLastPOWBlock)>::max();
         nMaturity = 15;
         nMasternodeCountDrift = 4;
@@ -300,16 +300,16 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("xdna.io", "seed01.xdna.io"));     // Primary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("uccnetwork.org", "seed01.uccnetwork.org"));     // Primary DNS Seeder
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 137); // Testnet XDNA addresses start with 'x'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet XDNA script addresses start with '8' or '9'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 137); // Testnet UCC addresses start with 'x'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet UCC script addresses start with '8' or '9'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
-        // Testnet XDNA BIP32 pubkeys start with 'DRKV'
+        // Testnet UCC BIP32 pubkeys start with 'DRKV'
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x61)(0xa0).convert_to_container<std::vector<unsigned char> >();
-        // Testnet XDNA BIP32 prvkeys start with 'DRKP'
+        // Testnet UCC BIP32 prvkeys start with 'DRKP'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3a)(0x80)(0x58)(0x37).convert_to_container<std::vector<unsigned char> >();
-        // Testnet XDNA BIP44 coin type is '1' (All coin's testnet default)
+        // Testnet UCC BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
@@ -373,7 +373,7 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetSpacing = 1 * 60;        // XDNA: 1 minute
+        nTargetSpacing = 1 * 60;        // UCC: 1 minute
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1529668200;
         genesis.nBits = 0x207fffff;

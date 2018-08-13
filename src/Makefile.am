@@ -70,15 +70,15 @@ noinst_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += xdnad
+  bin_PROGRAMS += uccd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += xdna-cli xdna-tx
+  bin_PROGRAMS += ucc-cli ucc-tx
 endif
 
 .PHONY: FORCE
-# xdna core #
+# ucc core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   addrman.h \
@@ -174,7 +174,7 @@ obj/build.h: FORCE
 	  "$(abs_top_srcdir)"
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between xdnad and xdna-qt
+# server: shared between uccd and ucc-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -215,7 +215,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between xdnad and xdna-qt, but only linked
+# wallet: shared between uccd and ucc-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -315,7 +315,7 @@ crypto_libbitcoin_crypto_a_SOURCES += \
  crypto/hex/hex.c \
  crypto/hex/hex.h
 
-# common: shared between xdnad, and xdna-qt and non-server tools
+# common: shared between uccd, and ucc-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -373,7 +373,7 @@ libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 libbitcoin_util_a_SOURCES += compat/glibcxx_compat.cpp
 endif
 
-# cli: shared between xdna-cli and xdna-qt
+# cli: shared between ucc-cli and ucc-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -383,16 +383,16 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# xdnad binary #
-xdnad_SOURCES = xdnad.cpp
-xdnad_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-xdnad_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-xdnad_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# uccd binary #
+uccd_SOURCES = uccd.cpp
+uccd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+uccd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+uccd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-xdnad_SOURCES += xdnad-res.rc
+uccd_SOURCES += uccd-res.rc
 endif
-xdnad_LDADD = \
+uccd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -404,41 +404,41 @@ xdnad_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-xdnad_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+uccd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# xdna-cli binary #
-xdna_cli_SOURCES = xdna-cli.cpp
-xdna_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-xdna_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-xdna_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# ucc-cli binary #
+ucc_cli_SOURCES = ucc-cli.cpp
+ucc_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+ucc_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+ucc_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-xdna_cli_SOURCES += xdna-cli-res.rc
+ucc_cli_SOURCES += ucc-cli-res.rc
 endif
 
-xdna_cli_LDADD = \
+ucc_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-xdna_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+ucc_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# xdna-tx binary #
-xdna_tx_SOURCES = xdna-tx.cpp
-xdna_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-xdna_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-xdna_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# ucc-tx binary #
+ucc_tx_SOURCES = ucc-tx.cpp
+ucc_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+ucc_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+ucc_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
-xdna_tx_LDADD = \
+ucc_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-xdna_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+ucc_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 if BUILD_BITCOIN_LIBS

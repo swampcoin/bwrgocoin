@@ -20,18 +20,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(XDNA);
-   // unitlist.append(mXDNA);
-   // unitlist.append(uXDNA);
+    unitlist.append(UCC);
+   // unitlist.append(mUCC);
+   // unitlist.append(uUCC);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case XDNA:
-    case mXDNA:
-    case uXDNA:
+    case UCC:
+    case mUCC:
+    case uUCC:
         return true;
     default:
         return false;
@@ -41,12 +41,12 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case XDNA:
-        return QString("xdna");
-    case mXDNA:
-        return QString("mxdna");
-    case uXDNA:
-        return QString::fromUtf8("uxdna");
+    case UCC:
+        return QString("ucc");
+    case mUCC:
+        return QString("mucc");
+    case uUCC:
+        return QString::fromUtf8("uucc");
     default:
         return QString("???");
     }
@@ -56,23 +56,23 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case XDNA:
-            return QString("XDNA");
-        case mXDNA:
+        case UCC:
+            return QString("UCC");
+        case mUCC:
             return QString("mDNA");
-        case uXDNA:
-            return QString::fromUtf8("μXDNA");
+        case uUCC:
+            return QString::fromUtf8("μUCC");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case XDNA:
-            return QString("tXDNA");
-        case mXDNA:
+        case UCC:
+            return QString("tUCC");
+        case mUCC:
             return QString("mXtDNA");
-        case uXDNA:
-            return QString::fromUtf8("μtXDNA");
+        case uUCC:
+            return QString::fromUtf8("μtUCC");
         default:
             return QString("???");
         }
@@ -83,23 +83,23 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case XDNA:
-            return QString("XDNA");
-        case mXDNA:
-            return QString("Milli-XDNA (1 / 1" THIN_SP_UTF8 "000)");
-        case uXDNA:
-            return QString("Micro-XDNA (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case UCC:
+            return QString("UCC");
+        case mUCC:
+            return QString("Milli-UCC (1 / 1" THIN_SP_UTF8 "000)");
+        case uUCC:
+            return QString("Micro-UCC (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case XDNA:
-            return QString("TestXDNAs");
-        case mXDNA:
-            return QString("Milli-TestXDNAs (1 / 1" THIN_SP_UTF8 "000)");
-        case uXDNA:
-            return QString("Micro-TestXDNAs (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case UCC:
+            return QString("TestUCCs");
+        case mUCC:
+            return QString("Milli-TestUCCs (1 / 1" THIN_SP_UTF8 "000)");
+        case uUCC:
+            return QString("Micro-TestUCCs (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
@@ -109,11 +109,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case XDNA:
+    case UCC:
         return 100000000;
-    case mXDNA:
+    case mUCC:
         return 100000;
-    case uXDNA:
+    case uUCC:
         return 100;
     default:
         return 100000000;
@@ -123,11 +123,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case XDNA:
+    case UCC:
         return 8;
-    case mXDNA:
+    case mUCC:
         return 5;
-    case uXDNA:
+    case uUCC:
         return 2;
     default:
         return 0;

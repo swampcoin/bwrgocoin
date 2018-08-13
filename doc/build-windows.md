@@ -1,7 +1,7 @@
 WINDOWS BUILD NOTES
 ====================
 
-Some notes on how to build XDNA Core for Windows.
+Some notes on how to build UCC Core for Windows.
 
 Most developers use cross-compilation from Ubuntu to build executables for
 Windows. This is also used to build the release binaries.
@@ -22,10 +22,11 @@ First install the toolchains:
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/XDNA-Core/XDNA.git
+    git clone https://github.com/UCC-Core/UCC.git
     
 To build executables for Windows 32-bit:
-    cd XDNA
+
+    cd UCC
     PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') # strip out problematic Windows %PATH% imported var
     cd depends
     make HOST=i686-w64-mingw32 -j4
@@ -34,7 +35,8 @@ To build executables for Windows 32-bit:
     make
 
 To build executables for Windows 64-bit:
-    cd XDNA
+
+    cd UCC
     PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') # strip out problematic Windows %PATH% imported var
     cd depends
     make HOST=x86_64-w64-mingw32 -j4

@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifdef HAVE_CONFIG_H
-#include "config/xdna-config.h"
+#include "config/ucc-config.h"
 #endif
 
 #include "netbase.h"

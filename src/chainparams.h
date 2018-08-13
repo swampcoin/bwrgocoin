@@ -28,7 +28,7 @@ struct CDNSSeedData {
 
 /**
  * CChainParams defines various tweakable parameters of a given instance of the
- * XDNA system. There are three: the main network on which people trade goods
+ * UCC system. There are three: the main network on which people trade goods
  * and services, the public test network which gets reset from time to time and
  * a regression test mode which is intended for private networks only. It has
  * minimal difficulty to ensure that blocks can be found instantly.
@@ -53,8 +53,8 @@ public:
     const MessageStartChars& MessageStart() const { return pchMessageStart; }
     const std::vector<unsigned char>& AlertKey() const { return vAlertPubKey; }
 
-    const std::vector<unsigned char>& xDNADevKey() const { return vXDNADevKey; }
-    const std::vector<unsigned char>& xDNAFundKey() const { return vXDNAFundKey; }
+    const std::vector<unsigned char>& xUCCDevKey() const { return vUCCDevKey; }
+    const std::vector<unsigned char>& xUCCFundKey() const { return vUCCFundKey; }
     int GetDevFee() const { return nDevFee; }
     int GetFundFee() const { return nFundFee; }
 
@@ -125,8 +125,8 @@ protected:
     MessageStartChars pchMessageStart;
     //! Raw pub key bytes for the broadcast alert signing key.
     std::vector<unsigned char> vAlertPubKey;
-    std::vector<unsigned char> vXDNADevKey;
-    std::vector<unsigned char> vXDNAFundKey;
+    std::vector<unsigned char> vUCCDevKey;
+    std::vector<unsigned char> vUCCFundKey;
     int nDevFee;
     int nFundFee;
     int nDefaultPort;

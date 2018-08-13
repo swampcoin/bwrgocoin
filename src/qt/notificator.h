@@ -6,7 +6,7 @@
 #define BITCOIN_QT_NOTIFICATOR_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/xdna-config.h"
+#include "config/ucc-config.h"
 #endif
 
 #include <QIcon>

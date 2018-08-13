@@ -1,33 +1,33 @@
-bin_PROGRAMS += qt/xdna-qt
+bin_PROGRAMS += qt/ucc-qt
 EXTRA_LIBRARIES += qt/libbitcoinqt.a
 
-# xdna qt core #
+# ucc qt core #
 QT_TS = \
-  qt/locale/xdna_bg.ts \
-  qt/locale/xdna_ca.ts \
-  qt/locale/xdna_cs.ts \
-  qt/locale/xdna_da.ts \
-  qt/locale/xdna_de.ts \
-  qt/locale/xdna_en.ts \
-  qt/locale/xdna_en_US.ts \
-  qt/locale/xdna_es.ts \
-  qt/locale/xdna_fi.ts \
-  qt/locale/xdna_fr_FR.ts \
-  qt/locale/xdna_it.ts \
-  qt/locale/xdna_ja.ts \
-  qt/locale/xdna_ko_KR.ts \
-  qt/locale/xdna_nl.ts \
-  qt/locale/xdna_pl.ts \
-  qt/locale/xdna_pt.ts \
-  qt/locale/xdna_pt_BR.ts \
-  qt/locale/xdna_ro_RO.ts \
-  qt/locale/xdna_ru.ts \
-  qt/locale/xdna_sk.ts \
-  qt/locale/xdna_sv.ts \
-  qt/locale/xdna_tr.ts \
-  qt/locale/xdna_uk.ts \
-  qt/locale/xdna_zh_CN.ts \
-  qt/locale/xdna_zh_TW.ts
+  qt/locale/ucc_bg.ts \
+  qt/locale/ucc_ca.ts \
+  qt/locale/ucc_cs.ts \
+  qt/locale/ucc_da.ts \
+  qt/locale/ucc_de.ts \
+  qt/locale/ucc_en.ts \
+  qt/locale/ucc_en_US.ts \
+  qt/locale/ucc_es.ts \
+  qt/locale/ucc_fi.ts \
+  qt/locale/ucc_fr_FR.ts \
+  qt/locale/ucc_it.ts \
+  qt/locale/ucc_ja.ts \
+  qt/locale/ucc_ko_KR.ts \
+  qt/locale/ucc_nl.ts \
+  qt/locale/ucc_pl.ts \
+  qt/locale/ucc_pt.ts \
+  qt/locale/ucc_pt_BR.ts \
+  qt/locale/ucc_ro_RO.ts \
+  qt/locale/ucc_ru.ts \
+  qt/locale/ucc_sk.ts \
+  qt/locale/ucc_sv.ts \
+  qt/locale/ucc_tr.ts \
+  qt/locale/ucc_uk.ts \
+  qt/locale/ucc_zh_CN.ts \
+  qt/locale/ucc_zh_TW.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \
@@ -112,16 +112,16 @@ BITCOIN_MM = \
   qt/macnotificationhandler.mm
 
 QT_MOC = \
-  qt/xdna.moc \
+  qt/ucc.moc \
   qt/bitcoinamountfield.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
 
-QT_QRC_CPP = qt/qrc_xdna.cpp
-QT_QRC = qt/xdna.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_xdna_locale.cpp
-QT_QRC_LOCALE = qt/xdna_locale.qrc
+QT_QRC_CPP = qt/qrc_ucc.cpp
+QT_QRC = qt/ucc.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_ucc_locale.cpp
+QT_QRC_LOCALE = qt/ucc_locale.qrc
 
 PROTOBUF_CC = qt/paymentrequest.pb.cc
 PROTOBUF_H = qt/paymentrequest.pb.h
@@ -191,10 +191,10 @@ BITCOIN_QT_H = \
 RES_ICONS = \
   qt/res/icons/add.png \
   qt/res/icons/address-book.png \
-  qt/res/icons/xdna.ico \
-  qt/res/icons/xdna.png \
-  qt/res/icons/xdna_testnet.ico \
-  qt/res/icons/xdna_testnet.png \
+  qt/res/icons/ucc.ico \
+  qt/res/icons/ucc.png \
+  qt/res/icons/ucc_testnet.ico \
+  qt/res/icons/ucc_testnet.png \
   qt/res/icons/browse.png \
   qt/res/icons/clock1.png \
   qt/res/icons/clock2.png \
@@ -243,7 +243,7 @@ RES_ICONS = \
   qt/res/icons/tx_mined.png  
   
 RES_FONTS = \
-    qt/res/fonts/xdna_font.ttf
+    qt/res/fonts/ucc_font.ttf
 
 BITCOIN_QT_CPP = \
   qt/bitcoinaddressvalidator.cpp \
@@ -313,7 +313,7 @@ RES_IMAGES = \
   qt/res/images/about.png \
   qt/res/images/splash.png \
   qt/res/images/splash_testnet.png \
-  qt/res/images/xdna_logo_horizontal.png \
+  qt/res/images/ucc_logo_horizontal.png \
   qt/res/images/frame_blue.png \
   qt/res/images/downArrow.png \
   qt/res/images/downArrow_small.png \
@@ -328,7 +328,7 @@ RES_CSS = \
 
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
 
-BITCOIN_RC = qt/res/xdna-qt-res.rc
+BITCOIN_RC = qt/res/ucc-qt-res.rc
 
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms
@@ -348,69 +348,69 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_xdna_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_ucc_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# xdna-qt binary #
-qt_xdna_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+# ucc-qt binary #
+qt_ucc_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-qt_xdna_qt_SOURCES = qt/xdna.cpp
+qt_ucc_qt_SOURCES = qt/ucc.cpp
 if TARGET_DARWIN
-  qt_xdna_qt_SOURCES += $(BITCOIN_MM)
+  qt_ucc_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  qt_xdna_qt_SOURCES += $(BITCOIN_RC)
+  qt_ucc_qt_SOURCES += $(BITCOIN_RC)
 endif
-qt_xdna_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+qt_ucc_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-qt_xdna_qt_LDADD += $(LIBBITCOIN_WALLET)
+qt_ucc_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
 if ENABLE_ZMQ
-qt_xdna_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+qt_ucc_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
-qt_xdna_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
+qt_ucc_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_xdna_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_xdna_qt_LIBTOOLFLAGS = --tag CXX
+qt_ucc_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_ucc_qt_LIBTOOLFLAGS = --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
 
 .SECONDARY: $(QT_QM)
 
-qt/xdnastrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
+qt/uccstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) $(PYTHON) ../share/qt/extract_strings_qt.py $^
 
-translate: qt/xdnastrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: qt/uccstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/xdna_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/ucc_en.ts
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC)
 	@test -f $(@D)/$(<F) || cp -f $< $(@D)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name xdna_locale $(@D)/$(<F) | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name ucc_locale $(@D)/$(<F) | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H) $(RES_FONTS)
 	@test -f $(RCC)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name xdna $< | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name ucc $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
 
 CLEANFILES += $(CLEAN_QT)
 
-xdna_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_xdna_qt_OBJECTS) qt/xdna-qt$(EXEEXT) $(LIBBITCOINQT)
+ucc_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_ucc_qt_OBJECTS) qt/ucc-qt$(EXEEXT) $(LIBBITCOINQT)
 
-xdna_qt : qt/xdna-qt$(EXEEXT)
+ucc_qt : qt/ucc-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

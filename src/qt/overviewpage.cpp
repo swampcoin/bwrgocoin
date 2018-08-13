@@ -45,7 +45,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::XDNA)
+    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::UCC)
     {
     }
 
@@ -192,7 +192,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     currentWatchUnconfBalance = watchUnconfBalance;
     currentWatchImmatureBalance = watchImmatureBalance;
 
-    // XDNA labels
+    // UCC labels
 
     if(balance != 0)
         ui->labelBalance->setText(BitcoinUnits::floorHtmlWithoutUnit(nDisplayUnit, balance, false, BitcoinUnits::separatorNever));
@@ -211,7 +211,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     // for symmetry reasons also show immature label when the watch-only one is shown
     ui->labelImmature->setVisible(showImmature || showWatchOnlyImmature);
     ui->labelImmatureText->setVisible(showImmature || showWatchOnlyImmature);
-    ui->label_XDNA4->setVisible(showImmature || showWatchOnlyImmature);
+    ui->label_UCC4->setVisible(showImmature || showWatchOnlyImmature);
 
    // ui->labelWatchImmature->setVisible(showWatchOnlyImmature); // show watch-only immature balance
 
@@ -278,11 +278,11 @@ void OverviewPage::setWalletModel(WalletModel* model)
         connect(ui->obfuscationReset, SIGNAL(clicked()), this, SLOT(obfuscationReset()));
         connect(ui->toggleObfuscation, SIGNAL(clicked()), this, SLOT(toggleObfuscation()));
         connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
-        connect(ui->blabel_XDNA, SIGNAL(clicked()), this, SLOT(openMyAddresses()));
+        connect(ui->blabel_UCC, SIGNAL(clicked()), this, SLOT(openMyAddresses()));
        
     }
 
-    // update the display unit, to not use the default ("XDNA")
+    // update the display unit, to not use the default ("UCC")
     updateDisplayUnit();
 }
 
@@ -356,8 +356,8 @@ void OverviewPage::updatBlockChainInfo()
     int CurrentBlock = chainActive.Height();
     int64_t netHashRate = chainActive.GetNetworkHashPS(24, CurrentBlock-1);
     int64_t BlockReward = Params().SubsidyValue(netHashRate, tip_time);
-    double BlockRewardXDNA =  static_cast<double>(BlockReward/COIN);
-    //int64_t XDNASupply = chainActive.Tip()->nMoneySupply / COIN;
+    double BlockRewardUCC =  static_cast<double>(BlockReward/COIN);
+    //int64_t UCCSupply = chainActive.Tip()->nMoneySupply / COIN;
 
     ui->label_CurrentBlock_value->setText(QString::number(CurrentBlock));
 
@@ -391,8 +391,8 @@ void OverviewPage::updatBlockChainInfo()
         ui->label_Nethash_value->setText(QString::number(nethash_mhs));
     }
 
-    ui->label_CurrentBlockReward_value->setText(QString::number(BlockRewardXDNA));
-    //ui->label_XDNASupply_value->setText(QString::number(XDNASupply));
+    ui->label_CurrentBlockReward_value->setText(QString::number(BlockRewardUCC));
+    //ui->label_UCCSupply_value->setText(QString::number(UCCSupply));
 }
 
 void OverviewPage::openMyAddresses()
@@ -417,15 +417,15 @@ void OverviewPage::updateObfuscationProgress()
     if (!pwalletMain) return;
 
     QString strAmountAndRounds;
-    QString strAnonymizeXDnaAmount = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nAnonymizeXDnaAmount * COIN, false, BitcoinUnits::separatorAlways);
+    QString strAnonymizeUccAmount = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nAnonymizeUccAmount * COIN, false, BitcoinUnits::separatorAlways);
 
     if (currentBalance == 0) {
         ui->obfuscationProgress->setValue(0);
         ui->obfuscationProgress->setToolTip(tr("No inputs detected"));
 
         // when balance is zero just show info from settings
-        strAnonymizeXDnaAmount = strAnonymizeXDnaAmount.remove(strAnonymizeXDnaAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
-        strAmountAndRounds = strAnonymizeXDnaAmount + " / " + tr("%n Rounds", "", nObfuscationRounds);
+        strAnonymizeUccAmount = strAnonymizeUccAmount.remove(strAnonymizeUccAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
+        strAmountAndRounds = strAnonymizeUccAmount + " / " + tr("%n Rounds", "", nObfuscationRounds);
 
         ui->labelAmountRounds->setToolTip(tr("No inputs detected"));
         ui->labelAmountRounds->setText(strAmountAndRounds);
@@ -452,20 +452,20 @@ void OverviewPage::updateObfuscationProgress()
     CAmount nMaxToAnonymize = nAnonymizableBalance + currentAnonymizedBalance + nDenominatedUnconfirmedBalance;
 
     // If it's more than the anon threshold, limit to that.
-    if (nMaxToAnonymize > nAnonymizeXDnaAmount * COIN) nMaxToAnonymize = nAnonymizeXDnaAmount * COIN;
+    if (nMaxToAnonymize > nAnonymizeUccAmount * COIN) nMaxToAnonymize = nAnonymizeUccAmount * COIN;
 
     if (nMaxToAnonymize == 0) return;
 
-    if (nMaxToAnonymize >= nAnonymizeXDnaAmount * COIN) {
+    if (nMaxToAnonymize >= nAnonymizeUccAmount * COIN) {
         ui->labelAmountRounds->setToolTip(tr("Found enough compatible inputs to anonymize %1")
-                                              .arg(strAnonymizeXDnaAmount));
-        strAnonymizeXDnaAmount = strAnonymizeXDnaAmount.remove(strAnonymizeXDnaAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
-        strAmountAndRounds = strAnonymizeXDnaAmount + " / " + tr("%n Rounds", "", nObfuscationRounds);
+                                              .arg(strAnonymizeUccAmount));
+        strAnonymizeUccAmount = strAnonymizeUccAmount.remove(strAnonymizeUccAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
+        strAmountAndRounds = strAnonymizeUccAmount + " / " + tr("%n Rounds", "", nObfuscationRounds);
     } else {
         QString strMaxToAnonymize = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nMaxToAnonymize, false, BitcoinUnits::separatorAlways);
         ui->labelAmountRounds->setToolTip(tr("Not enough compatible inputs to anonymize <span style='color:red;'>%1</span>,<br>"
                                              "will anonymize <span style='color:red;'>%2</span> instead")
-                                              .arg(strAnonymizeXDnaAmount)
+                                              .arg(strAnonymizeUccAmount)
                                               .arg(strMaxToAnonymize));
         strMaxToAnonymize = strMaxToAnonymize.remove(strMaxToAnonymize.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
         strAmountAndRounds = "<span style='color:red;'>" +
@@ -636,7 +636,7 @@ void OverviewPage::toggleObfuscation()
 
         /* show obfuscation configuration if client has defaults set */
 
-        if (nAnonymizeXDnaAmount == 0) {
+        if (nAnonymizeUccAmount == 0) {
             ObfuscationConfig dlg(this);
             dlg.setModel(walletModel);
             dlg.exec();
