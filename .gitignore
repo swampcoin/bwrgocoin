@@ -11,13 +11,13 @@ reset-files.bash
 *.tar.gz
 
 *.exe
-src/xdna
-src/xdnad
-src/xdna-cli
-src/xdna-tx
-src/test/test_xdna
-src/qt/test/test_xdna-qt
-src/bench/bench_xdna
+src/ucc
+src/uccd
+src/ucc-cli
+src/ucc-tx
+src/test/test_ucc
+src/qt/test/test_ucc-qt
+src/bench/bench_ucc
 
 # autoreconf
 Makefile.in
@@ -43,8 +43,8 @@ confdefs.h
 conftest.cpp
 conftest.err
 libtool
-src/config/xdna-config.h
-src/config/xdna-config.h.in
+src/config/ucc-config.h
+src/config/ucc-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -69,7 +69,7 @@ libconftest.dylib*
 *.o
 *.o-*
 *.patch
-.xdna
+.ucc
 *.a
 *.pb.cc
 *.pb.h
@@ -88,12 +88,12 @@ libconftest.dylib*
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-xdna-qt
-XDNA-Qt.app
+ucc-qt
+UCC-Qt.app
 
 # Unit-tests
 Makefile.test
-xdna-qt_test
+ucc-qt_test
 src/test/buildenv.py
 
 # Resources cpp
@@ -107,7 +107,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_xdna.coverage/
+test_ucc.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -131,14 +131,14 @@ share/BitcoindComparisonTool.jar
 /doc/doxygen/
 
 libbitcoinconsensus.pc
-libxdnaconsensus.pc
-src/qt/xdna-qt.bash
+libuccconsensus.pc
+src/qt/ucc-qt.bash
 qa/pull-tester/tests-config.sh
 
 #development symlinks
-xdna-cli
-xdnad
-xdna-qt
+ucc-cli
+uccd
+ucc-qt
 make
 
 #development local files
