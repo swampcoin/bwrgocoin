@@ -320,14 +320,20 @@ public:
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1534192292;
-        genesis.nNonce = 1;
+        genesis.nNonce = 58928;
 
-	MineGenesis(genesis);
-        std::cout << genesis.ToString() << std::endl;
+	//MineGenesis(genesis);
+        //std::cout << genesis.ToString() << std::endl;
+/*
+block.nTime = 1534192292
+block.nNonce = 58928
+block.GetHash = 00000e2287e74f52d995070ce91746fb4d60d963e31b126c56cfae1cb475eaf3
+block.merkle = f79c18ab2b4e33c8c4d482598146ee3887491c2a49afc4e35413ab1d90ec6dad
+*/
 
         hashGenesisBlock = genesis.GetKeccakHash();
 
-        assert(hashGenesisBlock == uint256("000"));
+        assert(hashGenesisBlock == uint256("00000e2287e74f52d995070ce91746fb4d60d963e31b126c56cfae1cb475eaf3"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -410,15 +416,21 @@ public:
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1534192293;
         genesis.nBits = 0x207fffff;
-        genesis.nNonce = 1;
+        genesis.nNonce = 733727;
 
         hashGenesisBlock = genesis.GetKeccakHash();
         nDefaultPort = 61112;
 
-	MineGenesis(genesis);
-        std::cout << genesis.ToString() << std::endl;
+	//MineGenesis(genesis);
+        //std::cout << genesis.ToString() << std::endl;
+/*
+block.nTime = 1534192293
+block.nNonce = 733727
+block.GetHash = 000008e721aea683c564ff7b41071d472bcfbb9b3a4681e6f15141613a41d48b
+block.merkle = f79c18ab2b4e33c8c4d482598146ee3887491c2a49afc4e35413ab1d90ec6dad
+*/
 
-        assert(hashGenesisBlock == uint256("000"));
+        assert(hashGenesisBlock == uint256("000008e721aea683c564ff7b41071d472bcfbb9b3a4681e6f15141613a41d48b"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
