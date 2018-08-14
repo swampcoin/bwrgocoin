@@ -5,7 +5,7 @@ UCC is a brand new digital currency that combines all the positive aspects of su
 The project brings tangible benefits not only to the digital world but also to the real one.
 
 
-More information at [uccnetwork.org](http://www.uccnetwork.org) Visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=4517612.0), join our group at [Discord] (https://discord.gg/S9adMgS).
+More information at [uccnetwork.org](http://www.uccnetwork.org).
 
 ### Coin Specs
 
@@ -15,8 +15,7 @@ More information at [uccnetwork.org](http://www.uccnetwork.org) Visit our ANN th
 <tr><td>POW phase duration</td><td>1440000 blocks</td></tr>
 <tr><td>PoW block reward</td><td>Dynamic from 4 to 511 UCC</td></tr>
 <tr><td>Instamine protection</td><td>First 720 blocks</td></tr>
-<tr><td>Hashing algorithm from start</td><td>Keccak</td></tr>
-<tr><td>Hashing algorithm from 15.00 GMT 08 Aug 2018 </td><td>HEX</td></tr>
+<tr><td>Hashing algorithm</td><td>HEX</td></tr>
 <tr><td>Estimated UCC supply during POW</td><td>138,000,000</td></tr>
 <tr><td>POS starting block</td><td>1440001</td></tr>
 <tr><td>POS phase duration</td><td>Unlimited</td></tr>
@@ -51,4 +50,3 @@ More information at [uccnetwork.org](http://www.uccnetwork.org) Visit our ANN th
 <tr><th>14</th><th>610</th><th>321</th></tr>
 <tr><th>15</th><th>987</th><th>511</th></tr>
 </table>
-![](doc/POW.png)
