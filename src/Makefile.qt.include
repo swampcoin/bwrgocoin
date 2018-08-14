@@ -185,8 +185,7 @@ BITCOIN_QT_H = \
   qt/walletview.h \
   qt/winshutdownmonitor.h \
   qt/toolspage.h \
-  qt/qssloader.h \
-  qt/labelclickable.h
+  qt/qssloader.h 
 
 RES_ICONS = \
   qt/res/icons/add.png \
