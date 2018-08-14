@@ -28,20 +28,20 @@ env:
     - WINEDEBUG=fixme-all
   matrix:
 # ARM
-    - HOST=arm-linux-gnueabihf PACKAGES="g++-arm-linux-gnueabihf" CHECK_DOC=1 CHECK_LOGPRINT=1 GOAL="install" BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
+    - REASON=ARM HOST=arm-linux-gnueabihf PACKAGES="g++-arm-linux-gnueabihf" CHECK_DOC=1 CHECK_LOGPRINT=1 GOAL="install" BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
 # Win32
-    - HOST=i686-w64-mingw32 DPKG_ADD_ARCH="i386" DEP_OPTS="NO_QT=1" PACKAGES="python3 nsis g++-mingw-w64-i686 wine1.6 bc" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-reduce-exports"
+    - REASON=Win32 HOST=i686-w64-mingw32 DPKG_ADD_ARCH="i386" DEP_OPTS="NO_QT=1" PACKAGES="python3 nsis g++-mingw-w64-i686 wine1.6 bc" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-reduce-exports"
 # 32-bit + dash
-    - HOST=i686-pc-linux-gnu PACKAGES="g++-multilib bc python3-zmq" DEP_OPTS="NO_QT=1" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++" USE_SHELL="/bin/dash" PYZMQ=true
+    - REASON=Linux32 HOST=i686-pc-linux-gnu PACKAGES="g++-multilib bc python3-zmq" DEP_OPTS="NO_QT=1" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++" USE_SHELL="/bin/dash" PYZMQ=true
 # Win64
-    - HOST=x86_64-w64-mingw32 DPKG_ADD_ARCH="i386" DEP_OPTS="NO_QT=1" PACKAGES="python3 nsis g++-mingw-w64-x86-64 wine1.6 bc" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-reduce-exports"
+    - REASON=Win64 HOST=x86_64-w64-mingw32 DPKG_ADD_ARCH="i386" DEP_OPTS="NO_QT=1" PACKAGES="python3 nsis g++-mingw-w64-x86-64 wine1.6 bc" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-reduce-exports"
 # uccd
-    - HOST=x86_64-unknown-linux-gnu PACKAGES="bc python3-zmq" DEP_OPTS="NO_QT=1 NO_UPNP=1 DEBUG=1" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports CPPFLAGS=-DDEBUG_LOCKORDER" PYZMQ=true
+    - REASON=Linux64 HOST=x86_64-unknown-linux-gnu PACKAGES="bc python3-zmq" DEP_OPTS="NO_QT=1 NO_UPNP=1 DEBUG=1" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports CPPFLAGS=-DDEBUG_LOCKORDER" PYZMQ=true
 
 # No wallet
 #    - HOST=x86_64-unknown-linux-gnu PACKAGES="python3" DEP_OPTS="NO_WALLET=1" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
 # Cross-Mac
-    - HOST=x86_64-apple-darwin11 PACKAGES="cmake imagemagick libcap-dev librsvg2-bin libz-dev libbz2-dev libtiff-tools python-dev" BITCOIN_CONFIG="--enable-reduce-exports" OSX_SDK=10.11 GOAL="deploy"
+    - REASON=MaxOSX HOST=x86_64-apple-darwin11 PACKAGES="cmake imagemagick libcap-dev librsvg2-bin libz-dev libbz2-dev libtiff-tools python-dev" BITCOIN_CONFIG="--enable-reduce-exports" OSX_SDK=10.11 GOAL="deploy"
 
 before_install:
     - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
@@ -77,4 +77,24 @@ script:
 after_script:
     - echo $TRAVIS_COMMIT_RANGE
     - echo $TRAVIS_COMMIT_LOG
-notifications:
+after_success:
+    - find $OUTDIR
+    - export VERSION=$REASON-$TRAVIS_BRANCH
+    - if [ "$REASON" = "ARM" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION; fi
+    - if [ "$REASON" = "Win32" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION; fi
+    - if [ "$REASON" = "Win64" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION; fi
+    - if [ "$REASON" = "Linux32" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION; fi
+    - if [ "$REASON" = "Linux64" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION; fi
+    - if [ "$REASON" = "MacOSX" ]; then mkdir -p $OUTDIR && cd $OUTDIR && cp /home/travis/build/ucccoin/ucc/bitcoin-x86_64-apple-darwin11/ucc.dmg UCC-$VERSION.dmg; fi
+deploy:
+  provider: releases
+  api_key:
+    secure: TAr/+eEXw5CMz0NDR6rsohNUY9XVwXbbHHEcd+4momcFwkJuIefP3HqcUVsN7LTaiispi3EXQE0hm1/Pmq/uYRW2MznK/VaLIu4BwUs/WsKZtf/bcas0eW+cfZjqKbbkucTm1/ymhvw3SnqqTEgsfE5VuSUe9AVTeBhtZOgI8q6Is7QFMOMTpEL3tw+2SAPJZCXVJ+gLlHZuAI0zILhP10l7QHUJ21Mn5z5PSLAKRGMUQOCrJJbN7ZJlVRBrLyDWcn4f5rcughR+nEP1SztuonVxzIkM3vpH29HT1vC+iH2dQGfHWrkLugdUIRJpTuEi/unkrZmGNoimcUsCttptYxjN3gqV3nFubbfVBjodMU7rZ57yPM+hcb3zQ+Ef/fjGufj/5sMfOKG5CFnxMCzO4zEd+uSmzOqXeiwYzH+uFA5LJpZTUaChnRQZ2X1qwVE9BtMr7VVTZ7VS+wLoIMlMBLUDQEot4C9xGjW1A43q2rNDznPEh282BSxSS6yqeGQDIzL84yj/o+QF31wY4Uv5CtHw5gNelbr4oYyBD4V5SdoWHDrLQx84mcpG04xu3tA1ycnCjtRY7xJc4HgUbOd0IPj0dWdO++rtVS3332rOnoDtlUmT4FqSaNEBZoP6WxevMeFiz0P6icDIKYVdX8ZqKcG12A78ny5vEKgJZDZbmVg=
+  file_glob: true
+  file:
+    - $OUTDIR/*.dmg
+    - $OUTDIR/*.zip
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: flyinghuman/ucc
