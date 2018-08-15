@@ -253,7 +253,6 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/fugue.c \
   crypto/gost.c \
   crypto/groestl.c \
-  crypto/hamsi.c \
   crypto/haval.c \
   crypto/hmac_sha256.cpp \
   crypto/hmac_sha256.h \
