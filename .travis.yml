@@ -79,12 +79,12 @@ after_script:
 after_success:
     - find $OUTDIR
     - export VERSION=$REASON-$TRAVIS_BRANCH
-    - if [ "$REASON" = "ARM" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION; fi
-    - if [ "$REASON" = "Win32" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION; fi
-    - if [ "$REASON" = "Win64" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION; fi
-    - if [ "$REASON" = "Linux32" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION; fi
-    - if [ "$REASON" = "Linux64" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION; fi
-    - if [ "$REASON" = "MacOSX" ]; then mkdir -p $OUTDIR && cd $OUTDIR && cp /home/travis/build/ucccoin/ucc/bitcoin-x86_64-apple-darwin11/ucc.dmg UCC-$VERSION.dmg; fi
+    - if [ "$REASON" = "ARM" ]; then cd $OUTDIR && ls -la && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION && ls -la; fi
+    - if [ "$REASON" = "Win32" ]; then cd $OUTDIR && ls -la && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION && ls -la; fi
+    - if [ "$REASON" = "Win64" ]; then cd $OUTDIR && ls -la && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION && ls -la; fi
+    - if [ "$REASON" = "Linux32" ]; then cd $OUTDIR && ls -la && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION && ls -la; fi
+    - if [ "$REASON" = "Linux64" ]; then cd $OUTDIR && ls -la && cp -a bin UCC-$VERSION && rm UCC-$VERSION/*test* && zip -r UCC-$VERSION.zip UCC-$VERSION && ls -la; fi
+    - if [ "$REASON" = "MacOSX" ]; then mkdir -p $OUTDIR && cd $OUTDIR && ls -la && cp /home/travis/build/ucccoin/ucc/bitcoin-x86_64-apple-darwin11/ucc.dmg UCC-$VERSION.dmg && ls -la; fi
 deploy:
   provider: releases
   api_key:
