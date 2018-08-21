@@ -15,17 +15,17 @@ If you like our Idea, feel free to contact us and work with us. For Team Discuss
 <table>
 <tr><td>Name & ticker</td><td>UCC</td></tr>
 <tr><td>Consensus algorithm</td><td>PoW/POS</td></tr>
-<tr><td>POW phase duration</td><td>1440000 blocks</td></tr>
+<tr><td>POW phase duration</td><td>777000 blocks</td></tr>
 <tr><td>PoW block reward</td><td>Dynamic from 4 to 511 UCC</td></tr>
 <tr><td>Instamine protection</td><td>First 720 blocks</td></tr>
 <tr><td>Hashing algorithm</td><td>HEX</td></tr>
-<tr><td>Estimated UCC supply during POW</td><td>138,000,000</td></tr>
-<tr><td>POS starting block</td><td>1440001</td></tr>
-<tr><td>POS phase duration</td><td>Unlimited</td></tr>
-<tr><td>POS block reward</td><td>57 UCC lowering by 4 coins every 525600 blocks until block reward is 1 UCC</td></tr>
+<tr><td>Estimated UCC supply during POW</td><td>80,000,000</td></tr>
+<tr><td>POS starting block</td><td>777001</td></tr>
+<tr><td>POS phase duration</td><td>Unlimited for now</td></tr>
+<tr><td>POS block reward</td><td>24 UCC lowering by 4 coins every 525600 blocks until block reward is 1 UCC</td></tr>
 <tr><td>POS block reward distribution</td><td>SeeSaw</td></tr>
-<tr><td>Estimated UCC supply during 15 years of POS</td><td>228,000,000</td></tr>
-<tr><td>Premine</td><td>971,712 UCC (0.7% of POW total supply)</td></tr>
+<tr><td>Estimated UCC supply during 15 years of POS</td><td>47,000,000</td></tr>
+<tr><td>Premine</td><td>5,3000,00 UCC (4.17% of total supply due many swapping coins are needed)</td></tr>
 <tr><td>Blocksize</td><td>1 MB</td></tr>
 <tr><td>Blocktime average</td><td>1 min (DGW3)</td></tr>
 <tr><td>Number of transaction confirmations</td><td>6</td></tr>
