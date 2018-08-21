@@ -3,6 +3,7 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2017-2018 The XDNA Core developers
+// Copyright (c) 2018-2018 The UCC Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -142,8 +143,8 @@ public:
         vAlertPubKey = ParseHex("0442503c4a9d9715d84777efbf1ec9adfff96adf45db669cd66c2cbf8731604439c2fac2d6d05108a63112e34a3918113494e153ba650f0a3ac7fec3f3cba234eb");
         vUCCDevKey = ParseHex("449AFD6F31739AE1F7BC41A05C16E6BAD57AB52319B5191C3B"); // DevPubKey for fees
         vUCCFundKey = ParseHex("44081DBD48EA7FEAE77471449ABEC48CA8AC6EBFC3F7C4CC42"); // FundPubKey for fees
-        nDevFee = 1; // DevFee %
-        nFundFee = 2; //FundFee %
+        nDevFee = 3; // DevFee %
+        nFundFee = 7; //FundFee %
         nDefaultPort = 41112;
         bnProofOfWorkLimit = ~uint256(0) >> 20;
         bnStartWork = ~uint256(0) >> 24;
@@ -161,9 +162,9 @@ public:
             {89  * 1e12,  57 * COIN},
             {144 * 1e12,  85 * COIN},
             {233 * 1e12, 131 * COIN},
-            {377 * 1e12, 204 * COIN},
-            {610 * 1e12, 321 * COIN},
-            {987 * 1e12, 511 * COIN},
+            {377 * 1e12, 174 * COIN},
+            {610 * 1e12, 242 * COIN},
+            {987 * 1e12, 311 * COIN},
         };
         assert(subsidySwitchPoints.size());
 
