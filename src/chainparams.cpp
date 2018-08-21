@@ -200,7 +200,7 @@ public:
         nStartMasternodePaymentsBlock = 7001;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 1440000;
+        nLastPOWBlock = 777000;
         nModifierUpdateBlock = std::numeric_limits<decltype(nModifierUpdateBlock)>::max();
 
         const char* pszTimestamp = "ucc rocks! 2018-08-13";
