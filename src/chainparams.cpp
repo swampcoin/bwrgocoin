@@ -141,8 +141,8 @@ public:
         pchMessageStart[2] = 0x2a;
         pchMessageStart[3] = 0x3f;
         vAlertPubKey = ParseHex("0442503c4a9d9715d84777efbf1ec9adfff96adf45db669cd66c2cbf8731604439c2fac2d6d05108a63112e34a3918113494e153ba650f0a3ac7fec3f3cba234eb");
-        vUCCDevKey = ParseHex("449AFD6F31739AE1F7BC41A05C16E6BAD57AB52319B5191C3B"); // DevPubKey for fees
-        vUCCFundKey = ParseHex("44081DBD48EA7FEAE77471449ABEC48CA8AC6EBFC3F7C4CC42"); // FundPubKey for fees
+        vUCCDevKey = ParseHex("0329b41789e8fd75dc7168d05dec322c25df364f6b010fb59c96b4637e5f4487cb"); // DevPubKey for fees
+        vUCCFundKey = ParseHex("031f3b25791150d4243608c51f39c13a5b340cb73e4bf44c4d0258ad65506cd6c2"); // FundPubKey for fees
         nDevFee = 3; // DevFee %
         nFundFee = 7; //FundFee %
         nDefaultPort = 41112;
