@@ -88,7 +88,7 @@ after_success:
 deploy:
   provider: releases
   api_key:
-    secure: TAr/+eEXw5CMz0NDR6rsohNUY9XVwXbbHHEcd+4momcFwkJuIefP3HqcUVsN7LTaiispi3EXQE0hm1/Pmq/uYRW2MznK/VaLIu4BwUs/WsKZtf/bcas0eW+cfZjqKbbkucTm1/ymhvw3SnqqTEgsfE5VuSUe9AVTeBhtZOgI8q6Is7QFMOMTpEL3tw+2SAPJZCXVJ+gLlHZuAI0zILhP10l7QHUJ21Mn5z5PSLAKRGMUQOCrJJbN7ZJlVRBrLyDWcn4f5rcughR+nEP1SztuonVxzIkM3vpH29HT1vC+iH2dQGfHWrkLugdUIRJpTuEi/unkrZmGNoimcUsCttptYxjN3gqV3nFubbfVBjodMU7rZ57yPM+hcb3zQ+Ef/fjGufj/5sMfOKG5CFnxMCzO4zEd+uSmzOqXeiwYzH+uFA5LJpZTUaChnRQZ2X1qwVE9BtMr7VVTZ7VS+wLoIMlMBLUDQEot4C9xGjW1A43q2rNDznPEh282BSxSS6yqeGQDIzL84yj/o+QF31wY4Uv5CtHw5gNelbr4oYyBD4V5SdoWHDrLQx84mcpG04xu3tA1ycnCjtRY7xJc4HgUbOd0IPj0dWdO++rtVS3332rOnoDtlUmT4FqSaNEBZoP6WxevMeFiz0P6icDIKYVdX8ZqKcG12A78ny5vEKgJZDZbmVg=
+    secure: $GITHUB_TOKEN
   file_glob: true
   file:
     - $OUTDIR/*.dmg
