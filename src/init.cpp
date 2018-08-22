@@ -3,6 +3,7 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2017-2018 The XDNA Core developers
+// Copyright (c) 2018-2018 The UCC Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -508,7 +509,9 @@ std::string LicenseInfo()
            "\n" +
            FormatParagraph(_("Copyright (C) 2015-2017 The PIVX Core Developers")) + "\n" +
            "\n" +
-           FormatParagraph(_("Copyright (C) 2017-%i The XDNA Core Developers")) + "\n" +
+           FormatParagraph(_("Copyright (C) 2017-2018 The XDNA Core Developers")) + "\n" +
+           "\n" +
+           FormatParagraph(_("Copyright (C) 2018-2018 The UCC Core Developers")) + "\n" +
            "\n" +
            FormatParagraph(_("This is experimental software.")) + "\n" +
            "\n" +
