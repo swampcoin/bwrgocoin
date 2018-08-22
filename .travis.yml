@@ -81,7 +81,7 @@ after_success:
     - find $OUTDIR
     - export VERSION=$REASON-$TRAVIS_BRANCH
     - if [ "$REASON" = "ARM" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && ls UCC-$VERSION/ && zip -r UCC-$VERSION.zip UCC-$VERSION && ls; fi
-    - if [ "$REASON" = "Win32" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && ls UCC-$VERSION/ && zip -r UCC-$VERSION.zip UCC-$VERSION && ls; fi
+    - if [ "$REASON" = "Win" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && ls UCC-$VERSION/ && zip -r UCC-$VERSION.zip UCC-$VERSION && ls; fi
     - if [ "$REASON" = "Win64" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && ls UCC-$VERSION/ && zip -r UCC-$VERSION.zip UCC-$VERSION && ls; fi
 #    - if [ "$REASON" = "Linux32" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && ls UCC-$VERSION/ && zip -r UCC-$VERSION.zip UCC-$VERSION && ls; fi
     - if [ "$REASON" = "Linux64" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && ls UCC-$VERSION/ && zip -r UCC-$VERSION.zip UCC-$VERSION && ls; fi
