@@ -85,7 +85,7 @@ after_success:
     - if [ "$REASON" = "Win64" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && ls UCC-$VERSION/ && zip -r UCC-$VERSION.zip UCC-$VERSION && ls; fi
 #    - if [ "$REASON" = "Linux32" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && ls UCC-$VERSION/ && zip -r UCC-$VERSION.zip UCC-$VERSION && ls; fi
     - if [ "$REASON" = "Linux64" ]; then cd $OUTDIR && cp -a bin UCC-$VERSION && ls UCC-$VERSION/ && zip -r UCC-$VERSION.zip UCC-$VERSION && ls; fi
-    - if [ "$REASON" = "MacOSX" ]; then find . -name '*.dmg' && mkdir -p $OUTDIR && cd $OUTDIR && cp -a ../UCC-Core.dmg UCC-$VERSION.dmg && ls; fi
+    - if [ "$REASON" = "MacOSX" ]; then pwd && find . -name '*.dmg' && echo $OUTDIR && mkdir -p $OUTDIR && cp UCC-Core.dmg $OUTDIR/UCC-$VERSION.dmg && ls; fi
 deploy:
   provider: releases
   api_key:
