@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/flyinghuman/ucc.svg?branch=master)](https://travis-ci.org/flyinghuman/ucc)
+
 UCC Core integration/staging repository
 =====================================
 
