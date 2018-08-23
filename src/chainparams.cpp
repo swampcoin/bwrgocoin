@@ -84,7 +84,7 @@ static const Checkpoints::CCheckpointData dataRegtest = {
 
 CAmount CChainParams::SubsidyValue(SubsidySwitchPoints::key_type level, uint32_t nTime) const
 {
-    const auto& points = (nTime <= nHEXHashTimestamp) ? subsidySwitchPoints : subsidySwitchPoints_HEXHash;
+    const auto& points = subsidySwitchPoints;
 
     SubsidySwitchPoints::const_iterator point = points.upper_bound(level);
 
@@ -103,7 +103,7 @@ void MineGenesis(CBlock genesis)
     uint256 thash;
     while(true)
     {
-        thash = genesis.GetKeccakHash();
+        thash = genesis.GetHash();
         if (thash <= hashTarget)
             break;
         if ((genesis.nNonce & 0xFFF) == 0)
@@ -119,7 +119,7 @@ void MineGenesis(CBlock genesis)
     }
     printf("block.nTime = %u \n", genesis.nTime);
     printf("block.nNonce = %u \n", genesis.nNonce);
-    printf("block.GetHash = %s\n", genesis.GetKeccakHash().ToString().c_str());
+    printf("block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
     printf("block.merkle = %s\n", genesis.hashMerkleRoot.ToString().c_str());
     std::fflush(stdout);
 }
@@ -141,34 +141,15 @@ public:
         pchMessageStart[2] = 0x2a;
         pchMessageStart[3] = 0x3f;
         vAlertPubKey = ParseHex("0442503c4a9d9715d84777efbf1ec9adfff96adf45db669cd66c2cbf8731604439c2fac2d6d05108a63112e34a3918113494e153ba650f0a3ac7fec3f3cba234eb");
-        vUCCDevKey = ParseHex("0329b41789e8fd75dc7168d05dec322c25df364f6b010fb59c96b4637e5f4487cb"); // DevPubKey for fees
-        vUCCFundKey = ParseHex("031f3b25791150d4243608c51f39c13a5b340cb73e4bf44c4d0258ad65506cd6c2"); // FundPubKey for fees
-        nDevFee = 3; // DevFee %
-        nFundFee = 7; //FundFee %
+        vUCCDevKey = ParseHex("0329b41789e8fd75dc7168d05dec322c25df364f6b010fb59c96b4637e5f4487cb"); // TEAMPubKey for fees
+        vUCCFundKey = ParseHex("031f3b25791150d4243608c51f39c13a5b340cb73e4bf44c4d0258ad65506cd6c2"); // SWAPPubKey for fees
+        nDevFee = 3; // TEAMFee %
+        nFundFee = 7; // SWAPFee %
         nDefaultPort = 41112;
         bnProofOfWorkLimit = ~uint256(0) >> 20;
         bnStartWork = ~uint256(0) >> 24;
 
         subsidySwitchPoints = {
-            {0         ,   4 * COIN},
-            {2   * 1e12,   5 * COIN},
-            {3   * 1e12,   7 * COIN},
-            {5   * 1e12,   9 * COIN},
-            {8   * 1e12,  11 * COIN},
-            {13  * 1e12,  15 * COIN},
-            {21  * 1e12,  20 * COIN},
-            {34  * 1e12,  27 * COIN},
-            {55  * 1e12,  39 * COIN},
-            {89  * 1e12,  57 * COIN},
-            {144 * 1e12,  85 * COIN},
-            {233 * 1e12, 131 * COIN},
-            {377 * 1e12, 174 * COIN},
-            {610 * 1e12, 242 * COIN},
-            {987 * 1e12, 311 * COIN},
-        };
-        assert(subsidySwitchPoints.size());
-
-        subsidySwitchPoints_HEXHash = {
             {0         ,   4 * COIN},
             {20   * 1e9,   5 * COIN},
             {30   * 1e9,   7 * COIN},
@@ -185,7 +166,7 @@ public:
             {6100 * 1e9,  95 * COIN},
             {9870 * 1e9, 109 * COIN},
         };
-        assert(subsidySwitchPoints_HEXHash.size());
+        assert(subsidySwitchPoints.size());
 
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 750;
@@ -219,10 +200,10 @@ public:
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 1573446;
 
-        //MineGenesis(genesis);
-        //std::cout << genesis.ToString() << std::endl;
+        MineGenesis(genesis);
+        std::cout << genesis.ToString() << std::endl;
 
-	hashGenesisBlock = genesis.GetKeccakHash();
+	hashGenesisBlock = genesis.GetHash();
 
         assert(hashGenesisBlock == uint256("000005c0f09d7f1b026f7db8df591d3ccebd1e0f192beb4d4deefb1dc11cbeeb"));
         assert(genesis.hashMerkleRoot == uint256("f79c18ab2b4e33c8c4d482598146ee3887491c2a49afc4e35413ab1d90ec6dad"));
@@ -255,10 +236,8 @@ public:
 
         nPoolMaxTransactions = 3;
         strSporkKey = "0479ee68a9b2d71d3d20edc7afe3751c546072400f61f9ad4fc30399c43e3622184435d37ef8221b34f3a52cab3a3bd77300c97d1df381c0ef4d1a8db85838ff57";
-        strObfuscationPoolDummyAddress = "A";
+        strObfuscationPoolDummyAddress = "UPGfxo1fS8hrsowprmo8gpJAvmAd1N35cp";
         nStartMasternodePayments = 1534192291;
-
-        nHEXHashTimestamp = 1534193291;
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
@@ -323,16 +302,10 @@ public:
         genesis.nTime = 1534192292;
         genesis.nNonce = 58928;
 
-	//MineGenesis(genesis);
-        //std::cout << genesis.ToString() << std::endl;
-/*
-block.nTime = 1534192292
-block.nNonce = 58928
-block.GetHash = 00000e2287e74f52d995070ce91746fb4d60d963e31b126c56cfae1cb475eaf3
-block.merkle = f79c18ab2b4e33c8c4d482598146ee3887491c2a49afc4e35413ab1d90ec6dad
-*/
+	MineGenesis(genesis);
+        std::cout << genesis.ToString() << std::endl;
 
-        hashGenesisBlock = genesis.GetKeccakHash();
+        hashGenesisBlock = genesis.GetHash();
 
         assert(hashGenesisBlock == uint256("00000e2287e74f52d995070ce91746fb4d60d963e31b126c56cfae1cb475eaf3"));
 
@@ -363,7 +336,7 @@ block.merkle = f79c18ab2b4e33c8c4d482598146ee3887491c2a49afc4e35413ab1d90ec6dad
 
         nPoolMaxTransactions = 2;
         strSporkKey = "0479ee68a9b2d71d3d20edc7afe3751c546072400f61f9ad4fc30399c43e3622184435d37ef8221b34f3a52cab3a3bd77300c97d1df381c0ef4d1a8db85838ff57";
-        strObfuscationPoolDummyAddress = "t";
+        strObfuscationPoolDummyAddress = "tk7oN9aE8Foa8gqoJCYx4UcrWnEaFvr3Co";
         nStartMasternodePayments = 1420837558; //Fri, 09 Jan 2015 21:05:58 GMT
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
@@ -419,17 +392,11 @@ public:
         genesis.nBits = 0x207fffff;
         genesis.nNonce = 733727;
 
-        hashGenesisBlock = genesis.GetKeccakHash();
+        hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 61112;
 
-	//MineGenesis(genesis);
-        //std::cout << genesis.ToString() << std::endl;
-/*
-block.nTime = 1534192293
-block.nNonce = 733727
-block.GetHash = 000008e721aea683c564ff7b41071d472bcfbb9b3a4681e6f15141613a41d48b
-block.merkle = f79c18ab2b4e33c8c4d482598146ee3887491c2a49afc4e35413ab1d90ec6dad
-*/
+	MineGenesis(genesis);
+        std::cout << genesis.ToString() << std::endl;
 
         assert(hashGenesisBlock == uint256("000008e721aea683c564ff7b41071d472bcfbb9b3a4681e6f15141613a41d48b"));
 

@@ -3,6 +3,7 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX Core developers
 // Copyright (c) 2017-2018 The XDNA Core developers
+// Copyright (c) 2018-2018 The UCC Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -111,11 +112,9 @@ public:
     int LAST_POW_BLOCK() const { return nLastPOWBlock; }
     int StartMNPaymentsBlock() const {return nStartMasternodePaymentsBlock; }
 
-    uint32_t HEXHashActivationTime() const {return nHEXHashTimestamp;}
-
     const SubsidySwitchPoints& GetSubsidySwitchPoints(uint32_t nTime) const
     {
-       return (nTime <= nHEXHashTimestamp) ? subsidySwitchPoints : subsidySwitchPoints_HEXHash;
+       return subsidySwitchPoints;
     }
 
 protected:
@@ -164,9 +163,6 @@ protected:
     std::string strSporkKey;
     std::string strObfuscationPoolDummyAddress;
     int64_t nStartMasternodePayments;
-
-    uint32_t            nHEXHashTimestamp;
-    SubsidySwitchPoints subsidySwitchPoints_HEXHash;
 };
 
 /**

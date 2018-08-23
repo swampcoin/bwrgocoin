@@ -44,6 +44,7 @@ using namespace boost;
 #define SPORK_6_MN_WINNER_MINIMUM_AGE_DEFAULT 8000               // Age in seconds. This should be > MASTERNODE_REMOVAL_SECONDS to avoid
                                                                  // misconfigured new nodes in the list.
                                                                  // Set this to zero to emulate classic behaviour
+#define SPORK_X_NEW_PROTOCOL_ENFORCEMENT_X 4070908800
 
 class CSporkMessage;
 class CSporkManager;
@@ -73,7 +74,7 @@ public:
 
     uint256 GetHash()
     {
-        uint256 n = HashKeccak256(BEGIN(nSporkID), END(nTimeSigned));
+        uint256 n = HashHEX(BEGIN(nSporkID), END(nTimeSigned));
         return n;
     }
 

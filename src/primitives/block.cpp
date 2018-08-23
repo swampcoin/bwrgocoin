@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2018-2018 The UCC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -18,19 +19,8 @@
 uint256 CBlockHeader::GetHash() const
 {
     uint256 thash;
-
-    if (nTime <= Params().HEXHashActivationTime()) {
-        thash = HashKeccak256(BEGIN(nVersion), END(nNonce));
-    } else {
-        thash = HashHEX(BEGIN(nVersion), END(nNonce));
-    }
-
+    thash = HashHEX(BEGIN(nVersion), END(nNonce));
     return thash;
-}
-
-uint256 CBlockHeader::GetKeccakHash() const
-{
-    return HashKeccak256(BEGIN(nVersion), END(nNonce));
 }
 
 uint256 CBlock::BuildMerkleTree(bool* fMutated) const

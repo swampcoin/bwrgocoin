@@ -5394,11 +5394,8 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 
 int ActiveProtocol()
 {
-    if(Params().HEXHashActivationTime() < GetAdjustedTime())
-        return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-
-//    if (IsSporkActive(SPORK_X_NEW_PROTOCOL_ENFORCEMENT_X))
-//            return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+    if (IsSporkActive(SPORK_X_NEW_PROTOCOL_ENFORCEMENT_X))
+       return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 
     return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }

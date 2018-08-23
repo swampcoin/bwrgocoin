@@ -61,7 +61,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, uint32_t nTime)
         return bnNew.GetCompact();
     }
 
-    bool is_hexhash_work = nTime > Params().HEXHashActivationTime();
+    bool is_hexhash_work = true;
 
     for (unsigned int i = 1; BlockReading && BlockReading->nHeight > 0; i++) {
         if (PastBlocksMax > 0 && i > PastBlocksMax) {
@@ -74,8 +74,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, uint32_t nTime)
             uint256 block_target;
             block_target.SetCompact(BlockReading->nBits);
 
-            bool keccak2xhash =  is_hexhash_work
-                              && BlockReading->GetBlockTime() <= Params().HEXHashActivationTime();
+            bool keccak2xhash =  false;
 
             // adjust difficulty of keccak (1350 MHps) blocks for hexhash (13.5 MHps)
             if(keccak2xhash)
