@@ -97,4 +97,4 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-    repo: flyinghuman/ucc
+    repo: uccnetwork/ucc
