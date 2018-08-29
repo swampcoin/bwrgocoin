@@ -3,6 +3,7 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2017-2018 The XDNA Core developers
+// Copyright (c) 2018-2018 The UCC Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -5394,9 +5395,9 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 
 int ActiveProtocol()
 {
-    if (IsSporkActive(SPORK_X_NEW_PROTOCOL_ENFORCEMENT_X))
+    /*if (IsSporkActive(SPORK_X_NEW_PROTOCOL_ENFORCEMENT_X))
        return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-
+    */
     return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }
 
