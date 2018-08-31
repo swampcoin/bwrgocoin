@@ -3,19 +3,19 @@
 UCC Core integration/staging repository
 =====================================
 
-UCC is a brand new digital currency building up a global Community to be united against scam-attempts. We will offer Swap-Solutions for Communitys which has been scammed. Also we will Support Charity Organisations and - who knows - eventually you all onedays can pay in big Online Shops with our Universal Coin (UC). The Community stands at first place, so there will be a Government System where each holder can vote for actual Projects. It is NOT intented to be a HIGH ROI Coin, we will offer Support for scammed Peoples as a long-Term Subject.
+UCC is a brand new digital currency building up a global Community to be united against scam-attempts. We will offer Swap-Solutions for Communitys which has been scammed. Also we will Support Charity Organisations and - who knows - eventually you all onedays can pay in big Online Shops with our United Coin (UC). The Community stands at first place, so there will be a Government System where each holder can vote for actual Projects. It is NOT intented to be a HIGH ROI Coin, we will offer support for scammed Peoples as a long-Term Subject.
 You may ask why we have such a huge Premine?! To offer swaps for scammed coins we need a lot of Coins and also there will be a fee during the Lifetime of the Project so that we can offer the swaps (with a specific ratio).
 
 The UCC Code was forked from [XDNA Project](https://xdna.io/).
 
 More information soon at [uccnetwork.org](http://www.uccnetwork.org).
 
-If you like our Idea, feel free to contact us and work with us. For Team Discussion we use ATM Discord. [Click here to follow invite Link](https://discord.gg/CcMaHNh).
+If you like our Idea, feel free to contact us and work with us. For Discussions we use Discord: [Click here to follow invite Link](https://discord.gg/CcMaHNh).
 
 ### Coin Specs
 
 <table>
-<tr><td>Name & ticker</td><td>UCC</td></tr>
+<tr><td>Name & ticker</td><td>United Community Coin (UCC)</td></tr>
 <tr><td>Consensus algorithm</td><td>PoW/POS</td></tr>
 <tr><td>POW phase duration</td><td>777000 blocks</td></tr>
 <tr><td>PoW block reward</td><td>Dynamic from 4 to 511 UCC</td></tr>
@@ -35,7 +35,7 @@ If you like our Idea, feel free to contact us and work with us. For Team Discuss
 </table>
 
 
-### Block reward
+### Block reward for the BitGun Algo (Thanks goes to XDNA-Devs!)
 
 <table>
 <tr><th>Level</th><th>Network hashrate (Th/s)</th><th>Block reward</th></tr>
