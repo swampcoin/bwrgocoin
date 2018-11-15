@@ -22,7 +22,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/ucc-project/ucc.git"
+- "url": "https://github.com/uccnetwork/ucc.git"
   "dir": "ucc"
 files: []
 script: |

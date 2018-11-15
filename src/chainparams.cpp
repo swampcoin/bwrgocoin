@@ -12,6 +12,7 @@
 #include "util.h"
 #include "utilstrencodings.h"
 
+#include <mutex>
 #include <assert.h>
 #include <limits>
 
@@ -54,14 +55,15 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 //    timestamp before)
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
-    boost::assign::map_list_of(0, uint256("000000c914b2c4a05d8e28f4ec8498b7f13798cd3513cf856c0da23690c00a89"));
-/*                              (50, uint256("000000224104db4572f767923cafd543f36b9a4d1eee117c4dc3e1961ca6371b"))
-                              (60200, uint256("00000000000031ba24b923e1966fbe17ae0cdff1efa9d1efc556e2a3cafb5c55"));*/
+    boost::assign::map_list_of(0, uint256("0x000000c914b2c4a05d8e28f4ec8498b7f13798cd3513cf856c0da23690c00a89"))
+                              (50, uint256("0x00000095487e7b6c6e10eca3d1c16f42af2b7daa85c6ebc3880647361aa22ba4"))
+                              (60200, uint256("0x000000000b791c519d51f8547ccdb4ca6657e7ebc4bcd3a11a01ade338074066"))
+							  (91268, uint256("0x00000000288b93b6501a6b877a029064b58963d6d892f275f23e04a5945ff64a"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1536512400, // * UNIX timestamp of last checkpoint block
-    0,          // * total number of transactions between genesis and last checkpoint
+    1542267487, // * UNIX timestamp of last checkpoint block
+    93975,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -227,7 +229,7 @@ public:
 
         fRequireRPCPassword = true;
         fMiningRequiresPeers = true;
-        fDefaultConsistencyChecks = true;
+        fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
         fSkipProofOfWorkCheck = false;
