@@ -85,6 +85,7 @@ static std::vector<ListenSocket> vhListenSocket;
 CAddrMan addrman;
 int nMaxConnections = 125;
 bool fAddressesInitialized = false;
+std::string strSubVersion;
 
 vector<CNode*> vNodes;
 CCriticalSection cs_vNodes;
@@ -345,16 +346,25 @@ CCriticalSection CNode::cs_totalBytesSent;
 CNode* FindNode(const CNetAddr& ip)
 {
     LOCK(cs_vNodes);
-    BOOST_FOREACH (CNode* pnode, vNodes)
+    for (CNode* pnode : vNodes)
         if ((CNetAddr)pnode->addr == ip)
             return (pnode);
+    return NULL;
+}
+
+CNode* FindNode(const CSubNet& subNet)
+{
+    LOCK(cs_vNodes);
+    for (CNode* pnode : vNodes)
+    if (subNet.Match((CNetAddr)pnode->addr))
+        return (pnode);
     return NULL;
 }
 
 CNode* FindNode(const std::string& addrName)
 {
     LOCK(cs_vNodes);
-    BOOST_FOREACH (CNode* pnode, vNodes)
+    for (CNode* pnode : vNodes)
         if (pnode->addrName == addrName)
             return (pnode);
     return NULL;
@@ -363,7 +373,7 @@ CNode* FindNode(const std::string& addrName)
 CNode* FindNode(const CService& addr)
 {
     LOCK(cs_vNodes);
-    BOOST_FOREACH (CNode* pnode, vNodes) {
+    for (CNode* pnode : vNodes) {
         if (Params().NetworkID() == CBaseChainParams::REGTEST) {
             //if using regtest, just check the IP
             if ((CNetAddr)pnode->addr == (CNetAddr)addr)
@@ -474,16 +484,21 @@ void CNode::PushVersion()
     else
         LogPrint("net", "send version message: version %d, blocks=%d, us=%s, peer=%d\n", PROTOCOL_VERSION, nBestHeight, addrMe.ToString(), id);
     PushMessage("version", PROTOCOL_VERSION, nLocalServices, nTime, addrYou, addrMe,
-        nLocalHostNonce, FormatSubVersion(CLIENT_NAME, CLIENT_VERSION, std::vector<string>()), nBestHeight, true);
+        nLocalHostNonce, strSubVersion, nBestHeight, true);
 }
 
 
 std::map<CNetAddr, int64_t> CNode::setBanned;
 CCriticalSection CNode::cs_setBanned;
+bool CNode::setBannedIsDirty;
 
 void CNode::ClearBanned()
 {
-    setBanned.clear();
+    {
+        LOCK(cs_setBanned);
+        setBanned.clear();
+        setBannedIsDirty = true;
+    }
 }
 
 bool CNode::IsBanned(CNetAddr ip)
@@ -1871,11 +1886,11 @@ bool CAddrDB::Read(CAddrMan& addr)
         return error("%s : Failed to open file %s", __func__, pathAddr.string());
 
     // use file size to size memory buffer
-    int fileSize = boost::filesystem::file_size(pathAddr);
-    int dataSize = fileSize - sizeof(uint256);
+    uint64_t fileSize = boost::filesystem::file_size(pathAddr);
+    uint64_t dataSize = fileSize - sizeof(uint256);
     // Don't try to resize to a negative number if file is small
-    if (dataSize < 0)
-        dataSize = 0;
+    if (fileSize >= sizeof(uint256))
+        dataSize = fileSize - sizeof(uint256);
     vector<unsigned char> vchData;
     vchData.resize(dataSize);
     uint256 hashIn;
@@ -2040,8 +2055,10 @@ void CNode::EndMessage() UNLOCK_FUNCTION(cs_vSend)
     if (mapArgs.count("-fuzzmessagestest"))
         Fuzz(GetArg("-fuzzmessagestest", 10));
 
-    if (ssSend.size() == 0)
+    if (ssSend.size() == 0) {
+	    LEAVE_CRITICAL_SECTION(cs_vSend);
         return;
+    }
 
     // Set the size
     unsigned int nSize = ssSend.size() - CMessageHeader::HEADER_SIZE;

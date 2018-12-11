@@ -226,7 +226,11 @@ void PrepareShutdown()
 #endif
 
 #ifndef WIN32
-    boost::filesystem::remove(GetPidFile());
+    try {
+        boost::filesystem::remove(GetPidFile());
+    } catch (const boost::filesystem::filesystem_error& e) {
+        LogPrintf("%s: Unable to remove pidfile: %s\n", __func__, e.what());
+    }
 #endif
     UnregisterAllValidationInterfaces();
 }
@@ -503,11 +507,11 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    return FormatParagraph(_("Copyright (C) 2009-2014 The Bitcoin Core Developers")) + "\n" +
+    return FormatParagraph(_("Copyright (C) 2009-2018 The Bitcoin Core Developers")) + "\n" +
            "\n" +
-           FormatParagraph(_("Copyright (C) 2014-2015 The Dash Core Developers")) + "\n" +
+           FormatParagraph(_("Copyright (C) 2014-2018 The Dash Core Developers")) + "\n" +
            "\n" +
-           FormatParagraph(_("Copyright (C) 2015-2017 The PIVX Core Developers")) + "\n" +
+           FormatParagraph(_("Copyright (C) 2015-2018 The PIVX Core Developers")) + "\n" +
            "\n" +
            FormatParagraph(_("Copyright (C) 2017-2018 The XDNA Core Developers")) + "\n" +
            "\n" +
@@ -609,8 +613,7 @@ void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 bool InitSanityCheck(void)
 {
     if (!ECC_InitSanityCheck()) {
-        InitError("OpenSSL appears to lack support for elliptic curve cryptography. For more "
-                  "information, visit https://en.bitcoin.it/wiki/OpenSSL_and_EC_Libraries");
+        InitError("Elliptic curve cryptography sanity check failure. Aborting.");
         return false;
     }
     if (!glibc_sanity_test() || !glibcxx_sanity_test())
@@ -647,16 +650,12 @@ bool AppInit2(boost::thread_group& threadGroup)
     typedef BOOL(WINAPI * PSETPROCDEPPOL)(DWORD);
     PSETPROCDEPPOL setProcDEPPol = (PSETPROCDEPPOL)GetProcAddress(GetModuleHandleA("Kernel32.dll"), "SetProcessDEPPolicy");
     if (setProcDEPPol != NULL) setProcDEPPol(PROCESS_DEP_ENABLE);
-
-    // Initialize Windows Sockets
-    WSADATA wsadata;
-    int ret = WSAStartup(MAKEWORD(2, 2), &wsadata);
-    if (ret != NO_ERROR || LOBYTE(wsadata.wVersion) != 2 || HIBYTE(wsadata.wVersion) != 2) {
-        return InitError(strprintf("Error: Winsock library failed to start (WSAStartup returned error %d)", ret));
-    }
 #endif
-#ifndef WIN32
 
+    if (!SetupNetworking())
+        return InitError("Error: Initializing networking failed");
+
+#ifndef WIN32
     if (GetBoolArg("-sysperms", false)) {
 #ifdef ENABLE_WALLET
         if (!GetBoolArg("-disablewallet", false))
@@ -682,10 +681,8 @@ bool AppInit2(boost::thread_group& threadGroup)
     sa_hup.sa_flags = 0;
     sigaction(SIGHUP, &sa_hup, NULL);
 
-#if defined(__SVR4) && defined(__sun)
-    // ignore SIGPIPE on Solaris
+    // Ignore SIGPIPE, otherwise it will bring the daemon down if the client closes unexpectedly
     signal(SIGPIPE, SIG_IGN);
-#endif
 #endif
 
     // ********************************************************* Step 2: parameter interactions
@@ -973,7 +970,7 @@ bool AppInit2(boost::thread_group& threadGroup)
                 sourceFile.make_preferred();
                 backupFile.make_preferred();
                 if (boost::filesystem::exists(sourceFile)) {
-#if BOOST_VERSION >= 158000
+#if BOOST_VERSION >= 105800
                     try {
                         boost::filesystem::copy_file(sourceFile, backupFile);
                         LogPrintf("Creating backup of %s -> %s\n", sourceFile, backupFile);
@@ -1069,6 +1066,21 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     RegisterNodeSignals(GetNodeSignals());
 
+    // sanitize comments per BIP-0014, format user agent and check total size
+    std::vector<std::string> uacomments;
+    for (const std::string& cmt : mapMultiArgs["-uacomment"]) {
+        if (cmt != SanitizeString(cmt, SAFE_CHARS_UA_COMMENT))
+            return InitError(strprintf(_("User Agent comment (%s) contains unsafe characters."), cmt));
+        uacomments.push_back(cmt);
+    }
+
+    // format user agent, check total size
+    strSubVersion = FormatSubVersion(CLIENT_NAME, CLIENT_VERSION, uacomments);
+    if (strSubVersion.size() > MAX_SUBVERSION_LENGTH) {
+        return InitError(strprintf(_("Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments."),
+            strSubVersion.size(), MAX_SUBVERSION_LENGTH));
+    }
+
     if (mapArgs.count("-onlynet")) {
         std::set<enum Network> nets;
         BOOST_FOREACH (std::string snet, mapMultiArgs["-onlynet"]) {
@@ -1115,7 +1127,6 @@ bool AppInit2(boost::thread_group& threadGroup)
         SetProxy(NET_IPV6, addrProxy);
         SetProxy(NET_TOR, addrProxy);
         SetNameProxy(addrProxy);
-        //SetReachable(NET_TOR); // by default, -proxy sets onion as reachable, unless -noonion later
         SetLimited(NET_TOR, false); // by default, -proxy sets onion as reachable, unless -noonion later
     }
 
@@ -1125,7 +1136,6 @@ bool AppInit2(boost::thread_group& threadGroup)
     std::string onionArg = GetArg("-onion", "");
     if (onionArg != "") {
         if (onionArg == "0") { // Handle -noonion/-onion=0
-            //SetReachable(NET_TOR, false); // set onions as unreachable
             SetLimited(NET_TOR); // set onions as unreachable
         } else {
             CService onionProxy;
@@ -1136,7 +1146,6 @@ bool AppInit2(boost::thread_group& threadGroup)
             if (!addrOnion.IsValid())
                 return InitError(strprintf(_("Invalid -onion address or hostname: '%s'"), onionArg));
             SetProxy(NET_TOR, addrOnion);
-            //SetReachable(NET_TOR);
             SetLimited(NET_TOR, false);
         }
     }
@@ -1144,7 +1153,6 @@ bool AppInit2(boost::thread_group& threadGroup)
     // see Step 2: parameter interactions for more information about these
     fListen = GetBoolArg("-listen", DEFAULT_LISTEN);
     fDiscover = GetBoolArg("-discover", true);
-    fNameLookup = GetBoolArg("-dns", true);
 
     bool fBound = false;
     if (fListen) {
@@ -1166,7 +1174,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         } else {
             struct in_addr inaddr_any;
             inaddr_any.s_addr = INADDR_ANY;
-            fBound |= Bind(CService(in6addr_any, GetListenPort()), BF_NONE);
+            fBound |= Bind(CService((in6_addr)IN6ADDR_ANY_INIT, GetListenPort()), BF_NONE);
             fBound |= Bind(CService(inaddr_any, GetListenPort()), !fBound ? BF_REPORT_ERROR : BF_NONE);
         }
         if (!fBound)
@@ -1504,7 +1512,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     }
 
     if (fMasterNode) {
-        LogPrintf("IS OBFUSCATION MASTER NODE\n");
+        LogPrintf("IS MASTER NODE\n");
         strMasterNodeAddr = GetArg("-masternodeaddr", "");
 
         LogPrintf(" addr %s\n", strMasterNodeAddr.c_str());
