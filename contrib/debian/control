@@ -21,8 +21,8 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 1.0
 Homepage: http://www.uccnetwork.org
-Vcs-Git: git://github.com/UCCNetwork/UCC.git
-Vcs-Browser: http://github.com/UCCNetwork/UCC
+Vcs-Git: git://github.com/UCC-Core/UCC.git
+Vcs-Browser: http://github.com/UCC-Core/UCC
 
 Package: uccd
 Architecture: any

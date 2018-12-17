@@ -39,7 +39,7 @@ If you like our Idea, feel free to contact us and work with us. For Discussions 
 
 <table>
 <tr><th>Level</th><th>Network hashrate (Th/s)</th><th>Block reward</th></tr>
-<tr><th>1</th><th>10</th><th>4</th></tr>
+<tr><th>1</th><th>0</th><th>4</th></tr>
 <tr><th>2</th><th>20</th><th>5</th></tr>
 <tr><th>3</th><th>30</th><th>7</th></tr>
 <tr><th>4</th><th>50</th><th>10</th></tr>
