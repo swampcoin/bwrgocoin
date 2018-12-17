@@ -7,7 +7,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/ucc-project/ucc-detached-sigs.git"
+- "url": "https://github.com/uccnetwork/ucc-detached-sigs.git"
   "dir": "signature"
 files:
 - "ucc-osx-unsigned.tar.gz"

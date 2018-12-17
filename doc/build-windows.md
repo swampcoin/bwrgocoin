@@ -22,7 +22,7 @@ First install the toolchains:
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/UCC-Core/UCC.git
+    git clone https://github.com/UCCNetwork/UCC.git
     
 To build executables for Windows 32-bit:
 
@@ -45,4 +45,3 @@ To build executables for Windows 64-bit:
     make
 
 For further documentation on the depends system see [README.md](../depends/README.md) in the depends directory.
-
