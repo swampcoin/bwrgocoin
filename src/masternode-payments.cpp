@@ -634,12 +634,12 @@ void CMasternodePayments::Sync(CNode* node, int nCountNeeded)
     }
 
     auto mn_counts = mnodeman.CountEnabledByLevels();
-    
+
     unsigned max_mn_count = 0u;
 
     for(auto& count : mn_counts)
         max_mn_count = std::max(max_mn_count, count.second * 125 / 100);
-    
+
     if(max_mn_count > nCountNeeded)
         max_mn_count = nCountNeeded;
 
