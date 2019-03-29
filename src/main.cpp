@@ -1655,36 +1655,10 @@ CAmount GetBlockValue(int nHeight, uint32_t nTime)
     return Params().SubsidyValue(netHashRate, nTime);
 }
 
-int64_t GetMasternodePayment(int nHeight, unsigned mnlevel, int64_t blockValue)
-{
-    if (nHeight <= Params().StartMNPaymentsBlock())
-        return 0;
-
-    // PoS Phase
-    if (nHeight > Params().LAST_POW_BLOCK()){
-        return GetSeeSaw(blockValue, nHeight, mnlevel);
-    }
-
-    // PoW Phase
-    switch(mnlevel)
-    {
-        case 1:
-            return blockValue / 100 * 3;
-
-        case 2:
-            return blockValue / 100 * 9;
-
-        case 3:
-            return blockValue / 100 * 15;
-    }
-
-    return 0;
-}
-
 CAmount GetSeeSaw(const CAmount& blockValue, int nHeightm, unsigned mnlevel)
 {
   int nMasternodeCount;
-  if (IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT))
+  if (IsSporkActive(SPORK_4_MASTERNODE_PAYMENT_ENFORCEMENT))
       nMasternodeCount = mnodeman.stable_size(mnlevel);
   else
       nMasternodeCount = mnodeman.size(mnlevel);
@@ -1893,6 +1867,32 @@ CAmount GetSeeSaw(const CAmount& blockValue, int nHeightm, unsigned mnlevel)
             ret = ret;
     }
     return ret;
+}
+
+int64_t GetMasternodePayment(int nHeight, unsigned mnlevel, int64_t blockValue)
+{
+    if (nHeight <= Params().StartMNPaymentsBlock())
+        return 0;
+
+    // PoS Phase
+    if (nHeight > Params().LAST_POW_BLOCK()){
+        return GetSeeSaw(blockValue, nHeight, mnlevel);
+    }
+
+    // PoW Phase
+    switch(mnlevel)
+    {
+        case 1:
+            return blockValue / 100 * 3;
+
+        case 2:
+            return blockValue / 100 * 9;
+
+        case 3:
+            return blockValue / 100 * 15;
+    }
+
+    return 0;
 }
 
 bool IsInitialBlockDownload()
