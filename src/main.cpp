@@ -1655,7 +1655,7 @@ CAmount GetBlockValue(int nHeight, uint32_t nTime)
     return Params().SubsidyValue(netHashRate, nTime);
 }
 
-CAmount GetSeeSaw(const CAmount& blockValue, int nHeightm, unsigned mnlevel)
+CAmount GetSeeSaw(const CAmount& blockValue, int nHeight, unsigned mnlevel)
 {
   int nMasternodeCount;
   if (IsSporkActive(SPORK_4_MASTERNODE_PAYMENT_ENFORCEMENT))
