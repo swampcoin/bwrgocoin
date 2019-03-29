@@ -66,7 +66,6 @@ bool fReindex = false;
 bool fTxIndex = true;
 bool fIsBareMultisigStd = true;
 bool fCheckBlockIndex = false;
-bool fVerifyingBlocks = false;
 unsigned int nCoinCacheSize = 5000;
 bool fAlerts = DEFAULT_ALERTS;
 
@@ -1625,24 +1624,27 @@ CAmount GetBlockValue(int nHeight, uint32_t nTime)
     } else if (nHeight <= Params().ANTI_INSTAMINE_TIME()) {
         return 1 * COIN;
 
-      // POS Year 1
+        // POS Cutover phase
+    } else if (nHeight <= (Params().LAST_POW_BLOCK()+10000) && nHeight > Params().LAST_POW_BLOCK()) {
+        return 1 * COIN;
+        // POS first Year
     } else if (nHeight <= 1302600 && nHeight > Params().LAST_POW_BLOCK()) {
-        return 24 * COIN;
+        return 5 * COIN;
       // POS Year 2
     } else if (nHeight <= 1828200 && nHeight >= 1302601) {
-        return 20 * COIN;
+        return 4 * COIN;
       // POS Year 3
     } else if (nHeight <= 2353800 && nHeight >= 1828201) {
-        return 16 * COIN;
+        return 3 * COIN;
       // POS Year 4
     } else if (nHeight <= 2879400 && nHeight >= 2353801) {
-        return 12 * COIN;
+        return 3 * COIN;
       // POS Year 5
     } else if (nHeight <= 3405000 && nHeight >= 2879401) {
-        return 8 * COIN;
+        return 2 * COIN;
       // POS Year 6
     } else if (nHeight <= 3930600 && nHeight >= 3405001) {
-        return 4 * COIN;
+        return 2 * COIN;
       // POS after Year 6
     } else if (nHeight >= 3930601) {
         return 1 * COIN;
@@ -1658,6 +1660,12 @@ int64_t GetMasternodePayment(int nHeight, unsigned mnlevel, int64_t blockValue)
     if (nHeight <= Params().StartMNPaymentsBlock())
         return 0;
 
+    // PoS Phase
+    if (nHeight > Params().LAST_POW_BLOCK()){
+        return GetSeeSaw(blockValue, nHeight, mnlevel);
+    }
+
+    // PoW Phase
     switch(mnlevel)
     {
         case 1:
@@ -1673,10 +1681,224 @@ int64_t GetMasternodePayment(int nHeight, unsigned mnlevel, int64_t blockValue)
     return 0;
 }
 
+CAmount GetSeeSaw(const CAmount& blockValue, int nHeightm, unsigned mnlevel)
+{
+  int nMasternodeCount;
+  if (IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT))
+      nMasternodeCount = mnodeman.stable_size(mnlevel);
+  else
+      nMasternodeCount = mnodeman.size(mnlevel);
+
+    int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
+    int64_t mNodeCoins;
+    switch(mnlevel)
+    {
+        case 1:
+            mNodeCoins = nMasternodeCount * 1000 * COIN;
+        case 2:
+            mNodeCoins = nMasternodeCount * 3000 * COIN;
+        case 3:
+            mNodeCoins = nMasternodeCount * 5000 * COIN;
+    }
+
+    if (fDebug)
+        LogPrintf("GetMasternodePayment(): moneysupply=%s, nodecoins=%s, level=%d \n", FormatMoney(nMoneySupply).c_str(),
+                  FormatMoney(mNodeCoins).c_str(),mnlevel);
+
+    CAmount ret = 0;
+    if (mNodeCoins == 0) {
+        ret = 0;
+    } else if (nHeight > Params().LAST_POW_BLOCK()) {
+        if (mNodeCoins <= (nMoneySupply * .01) && mNodeCoins > 0) {
+            ret = blockValue * .90;
+        } else if (mNodeCoins <= (nMoneySupply * .02) && mNodeCoins > (nMoneySupply * .01)) {
+            ret = blockValue * .88;
+        } else if (mNodeCoins <= (nMoneySupply * .03) && mNodeCoins > (nMoneySupply * .02)) {
+            ret = blockValue * .87;
+        } else if (mNodeCoins <= (nMoneySupply * .04) && mNodeCoins > (nMoneySupply * .03)) {
+            ret = blockValue * .86;
+        } else if (mNodeCoins <= (nMoneySupply * .05) && mNodeCoins > (nMoneySupply * .04)) {
+            ret = blockValue * .85;
+        } else if (mNodeCoins <= (nMoneySupply * .06) && mNodeCoins > (nMoneySupply * .05)) {
+            ret = blockValue * .84;
+        } else if (mNodeCoins <= (nMoneySupply * .07) && mNodeCoins > (nMoneySupply * .06)) {
+            ret = blockValue * .83;
+        } else if (mNodeCoins <= (nMoneySupply * .08) && mNodeCoins > (nMoneySupply * .07)) {
+            ret = blockValue * .82;
+        } else if (mNodeCoins <= (nMoneySupply * .09) && mNodeCoins > (nMoneySupply * .08)) {
+            ret = blockValue * .81;
+        } else if (mNodeCoins <= (nMoneySupply * .10) && mNodeCoins > (nMoneySupply * .09)) {
+            ret = blockValue * .80;
+        } else if (mNodeCoins <= (nMoneySupply * .11) && mNodeCoins > (nMoneySupply * .10)) {
+            ret = blockValue * .79;
+        } else if (mNodeCoins <= (nMoneySupply * .12) && mNodeCoins > (nMoneySupply * .11)) {
+            ret = blockValue * .78;
+        } else if (mNodeCoins <= (nMoneySupply * .13) && mNodeCoins > (nMoneySupply * .12)) {
+            ret = blockValue * .77;
+        } else if (mNodeCoins <= (nMoneySupply * .14) && mNodeCoins > (nMoneySupply * .13)) {
+            ret = blockValue * .76;
+        } else if (mNodeCoins <= (nMoneySupply * .15) && mNodeCoins > (nMoneySupply * .14)) {
+            ret = blockValue * .75;
+        } else if (mNodeCoins <= (nMoneySupply * .16) && mNodeCoins > (nMoneySupply * .15)) {
+            ret = blockValue * .74;
+        } else if (mNodeCoins <= (nMoneySupply * .17) && mNodeCoins > (nMoneySupply * .16)) {
+            ret = blockValue * .73;
+        } else if (mNodeCoins <= (nMoneySupply * .18) && mNodeCoins > (nMoneySupply * .17)) {
+            ret = blockValue * .72;
+        } else if (mNodeCoins <= (nMoneySupply * .19) && mNodeCoins > (nMoneySupply * .18)) {
+            ret = blockValue * .71;
+        } else if (mNodeCoins <= (nMoneySupply * .20) && mNodeCoins > (nMoneySupply * .19)) {
+            ret = blockValue * .70;
+        } else if (mNodeCoins <= (nMoneySupply * .21) && mNodeCoins > (nMoneySupply * .20)) {
+            ret = blockValue * .69;
+        } else if (mNodeCoins <= (nMoneySupply * .22) && mNodeCoins > (nMoneySupply * .21)) {
+            ret = blockValue * .68;
+        } else if (mNodeCoins <= (nMoneySupply * .23) && mNodeCoins > (nMoneySupply * .22)) {
+            ret = blockValue * .67;
+        } else if (mNodeCoins <= (nMoneySupply * .24) && mNodeCoins > (nMoneySupply * .23)) {
+            ret = blockValue * .66;
+        } else if (mNodeCoins <= (nMoneySupply * .25) && mNodeCoins > (nMoneySupply * .24)) {
+            ret = blockValue * .65;
+        } else if (mNodeCoins <= (nMoneySupply * .26) && mNodeCoins > (nMoneySupply * .25)) {
+            ret = blockValue * .64;
+        } else if (mNodeCoins <= (nMoneySupply * .27) && mNodeCoins > (nMoneySupply * .26)) {
+            ret = blockValue * .63;
+        } else if (mNodeCoins <= (nMoneySupply * .28) && mNodeCoins > (nMoneySupply * .27)) {
+            ret = blockValue * .62;
+        } else if (mNodeCoins <= (nMoneySupply * .29) && mNodeCoins > (nMoneySupply * .28)) {
+            ret = blockValue * .61;
+        } else if (mNodeCoins <= (nMoneySupply * .30) && mNodeCoins > (nMoneySupply * .29)) {
+            ret = blockValue * .60;
+        } else if (mNodeCoins <= (nMoneySupply * .31) && mNodeCoins > (nMoneySupply * .30)) {
+            ret = blockValue * .59;
+        } else if (mNodeCoins <= (nMoneySupply * .32) && mNodeCoins > (nMoneySupply * .31)) {
+            ret = blockValue * .58;
+        } else if (mNodeCoins <= (nMoneySupply * .33) && mNodeCoins > (nMoneySupply * .32)) {
+            ret = blockValue * .57;
+        } else if (mNodeCoins <= (nMoneySupply * .34) && mNodeCoins > (nMoneySupply * .33)) {
+            ret = blockValue * .56;
+        } else if (mNodeCoins <= (nMoneySupply * .35) && mNodeCoins > (nMoneySupply * .34)) {
+            ret = blockValue * .55;
+        } else if (mNodeCoins <= (nMoneySupply * .363) && mNodeCoins > (nMoneySupply * .35)) {
+            ret = blockValue * .54;
+        } else if (mNodeCoins <= (nMoneySupply * .376) && mNodeCoins > (nMoneySupply * .363)) {
+            ret = blockValue * .53;
+        } else if (mNodeCoins <= (nMoneySupply * .389) && mNodeCoins > (nMoneySupply * .376)) {
+            ret = blockValue * .52;
+        } else if (mNodeCoins <= (nMoneySupply * .402) && mNodeCoins > (nMoneySupply * .389)) {
+            ret = blockValue * .51;
+        } else if (mNodeCoins <= (nMoneySupply * .415) && mNodeCoins > (nMoneySupply * .402)) {
+            ret = blockValue * .50;
+        } else if (mNodeCoins <= (nMoneySupply * .428) && mNodeCoins > (nMoneySupply * .415)) {
+            ret = blockValue * .49;
+        } else if (mNodeCoins <= (nMoneySupply * .441) && mNodeCoins > (nMoneySupply * .428)) {
+            ret = blockValue * .48;
+        } else if (mNodeCoins <= (nMoneySupply * .454) && mNodeCoins > (nMoneySupply * .441)) {
+            ret = blockValue * .47;
+        } else if (mNodeCoins <= (nMoneySupply * .467) && mNodeCoins > (nMoneySupply * .454)) {
+            ret = blockValue * .46;
+        } else if (mNodeCoins <= (nMoneySupply * .48) && mNodeCoins > (nMoneySupply * .467)) {
+            ret = blockValue * .45;
+        } else if (mNodeCoins <= (nMoneySupply * .493) && mNodeCoins > (nMoneySupply * .48)) {
+            ret = blockValue * .44;
+        } else if (mNodeCoins <= (nMoneySupply * .506) && mNodeCoins > (nMoneySupply * .493)) {
+            ret = blockValue * .43;
+        } else if (mNodeCoins <= (nMoneySupply * .519) && mNodeCoins > (nMoneySupply * .506)) {
+            ret = blockValue * .42;
+        } else if (mNodeCoins <= (nMoneySupply * .532) && mNodeCoins > (nMoneySupply * .519)) {
+            ret = blockValue * .41;
+        } else if (mNodeCoins <= (nMoneySupply * .545) && mNodeCoins > (nMoneySupply * .532)) {
+            ret = blockValue * .40;
+        } else if (mNodeCoins <= (nMoneySupply * .558) && mNodeCoins > (nMoneySupply * .545)) {
+            ret = blockValue * .39;
+        } else if (mNodeCoins <= (nMoneySupply * .571) && mNodeCoins > (nMoneySupply * .558)) {
+            ret = blockValue * .38;
+        } else if (mNodeCoins <= (nMoneySupply * .584) && mNodeCoins > (nMoneySupply * .571)) {
+            ret = blockValue * .37;
+        } else if (mNodeCoins <= (nMoneySupply * .597) && mNodeCoins > (nMoneySupply * .584)) {
+            ret = blockValue * .36;
+        } else if (mNodeCoins <= (nMoneySupply * .61) && mNodeCoins > (nMoneySupply * .597)) {
+            ret = blockValue * .35;
+        } else if (mNodeCoins <= (nMoneySupply * .623) && mNodeCoins > (nMoneySupply * .61)) {
+            ret = blockValue * .34;
+        } else if (mNodeCoins <= (nMoneySupply * .636) && mNodeCoins > (nMoneySupply * .623)) {
+            ret = blockValue * .33;
+        } else if (mNodeCoins <= (nMoneySupply * .649) && mNodeCoins > (nMoneySupply * .636)) {
+            ret = blockValue * .32;
+        } else if (mNodeCoins <= (nMoneySupply * .662) && mNodeCoins > (nMoneySupply * .649)) {
+            ret = blockValue * .31;
+        } else if (mNodeCoins <= (nMoneySupply * .675) && mNodeCoins > (nMoneySupply * .662)) {
+            ret = blockValue * .30;
+        } else if (mNodeCoins <= (nMoneySupply * .688) && mNodeCoins > (nMoneySupply * .675)) {
+            ret = blockValue * .29;
+        } else if (mNodeCoins <= (nMoneySupply * .701) && mNodeCoins > (nMoneySupply * .688)) {
+            ret = blockValue * .28;
+        } else if (mNodeCoins <= (nMoneySupply * .714) && mNodeCoins > (nMoneySupply * .701)) {
+            ret = blockValue * .27;
+        } else if (mNodeCoins <= (nMoneySupply * .727) && mNodeCoins > (nMoneySupply * .714)) {
+            ret = blockValue * .26;
+        } else if (mNodeCoins <= (nMoneySupply * .74) && mNodeCoins > (nMoneySupply * .727)) {
+            ret = blockValue * .25;
+        } else if (mNodeCoins <= (nMoneySupply * .753) && mNodeCoins > (nMoneySupply * .74)) {
+            ret = blockValue * .24;
+        } else if (mNodeCoins <= (nMoneySupply * .766) && mNodeCoins > (nMoneySupply * .753)) {
+            ret = blockValue * .23;
+        } else if (mNodeCoins <= (nMoneySupply * .779) && mNodeCoins > (nMoneySupply * .766)) {
+            ret = blockValue * .22;
+        } else if (mNodeCoins <= (nMoneySupply * .792) && mNodeCoins > (nMoneySupply * .779)) {
+            ret = blockValue * .21;
+        } else if (mNodeCoins <= (nMoneySupply * .805) && mNodeCoins > (nMoneySupply * .792)) {
+            ret = blockValue * .20;
+        } else if (mNodeCoins <= (nMoneySupply * .818) && mNodeCoins > (nMoneySupply * .805)) {
+            ret = blockValue * .19;
+        } else if (mNodeCoins <= (nMoneySupply * .831) && mNodeCoins > (nMoneySupply * .818)) {
+            ret = blockValue * .18;
+        } else if (mNodeCoins <= (nMoneySupply * .844) && mNodeCoins > (nMoneySupply * .831)) {
+            ret = blockValue * .17;
+        } else if (mNodeCoins <= (nMoneySupply * .857) && mNodeCoins > (nMoneySupply * .844)) {
+            ret = blockValue * .16;
+        } else if (mNodeCoins <= (nMoneySupply * .87) && mNodeCoins > (nMoneySupply * .857)) {
+            ret = blockValue * .15;
+        } else if (mNodeCoins <= (nMoneySupply * .883) && mNodeCoins > (nMoneySupply * .87)) {
+            ret = blockValue * .14;
+        } else if (mNodeCoins <= (nMoneySupply * .896) && mNodeCoins > (nMoneySupply * .883)) {
+            ret = blockValue * .13;
+        } else if (mNodeCoins <= (nMoneySupply * .909) && mNodeCoins > (nMoneySupply * .896)) {
+            ret = blockValue * .12;
+        } else if (mNodeCoins <= (nMoneySupply * .922) && mNodeCoins > (nMoneySupply * .909)) {
+            ret = blockValue * .11;
+        } else if (mNodeCoins <= (nMoneySupply * .935) && mNodeCoins > (nMoneySupply * .922)) {
+            ret = blockValue * .10;
+        } else if (mNodeCoins <= (nMoneySupply * .945) && mNodeCoins > (nMoneySupply * .935)) {
+            ret = blockValue * .09;
+        } else if (mNodeCoins <= (nMoneySupply * .961) && mNodeCoins > (nMoneySupply * .945)) {
+            ret = blockValue * .08;
+        } else if (mNodeCoins <= (nMoneySupply * .974) && mNodeCoins > (nMoneySupply * .961)) {
+            ret = blockValue * .07;
+        } else if (mNodeCoins <= (nMoneySupply * .987) && mNodeCoins > (nMoneySupply * .974)) {
+            ret = blockValue * .06;
+        } else if (mNodeCoins <= (nMoneySupply * .99) && mNodeCoins > (nMoneySupply * .987)) {
+            ret = blockValue * .05;
+        } else {
+            ret = blockValue * .01;
+        }
+    }
+    switch(mnlevel)
+    {
+        case 1:
+            ret = ret * 0.4;
+        case 2:
+            ret = ret * 0.7;
+        case 3:
+            ret = ret;
+    }
+    return ret;
+}
+
 bool IsInitialBlockDownload()
 {
     LOCK(cs_main);
-    if (fImporting || fReindex || fVerifyingBlocks || chainActive.Height() < Checkpoints::GetTotalBlocksEstimate())
+    if (fImporting || fReindex || chainActive.Height() < Checkpoints::GetTotalBlocksEstimate())
         return true;
     static bool lockIBDState = false;
     if (lockIBDState)
@@ -2066,11 +2288,11 @@ static int64_t nTimeIndex = 0;
 static int64_t nTimeCallbacks = 0;
 static int64_t nTimeTotal = 0;
 
-bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pindex, CCoinsViewCache& view, bool fJustCheck, bool fAlreadyChecked)
+bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pindex, CCoinsViewCache& view, bool fJustCheck)
 {
     AssertLockHeld(cs_main);
     // Check it again in case a previous version let a bad block in
-    if (!fAlreadyChecked && !CheckBlock(block, state, !fJustCheck, !fJustCheck))
+    if (!CheckBlock(block, state, !fJustCheck, !fJustCheck))
         return false;
 
     // verify that the view's current state corresponds to the previous block
@@ -2410,14 +2632,11 @@ static int64_t nTimePostConnect = 0;
  * Connect a new block to chainActive. pblock is either NULL or a pointer to a CBlock
  * corresponding to pindexNew, to bypass loading it again from disk.
  */
-bool static ConnectTip(CValidationState& state, CBlockIndex* pindexNew, CBlock* pblock, bool fAlreadyChecked)
+bool static ConnectTip(CValidationState& state, CBlockIndex* pindexNew, CBlock* pblock)
 {
     assert(pindexNew->pprev == chainActive.Tip());
     mempool.check(pcoinsTip);
     CCoinsViewCache view(pcoinsTip);
-
-    if (pblock == NULL)
-        fAlreadyChecked = false;
 
     // Read block from disk.
     int64_t nTime1 = GetTimeMicros();
@@ -2434,7 +2653,7 @@ bool static ConnectTip(CValidationState& state, CBlockIndex* pindexNew, CBlock* 
     LogPrint("bench", "  - Load block from disk: %.2fms [%.2fs]\n", (nTime2 - nTime1) * 0.001, nTimeReadFromDisk * 0.000001);
     {
         CInv inv(MSG_BLOCK, pindexNew->GetBlockHash());
-        bool rv = ConnectBlock(*pblock, state, pindexNew, view, false, fAlreadyChecked);
+        bool rv = ConnectBlock(*pblock, state, pindexNew, view);
         g_signals.BlockChecked(*pblock, state);
         if (!rv) {
             if (state.IsInvalid())
@@ -2645,11 +2864,9 @@ static void PruneBlockIndexCandidates()
  * Try to make some progress towards making pindexMostWork the active block.
  * pblock is either NULL or a pointer to a CBlock corresponding to pindexMostWork.
  */
-static bool ActivateBestChainStep(CValidationState& state, CBlockIndex* pindexMostWork, CBlock* pblock, bool fAlreadyChecked)
+static bool ActivateBestChainStep(CValidationState& state, CBlockIndex* pindexMostWork, CBlock* pblock)
 {
     AssertLockHeld(cs_main);
-    if (pblock == NULL)
-        fAlreadyChecked = false;
     bool fInvalidFound = false;
     const CBlockIndex* pindexOldTip = chainActive.Tip();
     const CBlockIndex* pindexFork = chainActive.FindFork(pindexMostWork);
@@ -2679,7 +2896,7 @@ static bool ActivateBestChainStep(CValidationState& state, CBlockIndex* pindexMo
 
         // Connect new blocks.
         BOOST_REVERSE_FOREACH (CBlockIndex* pindexConnect, vpindexToConnect) {
-            if (!ConnectTip(state, pindexConnect, pindexConnect == pindexMostWork ? pblock : NULL, fAlreadyChecked)) {
+            if (!ConnectTip(state, pindexConnect, pindexConnect == pindexMostWork ? pblock : NULL)) {
                 if (state.IsInvalid()) {
                     // The block violates a consensus rule.
                     if (!state.CorruptionPossible())
@@ -2717,7 +2934,7 @@ static bool ActivateBestChainStep(CValidationState& state, CBlockIndex* pindexMo
  * or an activated best chain. pblock is either NULL or a pointer to a block
  * that is already loaded (to avoid loading it again from disk).
  */
-bool ActivateBestChain(CValidationState& state, CBlock* pblock, bool fAlreadyChecked)
+bool ActivateBestChain(CValidationState& state, CBlock* pblock)
 {
     CBlockIndex* pindexNewTip = NULL;
     CBlockIndex* pindexMostWork = NULL;
@@ -2738,7 +2955,7 @@ bool ActivateBestChain(CValidationState& state, CBlock* pblock, bool fAlreadyChe
             if (pindexMostWork == NULL || pindexMostWork == chainActive.Tip())
                 return true;
 
-            if (!ActivateBestChainStep(state, pindexMostWork, pblock && pblock->GetHash() == pindexMostWork->GetBlockHash() ? pblock : NULL, fAlreadyChecked))
+            if (!ActivateBestChainStep(state, pindexMostWork, pblock && pblock->GetHash() == pindexMostWork->GetBlockHash() ? pblock : NULL))
                 return false;
 
             pindexNewTip = chainActive.Tip();
@@ -3402,7 +3619,7 @@ bool AcceptBlockHeader(const CBlock& block, CValidationState& state, CBlockIndex
     return true;
 }
 
-bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, CDiskBlockPos* dbp, bool fAlreadyCheckedBlock)
+bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, CDiskBlockPos* dbp)
 {
     AssertLockHeld(cs_main);
 
@@ -3443,7 +3660,7 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
         return true;
     }
 
-    if ((!fAlreadyCheckedBlock && !CheckBlock(block, state)) || !ContextualCheckBlock(block, state, pindex->pprev)) {
+    if ((!CheckBlock(block, state)) || !ContextualCheckBlock(block, state, pindex->pprev)) {
         if (state.IsInvalid() && !state.CorruptionPossible()) {
             pindex->nStatus |= BLOCK_FAILED_VALID;
             setDirtyBlockIndex.insert(pindex);
@@ -3569,7 +3786,7 @@ bool ProcessNewBlock(CValidationState& state, CNode* pfrom, CBlock* pblock, CDis
 
         // Store to disk
         CBlockIndex* pindex = NULL;
-        bool ret = AcceptBlock(*pblock, state, &pindex, dbp, checked);
+        bool ret = AcceptBlock(*pblock, state, &pindex, dbp);
         if (pindex && pfrom) {
             mapBlockSource[pindex->GetBlockHash()] = pfrom->GetId();
         }
@@ -3578,7 +3795,7 @@ bool ProcessNewBlock(CValidationState& state, CNode* pfrom, CBlock* pblock, CDis
             return error("%s : AcceptBlock FAILED", __func__);
     }
 
-    if (!ActivateBestChain(state, pblock, checked))
+    if (!ActivateBestChain(state, pblock))
         return error("%s : ActivateBestChain failed", __func__);
 
     if (!fLiteMode) {
@@ -3718,7 +3935,7 @@ CBlockIndex* InsertBlockIndex(uint256 hash)
     return pindexNew;
 }
 
-bool static LoadBlockIndexDB(string& strError)
+bool static LoadBlockIndexDB()
 {
     if (!pblocktree->LoadBlockIndexGuts())
         return false;
@@ -3797,69 +4014,83 @@ bool static LoadBlockIndexDB(string& strError)
     LogPrintf("%s: Last shutdown was prepared: %s\n", __func__, fLastShutdownWasPrepared);
 
     //Check for inconsistency with block file info and internal state
-    if (!fLastShutdownWasPrepared && !GetBoolArg("-forcestart", false) && !GetBoolArg("-reindex", false)) {
-        unsigned int nHeightLastBlockFile = vinfoBlockFile[nLastBlockFile].nHeightLast + 1;
-        if (vSortedByHeight.size() > nHeightLastBlockFile && pcoinsTip->GetBestBlock() != vSortedByHeight[nHeightLastBlockFile].second->GetBlockHash()) {
-            //The database is in a state where a block has been accepted and written to disk, but the
-            //transaction database (pcoinsTip) was not flushed to disk, and is therefore not in sync with
-            //the block index database.
+    if (!fLastShutdownWasPrepared && !GetBoolArg("-forcestart", false) && !GetBoolArg("-reindex", false) && (vSortedByHeight.size() != vinfoBlockFile[nLastBlockFile].nHeightLast + 1) && (vinfoBlockFile[nLastBlockFile].nHeightLast != 0)) {
+        //The database is in a state where a block has been accepted and written to disk, but not
+        //all of the block has perculated through the code. The block and the index should both be
+        //intact (although assertions are added if they are not), and the block will be reprocessed
+        //to ensure all data will be accounted for.
+        LogPrintf("%s: Inconsistent State Detected mapBlockIndex.size()=%d blockFileBlocks=%d\n", __func__, vSortedByHeight.size(), vinfoBlockFile[nLastBlockFile].nHeightLast + 1);
+        LogPrintf("%s: lastIndexPos=%d blockFileSize=%d\n", __func__, vSortedByHeight[vSortedByHeight.size() - 1].second->GetBlockPos().nPos,
+            vinfoBlockFile[nLastBlockFile].nSize);
 
-            if (!mapBlockIndex.count(pcoinsTip->GetBestBlock())) {
-                strError = "The wallet has been not been closed gracefully, causing the transaction database to be out of sync with the block database";
-                return false;
-            }
-            LogPrintf("%s : pcoinstip synced to block height %d, block index height %d\n", __func__,
-                mapBlockIndex[pcoinsTip->GetBestBlock()]->nHeight, vSortedByHeight.size());
+        //try reading the block from the last index we have
+        bool isFixed = true;
+        string strError = "";
+        LogPrintf("%s: Attempting to re-add last block that was recorded to disk\n", __func__);
 
-            //get the index associated with the point in the chain that pcoinsTip is synced to
-            CBlockIndex* pindexLastMeta = vSortedByHeight[vinfoBlockFile[nLastBlockFile].nHeightLast + 1].second;
-            CBlockIndex* pindex = vSortedByHeight[0].second;
-            unsigned int nSortedPos = 0;
-            for (unsigned int i = 0; i < vSortedByHeight.size(); i++) {
-                nSortedPos = i;
-                if (vSortedByHeight[i].first == mapBlockIndex[pcoinsTip->GetBestBlock()]->nHeight + 1) {
-                    pindex = vSortedByHeight[i].second;
-                    break;
-                }
-            }
+        //get the last block that was properly recorded to the block info file
+        CBlockIndex* pindexLastMeta = vSortedByHeight[vinfoBlockFile[nLastBlockFile].nHeightLast + 1].second;
 
-            // Start at the last block that was successfully added to the txdb (pcoinsTip) and manually add all transactions that occurred for each block up until
-            // the best known block from the block index db.
-            CCoinsViewCache view(pcoinsTip);
-            while (nSortedPos < vSortedByHeight.size()) {
-                CBlock block;
-                if (!ReadBlockFromDisk(block, pindex)) {
-                    strError = "The wallet has been not been closed gracefully and has caused corruption of blocks stored to disk. Data directory is in an unusable state";
-                    return false;
-                }
-
-                vector<CTxUndo> vtxundo;
-                vtxundo.reserve(block.vtx.size() - 1);
-                uint256 hashBlock = block.GetHash();
-                for (unsigned int i = 0; i < block.vtx.size(); i++) {
-                    CValidationState state;
-                    CTxUndo undoDummy;
-                    if (i > 0)
-                        vtxundo.push_back(CTxUndo());
-                    UpdateCoins(block.vtx[i], state, view, i == 0 ? undoDummy : vtxundo.back(), pindex->nHeight);
-                    view.SetBestBlock(hashBlock);
-                }
-
-                if (pindex->nHeight >= pindexLastMeta->nHeight)
-                    break;
-
-                pindex = vSortedByHeight[++nSortedPos].second;
-            }
-
-            // Save the updates to disk
-            if (!view.Flush() || !pcoinsTip->Flush())
-                LogPrintf("%s : failed to flush view\n", __func__);
-
-            LogPrintf("%s: Last block properly recorded: #%d %s\n", __func__, pindexLastMeta->nHeight,
-                pindexLastMeta->GetBlockHash().ToString().c_str());
-            LogPrintf("%s : pcoinstip=%d %s\n", __func__, mapBlockIndex[pcoinsTip->GetBestBlock()]->nHeight,
-                pcoinsTip->GetBestBlock().GetHex());
+        //fix Assertion `hashPrevBlock == view.GetBestBlock()' failed. By adjusting height to the last recorded by coinsview
+        CBlockIndex* pindexCoinsView = mapBlockIndex[pcoinsTip->GetBestBlock()];
+        for(unsigned int i = vinfoBlockFile[nLastBlockFile].nHeightLast + 1; i < vSortedByHeight.size(); i++)
+        {
+            pindexLastMeta = vSortedByHeight[i].second;
+            if(pindexLastMeta->nHeight > pindexCoinsView->nHeight)
+                break;
         }
+
+        LogPrintf("%s: Last block properly recorded: #%d %s\n", __func__, pindexLastMeta->nHeight, pindexLastMeta->GetBlockHash().ToString().c_str());
+
+        CBlock lastMetaBlock;
+        if (!ReadBlockFromDisk(lastMetaBlock, pindexLastMeta)) {
+            isFixed = false;
+            strError = strprintf("failed to read block %d from disk", pindexLastMeta->nHeight);
+        }
+
+        //set the chain to the block before lastMeta so that the meta block will be seen as new
+        chainActive.SetTip(pindexLastMeta->pprev);
+
+        //Process the lastMetaBlock again, using the known location on disk
+        CDiskBlockPos blockPos = pindexLastMeta->GetBlockPos();
+        CValidationState state;
+        ProcessNewBlock(state, NULL, &lastMetaBlock, &blockPos);
+
+        //ensure that everything is as it should be
+        if (pcoinsTip->GetBestBlock() != vSortedByHeight[vSortedByHeight.size() - 1].second->GetBlockHash()) {
+            isFixed = false;
+            strError = "pcoinsTip best block is not correct";
+        }
+
+        //properly account for all of the blocks that were not in the meta data. If this is not done the file
+        //positioning will be wrong and blocks will be overwritten and later cause serialization errors
+        CBlockIndex *pindexLast = vSortedByHeight[vSortedByHeight.size() - 1].second;
+        CBlock lastBlock;
+        if (!ReadBlockFromDisk(lastBlock, pindexLast)) {
+            isFixed = false;
+            strError = strprintf("failed to read block %d from disk", pindexLast->nHeight);
+        }
+        vinfoBlockFile[nLastBlockFile].nHeightLast = pindexLast->nHeight;
+        vinfoBlockFile[nLastBlockFile].nSize = pindexLast->GetBlockPos().nPos + ::GetSerializeSize(lastBlock, SER_DISK, CLIENT_VERSION);;
+        setDirtyFileInfo.insert(nLastBlockFile);
+        FlushStateToDisk(state, FLUSH_STATE_ALWAYS);
+
+        //Print out file info again
+        pblocktree->ReadLastBlockFile(nLastBlockFile);
+        vinfoBlockFile.resize(nLastBlockFile + 1);
+        LogPrintf("%s: last block file = %i\n", __func__, nLastBlockFile);
+        for (int nFile = 0; nFile <= nLastBlockFile; nFile++) {
+            pblocktree->ReadBlockFileInfo(nFile, vinfoBlockFile[nFile]);
+        }
+        LogPrintf("%s: last block file info: %s\n", __func__, vinfoBlockFile[nLastBlockFile].ToString());
+
+        if (!isFixed) {
+            strError = "Failed reading from database. " + strError + ". The block database is in an inconsistent state and may cause issues in the future."
+                                                                     "To force start use -forcestart";
+            uiInterface.ThreadSafeMessageBox(strError, "", CClientUIInterface::MSG_ERROR);
+            abort();
+        }
+        LogPrintf("Passed corruption fix\n");
     }
 
     // Check whether we need to continue reindexing
@@ -3967,7 +4198,7 @@ bool CVerifyDB::VerifyDB(CCoinsView* coinsview, int nCheckLevel, int nCheckDepth
             CBlock block;
             if (!ReadBlockFromDisk(block, pindex))
                 return error("VerifyDB() : *** ReadBlockFromDisk failed at %d, hash=%s", pindex->nHeight, pindex->GetBlockHash().ToString());
-            if (!ConnectBlock(block, state, pindex, coins, false))
+            if (!ConnectBlock(block, state, pindex, coins))
                 return error("VerifyDB() : *** found unconnectable block at %d, hash=%s", pindex->nHeight, pindex->GetBlockHash().ToString());
         }
     }
@@ -3985,10 +4216,10 @@ void UnloadBlockIndex()
     pindexBestInvalid = NULL;
 }
 
-bool LoadBlockIndex(string& strError)
+bool LoadBlockIndex()
 {
     // Load block index from databases
-    if (!fReindex && !LoadBlockIndexDB(strError))
+    if (!fReindex && !LoadBlockIndexDB())
         return false;
     return true;
 }
@@ -5397,7 +5628,7 @@ int ActiveProtocol()
 {
     if(IsSporkActive(SPORK_7_NEW_PROTOCOL_ENFORCEMENT))
        return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-    
+
     return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }
 
