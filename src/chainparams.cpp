@@ -292,8 +292,8 @@ public:
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
-        nTargetSpacing = 1 * 60;  // UCC: 1 minute
-        nLastPOWBlock = std::numeric_limits<decltype(nLastPOWBlock)>::max();
+        nTargetSpacing = 1 * 10;  // UCC: 10 seconds
+        nLastPOWBlock = 40000;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = std::numeric_limits<decltype(nModifierUpdateBlock)>::max();
@@ -304,7 +304,7 @@ public:
         genesis.nTime = 1536512401;
         genesis.nNonce = 30578;
 
-	//MineGenesis(genesis);
+	      //MineGenesis(genesis);
         //std::cout << genesis.ToString() << std::endl;
 
         hashGenesisBlock = genesis.GetHash();
@@ -318,7 +318,7 @@ public:
         vSeeds.push_back(CDNSSeedData("uccnetwork.org", "seednode3.uccnetwork.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 128); // Testnet UCC addresses start with 't'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 11);  
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 11);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 240);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
         // Testnet UCC BIP32 pubkeys start with 'DRKV'
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x51)(0xc0).convert_to_container<std::vector<unsigned char> >();
