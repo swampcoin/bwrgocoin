@@ -3300,6 +3300,11 @@ void CWallet::AutoCombineDust()
         return;
     }
 
+    // If the block height hasn't exceeded our frequency; or is not a multiple of our frequency.
+    if ((nBlockFrequency > chainActive.Tip()->nHeight) || (chainActive.Tip()->nHeight % nBlockFrequency)) {
+        return;
+    }
+	
     map<CBitcoinAddress, vector<COutput> > mapCoinsByAddress = AvailableCoinsByAddress(true, nAutoCombineThreshold * COIN);
 
     //coins are sectioned by address. This combination code only wants to combine inputs that belong to the same address
