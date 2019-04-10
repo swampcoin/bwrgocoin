@@ -644,10 +644,11 @@ bool ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue, CW
             ssValue >> strDisabledAddress;
             pwallet->vDisabledAddresses.push_back(strDisabledAddress);
         } else if (strType == "autocombinesettings") {
-            std::pair<bool, CAmount> pSettings;
+            std::pair<std::pair<bool, CAmount>,int> pSettings;
             ssValue >> pSettings;
-            pwallet->fCombineDust = pSettings.first;
-            pwallet->nAutoCombineThreshold = pSettings.second;
+            pwallet->fCombineDust = pSettings.first.first;
+            pwallet->nAutoCombineThreshold = pSettings.first.second;
+            pwallet->nBlockFrequency = pSettings.second;
         } else if (strType == "destdata") {
             std::string strAddress, strKey, strValue;
             ssKey >> strAddress;
