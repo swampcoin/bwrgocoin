@@ -3301,10 +3301,16 @@ void CWallet::AutoCombineDust()
         return;
     }
 
-    // If the block height hasn't exceeded our frequency; or is not a multiple of our frequency.
-    if ((nAutoCombineBlockFrequency > chainActive.Tip()->nHeight) || 
-        (chainActive.Tip()->nHeight % nAutoCombineBlockFrequency)) {
-        return;
+    if (0 != nAutoCombineBlockFrequency) {
+        // If the block height hasn't exceeded our frequency; or is not a multiple of our frequency.
+        if ((nAutoCombineBlockFrequency > chainActive.Tip()->nHeight) || 
+            (chainActive.Tip()->nHeight % nAutoCombineBlockFrequency)) {
+            return;
+        }
+    } else {
+        // If nAutoCombineBlockFrequency is 0, it's the special onetime case
+        // so let it rip but turn it off so it doesn't rip again.
+        fCombineDust = 0;
     }
 	
     map<CBitcoinAddress, vector<COutput> > mapCoinsByAddress = AvailableCoinsByAddress(true, nAutoCombineThreshold * COIN);
