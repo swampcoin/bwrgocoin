@@ -210,7 +210,7 @@ public:
     //Auto Combine Inputs
     bool fCombineDust;
     CAmount nAutoCombineThreshold;
-	int nAutoCombineBlockFrequency;
+    int nAutoCombineBlockFrequency;
 
     CWallet()
     {

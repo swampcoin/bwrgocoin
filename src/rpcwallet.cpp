@@ -2040,21 +2040,23 @@ UniValue getstakesplitthreshold(const UniValue& params, bool fHelp)
     return int(pwalletMain->nStakeSplitThreshold);
 }
 
-UniValue getautocombineinfo(const Array& params, bool fHelp)
+UniValue getautocombineinfo(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "getautocombineinfo\n"
             "Returns the autocombinerewards settings\n");
 
-    Object result;
-	result.push_back(Pair("autocombine set to <on/off>  ", int(pwalletMain->fCombineDust)));
+    UniValue obj(UniValue::VOBJ);
+    obj.push_back(Pair("autocombine set to <on/off>  ", int(pwalletMain->fCombineDust)));
     if (pwalletMain->fCombineDust) {
-        result.push_back(Pair("autocombine threshold set to <Coin Amount>", int(pwalletMain->nAutoCombineThreshold)));
-        result.push_back(Pair("autocombine block frequency set to ", int(pwalletMain->nAutoCombineBlockFrequency)));
+        obj.push_back(Pair("autocombine threshold set to <Coin Amount>", 
+                            int(pwalletMain->nAutoCombineThreshold)));
+        obj.push_back(Pair("autocombine block frequency set to ", 
+                            int(pwalletMain->nAutoCombineBlockFrequency)));
     }
     
-    return result;
+    return obj;
 }
 
 UniValue autocombinerewards(const UniValue& params, bool fHelp)
@@ -2091,19 +2093,25 @@ UniValue autocombinerewards(const UniValue& params, bool fHelp)
             if (nBlockFrequency < 1)
                 nBlockFrequency = 1;
         }
-	}
+    }
 
     pwalletMain->fCombineDust = fEnable;
     pwalletMain->nAutoCombineThreshold = nThreshold;
-	pwalletMain->nAutoCombineBlockFrequency = nAutoCombineBlockFrequency;			
+    pwalletMain->nAutoCombineBlockFrequency = nBlockFrequency;
 
     if (!walletdb.WriteAutoCombineSettings(fEnable, nThreshold, nBlockFrequency))
         throw runtime_error("Changed settings in wallet but failed to save to database\n");
 
-    if (fEnable)
-        return "Auto Combine Rewards Enabled.  Threshold: " << nThreshold << " Frequency: " << nBlockFrequency << " Blocks";
-    else
-        return "Auto Combine Rewards Disabled";
+    UniValue obj(UniValue::VOBJ);
+    obj.push_back(Pair("autocombine set to <on/off>  ", int(pwalletMain->fCombineDust)));
+    if (pwalletMain->fCombineDust) {
+        obj.push_back(Pair("autocombine threshold set to <Coin Amount>", 
+                            int(pwalletMain->nAutoCombineThreshold)));
+        obj.push_back(Pair("autocombine block frequency set to ", 
+                            int(pwalletMain->nAutoCombineBlockFrequency)));
+    }
+    
+    return obj;
 }
 
 UniValue printMultiSend()
