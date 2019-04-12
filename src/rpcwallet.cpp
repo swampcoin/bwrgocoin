@@ -2054,6 +2054,9 @@ UniValue getautocombineinfo(const UniValue& params, bool fHelp)
                            int(pwalletMain->nAutoCombineThreshold)));
         if (0 == pwalletMain->nAutoCombineBlockFrequency) {
             obj.push_back(Pair("autocombine set to one time", "on next block"));
+        } else {
+            obj.push_back(Pair("autocombine block frequency set to ",
+                           int(pwalletMain->nAutoCombineBlockFrequency)));
         }
     }
     else {
@@ -2081,7 +2084,7 @@ UniValue autocombinerewards(const UniValue& params, bool fHelp)
             "\nWallet will automatically monitor for UTXOs with values below the threshold amount, "
             "and combine them into transactions sized to the threshold amount, if they reside with "
             "the same UCC address.\n"
-            "\nA frequency value of \"0\" will run the sweep on the next available block, or once on startup.\n"
+            "\nA frequency value of \"0\" will run the sweep on the next available block, once on every startup.\n"
             "\nWhen autocombinerewards runs it will create a transaction, and therefore will be subject "
             "to transaction fees.  Transactions will be limited to a full combine of the threshold "
             "amount unless the transaction fees are zero.\n"
