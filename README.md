@@ -27,7 +27,7 @@ If you like our Idea, feel free to contact us and work with us. For Discussions 
 <tr><td>POS block reward</td><td>24 UCC lowering by 4 coins every 525600 blocks until block reward is 1 UCC</td></tr>
 <tr><td>POS block reward distribution</td><td>SeeSaw</td></tr>
 <tr><td>Estimated UCC supply during 15 years of POS</td><td>47,000,000</td></tr>
-<tr><td>Premine</td><td>5,3000,00 UCC (4.17% of total supply due many swapping coins are needed)</td></tr>
+<tr><td>Premine</td><td>5,300,000 UCC (4.17% of total supply due to the for swapping coins)</td></tr>
 <tr><td>Blocksize</td><td>1 MB</td></tr>
 <tr><td>Blocktime average</td><td>1 min (DGW3)</td></tr>
 <tr><td>Number of transaction confirmations</td><td>6</td></tr>
