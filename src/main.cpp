@@ -1704,7 +1704,7 @@ CAmount GetSeeSaw(const CAmount& blockValue, int nHeight)
         ** with an offset of 4. This makes a total table length of
         ** 77 elements; ranging from 0 to 76.
         ** 0/anysupply/.013 = 0.  maxsupply/maxsupply/.013 = 76
-	** Credits: CaveSpectre 2019
+        ** Credits: CaveSpectre 2019
         */
         SeeSawTableIndex = floor((double)mNodeCoins/nMoneySupply/.013);
     }
@@ -1716,7 +1716,7 @@ CAmount GetSeeSaw(const CAmount& blockValue, int nHeight)
 
     if (fDebug)
         LogPrintf("GetSeeSaw(): Calculated Masternode to receive %s of the %s Block Reward\n", 
-		  FormatMoney(ret).c_str(),
+                  FormatMoney(ret).c_str(),
                   FormatMoney(blockValue).c_str());
 
     return ret;
