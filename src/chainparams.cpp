@@ -293,23 +293,25 @@ public:
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
         nTargetSpacing = 1 * 10;  // UCC: 10 seconds
-        nLastPOWBlock = 40000;
+        nLastPOWBlock = 4000;
         nMaturity = 15;
         nMasternodePercentDrift = 4;
         nModifierUpdateBlock = std::numeric_limits<decltype(nModifierUpdateBlock)>::max();
         nMaxMoneyOut = 1000000000 * COIN;
 
+	nStartMasternodePaymentsBlock = 1001;
+
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1536512401;
-        genesis.nNonce = 30578;
+        genesis.nTime = 1558695858;
+        genesis.nNonce = 1493732;
 
-	      //MineGenesis(genesis);
+	//MineGenesis(genesis);
         //std::cout << genesis.ToString() << std::endl;
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("00000c5daaf65811373c50c5484f7453bef8e7ee071f275112a84f53b422369c"));
+        assert(hashGenesisBlock == uint256("00000065c19853939e1dddeb012661b6fec25e5894723f1e3a01775bac255fa3"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -339,7 +341,7 @@ public:
         nPoolMaxTransactions = 2;
         strSporkKey = "04cce5d10552bda19b62b597f80f37d8ad4c2c28b59d5bc0e39e42c046fbb73522a6b23339ffcd43f3aba62c128486c2e74b004480ed977c09252c78150bcb2d7a";
         strObfuscationPoolDummyAddress = "tk7oN9aE8Foa8gqoJCYx4UcrWnEaFvr3Co";
-        nStartMasternodePayments = 1536512409;
+        nStartMasternodePayments = 1558695858;
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
     {
