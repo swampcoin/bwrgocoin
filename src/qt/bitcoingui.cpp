@@ -200,11 +200,11 @@ QString windowTitle = tr("UCC Core") + " - ";
     labelBlocksIcon->setFixedSize(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE);
 
     if (enableWallet) {
-        
+
         frameBlocksLayout->addWidget(labelEncryptionIcon);
     }
-    
-   // frameBlocksLayout->addWidget(labelStakingIcon);
+
+    frameBlocksLayout->addWidget(labelStakingIcon);
     frameBlocksLayout->addWidget(labelBlocksIcon);
     frameBlocksLayout->addWidget(labelConnectionsIcon);
     frameBlocksLayout->setAlignment(Qt::AlignRight);
@@ -259,7 +259,7 @@ QString windowTitle = tr("UCC Core") + " - ";
     connect(openMNConfEditorAction, SIGNAL(triggered()), rpcConsole, SLOT(showMNConfEditor()));
     connect(showBackupsAction, SIGNAL(triggered()), rpcConsole, SLOT(showBackups()));
     connect(labelConnectionsIcon, SIGNAL(clicked()), this, SLOT(showPeers()));
-  
+
 
     // Get restart command-line parameters and handle restart
     connect(rpcConsole, SIGNAL(handleRestart(QStringList)), this, SLOT(handleRestart(QStringList)));
@@ -278,15 +278,13 @@ QString windowTitle = tr("UCC Core") + " - ";
 
     // Subscribe to notifications from core
     subscribeToCoreSignals();
-  
+
    //will be activate when pow ends
-   /*
    labelStakingIcon->hide();
    QTimer* timerStakingIcon = new QTimer(labelStakingIcon);
    connect(timerStakingIcon, SIGNAL(timeout()), this, SLOT(setStakingStatus()));
    timerStakingIcon->start(10000);
    setStakingStatus();
-   */
 }
 
 BitcoinGUI::~BitcoinGUI()
@@ -306,7 +304,7 @@ BitcoinGUI::~BitcoinGUI()
 void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 {
     QActionGroup* tabGroup = new QActionGroup(this);
- 
+
     overviewAction = new QAction(QIcon(":/icons/overview"), "", this);
     overviewAction->setStatusTip(tr("Show general overview of wallet"));
     overviewAction->setToolTip(overviewAction->statusTip());
@@ -317,7 +315,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     overviewAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_1));
 #endif
     tabGroup->addAction(overviewAction);
-    
+
     sendCoinsAction = new QAction(QIcon(":/icons/send"), "", this);
     sendCoinsAction->setStatusTip(tr("Send coins to a UCC address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
@@ -328,7 +326,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
 #endif
     tabGroup->addAction(sendCoinsAction);
-   
+
     receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), "", this);
     receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and UCC: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
@@ -723,7 +721,7 @@ void BitcoinGUI::createTrayIconMenu()
 #endif
 
     // Configuration of the tray icon (or dock icon) icon menu
-   
+
     trayIconMenu->addAction(toggleHideAction);
      /*
     trayIconMenu->addSeparator();
@@ -954,7 +952,7 @@ if (!masternodeSync.IsBlockchainSynced() || !masternodeSync.IsSynced())
                                            .pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
             spinnerFrame = (spinnerFrame + 1) % SPINNER_FRAMES;
 }
-else   disconnect(synctimer, SIGNAL(timeout()), 0, 0);    
+else   disconnect(synctimer, SIGNAL(timeout()), 0, 0);
 }
 
 void BitcoinGUI::setNumBlocks(int count)
@@ -1004,7 +1002,7 @@ void BitcoinGUI::setNumBlocks(int count)
         } else {
             int nAttempt;
             int progress = 0;
-            
+
 #ifdef ENABLE_WALLET
             if (walletFrame)
                 walletFrame->showOutOfSyncWarning(false);
@@ -1048,7 +1046,7 @@ void BitcoinGUI::setNumBlocks(int count)
         progressBar->setVisible(true);
 
         tooltip = tr("Catching up...") + QString("<br>") + tooltip;
-                
+
         prevBlocks = count;
 
 #ifdef ENABLE_WALLET
