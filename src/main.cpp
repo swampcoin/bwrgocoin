@@ -3,7 +3,7 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2017-2018 The XDNA Core developers
-// Copyright (c) 2018-2018 The UCC Core developers
+// Copyright (c) 2018-2019 The UCC Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1655,11 +1655,17 @@ CAmount GetBlockValue(int nHeight, uint32_t nTime)
     return Params().SubsidyValue(netHashRate, nTime);
 }
 
-CAmount GetSeeSaw(const CAmount& blockValue, int nHeight)
+CAmount GetSeeSaw(const CAmount& blockValue, int nHeight, bool bDrift)
 {
     int nMasternodeCountLevel1;
     int nMasternodeCountLevel2;
     int nMasternodeCountLevel3;
+    static int lastHeight=0;
+
+    if ((nHeight <= Params().LAST_POW_BLOCK()) && (nHeight != lastHeight)) {
+       LogPrintf("GetSeeSaw() called during POW; strange things may occur!\n");
+    }
+
     if (IsSporkActive(SPORK_4_MASTERNODE_PAYMENT_ENFORCEMENT))
     {
         nMasternodeCountLevel1 = mnodeman.stable_size(1);
@@ -1682,9 +1688,20 @@ CAmount GetSeeSaw(const CAmount& blockValue, int nHeight)
     mNodeCoins += nMasternodeCountLevel2 * 3000 * COIN;
     mNodeCoins += nMasternodeCountLevel3 * 5000 * COIN;
 
-    if (fDebug)
-        LogPrintf("GetSeeSaw(): moneysupply=%s, overall nodecoins=%s\n", FormatMoney(nMoneySupply).c_str(),
-                  FormatMoney(mNodeCoins).c_str());
+    if (bDrift) {
+        int64_t mRawLocked = mNodeCoins;
+        // Add drift wiggle room to the calcuation.  
+        mNodeCoins += (mNodeCoins * ((double)Params().MasternodePercentDrift() / 100));
+        if (fDebug && (nHeight != lastHeight)) {
+            LogPrintf("GetSeeSaw(): Adding %d%% to %s locked coins.  Using %s to generate minimum required payment.\n", 
+                      (int)Params().MasternodePercentDrift(), FormatMoney(mRawLocked).c_str(), FormatMoney(mNodeCoins).c_str());
+        }
+    }
+
+    if (fDebug && (nHeight != lastHeight)) {
+        LogPrintf("GetSeeSaw(): Calculating Masternode Reward when Coin Supply is %s and Locked Coins are %s\n", 
+                  FormatMoney(nMoneySupply).c_str(), FormatMoney(mNodeCoins).c_str());
+    }
 
     CAmount ret = 0;  // if not POS, we will have strange results; however just leave the warning above and let it go.
 
@@ -1713,16 +1730,18 @@ CAmount GetSeeSaw(const CAmount& blockValue, int nHeight)
     ** 100 - 0 - 4 = 96; 100 - 76 - 4 = 20
     */
     ret = blockValue * ((double)(100-SeeSawTableIndex-4) / 100);
-
-    if (fDebug)
-        LogPrintf("GetSeeSaw(): Calculated Masternode to receive %s of the %s Block Reward\n", 
+    if (fDebug && (nHeight != lastHeight)) {
+        LogPrintf("GetSeeSaw(): Calculated Masternode to receive %s%s of the %s Block Reward\n", 
+                  bDrift ? "at least " : "",
                   FormatMoney(ret).c_str(),
                   FormatMoney(blockValue).c_str());
+    }
 
+    lastHeight = nHeight; // save the height so we don't keep issuing the same messages
     return ret;
 }
 
-int64_t GetMasternodePayment(int nHeight, unsigned mnlevel, int64_t blockValue)
+int64_t GetMasternodePayment(int nHeight, unsigned mnlevel, int64_t blockValue, bool bDrift)
 {
     int64_t mnPayment;
 
@@ -1731,10 +1750,10 @@ int64_t GetMasternodePayment(int nHeight, unsigned mnlevel, int64_t blockValue)
 
     if (nHeight > Params().LAST_POW_BLOCK()) {
         // PoS Phase
-        mnPayment = GetSeeSaw(blockValue, nHeight);
+        mnPayment = GetSeeSaw(blockValue, nHeight, bDrift);
     } else {
         // PoW Phase
-	      mnPayment = blockValue / 100 * 27; // 27% to masternodes = 3% level1 + 9% Level 2 + 15% Level3
+        mnPayment = blockValue / 100 * 27; // 27% to masternodes = 3% level1 + 9% Level 2 + 15% Level3
     }
 
     int64_t mnShare = mnPayment / 9;
@@ -1746,7 +1765,7 @@ int64_t GetMasternodePayment(int nHeight, unsigned mnlevel, int64_t blockValue)
         case 2:
             return mnShare * 3;
         case 3:
-	          return mnShare * 5;
+            return mnShare * 5;
     }
 
     return 0;
@@ -3203,7 +3222,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                 return state.DoS(100, error("CheckBlock() : coinbase do not have the dev or fund reward."),
                 REJECT_INVALID, "bad-cb-reward-missing");
 
-            int FoudIndex = -1;
+            int FundIndex = -1;
             int DevIndex = -1;
 
             for (unsigned int indx = 0; indx < block.vtx[0].vout.size(); ++indx) {
@@ -3212,16 +3231,17 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                 if (tmp_address == DevAddress)
                     DevIndex = indx;
                 if (tmp_address == FundAddress)
-                    FoudIndex = indx;
+                    FundIndex = indx;
             }
 
-            if(FoudIndex == -1 || DevIndex == -1)
+            if(FundIndex == -1 || DevIndex == -1)
                 return state.DoS(100, error("CheckBlock() : coinbase do not have the dev or fund reward (vout)."),
                 REJECT_INVALID, "bad-cb-reward-missing");
 
             CAmount block_value = GetBlockValue(nHeight, block.nTime);
 
-            if (block.vtx[0].vout[DevIndex].nValue < block_value * Params().GetDevFee() / 100 || block.vtx[0].vout[FoudIndex].nValue < block_value * Params().GetFundFee() / 100)
+		    
+            if (block.vtx[0].vout[DevIndex].nValue < block_value * Params().GetDevFee() / 100 || block.vtx[0].vout[FundIndex].nValue < block_value * Params().GetFundFee() / 100)
                 return state.DoS(100, error("CheckBlock() : coinbase do not have the enough reward for dev or fund."),
                 REJECT_INVALID, "bad-cb-reward-invalid");
 
