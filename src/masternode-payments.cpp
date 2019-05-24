@@ -347,7 +347,7 @@ bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew, uint3
 
     CAmount nReward = GetBlockValue(nBlockHeight, nTime);
 
-    if (nBlockHeight > Params().LAST_POW_BLOCK() {
+    if (nBlockHeight > Params().LAST_POW_BLOCK()) {
         // Deduct the payments out so SeeSaw splits the right amount
         CAmount DevReward = nReward * Params().GetDevFee() / 100;
         CAmount FundReward = nReward * Params().GetFundFee() / 100;
