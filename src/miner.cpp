@@ -336,7 +336,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
         if (!fProofOfStake)
             UpdateTime(pblock, pindexPrev);
 
-        CAmount block_value = GetBlockValue(nHeight, pblock->nTime);
+        CAmount block_value = GetBlockValue(nHeight, pblock->nTime); // XXX - Second Param isn't used
 
         txNew.vin[0].scriptSig = CScript() << nHeight << OP_0;
 
@@ -388,9 +388,20 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
 
         // Fill in header
         pblock->hashPrevBlock = pindexPrev->GetBlockHash();
-        pblock->nBits = GetNextWorkRequired(pindexPrev, pblock->nTime);
+        pblock->nBits = GetNextWorkRequired(pindexPrev, pblock->nTime); // XXX - Doesn't even use second parameter
         pblock->nNonce = 0;
+
         pblocktemplate->vTxSigOps[0] = GetLegacySigOpCount(pblock->vtx[0]);
+
+        if (fProofOfStake) {
+            unsigned int nExtraNonce = 0;
+            IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
+            LogPrintf("CPUMiner : proof-of-stake block found %s \n", pblock->GetHash().ToString().c_str());
+            if (!pblock->SignBlock(*pwallet)) {
+                LogPrintf("CreateNewBlock(): Signing new block with UTXO key failed \n");
+                return nullptr;
+            }
+        }
 
         CValidationState state;
         if (!TestBlockValidity(state, *pblock, pindexPrev, false, false)) {
