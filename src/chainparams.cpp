@@ -303,15 +303,14 @@ public:
 
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1558695858;
-        genesis.nNonce = 1493732;
+        genesis.nTime = 1558955541;
+        genesis.nNonce = 157995;
 
 	//MineGenesis(genesis);
-        //std::cout << genesis.ToString() << std::endl;
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("00000065c19853939e1dddeb012661b6fec25e5894723f1e3a01775bac255fa3"));
+        assert(hashGenesisBlock == uint256("000008d40446be525d6814a9a34d48a4b0e021b5029ae532ad5afa7f03c378d9"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
