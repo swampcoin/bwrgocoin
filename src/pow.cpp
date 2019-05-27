@@ -2,6 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2017-2018 The XDNA Core developers
+// Copyright (c) 2018-2019 The UCC Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -17,7 +18,7 @@
 #include <math.h>
 
 
-unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, uint32_t nTime)
+unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader* pblock)
 {
     /* current difficulty formula, UCC - DarkGravity v3, written by Evan Duffield - evan@dashpay.io */
     const CBlockIndex* BlockLastSolved = pindexLast;
@@ -61,8 +62,6 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, uint32_t nTime)
         return bnNew.GetCompact();
     }
 
-    bool is_hexhash_work = true;
-
     for (unsigned int i = 1; BlockReading && BlockReading->nHeight > 0; i++) {
         if (PastBlocksMax > 0 && i > PastBlocksMax) {
             break;
@@ -71,19 +70,10 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, uint32_t nTime)
 
         if (CountBlocks <= PastBlocksMin) {
 
-            uint256 block_target;
-            block_target.SetCompact(BlockReading->nBits);
-
-            bool keccak2xhash =  false;
-
-            // adjust difficulty of keccak (1350 MHps) blocks for hexhash (13.5 MHps)
-            if(keccak2xhash)
-                block_target *= 100;  // 100 = 1350 MHps / 13.5 MHps
-
             if (CountBlocks == 1) {
-                PastDifficultyAverage = block_target;
+                PastDifficultyAverage.SetCompact(BlockReading->nBits);
             } else {
-                PastDifficultyAverage = ((PastDifficultyAveragePrev * CountBlocks) + (block_target)) / (CountBlocks + 1);
+                PastDifficultyAverage = ((PastDifficultyAveragePrev * CountBlocks) + (uint256().SetCompact(BlockReading->nBits))) / (CountBlocks + 1);
             }
             PastDifficultyAveragePrev = PastDifficultyAverage;
         }
