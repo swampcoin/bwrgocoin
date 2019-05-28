@@ -351,7 +351,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
 	}
 
         // Compute final coinbase transaction.
-        pblock->vin[0].scriptSig = CScript() << nHeight << OP_0;
+        txNew.vin[0].scriptSig = CScript() << nHeight << OP_0;
         if (!fProofOfStake) {
             pblock->vtx[0] = txNew;  // This could very much be what blew up our PoS
             pblocktemplate->vTxFees[0] = -nFees;
