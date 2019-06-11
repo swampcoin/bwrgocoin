@@ -69,7 +69,7 @@ bool fCheckBlockIndex = false;
 unsigned int nCoinCacheSize = 5000;
 bool fAlerts = DEFAULT_ALERTS;
 
-unsigned int nStakeMinAge = 60 * 60;
+unsigned int nStakeMinAge = 60 * 60; // 1 hour
 int64_t nReserveBalance = 0;
 
 /** Fees smaller than this (in uucc) are considered zero fee (for relaying and mining)
@@ -913,7 +913,7 @@ int GetIXConfirmations(uint256 nTXHash)
     return 0;
 }
 
-// ppcoin: total coin age spent in transaction, in the unit of coin-days.
+// total coin age spent in transaction, in the unit of coin-days.
 // Only those coins meeting minimum age requirement counts. As those
 // transactions not in main chain are not currently indexed so we
 // might not find out about their coin age. Older transactions are
@@ -1617,7 +1617,7 @@ double ConvertBitsToDouble(unsigned int nBits)
     return dDiff;
 }
 
-CAmount GetBlockValue(int nHeight, uint32_t nTime)
+CAmount GetBlockValue(int nHeight)
 {
     if (nHeight == 1) {
         return 5300000 * COIN;
@@ -1651,7 +1651,7 @@ CAmount GetBlockValue(int nHeight, uint32_t nTime)
 
     int64_t netHashRate = chainActive.GetNetworkHashPS(24, nHeight);
 
-    return Params().SubsidyValue(netHashRate, nTime);
+    return Params().SubsidyValue(netHashRate);
 }
 
 CAmount GetSeeSaw(const CAmount& blockValue, int nHeight, bool bDrift)
@@ -1674,10 +1674,6 @@ CAmount GetSeeSaw(const CAmount& blockValue, int nHeight, bool bDrift)
         nMasternodeCountLevel1 = mnodeman.size(1);
         nMasternodeCountLevel2 = mnodeman.size(2);
         nMasternodeCountLevel3 = mnodeman.size(3);
-    }
-
-    if (nHeight <= Params().LAST_POW_BLOCK()) {
-       LogPrintf("GetSeeSaw() called during POW; strange things may occur!");
     }
 
     int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
@@ -2165,6 +2161,7 @@ static int64_t nTimeTotal = 0;
 
 bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pindex, CCoinsViewCache& view, bool fJustCheck=false)
 {
+    bool bPoWphase = (pindex->nHeight <= Params().LAST_POW_BLOCK()); // XXX - debug temporary
     AssertLockHeld(cs_main);
     // Check it again in case a previous version let a bad block in
     if (!CheckBlock(block, state, !fJustCheck, !fJustCheck))
@@ -2289,7 +2286,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime1 - nTimeStart), 0.001 * (nTime1 - nTimeStart) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime1 - nTimeStart) / (nInputs - 1), nTimeConnect * 0.000001);
 
     //PoW phase redistributed fees to miner. PoS stage destroys fees.
-    CAmount nExpectedMint = GetBlockValue(pindex->pprev->nHeight + 1, block.nTime);
+    CAmount nExpectedMint = GetBlockValue(pindex->pprev->nHeight + 1);
     if (block.IsProofOfWork())
         nExpectedMint += nFees;
 
@@ -3247,7 +3244,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                 return state.DoS(100, error("CheckBlock() : coinbase do not have the dev or fund reward (vout)."),
                 REJECT_INVALID, "bad-cb-reward-missing");
 
-            CAmount block_value = GetBlockValue(nHeight, block.nTime);
+            CAmount block_value = GetBlockValue(nHeight);
 
 		    
             if (block.vtx[0].vout[DevIndex].nValue < block_value * Params().GetDevFee() / 100 || block.vtx[0].vout[FundIndex].nValue < block_value * Params().GetFundFee() / 100)
@@ -3710,7 +3707,9 @@ bool ProcessNewBlock(CValidationState& state, CNode* pfrom, CBlock* pblock, CDis
 bool TestBlockValidity(CValidationState& state, const CBlock& block, CBlockIndex* const pindexPrev, bool fCheckPOW, bool fCheckMerkleRoot)
 {
     AssertLockHeld(cs_main);
-    assert(pindexPrev == chainActive.Tip());
+    if (pindexPrev != chainActive.Tip()) {
+        LogPrintf("TestBlockValidity(): No longer working on chain tip\n"); return false;
+    }
 
     CCoinsViewCache viewNew(pcoinsTip);
     CBlockIndex indexDummy(block);

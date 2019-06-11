@@ -29,7 +29,7 @@ CCriticalSection cs_mapMasternodePayeeVotes;
 bool IsBlockValueValid(const CBlock& block, CAmount nExpectedValue, CAmount nMinted)
 {
     CBlockIndex* pindexPrev = chainActive.Tip();
-    if(!pindexPrev) return true;
+    if (!pindexPrev) return true;
 
     int nHeight = 0;
     if (pindexPrev->GetBlockHash() == block.hashPrevBlock) {
@@ -92,7 +92,6 @@ CAmount CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, CAmount 
 
         CScript payee;
 
-        //spork
         if (!masternodePayments.GetBlockPayee(pindexPrev->nHeight + 1, mnlevel, payee)) {
             //no masternode detected
             CMasternode* winningNode = mnodeman.GetCurrentMasterNode(mnlevel, 1);
@@ -103,7 +102,7 @@ CAmount CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, CAmount 
             payee = GetScriptForDestination(winningNode->pubKeyCollateralAddress.GetID());
         }
 
-        CAmount masternodePayment = GetMasternodePayment(pindexPrev->nHeight, mnlevel, block_value);
+        CAmount masternodePayment = GetMasternodePayment(pindexPrev->nHeight+1, mnlevel, block_value);
 
         if(!masternodePayment)
             continue;
@@ -116,10 +115,12 @@ CAmount CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, CAmount 
         ExtractDestination(payee, address1);
         CBitcoinAddress address2(address1);
 
-        LogPrintf("Masternode payment of %s to %s\n", FormatMoney(masternodePayment).c_str(), address2.ToString().c_str());
+        LogPrintf("Masternode payment of %s to %s (vout[%d])\n", FormatMoney(masternodePayment).c_str(), 
+                  address2.ToString().c_str(), txNew.vout.size()-1);
     }
 
     return mn_payments_total;
+
 }
 
 int CMasternodePayments::GetMinMasternodePaymentsProto()
@@ -345,7 +346,7 @@ bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew, uint3
     if(!max_signatures.size())
         return true;
 
-    CAmount nReward = GetBlockValue(nBlockHeight, nTime);
+    CAmount nReward = GetBlockValue(nBlockHeight);
 
     if (nBlockHeight > Params().LAST_POW_BLOCK()) {
         // Deduct the payments out so SeeSaw splits the right amount

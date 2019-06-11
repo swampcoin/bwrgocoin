@@ -2324,7 +2324,7 @@ bool CWallet::CreateTransaction(CScript scriptPubKey, const CAmount& nValue, CWa
 }
 
 // ppcoin: create coin stake transaction
-bool CWallet::CreateCoinStake(const CKeyStore& keystore, uint32_t nTime, unsigned int nBits, int64_t nSearchInterval, CMutableTransaction& txNew, unsigned int& nTxNewTime)
+bool CWallet::CreateCoinStake(const CKeyStore& keystore, uint32_t nTime, unsigned int nBits, int64_t nSearchInterval, CMutableTransaction& txNew, unsigned int& nTxNewTime, CAmount nFees)
 {
     // The following split & combine thresholds are important to security
     // Should not be adjusted if you don't understand the consequences
@@ -2446,14 +2446,30 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, uint32_t nTime, unsigne
         return false;
 
     // Calculate reward
-    const CBlockIndex* pIndex0 = chainActive.Tip();
+//    CAmount blockReward = GetBlockValue(chainActive.Height()+1) + nFees;
+    CAmount blockReward = GetBlockValue(chainActive.Height() + 1);
 
-    nCredit += GetBlockValue(pIndex0->nHeight+1, nTime);
+    auto vDevReward  = blockReward * Params().GetDevFee() / 100;
+    auto vFundReward = blockReward * Params().GetFundFee() / 100;
+    
+    CScript scriptDevPubKeyIn  = CScript{} << Params().xUCCDevKey() << OP_CHECKSIG;
+    CScript scriptFundPubKeyIn = CScript{} << Params().xUCCFundKey() << OP_CHECKSIG;
+	
+    txNew.vout.emplace_back(vDevReward, scriptDevPubKeyIn);
+    txNew.vout.emplace_back(vFundReward, scriptFundPubKeyIn);
+
+    blockReward -= vDevReward;
+    blockReward -= vFundReward;
+ 
+    blockReward -= masternodePayments.FillBlockPayee(txNew, blockReward, true);
+
+    // after payments; add block reward to credit
+    nCredit += blockReward;
 
     //presstab HyperStake - calculate the total size of our new output including the stake reward so that we can use it to decide whether to split the stake outputs
     if (nCredit / 2 > nStakeSplitThreshold * COIN) {
         txNew.vout[1].nValue = (nCredit / 2 / CENT) * CENT;
-        txNew.vout.push_back(CTxOut(nCredit - txNew.vout[1].nValue, txNew.vout[1].scriptPubKey));
+        txNew.vout.emplace_back(nCredit - txNew.vout[1].nValue, txNew.vout[1].scriptPubKey);
     } else {
         txNew.vout[1].nValue = nCredit;
     }
@@ -2477,6 +2493,13 @@ bool CWallet::CommitTransaction(CWalletTx& wtxNew, CReserveKey& reservekey, std:
 {
     {
         LOCK2(cs_main, cs_wallet);
+
+        if (!wtxNew.AcceptToMemoryPool(false)) {
+            // This must not fail. The transaction has already been signed and recorded.
+            LogPrintf("CommitTransaction() : Error: Transaction not valid\n");
+            return false;
+        }
+
         LogPrintf("CommitTransaction:\n%s", wtxNew.ToString());
         {
             // This is only to keep the database open to defeat the auto-flush for the
@@ -2510,11 +2533,6 @@ bool CWallet::CommitTransaction(CWalletTx& wtxNew, CReserveKey& reservekey, std:
         mapRequestCount[wtxNew.GetHash()] = 0;
 
         // Broadcast
-        if (!wtxNew.AcceptToMemoryPool(false)) {
-            // This must not fail. The transaction has already been signed and recorded.
-            LogPrintf("CommitTransaction() : Error: Transaction not valid\n");
-            return false;
-        }
         wtxNew.RelayWalletTransaction(strCommand);
     }
     return true;

@@ -84,7 +84,7 @@ static const Checkpoints::CCheckpointData dataRegtest = {
     0,
     100};
 
-CAmount CChainParams::SubsidyValue(SubsidySwitchPoints::key_type level, uint32_t nTime) const
+CAmount CChainParams::SubsidyValue(SubsidySwitchPoints::key_type level) const
 {
     const auto& points = subsidySwitchPoints;
 
@@ -293,24 +293,24 @@ public:
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
         nTargetSpacing = 1 * 10;  // UCC: 10 seconds
-        nLastPOWBlock = 1500;
+        nLastPOWBlock = 1000;
         nMaturity = 15;
         nMasternodePercentDrift = 4;
         nModifierUpdateBlock = std::numeric_limits<decltype(nModifierUpdateBlock)>::max();
         nMaxMoneyOut = 1000000000 * COIN;
 
-	nStartMasternodePaymentsBlock = 1001;
+	nStartMasternodePaymentsBlock = 300;
 
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1559125649;
-        genesis.nNonce = 884877;
+        genesis.nTime = 1560108283;
+        genesis.nNonce = 3259884;
 
-	//MineGenesis(genesis);
+//	MineGenesis(genesis);
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("00000bd6961045157f04144acb30a3d8e012f0a8171b63fa11e3f06fef627a3d"));
+        assert(hashGenesisBlock == uint256("000005efb3d5bbada21a9d483432af502b100a5ffb045349a900c9acc17cb320"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
