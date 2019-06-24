@@ -425,8 +425,8 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(networkStyle->getAppIcon(), tr("&About UCC Core"), this);
-    aboutAction->setStatusTip(tr("Show information about UCC Core"));
+    aboutAction = new QAction(networkStyle->getAppIcon(), tr("&About UCC Wallet"), this);
+    aboutAction->setStatusTip(tr("Show information about UCC Wallet"));
     aboutAction->setMenuRole(QAction::AboutRole);
 #if QT_VERSION < 0x050000
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
@@ -464,9 +464,6 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     openRPCConsoleAction = new QAction(QIcon(GUIUtil::getThemeImage(":/icons/debugwindow")), tr("&Debug console"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging console"));
 
-    openBlockExplorerAction = new QAction(QIcon(GUIUtil::getThemeImage(":/icons/blockexplorer")), tr("Blockchain explorer"), this);
-    openBlockExplorerAction->setStatusTip(tr("Open inWallet Blockchain explorer"));
-
     openInfoAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Information"), this);
     openInfoAction->setStatusTip(tr("Show diagnostic information"));
     openRPCConsoleAction = new QAction(QIcon(GUIUtil::getThemeImage(":/icons/debugwindow")), tr("&Debug console"), this);
@@ -499,7 +496,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     openAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_FileIcon), tr("Open &URI..."), this);
     openAction->setStatusTip(tr("Open a UCC: URI or payment request"));
 
-    openBlockExplorerAction = new QAction(QIcon(":/icons/blockexplorer"), "", this);
+    openBlockExplorerAction = new QAction(QIcon(GUIUtil::getThemeImage(":/icons/blockexplorer")), "", this);
     openBlockExplorerAction->setStatusTip(tr("Blockchain explorer"));
     openBlockExplorerAction->setToolTip(openBlockExplorerAction->statusTip());
     openBlockExplorerAction->setCheckable(true);
@@ -512,7 +509,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 
     showHelpMessageAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
-    showHelpMessageAction->setStatusTip(tr("Show the UCC Core help message to get a list with possible UCC command-line options"));
+    showHelpMessageAction->setStatusTip(tr("Show the UCC Wallet help message to get a list with possible UCC command-line options"));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -1131,7 +1128,7 @@ void BitcoinGUI::setNumBlocks(int count)
 
 void BitcoinGUI::message(const QString& title, const QString& message, unsigned int style, bool* ret)
 {
-    QString strTitle = tr("UCC Core"); // default title
+    QString strTitle = tr("UCC Wallet"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
