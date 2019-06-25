@@ -109,15 +109,15 @@ jobs:
         BITCOIN_CONFIG="--enable-zmq --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --disable-tests LDFLAGS='-static-libstdc++ -static-libgcc' CFLAGS=-fPIC"
 
     - stage: test
-      name: 'Ubuntu1604 32bit  [GOAL: install]  [xenial]  [with GUI]'
+      name: 'Ubuntu1604 32bit  [GOAL: install]  [xenial]  [without GUI]'
       env: >-
         REASON=Ubuntu1604-32bit
         HOST=i686-pc-linux-gnu
         DOCKER_NAME_TAG=ubuntu:16.04
         PACKAGES="g++-multilib bc python3-zmq"
-        DEP_OPTS="DEBUG=1"
+        DEP_OPTS="NO_QT=1 DEBUG=1"
         GOAL="install"
-        BITCOIN_CONFIG="--enable-zmq --with-incompatible-bdb --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --disable-tests LDFLAGS='-static-libstdc++ -static-libgcc' CFLAGS=-fPIC"
+        BITCOIN_CONFIG="--enable-zmq --with-incompatible-bdb --enable-glibc-back-compat --enable-reduce-exports --disable-tests LDFLAGS='-static-libstdc++ -static-libgcc' CFLAGS=-fPIC"
         
     - stage: test
       name: 'Ubuntu1604 64bit  [GOAL: install]  [xenial]  [with GUI]'
