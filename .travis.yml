@@ -69,8 +69,7 @@ script:
     - depends/$HOST/native/bin/ccache --max-size=$CCACHE_SIZE
     - test -n "$USE_SHELL" && eval '"$USE_SHELL" -c "./autogen.sh"' || ./autogen.sh
     - ./configure --cache-file=config.cache $BITCOIN_CONFIG_ALL $BITCOIN_CONFIG || ( cat config.log && false)
-    - if [ "$DEPENDS_TIMEOUT" != "true" ]; then make $MAKEJOBS $GOAL || ( echo "Build failure. Verbose build follows." && make $GOAL V=1; true ); fi
-    - if [ $CONTINUE = "1" ]; then make $MAKEJOBS $GOAL || ( echo "Build failure. Verbose build follows." && make $GOAL V=1; else set +o errexit; echo "$CACHE_ERR_MSG"; false; fi    
+    - if [ $CONTINUE = "1" ]; then set -o errexit; make $MAKEJOBS $GOAL; else set +o errexit; echo "$CACHE_ERR_MSG"; false; fi    
 after_script:
     - echo $TRAVIS_COMMIT_RANGE
     - echo $TRAVIS_COMMIT_LOG
