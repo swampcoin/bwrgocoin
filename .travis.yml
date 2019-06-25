@@ -88,6 +88,49 @@ jobs:
         - set -o errexit; source .travis/lint_06_script.sh
 
     - stage: test
+      name: 'Linux 32-bit [GOAL: install]  [bionic]  [with GUI]'
+      env: >-
+        REASON=Linux-32bit
+        HOST=i686-pc-linux-gnu
+        PACKAGES="g++-multilib python3-zmq"
+        GOAL="install"
+        BITCOIN_CONFIG="--enable-zmq --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++"
+        CONFIG_SHELL="/bin/dash"
+
+    - stage: test
+      name: 'Linux 64-bit [GOAL: install]  [bionic]  [with GUI]'
+      env: >-
+        REASON=Linux-64bit
+        HOST=x86_64-unknown-linux-gnu
+        PACKAGES="python3-zmq"
+        DEP_OPTS="DEBUG=1"
+        RUN_FUNCTIONAL_TESTS=true
+        GOAL="install"
+        BITCOIN_CONFIG="--enable-zmq --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --disable-tests LDFLAGS='-static-libstdc++ -static-libgcc' CFLAGS=-fPIC"
+
+    - stage: test
+      name: 'Ubuntu1604 32bit  [GOAL: install]  [xenial]  [with GUI]'
+      env: >-
+        REASON=Ubuntu1604-32bit
+        HOST=i686-pc-linux-gnu
+        DOCKER_NAME_TAG=ubuntu:16.04
+        PACKAGES="g++-multilib bc python3-zmq"
+        DEP_OPTS="DEBUG=1"
+        GOAL="install"
+        BITCOIN_CONFIG="--enable-zmq --with-incompatible-bdb --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --disable-tests LDFLAGS='-static-libstdc++ -static-libgcc' CFLAGS=-fPIC"
+        
+    - stage: test
+      name: 'Ubuntu1604 64bit  [GOAL: install]  [xenial]  [with GUI]'
+      env: >-
+        REASON=Ubuntu1604-64bit
+        HOST=x86_64-unknown-linux-gnu
+        DOCKER_NAME_TAG=ubuntu:16.04
+        PACKAGES="bc python3-zmq"
+        DEP_OPTS="DEBUG=1"
+        GOAL="install"
+        BITCOIN_CONFIG="--enable-zmq --with-incompatible-bdb --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --disable-tests LDFLAGS='-static-libstdc++ -static-libgcc' CFLAGS=-fPIC"
+
+    - stage: test
       name: 'ARM 32-bit  [GOAL: install]  [no unit or functional tests]'
       env: >-
         REASON=ARM-32bit
@@ -154,48 +197,6 @@ jobs:
         RUN_FUNCTIONAL_TESTS=false
         GOAL="deploy"
         BITCOIN_CONFIG="--enable-reduce-exports --with-gui=qt5"
-
-    - stage: test
-      name: 'Linux 32-bit [GOAL: install]  [bionic]  [with GUI]'
-      env: >-
-        REASON=Linux-32bit
-        HOST=i686-pc-linux-gnu
-        PACKAGES="g++-multilib python3-zmq"
-        GOAL="install"
-        BITCOIN_CONFIG="--enable-zmq --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++"
-        CONFIG_SHELL="/bin/dash"
-
-    - stage: test
-      name: 'Linux 64-bit [GOAL: install]  [bionic]  [with GUI]'
-      env: >-
-        REASON=Linux-64bit
-        HOST=x86_64-unknown-linux-gnu
-        PACKAGES="python3-zmq libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler qtbase5-dev libdbus-1-dev libharfbuzz-dev"
-        DEP_OPTS="NO_UPNP=1 DEBUG=1 ALLOW_HOST_PACKAGES=1"
-        RUN_FUNCTIONAL_TESTS=true
-        GOAL="install"
-        BITCOIN_CONFIG="--enable-zmq --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --disable-tests LDFLAGS='-static-libstdc++ -static-libgcc' CFLAGS=-fPIC"
-
-    - stage: test
-      name: 'x86_64 Linux  [GOAL: install]  [xenial]  [with GUI]'
-      env: >-
-        REASON=Linux-64bit-Ubuntu1604
-        HOST=x86_64-unknown-linux-gnu
-        DOCKER_NAME_TAG=ubuntu:16.04
-        PACKAGES="python3-zmq libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools qtbase5-dev libssl-dev libevent-dev bsdmainutils libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libdb5.3++-dev libminiupnpc-dev libzmq3-dev libprotobuf-dev protobuf-compiler libqrencode-dev libgmp-dev"
-        DEP_OPTS="NO_UPNP=1 DEBUG=1 ALLOW_HOST_PACKAGES=1"
-        GOAL="install"
-        BITCOIN_CONFIG="--enable-zmq --with-incompatible-bdb --with-gui=qt5 --disable-hardening --disable-asm --enable-glibc-back-compat --enable-reduce-exports --disable-tests LDFLAGS='-static-libstdc++ -static-libgcc' CFLAGS=-fPIC"
-
-    - stage: test
-      name: 'x86_64 Linux  [GOAL: install]  [bionic]  [no depends, only system libs]'
-      env: >-
-        REASON=Linux-64bit-nD
-        HOST=x86_64-unknown-linux-gnu
-        PACKAGES="python3-zmq libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools qtbase5-dev libssl1.0-dev libevent-dev bsdmainutils libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libdb5.3++-dev libminiupnpc-dev libzmq3-dev libprotobuf-dev protobuf-compiler libqrencode-dev libgmp-dev"
-        NO_DEPENDS=1
-        GOAL="install"
-        BITCOIN_CONFIG="--enable-zmq --with-incompatible-bdb --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --disable-tests LDFLAGS='-static-libstdc++ -static-libgcc' CFLAGS=-fPIC"
 
     - stage: test
       name: 'macOS 10.10  [GOAL: deploy]'
