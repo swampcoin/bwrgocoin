@@ -3,6 +3,7 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2017-2018 The XDNA Core developers
+// Copyright (c) 2018-2019 The United Community Coin Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -223,13 +224,22 @@ bool CWalletDB::EraseMSDisabledAddresses(std::vector<std::string> vDisabledAddre
     }
     return ret;
 }
-bool CWalletDB::WriteAutoCombineSettings(bool fEnable, CAmount nCombineThreshold)
+bool CWalletDB::WriteAutoCombineSettings(bool fEnable, CAmount nCombineThreshold, int nBlockFrequency)
 {
     nWalletDBUpdated++;
-    std::pair<bool, CAmount> pSettings;
-    pSettings.first = fEnable;
-    pSettings.second = nCombineThreshold;
-    return Write(std::string("autocombinesettings"), pSettings, true);
+    // Overwrite the old format with a special flag
+    std::pair<bool, CAmount> pSettingsOld;
+    pSettingsOld.first = fEnable;
+    pSettingsOld.second = -1; // Negatives doesn't make sense, so we can use them as flags
+    if (Write(std::string("autocombinesettings"), pSettingsOld, true)) {
+        // Now add the new format as v2
+        std::pair<bool, CAmount> enabledMS1(fEnable, nCombineThreshold);
+        std::pair<std::pair<bool, CAmount>,int> pSettings(enabledMS1, nBlockFrequency);
+        return Write(std::string("autocombinesettingsV2"), pSettings, true);
+    } else {
+        // report the old format write failed
+        return false;
+    }
 }
 
 bool CWalletDB::WriteDefaultKey(const CPubKey& vchPubKey)
@@ -644,10 +654,23 @@ bool ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue, CW
             ssValue >> strDisabledAddress;
             pwallet->vDisabledAddresses.push_back(strDisabledAddress);
         } else if (strType == "autocombinesettings") {
+            // Old Format
             std::pair<bool, CAmount> pSettings;
             ssValue >> pSettings;
-            pwallet->fCombineDust = pSettings.first;
-            pwallet->nAutoCombineThreshold = pSettings.second;
+            if (pSettings.second >= 0) {
+                // Convert the old format
+                pwallet->fCombineDust = pSettings.first;
+                pwallet->nAutoCombineThreshold = pSettings.second;
+                pwallet->nAutoCombineBlockFrequency = 15; // Default
+                LogPrintf("autocombinerewards settings are stale, refresh your settings for the new format\n");
+            }
+        } else if (strType == "autocombinesettingsV2") {
+            // New Format
+            std::pair<std::pair<bool, CAmount>,int> pSettings;
+            ssValue >> pSettings;
+            pwallet->fCombineDust = pSettings.first.first;
+            pwallet->nAutoCombineThreshold = pSettings.first.second;
+            pwallet->nAutoCombineBlockFrequency = pSettings.second;
         } else if (strType == "destdata") {
             std::string strAddress, strKey, strValue;
             ssKey >> strAddress;

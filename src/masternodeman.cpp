@@ -186,7 +186,7 @@ void DumpMasternodes()
             return;
         }
     }
-    LogPrintf("Writting info to mncache.dat...\n");
+    LogPrintf("Writing info to mncache.dat...\n");
     mndb.Write(mnodeman);
 
     LogPrintf("Masternode dump finished  %dms\n", GetTimeMillis() - nStart);
@@ -550,12 +550,12 @@ bool CMasternodeMan::WinnersUpdate(CNode* node)
     }
 
     auto mn_counts = mnodeman.CountEnabledByLevels();
-    
+
     unsigned max_mn_count = 0u;
-    
+
     for(const auto& count : mn_counts)
         max_mn_count = std::max(max_mn_count, count.second);
-    
+
     node->PushMessage("mnget", max_mn_count);
     int64_t askAgain = GetTime() + MASTERNODES_DSEG_SECONDS;
     mWeAskedForWinnerMasternodeList[node->addr] = askAgain;
@@ -633,9 +633,9 @@ CMasternode* CMasternodeMan::GetNextMasternodeInQueueForPayment(int nBlockHeight
         //check protocol version
         if(mn.protocolVersion < masternodePayments.GetMinMasternodePaymentsProto())
             continue;
-        
+
          mn.Check();
-         
+
          if(!mn.IsEnabled())
             continue;
 
@@ -665,30 +665,30 @@ CMasternode* CMasternodeMan::GetNextMasternodeInQueueForPayment(int nBlockHeight
 
     // Look at 1/10 of the oldest nodes (by last payment), calculate their scores and pay the best one
     //  -- This doesn't look at who is being paid in the scheduled blocks, allowing for double payments very rarely
-    
+
     int     nCountTenth = nMnCount / 10;
     uint256 nHigh = 0;
-    
+
     CMasternode* pBestMasternode = nullptr;
-    
+
     for(const auto& s : vecMasternodeLastPaid) {
 
         CMasternode* pmn = Find(s.second);
-        
+
         if(!pmn)
             continue;
 
         uint256 n = pmn->CalculateScore(1, nBlockHeight - 100);
-        
+
         if(n > nHigh) {
             nHigh = n;
             pBestMasternode = pmn;
         }
-        
+
         if(--nCountTenth > 0)
             break;
     }
-    
+
     return pBestMasternode;
 }
 

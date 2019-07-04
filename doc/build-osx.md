@@ -5,7 +5,7 @@ This guide will show you how to build uccd (headless client) for OSX.
 Notes
 -----
 
-* Tested on OS X 10.7 through 10.10 on 64-bit Intel processors only.
+* Tested on OS X 10.7 through 10.12 on 64-bit Intel processors only.
 
 * All of the commands should be executed in a Terminal application. The
 built-in one is located in `/Applications/Utilities`.
@@ -44,8 +44,8 @@ Instructions: Homebrew
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/UCC-Core/UCC.git
-        cd UCC
+        git clone https://github.com/UCCNetwork/ucc.git
+        cd ucc
 
 2.  Build uccd:
 

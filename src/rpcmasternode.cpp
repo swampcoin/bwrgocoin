@@ -524,14 +524,14 @@ UniValue masternodecurrent (const UniValue& params, bool fHelp)
             HelpExampleCli("masternodecurrent", "") + HelpExampleRpc("masternodecurrent", ""));
 
     UniValue result{UniValue::VARR};
-    
+
     for(unsigned l = CMasternode::LevelValue::MIN; l <= CMasternode::LevelValue::MAX; ++l) {
-        
+
         CMasternode* winner = mnodeman.GetCurrentMasterNode(l, 1);
-        
+
         if(!winner)
             continue;
-         
+
         UniValue obj(UniValue::VOBJ);
 
         obj.push_back(Pair("level", winner->Level()));
@@ -540,7 +540,7 @@ UniValue masternodecurrent (const UniValue& params, bool fHelp)
         obj.push_back(Pair("pubkey", CBitcoinAddress(winner->pubKeyCollateralAddress.GetID()).ToString()));
         obj.push_back(Pair("lastseen", (winner->lastPing == CMasternodePing()) ? winner->sigTime : (int64_t)winner->lastPing.sigTime));
         obj.push_back(Pair("activeseconds", (winner->lastPing == CMasternodePing()) ? 0 : (int64_t)(winner->lastPing.sigTime - winner->sigTime)));
-        
+
         result.push_back(obj);
     }
 

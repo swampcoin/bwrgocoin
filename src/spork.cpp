@@ -149,14 +149,15 @@ void ReprocessBlocks(int nBlocks)
         ++it;
     }
 
+    CValidationState state;
     {
         LOCK(cs_main);
         DisconnectBlocksAndReprocess(nBlocks);
     }
 
-    CValidationState state;
-
-    ActivateBestChain(state);
+    if (state.IsValid()) {
+        ActivateBestChain(state);
+    }
 }
 
 bool CSporkManager::CheckSignature(CSporkMessage& spork)
