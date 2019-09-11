@@ -11,7 +11,7 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>ucc.icns</string>
+  <string>nwo.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
@@ -32,7 +32,7 @@
   <string>NWO-Qt</string>
 
   <key>CFBundleIdentifier</key>
-  <string>io.ucc.NWO-Qt</string>
+  <string>io.nwo.NWO-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -40,10 +40,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.ucc.UccPayment</string>
+      <string>io.nwo.UccPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>ucc</string>
+        <string>nwo</string>
       </array>
     </dict>
   </array>
@@ -52,7 +52,7 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>io.ucc.paymentrequest</string>
+      <string>io.nwo.paymentrequest</string>
       <key>UTTypeDescription</key>
       <string>NWO payment request</string>
       <key>UTTypeConformsTo</key>
@@ -62,10 +62,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-ucc-payment-request</string>
+        <string>application/x-nwo-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>uccpaymentrequest</string>
+          <string>nwopaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -78,7 +78,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>io.ucc.paymentrequest</string>
+        <string>io.nwo.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>
