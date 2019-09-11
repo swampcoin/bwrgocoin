@@ -222,7 +222,7 @@ bool IsPeerAddrLocalGood(CNode* pnode)
 // pushes our own address to a peer
 void AdvertiseLocal(CNode* pnode)
 {
-    if (fListen && pnode->fSnwoessfullyConnected) {
+    if (fListen && pnode->fSuccessfullyConnected) {
         CAddress addrLocal = GetLocalAddress(&pnode->addr);
         // If discovery is enabled, sometimes give our peer the address it
         // tells us that it sees us as in case it has a better idea of our
@@ -1005,7 +1005,7 @@ void ThreadMapPort()
     struct UPNPDev* devlist = 0;
     char lanaddr[64];
 
-#ifndef UPNPDISCOVER_SNWOESS
+#ifndef UPNPDISCOVER_SUCCESS
     /* miniupnpc 1.5 */
     devlist = upnpDiscover(2000, multicastif, minissdpdpath, 0);
 #elif MINIUPNPC_API_VERSION < 14
@@ -1027,7 +1027,7 @@ void ThreadMapPort()
         if (fDiscover) {
             char externalIPAddress[40];
             r = UPNP_GetExternalIPAddress(urls.controlURL, data.first.servicetype, externalIPAddress);
-            if (r != UPNPCOMMAND_SNWOESS)
+            if (r != UPNPCOMMAND_SUCCESS)
                 LogPrintf("UPnP: GetExternalIPAddress() returned %d\n", r);
             else {
                 if (externalIPAddress[0]) {
@@ -1042,7 +1042,7 @@ void ThreadMapPort()
 
         try {
             while (true) {
-#ifndef UPNPDISCOVER_SNWOESS
+#ifndef UPNPDISCOVER_SUCCESS
                 /* miniupnpc 1.5 */
                 r = UPNP_AddPortMapping(urls.controlURL, data.first.servicetype,
                     port.c_str(), port.c_str(), lanaddr, strDesc.c_str(), "TCP", 0);
@@ -1052,11 +1052,11 @@ void ThreadMapPort()
                     port.c_str(), port.c_str(), lanaddr, strDesc.c_str(), "TCP", 0, "0");
 #endif
 
-                if (r != UPNPCOMMAND_SNWOESS)
+                if (r != UPNPCOMMAND_SUCCESS)
                     LogPrintf("AddPortMapping(%s, %s, %s) failed with code %d (%s)\n",
                         port, port, lanaddr, r, strupnperror(r));
                 else
-                    LogPrintf("UPnP Port Mapping snwoessful.\n");
+                    LogPrintf("UPnP Port Mapping successful.\n");
                 ;
 
                 MilliSleep(20 * 60 * 1000); // Refresh every 20 minutes
@@ -1317,7 +1317,7 @@ void ThreadOpenAddedConnections()
                 }
             }
         }
-        // Attempt to connect to each IP for each addnode entry until at least one is snwoessful per addnode entry
+        // Attempt to connect to each IP for each addnode entry until at least one is successful per addnode entry
         // (keeping in mind that addnode entries can have many IPs if fNameLookup)
         {
             LOCK(cs_vNodes);
@@ -1339,7 +1339,7 @@ void ThreadOpenAddedConnections()
     }
 }
 
-// if snwoessful, this moves the passed grant to the constructed node
+// if successful, this moves the passed grant to the constructed node
 bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant* grantOutbound, const char* pszDest, bool fOneShot)
 {
     //
@@ -1803,7 +1803,7 @@ uint64_t CNode::GetTotalBytesSent()
 
 void CNode::Fuzz(int nChance)
 {
-    if (!fSnwoessfullyConnected) return; // Don't fuzz initial handshake
+    if (!fSuccessfullyConnected) return; // Don't fuzz initial handshake
     if (GetRand(nChance) != 0) return;   // Fuzz 1 of every nChance messages
 
     switch (GetRand(3)) {
@@ -1951,7 +1951,7 @@ CNode::CNode(SOCKET hSocketIn, CAddress addrIn, std::string addrNameIn, bool fIn
     fClient = false; // set by version message
     fInbound = fInboundIn;
     fNetworkNode = false;
-    fSnwoessfullyConnected = false;
+    fSuccessfullyConnected = false;
     fDisconnect = false;
     nRefCount = 0;
     nSendSize = 0;
