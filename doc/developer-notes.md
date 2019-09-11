@@ -31,7 +31,7 @@ class Class
             ...
         }
 
-        // Success return is usually at the end
+        // Snwoess return is usually at the end
         return true;
     }
 }

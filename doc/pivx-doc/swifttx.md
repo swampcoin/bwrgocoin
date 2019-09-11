@@ -17,7 +17,7 @@ This mechanism has been integrated into Bitcore-Node-PIVX which allows for notif
 
 ####Command line option
 
-When a wallet SwiftTX transaction is successfully locked a shell command provided in this option is executed (`%s` in `<cmd>` is replaced by TxID):
+When a wallet SwiftTX transaction is snwoessfully locked a shell command provided in this option is executed (`%s` in `<cmd>` is replaced by TxID):
 
 ```
 -swifttxnotify=<cmd>
@@ -39,7 +39,7 @@ This value can be overridden by passing the following argument to the PIVX Core 
 -swifttxdepth=<n>
 ```
 
-The key thing to understand is that this value indicates the number of "confirmations" a successful Transaction Lock represents. When Wallet RPC commands are performed (such as `listsinceblock`) this attribute is taken into account when returning information about the transaction. The value in `confirmations` field you see through RPC is showing the number of `"Blockchain Confirmations" + "SwiftTX Depth"` (assuming the funds were sent via SwiftTX).
+The key thing to understand is that this value indicates the number of "confirmations" a snwoessful Transaction Lock represents. When Wallet RPC commands are performed (such as `listsinceblock`) this attribute is taken into account when returning information about the transaction. The value in `confirmations` field you see through RPC is showing the number of `"Blockchain Confirmations" + "SwiftTX Depth"` (assuming the funds were sent via SwiftTX).
 
 There is also a field named `bcconfirmations`. The value in this field represents the total number of `"Blockchain Confirmations"` for a given transaction without taking into account whether it was SwiftTX or not.
 

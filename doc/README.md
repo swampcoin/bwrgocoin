@@ -3,7 +3,7 @@ NWO
 
 Setup
 ---------------------
-[NWO](http://uccnetwork.org/wallet) is the original NWO client and it builds the backbone of the network. However, it downloads and stores the entire history of NWO transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[NWO](http://nwonetwork.org/wallet) is the original NWO client and it builds the backbone of the network. However, it downloads and stores the entire history of NWO transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
@@ -13,12 +13,12 @@ The following are some helpful notes on how to run NWO on your native platform.
 
 Unpack the files into a directory and run:
 
-- bin/32/ucc-qt (GUI, 32-bit) or bin/32/uccd (headless, 32-bit)
-- bin/64/ucc-qt (GUI, 64-bit) or bin/64/uccd (headless, 64-bit)
+- bin/32/nwo-qt (GUI, 32-bit) or bin/32/nwod (headless, 32-bit)
+- bin/64/nwo-qt (GUI, 64-bit) or bin/64/nwod (headless, 64-bit)
 
 ### Windows
 
-Unpack the files into a directory, and then run ucc-qt.exe.
+Unpack the files into a directory, and then run nwo-qt.exe.
 
 ### OSX
 
@@ -26,9 +26,9 @@ Drag NWO-Qt to your applications folder, and then run NWO-Qt.
 
 ### Need Help?
 
-* See the documentation at the [NWO Wiki](https://en.uccnetwork.org/wiki/Main_Page) ***TODO***
+* See the documentation at the [NWO Wiki](https://en.nwonetwork.org/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org) or on the [NWO Forum](http://forum.uccnetwork.org/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org) or on the [NWO Forum](http://forum.nwonetwork.org/).
 * Join our Discord server [Discord Server](https://discord.gg/S9adMgS)
 
 Building
@@ -56,7 +56,7 @@ The NWO repo's [root README](https://github.com/NWO-Core/NWO/blob/master/README.
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [NWO](http://forum.uccnetwork.org/) forum.
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [NWO](http://forum.nwonetwork.org/) forum.
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

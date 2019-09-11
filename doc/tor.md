@@ -38,12 +38,12 @@ outgoing connections be anonymized, but more is possible.
 An example how to start the client if the Tor proxy is running on local host on
 port 9050 and only allows .onion nodes to connect:
 ```
-./uccd -onion=127.0.0.1:9050 -onlynet=tor -listen=0 -addnode=dnetzj6l4cvo2fxy.onion:989
+./nwod -onion=127.0.0.1:9050 -onlynet=tor -listen=0 -addnode=dnetzj6l4cvo2fxy.onion:989
 ```
 
 In a typical situation, this suffices to run behind a Tor proxy:
 ```
-./uccd -proxy=127.0.0.1:9050
+./nwod -proxy=127.0.0.1:9050
 ```
 
 Run a NWO hidden server
@@ -69,12 +69,12 @@ NumEntryGuards 8
 ```
 
 The directory can be different of course, but (both) port numbers should be equal to
-your uccd's P2P listen port (41112 by default).
+your nwod's P2P listen port (41112 by default).
 ```
--externalip=X   You can tell ucc about its publicly reachable address using
+-externalip=X   You can tell nwo about its publicly reachable address using
                 this option, and this can be a .onion address. Given the above
                 configuration, you can find your onion address in
-                /var/lib/tor/ucc-service/hostname. Onion addresses are given
+                /var/lib/tor/nwo-service/hostname. Onion addresses are given
                 preference for your node to advertize itself with, for connections
                 coming from unroutable addresses (such as 127.0.0.1, where the
                 Tor proxy typically runs).
@@ -92,14 +92,14 @@ your uccd's P2P listen port (41112 by default).
 
 In a typical situation, where you're only reachable via Tor, this should suffice:
 ```
-./uccd -proxy=127.0.0.1:9050 -externalip=TO-DO -listen
+./nwod -proxy=127.0.0.1:9050 -externalip=TO-DO -listen
 ```
 
 (obviously, replace the Onion address with your own). If you don't care too much
 about hiding your node, and want to be reachable on IPv4 as well, additionally
 specify:
 ```
-./uccd ... -discover
+./nwod ... -discover
 ```
 
 and open port 41112 on your firewall (or use -upnp).
@@ -107,7 +107,7 @@ and open port 41112 on your firewall (or use -upnp).
 If you only want to use Tor to reach onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:
 ```
-./uccd -onion=127.0.0.1:9050 -externalip=TO-DO -discover
+./nwod -onion=127.0.0.1:9050 -externalip=TO-DO -discover
 ```
 
 List of known NWO Tor relays       **TO-DO**

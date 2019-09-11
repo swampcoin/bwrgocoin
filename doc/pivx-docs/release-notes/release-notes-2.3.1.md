@@ -90,7 +90,7 @@ Result: (for other sets):
   "detail": [
     {
       "node": "xxxx",    (string) Node name or alias
-      "result": "xxxx",  (string) 'success' or 'failed'
+      "result": "xxxx",  (string) 'snwoess' or 'failed'
       "error": "xxxx"    (string) Error message, if failed
     }
     ,...
@@ -125,7 +125,7 @@ Result:
   "detail": [
     {
       "node": "xxxx",      (string) 'local' or the MN alias
-      "result": "xxxx",    (string) Either 'Success' or 'Failed'
+      "result": "xxxx",    (string) Either 'Snwoess' or 'Failed'
       "error": "xxxx",     (string) Error message, if vote failed
     }
     ,...
