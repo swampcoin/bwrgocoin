@@ -340,7 +340,7 @@ bool CDB::Rewrite(const string& strFile, const char* pszSkip)
                 bitdb.CheckpointLSN(strFile);
                 bitdb.mapFileUseCount.erase(strFile);
 
-                bool fSuccess = true;
+                bool fSnwoess = true;
                 LogPrintf("CDB::Rewrite : Rewriting %s...\n", strFile);
                 string strFileRes = strFile + ".rewrite";
                 { // surround usage of db with extra {}
@@ -355,12 +355,12 @@ bool CDB::Rewrite(const string& strFile, const char* pszSkip)
                         0);
                     if (ret > 0) {
                         LogPrintf("CDB::Rewrite : Can't create database file %s\n", strFileRes);
-                        fSuccess = false;
+                        fSnwoess = false;
                     }
 
                     Dbc* pcursor = db.GetCursor();
                     if (pcursor)
-                        while (fSuccess) {
+                        while (fSnwoess) {
                             CDataStream ssKey(SER_DISK, CLIENT_VERSION);
                             CDataStream ssValue(SER_DISK, CLIENT_VERSION);
                             int ret = db.ReadAtCursor(pcursor, ssKey, ssValue, DB_NEXT);
@@ -369,7 +369,7 @@ bool CDB::Rewrite(const string& strFile, const char* pszSkip)
                                 break;
                             } else if (ret != 0) {
                                 pcursor->close();
-                                fSuccess = false;
+                                fSnwoess = false;
                                 break;
                             }
                             if (pszSkip &&
@@ -384,27 +384,27 @@ bool CDB::Rewrite(const string& strFile, const char* pszSkip)
                             Dbt datValue(&ssValue[0], ssValue.size());
                             int ret2 = pdbCopy->put(NULL, &datKey, &datValue, DB_NOOVERWRITE);
                             if (ret2 > 0)
-                                fSuccess = false;
+                                fSnwoess = false;
                         }
-                    if (fSuccess) {
+                    if (fSnwoess) {
                         db.Close();
                         bitdb.CloseDb(strFile);
                         if (pdbCopy->close(0))
-                            fSuccess = false;
+                            fSnwoess = false;
                         delete pdbCopy;
                     }
                 }
-                if (fSuccess) {
+                if (fSnwoess) {
                     Db dbA(&bitdb.dbenv, 0);
                     if (dbA.remove(strFile.c_str(), NULL, 0))
-                        fSuccess = false;
+                        fSnwoess = false;
                     Db dbB(&bitdb.dbenv, 0);
                     if (dbB.rename(strFileRes.c_str(), NULL, strFile.c_str(), 0))
-                        fSuccess = false;
+                        fSnwoess = false;
                 }
-                if (!fSuccess)
+                if (!fSnwoess)
                     LogPrintf("CDB::Rewrite : Failed to rewrite database file %s\n", strFileRes);
-                return fSuccess;
+                return fSnwoess;
             }
         }
         MilliSleep(100);

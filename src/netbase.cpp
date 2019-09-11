@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifdef HAVE_CONFIG_H
-#include "config/ucc-config.h"
+#include "config/nwo-config.h"
 #endif
 
 #include "netbase.h"
@@ -352,7 +352,7 @@ bool static Socks5(string strDest, int port, const ProxyCredentials *auth, SOCKE
         }
         if (pchRetA[0] != 0x01 || pchRetA[1] != 0x00) {
             CloseSocket(hSocket);
-            return error("Proxy authentication unsuccesful");
+            return error("Proxy authentication unsnwoesful");
         }
     } else if (pchRet1[1] == 0x00) {
         // Perform no authentication

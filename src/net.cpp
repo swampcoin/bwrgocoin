@@ -7,7 +7,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/ucc-config.h"
+#include "config/nwo-config.h"
 #endif
 
 #include "net.h"
@@ -222,7 +222,7 @@ bool IsPeerAddrLocalGood(CNode* pnode)
 // pushes our own address to a peer
 void AdvertiseLocal(CNode* pnode)
 {
-    if (fListen && pnode->fSuccessfullyConnected) {
+    if (fListen && pnode->fSnwoessfullyConnected) {
         CAddress addrLocal = GetLocalAddress(&pnode->addr);
         // If discovery is enabled, sometimes give our peer the address it
         // tells us that it sees us as in case it has a better idea of our
@@ -1056,7 +1056,7 @@ void ThreadMapPort()
                     LogPrintf("AddPortMapping(%s, %s, %s) failed with code %d (%s)\n",
                         port, port, lanaddr, r, strupnperror(r));
                 else
-                    LogPrintf("UPnP Port Mapping successful.\n");
+                    LogPrintf("UPnP Port Mapping snwoessful.\n");
                 ;
 
                 MilliSleep(20 * 60 * 1000); // Refresh every 20 minutes
@@ -1317,7 +1317,7 @@ void ThreadOpenAddedConnections()
                 }
             }
         }
-        // Attempt to connect to each IP for each addnode entry until at least one is successful per addnode entry
+        // Attempt to connect to each IP for each addnode entry until at least one is snwoessful per addnode entry
         // (keeping in mind that addnode entries can have many IPs if fNameLookup)
         {
             LOCK(cs_vNodes);
@@ -1339,7 +1339,7 @@ void ThreadOpenAddedConnections()
     }
 }
 
-// if successful, this moves the passed grant to the constructed node
+// if snwoessful, this moves the passed grant to the constructed node
 bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant* grantOutbound, const char* pszDest, bool fOneShot)
 {
     //
@@ -1803,7 +1803,7 @@ uint64_t CNode::GetTotalBytesSent()
 
 void CNode::Fuzz(int nChance)
 {
-    if (!fSuccessfullyConnected) return; // Don't fuzz initial handshake
+    if (!fSnwoessfullyConnected) return; // Don't fuzz initial handshake
     if (GetRand(nChance) != 0) return;   // Fuzz 1 of every nChance messages
 
     switch (GetRand(3)) {
@@ -1951,7 +1951,7 @@ CNode::CNode(SOCKET hSocketIn, CAddress addrIn, std::string addrNameIn, bool fIn
     fClient = false; // set by version message
     fInbound = fInboundIn;
     fNetworkNode = false;
-    fSuccessfullyConnected = false;
+    fSnwoessfullyConnected = false;
     fDisconnect = false;
     nRefCount = 0;
     nSendSize = 0;

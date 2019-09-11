@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "NWO"
-            VALUE "FileDescription",    "uccd (OSS daemon/client for NWO)"
+            VALUE "FileDescription",    "nwod (OSS daemon/client for NWO)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "uccd"
+            VALUE "InternalName",       "nwod"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "uccd.exe"
-            VALUE "ProductName",        "uccd"
+            VALUE "OriginalFilename",   "nwod.exe"
+            VALUE "ProductName",        "nwod"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

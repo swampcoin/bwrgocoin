@@ -65,7 +65,7 @@ CLevelDBWrapper::CLevelDBWrapper(const boost::filesystem::path& path, size_t nCa
     }
     leveldb::Status status = leveldb::DB::Open(options, path.string(), &pdb);
     HandleError(status);
-    LogPrintf("Opened LevelDB successfully\n");
+    LogPrintf("Opened LevelDB snwoessfully\n");
 }
 
 CLevelDBWrapper::~CLevelDBWrapper()

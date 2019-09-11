@@ -332,7 +332,7 @@ bool CheckStakeKernelHash(unsigned int nBits, const CBlock blockFrom, const CTra
         return stakeTargetHit(hashProofOfStake, nValueIn, bnTargetPerCoinDay);
     }
 
-    bool fSuccess = false;
+    bool fSnwoess = false;
     unsigned int nTryTime = 0;
     unsigned int i;
     int nHeightStart = chainActive.Height();
@@ -350,7 +350,7 @@ bool CheckStakeKernelHash(unsigned int nBits, const CBlock blockFrom, const CTra
         if (!stakeTargetHit(hashProofOfStake, nValueIn, bnTargetPerCoinDay))
             continue;
 
-        fSuccess = true; // if we make it this far then we have successfully created a stake hash
+        fSnwoess = true; // if we make it this far then we have snwoessfully created a stake hash
         nTimeTx = nTryTime;
 
         if (fDebug || fPrintProofOfStake) {
@@ -370,7 +370,7 @@ bool CheckStakeKernelHash(unsigned int nBits, const CBlock blockFrom, const CTra
 
     mapHashedBlocks.clear();
     mapHashedBlocks[chainActive.Tip()->nHeight] = GetTime(); //store a time stamp of when we last hashed on this block
-    return fSuccess;
+    return fSnwoess;
 }
 
 // Check kernel hash target and coinstake signature

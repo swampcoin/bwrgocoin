@@ -31,7 +31,7 @@ class CActiveMasternode;
 #define POOL_STATUS_SIGNING 5              // check inputs/outputs, sign final tx
 #define POOL_STATUS_TRANSMISSION 6         // transmit transaction
 #define POOL_STATUS_ERROR 7                // error
-#define POOL_STATUS_SNWOESS 8              // success
+#define POOL_STATUS_SNWOESS 8              // snwoess
 
 // status update message constants
 #define MASTERNODE_ACCEPTED 1
@@ -214,8 +214,8 @@ public:
      *  \return true if all conditions are met:
      *     1) we have an active Masternode,
      *     2) we have a valid Masternode private key,
-     *     3) we signed the message successfully, and
-     *     4) we verified the message successfully
+     *     3) we signed the message snwoessfully, and
+     *     4) we verified the message snwoessfully
      */
     bool Sign();
 
@@ -249,13 +249,13 @@ class CObfuScationSigner
 public:
     /// Is the inputs associated with this public key? (and there is deposit NWO amount - checking if valid masternode)
     bool IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey);
-    /// Set the private/public key values, returns true if successful
+    /// Set the private/public key values, returns true if snwoessful
     bool GetKeysFromSecret(std::string strSecret, CKey& keyRet, CPubKey& pubkeyRet);
-    /// Set the private/public key values, returns true if successful
+    /// Set the private/public key values, returns true if snwoessful
     bool SetKey(std::string strSecret, std::string& errorMessage, CKey& key, CPubKey& pubkey);
-    /// Sign the message, returns true if successful
+    /// Sign the message, returns true if snwoessful
     bool SignMessage(std::string strMessage, std::string& errorMessage, std::vector<unsigned char>& vchSig, CKey key);
-    /// Verify the message, returns true if succcessful
+    /// Verify the message, returns true if snwocessful
     bool VerifyMessage(CPubKey pubkey, std::vector<unsigned char>& vchSig, std::string strMessage, std::string& errorMessage);
 };
 
@@ -287,7 +287,7 @@ private:
     bool sessionFoundMasternode; //If we've found a compatible Masternode
     std::vector<CTransaction> vecSessionCollateral;
 
-    int cachedLastSuccess;
+    int cachedLastSnwoess;
 
     int minBlockSpacing; //required blocks between mixes
     CMutableTransaction txCollateral;
@@ -335,7 +335,7 @@ public:
         /* Obfuscation uses collateral addresses to trust parties entering the pool
             to behave themselves. If they don't it takes their money. */
 
-        cachedLastSuccess = 0;
+        cachedLastSnwoess = 0;
         cachedNumBlocks = std::numeric_limits<int>::max();
         unitTest = false;
         txCollateral = CMutableTransaction();

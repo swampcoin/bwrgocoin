@@ -25,7 +25,7 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called NWO (http://www.uccnetwork.org),
+ * This is the developer documentation of the reference client for an experimental new digital currency called NWO (http://www.nwonetwork.org),
  * which enables instant payments to anyone, anywhere in the world. NWO uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
@@ -65,7 +65,7 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/ucc.conf are parsed in qt/ucc.cpp's main()
+    // If Qt is used, parameters/nwo.conf are parsed in qt/nwo.cpp's main()
     ParseParameters(argc, argv);
 
     // Process help and version before taking care about datadir
@@ -76,7 +76,7 @@ bool AppInit(int argc, char* argv[])
             strUsage += LicenseInfo();
         } else {
             strUsage += "\n" + _("Usage:") + "\n" +
-                        "  uccd [options]                     " + _("Start NWO Core Daemon") + "\n";
+                        "  nwod [options]                     " + _("Start NWO Core Daemon") + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
         }
@@ -112,11 +112,11 @@ bool AppInit(int argc, char* argv[])
         // Command-line RPC
         bool fCommandLine = false;
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "ucc:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "nwo:"))
                 fCommandLine = true;
 
         if (fCommandLine) {
-            fprintf(stderr, "Error: There is no RPC client functionality in uccd anymore. Use the ucc-cli utility instead.\n");
+            fprintf(stderr, "Error: There is no RPC client functionality in nwod anymore. Use the nwo-cli utility instead.\n");
             exit(1);
         }
 #ifndef WIN32
@@ -175,7 +175,7 @@ int main(int argc, char* argv[])
 {
     SetupEnvironment();
 
-    // Connect uccd signal handlers
+    // Connect nwod signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? 0 : 1);

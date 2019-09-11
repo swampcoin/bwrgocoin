@@ -48,10 +48,10 @@ static bool AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || mapArgs.count("-?") || mapArgs.count("-help")) {
         // First part of help message is specific to this utility
-        std::string strUsage = _("NWO Core ucc-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("NWO Core nwo-tx utility version") + " " + FormatFullVersion() + "\n\n" +
                                _("Usage:") + "\n" +
-                               "  ucc-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded NWO transaction") + "\n" +
-                               "  ucc-tx [options] -create [commands]   " + _("Create hex-encoded NWO transaction") + "\n" +
+                               "  nwo-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded NWO transaction") + "\n" +
+                               "  nwo-tx [options] -create [commands]   " + _("Create hex-encoded NWO transaction") + "\n" +
                                "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());

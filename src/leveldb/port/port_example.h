@@ -113,11 +113,11 @@ extern bool Snappy_GetUncompressedLength(const char* input, size_t length,
                                          size_t* result);
 
 // Attempt to snappy uncompress input[0,input_length-1] into *output.
-// Returns true if successful, false if the input is invalid lightweight
+// Returns true if snwoessful, false if the input is invalid lightweight
 // compressed data.
 //
 // REQUIRES: at least the first "n" bytes of output[] must be writable
-// where "n" is the result of a successful call to
+// where "n" is the result of a snwoessful call to
 // Snappy_GetUncompressedLength.
 extern bool Snappy_Uncompress(const char* input_data, size_t input_length,
                               char* output);

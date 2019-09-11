@@ -41,7 +41,7 @@ class Env {
   static Env* Default();
 
   // Create a brand new sequentially-readable file with the specified name.
-  // On success, stores a pointer to the new file in *result and returns OK.
+  // On snwoess, stores a pointer to the new file in *result and returns OK.
   // On failure stores NULL in *result and returns non-OK.  If the file does
   // not exist, returns a non-OK status.
   //
@@ -50,7 +50,7 @@ class Env {
                                    SequentialFile** result) = 0;
 
   // Create a brand new random access read-only file with the
-  // specified name.  On success, stores a pointer to the new file in
+  // specified name.  On snwoess, stores a pointer to the new file in
   // *result and returns OK.  On failure stores NULL in *result and
   // returns non-OK.  If the file does not exist, returns a non-OK
   // status.
@@ -61,7 +61,7 @@ class Env {
 
   // Create an object that writes to a new file with the specified
   // name.  Deletes any existing file with the same name and creates a
-  // new file.  On success, stores a pointer to the new file in
+  // new file.  On snwoess, stores a pointer to the new file in
   // *result and returns OK.  On failure stores NULL in *result and
   // returns non-OK.
   //
@@ -98,7 +98,7 @@ class Env {
   // the same db by multiple processes.  On failure, stores NULL in
   // *lock and returns non-OK.
   //
-  // On success, stores a pointer to the object that represents the
+  // On snwoess, stores a pointer to the object that represents the
   // acquired lock in *lock and returns OK.  The caller should call
   // UnlockFile(*lock) to release the lock.  If the process exits,
   // the lock will be automatically released.
@@ -110,8 +110,8 @@ class Env {
   // May create the named file if it does not already exist.
   virtual Status LockFile(const std::string& fname, FileLock** lock) = 0;
 
-  // Release the lock acquired by a previous successful call to LockFile.
-  // REQUIRES: lock was returned by a successful LockFile() call
+  // Release the lock acquired by a previous snwoessful call to LockFile.
+  // REQUIRES: lock was returned by a snwoessful LockFile() call
   // REQUIRES: lock has not already been unlocked.
   virtual Status UnlockFile(FileLock* lock) = 0;
 
@@ -159,7 +159,7 @@ class SequentialFile {
 
   // Read up to "n" bytes from the file.  "scratch[0..n-1]" may be
   // written by this routine.  Sets "*result" to the data that was
-  // read (including if fewer than "n" bytes were successfully read).
+  // read (including if fewer than "n" bytes were snwoessfully read).
   // May set "*result" to point at data in "scratch[0..n-1]", so
   // "scratch[0..n-1]" must be live when "*result" is used.
   // If an error was encountered, returns a non-OK status.
@@ -191,7 +191,7 @@ class RandomAccessFile {
   // Read up to "n" bytes from the file starting at "offset".
   // "scratch[0..n-1]" may be written by this routine.  Sets "*result"
   // to the data that was read (including if fewer than "n" bytes were
-  // successfully read).  May set "*result" to point at data in
+  // snwoessfully read).  May set "*result" to point at data in
   // "scratch[0..n-1]", so "scratch[0..n-1]" must be live when
   // "*result" is used.  If an error was encountered, returns a non-OK
   // status.

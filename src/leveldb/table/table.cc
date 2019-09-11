@@ -69,7 +69,7 @@ Status Table::Open(const Options& options,
   }
 
   if (s.ok()) {
-    // We've successfully read the footer and the index block: we're
+    // We've snwoessfully read the footer and the index block: we're
     // ready to serve requests.
     Rep* rep = new Table::Rep;
     rep->options = options;

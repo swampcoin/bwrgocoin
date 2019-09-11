@@ -46,7 +46,7 @@ class Reader {
   ~Reader();
 
   // Read the next record into *record.  Returns true if read
-  // successfully, false if we hit end of the input.  May use
+  // snwoessfully, false if we hit end of the input.  May use
   // "*scratch" as temporary storage.  The contents filled in *record
   // will only be valid until the next mutating operation on this
   // reader or the next mutation to *scratch.
@@ -86,7 +86,7 @@ class Reader {
 
   // Skips all blocks that are completely before "initial_offset_".
   //
-  // Returns true on success. Handles reporting.
+  // Returns true on snwoess. Handles reporting.
   bool SkipToInitialBlock();
 
   // Return type, or one of the preceding special values

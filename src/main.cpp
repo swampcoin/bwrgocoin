@@ -72,7 +72,7 @@ bool fAlerts = DEFAULT_ALERTS;
 unsigned int nStakeMinAge = 60 * 60; // 1 hour
 int64_t nReserveBalance = 0;
 
-/** Fees smaller than this (in uucc) are considered zero fee (for relaying and mining)
+/** Fees smaller than this (in unwo) are considered zero fee (for relaying and mining)
  * We are ~100 times smaller then bitcoin now (2015-06-23), set minRelayTxFee only 10 times higher
  * so it's still 10 times lower comparing to bitcoin.
  */
@@ -450,7 +450,7 @@ CBlockIndex* LastCommonAncestor(CBlockIndex* pa, CBlockIndex* pb)
     return pa;
 }
 
-/** Update pindexLastCommonBlock and add not-in-flight missing successors to vBlocks, until it has
+/** Update pindexLastCommonBlock and add not-in-flight missing snwoessors to vBlocks, until it has
  *  at most count entries. */
 void FindNextBlocksToDownload(NodeId nodeid, unsigned int count, std::vector<CBlockIndex*>& vBlocks, NodeId& nodeStaller)
 {
@@ -490,7 +490,7 @@ void FindNextBlocksToDownload(NodeId nodeid, unsigned int count, std::vector<CBl
     int nMaxHeight = std::min<int>(state->pindexBestKnownBlock->nHeight, nWindowEnd + 1);
     NodeId waitingfor = -1;
     while (pindexWalk->nHeight < nMaxHeight) {
-        // Read up to 128 (or more, if more blocks than that are needed) successors of pindexWalk (towards
+        // Read up to 128 (or more, if more blocks than that are needed) snwoessors of pindexWalk (towards
         // pindexBestKnownBlock) into vToFetch. We fetch 128, because CBlockIndex::GetAncestor may be as expensive
         // as iterating over ~100 CBlockIndex* entries anyway.
         int nToFetch = std::min(nMaxHeight - pindexWalk->nHeight, std::max<int>(count - vBlocks.size(), 128));
@@ -2154,7 +2154,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    RenameThread("ucc-scriptch");
+    RenameThread("nwo-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -2597,14 +2597,14 @@ bool DisconnectBlocksAndReprocess(int blocks)
 /*
     DisconnectBlockAndInputs
 
-    Remove conflicting blocks for successful SwiftX transaction locks
+    Remove conflicting blocks for snwoessful SwiftX transaction locks
     This should be very rare (Probably will never happen)
 */
 // ***TODO*** clean up here
 bool DisconnectBlockAndInputs(CValidationState& state, CTransaction txLock)
 {
     // All modifications to the coin state will be done in this cache.
-    // Only when all have succeeded, we push it to pcoinsTip.
+    // Only when all have snwoeeded, we push it to pcoinsTip.
     //    CCoinsViewCache view(*pcoinsTip, true);
 
     CBlockIndex* BlockReading = chainActive.Tip();
@@ -2733,7 +2733,7 @@ static void PruneBlockIndexCandidates()
     while (it != setBlockIndexCandidates.end() && setBlockIndexCandidates.value_comp()(*it, chainActive.Tip())) {
         setBlockIndexCandidates.erase(it++);
     }
-    // Either the current tip or a successor of it we're working towards is left in setBlockIndexCandidates.
+    // Either the current tip or a snwoessor of it we're working towards is left in setBlockIndexCandidates.
     assert(!setBlockIndexCandidates.empty());
 }
 
@@ -4226,7 +4226,7 @@ bool LoadExternalBlockFile(FILE* fileIn, CDiskBlockPos* dbp)
                     LogPrintf("Block Import: already had block %s at height %d\n", hash.ToString(), mapBlockIndex[hash]->nHeight);
                 }
 
-                // Recursively process earlier encountered successors of this block
+                // Recursively process earlier encountered snwoessors of this block
                 deque<uint256> queue;
                 queue.push_back(hash);
                 while (!queue.empty()) {
@@ -4808,7 +4808,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                 item.second.RelayTo(pfrom);
         }
 
-        pfrom->fSuccessfullyConnected = true;
+        pfrom->fSnwoessfullyConnected = true;
 
         string remoteAddr;
         if (fLogIPs)
@@ -5363,7 +5363,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                     bPingFinished = true;
                     int64_t pingUsecTime = pingUsecEnd - pfrom->nPingUsecStart;
                     if (pingUsecTime > 0) {
-                        // Successful ping time measurement, replace previous
+                        // Snwoessful ping time measurement, replace previous
                         pfrom->nPingUsecTime = pingUsecTime;
                     } else {
                         // This should never happen

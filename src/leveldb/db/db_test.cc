@@ -1375,8 +1375,8 @@ TEST(DBTest, ComparatorCheck) {
     virtual void FindShortestSeparator(std::string* s, const Slice& l) const {
       BytewiseComparator()->FindShortestSeparator(s, l);
     }
-    virtual void FindShortSuccessor(std::string* key) const {
-      BytewiseComparator()->FindShortSuccessor(key);
+    virtual void FindShortSnwoessor(std::string* key) const {
+      BytewiseComparator()->FindShortSnwoessor(key);
     }
   };
   NewComparator cmp;
@@ -1399,7 +1399,7 @@ TEST(DBTest, CustomComparator) {
       ToNumber(*s);     // Check format
       ToNumber(l);      // Check format
     }
-    virtual void FindShortSuccessor(std::string* key) const {
+    virtual void FindShortSnwoessor(std::string* key) const {
       ToNumber(*key);   // Check format
     }
    private:
@@ -1571,7 +1571,7 @@ TEST(DBTest, WriteSyncError) {
   Reopen(&options);
   env_->data_sync_error_.Release_Store(env_);
 
-  // (b) Normal write should succeed
+  // (b) Normal write should snwoeed
   WriteOptions w;
   ASSERT_OK(db_->Put(w, "k1", "v1"));
   ASSERT_EQ("v1", Get("k1"));
@@ -1616,7 +1616,7 @@ TEST(DBTest, ManifestWriteError) {
     ASSERT_OK(Put("foo", "bar"));
     ASSERT_EQ("bar", Get("foo"));
 
-    // Memtable compaction (will succeed)
+    // Memtable compaction (will snwoeed)
     dbfull()->TEST_CompactMemTable();
     ASSERT_EQ("bar", Get("foo"));
     const int last = config::kMaxMemCompactLevel;

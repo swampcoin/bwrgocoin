@@ -69,7 +69,7 @@ extern std::string OldInfoLogFileName(const std::string& dbname);
 
 // If filename is a leveldb file, store the type of the file in *type.
 // The number encoded in the filename is stored in *number.  If the
-// filename was successfully parsed, returns true.  Else return false.
+// filename was snwoessfully parsed, returns true.  Else return false.
 extern bool ParseFileName(const std::string& filename,
                           uint64_t* number,
                           FileType* type);

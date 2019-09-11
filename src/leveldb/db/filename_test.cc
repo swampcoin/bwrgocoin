@@ -18,7 +18,7 @@ TEST(FileNameTest, Parse) {
   FileType type;
   uint64_t number;
 
-  // Successful parses
+  // Snwoessful parses
   static struct {
     const char* fname;
     uint64_t number;

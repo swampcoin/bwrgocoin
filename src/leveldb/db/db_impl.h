@@ -86,7 +86,7 @@ class DBImpl : public DB {
   void DeleteObsoleteFiles();
 
   // Compact the in-memory write buffer to disk.  Switches to a new
-  // log-file/memtable and writes a new descriptor iff successful.
+  // log-file/memtable and writes a new descriptor iff snwoessful.
   // Errors are recorded in bg_error_.
   void CompactMemTable() EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
@@ -130,7 +130,7 @@ class DBImpl : public DB {
   // table_cache_ provides its own synchronization
   TableCache* table_cache_;
 
-  // Lock over the persistent DB state.  Non-NULL iff successfully acquired.
+  // Lock over the persistent DB state.  Non-NULL iff snwoessfully acquired.
   FileLock* db_lock_;
 
   // State below is protected by mutex_

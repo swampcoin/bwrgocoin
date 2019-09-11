@@ -65,7 +65,7 @@ class Cache {
   virtual void Release(Handle* handle) = 0;
 
   // Return the value encapsulated in a handle returned by a
-  // successful Lookup().
+  // snwoessful Lookup().
   // REQUIRES: handle must not have been released yet.
   // REQUIRES: handle must have been returned by a method on *this.
   virtual void* Value(Handle* handle) = 0;

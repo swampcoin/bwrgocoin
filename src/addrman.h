@@ -26,13 +26,13 @@ private:
     //! where knowledge about this address first came from
     CNetAddr source;
 
-    //! last successful connection by us
-    int64_t nLastSuccess;
+    //! last snwoessful connection by us
+    int64_t nLastSnwoess;
 
     //! last try whatsoever by us:
     // int64_t CAddress::nLastTry
 
-    //! connection attempts since last successful attempt
+    //! connection attempts since last snwoessful attempt
     int nAttempts;
 
     //! reference count in new sets (memory only)
@@ -54,13 +54,13 @@ public:
     {
         READWRITE(*(CAddress*)this);
         READWRITE(source);
-        READWRITE(nLastSuccess);
+        READWRITE(nLastSnwoess);
         READWRITE(nAttempts);
     }
 
     void Init()
     {
-        nLastSuccess = 0;
+        nLastSnwoess = 0;
         nLastTry = 0;
         nAttempts = 0;
         nRefCount = 0;
@@ -150,7 +150,7 @@ public:
 //! after how many failed attempts we give up on a new node
 #define ADDRMAN_RETRIES 3
 
-//! how many successive failures are allowed ...
+//! how many snwoessive failures are allowed ...
 #define ADDRMAN_MAX_FAILURES 10
 
 //! ... in at least this many days

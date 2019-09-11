@@ -1307,7 +1307,7 @@ sph_bswap64(sph_u64 x)
  * combines an addition and the actual access in a single opcode; but
  * it requires the setting (and subsequent resetting) of %asi, which is
  * slow. Some operations (i.e. MD5 compression function) combine many
- * successive little-endian read accesses, which may share the same
+ * snwoessive little-endian read accesses, which may share the same
  * %asi setting. The macros below contain the appropriate inline
  * assembly.
  */

@@ -326,24 +326,24 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
         /* NWO features */
-        {"ucc", "masternode", &masternode, true, true, false},
-        {"ucc", "listmasternodes", &listmasternodes, true, true, false},
-        {"ucc", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"ucc", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"ucc", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"ucc", "masternodedebug", &masternodedebug, true, true, false},
-        {"ucc", "startmasternode", &startmasternode, true, true, false},
-        {"ucc", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"ucc", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"ucc", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"ucc", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"ucc", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"ucc", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"ucc", "mnsync", &mnsync, true, true, false},
-        {"ucc", "spork", &spork, true, true, false},
-        {"ucc", "getpoolinfo", &getpoolinfo, true, true, false},
+        {"nwo", "masternode", &masternode, true, true, false},
+        {"nwo", "listmasternodes", &listmasternodes, true, true, false},
+        {"nwo", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"nwo", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"nwo", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"nwo", "masternodedebug", &masternodedebug, true, true, false},
+        {"nwo", "startmasternode", &startmasternode, true, true, false},
+        {"nwo", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"nwo", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"nwo", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"nwo", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"nwo", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"nwo", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"nwo", "mnsync", &mnsync, true, true, false},
+        {"nwo", "spork", &spork, true, true, false},
+        {"nwo", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
-        {"ucc", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
+        {"nwo", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -609,10 +609,10 @@ void StartRPCThreads()
         unsigned char rand_pwd[32];
         GetRandBytes(rand_pwd, 32);
         uiInterface.ThreadSafeMessageBox(strprintf(
-                                             _("To use uccd, or the -server option to ucc-qt, you must set an rpcpassword in the configuration file:\n"
+                                             _("To use nwod, or the -server option to nwo-qt, you must set an rpcpassword in the configuration file:\n"
                                                "%s\n"
                                                "It is recommended you use the following random password:\n"
-                                               "rpcuser=uccrpc\n"
+                                               "rpcuser=nworpc\n"
                                                "rpcpassword=%s\n"
                                                "(you do not need to remember this password)\n"
                                                "The username and password MUST NOT be the same.\n"
@@ -711,7 +711,7 @@ void StartRPCThreads()
             rpc_acceptors.push_back(acceptor);
             fListening = true;
             rpc_acceptors.push_back(acceptor);
-            // If dual IPv6/IPv4 bind successful, skip binding to IPv4 separately
+            // If dual IPv6/IPv4 bind snwoessful, skip binding to IPv4 separately
             if (bBindAny && bindAddress == asio::ip::address_v6::any() && !v6_only_error)
                 break;
         } catch (boost::system::system_error& e) {
@@ -1069,7 +1069,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> ucc-cli " + methodname + " " + args + "\n";
+    return "> nwo-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

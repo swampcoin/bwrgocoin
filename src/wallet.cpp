@@ -2218,7 +2218,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, CAmount> >& vecSend,
                 if (nChange > 0) {
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
-                    // change transaction isn't always pay-to-ucc-address
+                    // change transaction isn't always pay-to-nwo-address
                     CScript scriptChange;
 
                     // coin control: send change to custom address
@@ -2481,7 +2481,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, uint32_t nTime, unsigne
             return error("CreateCoinStake : failed to sign coinstake");
     }
 
-    // Successfully generated coinstake
+    // Snwoessfully generated coinstake
     nLastStakeSetUpdate = 0; //this will trigger stake set to repopulate next round
     return true;
 }
@@ -3522,7 +3522,7 @@ bool CWallet::MultiSend()
         if (!walletdb.WriteMSettings(fMultiSendStake, fMultiSendMasternodeReward, nLastMultiSendHeight))
             LogPrintf("Failed to write MultiSend setting to DB\n");
 
-        LogPrintf("MultiSend successfully sent\n");
+        LogPrintf("MultiSend snwoessfully sent\n");
 
 	//set which Multisend triggered
         if (sendMSOnStake)

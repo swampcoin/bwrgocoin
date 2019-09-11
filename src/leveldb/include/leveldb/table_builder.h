@@ -70,7 +70,7 @@ class TableBuilder {
   // Number of calls to Add() so far.
   uint64_t NumEntries() const;
 
-  // Size of the file generated so far.  If invoked after a successful
+  // Size of the file generated so far.  If invoked after a snwoessful
   // Finish() call, returns the size of the final generated file.
   uint64_t FileSize() const;
 

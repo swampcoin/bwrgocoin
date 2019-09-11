@@ -76,15 +76,15 @@ noinst_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += uccd
+  bin_PROGRAMS += nwod
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += ucc-cli ucc-tx
+  bin_PROGRAMS += nwo-cli nwo-tx
 endif
 
 .PHONY: FORCE
-# ucc core #
+# nwo core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   addrman.h \
@@ -180,7 +180,7 @@ obj/build.h: FORCE
 	  "$(abs_top_srcdir)"
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between uccd and ucc-qt
+# server: shared between nwod and nwo-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -221,7 +221,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between uccd and ucc-qt, but only linked
+# wallet: shared between nwod and nwo-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -323,7 +323,7 @@ crypto_libbitcoin_crypto_a_SOURCES += \
  crypto/hex/hex.c \
  crypto/hex/hex.h
 
-# common: shared between uccd, and ucc-qt and non-server tools
+# common: shared between nwod, and nwo-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -381,7 +381,7 @@ libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 libbitcoin_util_a_SOURCES += compat/glibcxx_compat.cpp
 endif
 
-# cli: shared between ucc-cli and ucc-qt
+# cli: shared between nwo-cli and nwo-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -391,16 +391,16 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# uccd binary #
-uccd_SOURCES = uccd.cpp
-uccd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-uccd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-uccd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# nwod binary #
+nwod_SOURCES = nwod.cpp
+nwod_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+nwod_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+nwod_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-uccd_SOURCES += uccd-res.rc
+nwod_SOURCES += nwod-res.rc
 endif
-uccd_LDADD = \
+nwod_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -412,41 +412,41 @@ uccd_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-uccd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+nwod_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# ucc-cli binary #
-ucc_cli_SOURCES = ucc-cli.cpp
-ucc_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-ucc_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-ucc_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# nwo-cli binary #
+nwo_cli_SOURCES = nwo-cli.cpp
+nwo_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+nwo_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+nwo_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-ucc_cli_SOURCES += ucc-cli-res.rc
+nwo_cli_SOURCES += nwo-cli-res.rc
 endif
 
-ucc_cli_LDADD = \
+nwo_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-ucc_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+nwo_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# ucc-tx binary #
-ucc_tx_SOURCES = ucc-tx.cpp
-ucc_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-ucc_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-ucc_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# nwo-tx binary #
+nwo_tx_SOURCES = nwo-tx.cpp
+nwo_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+nwo_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+nwo_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
-ucc_tx_LDADD = \
+nwo_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-ucc_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+nwo_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 if BUILD_BITCOIN_LIBS

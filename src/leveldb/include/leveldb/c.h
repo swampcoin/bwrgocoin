@@ -28,7 +28,7 @@
      *errptr == NULL
      *errptr points to a malloc()ed null-terminated error message
        (On Windows, *errptr must have been malloc()-ed by this library.)
-  On success, a leveldb routine leaves *errptr unchanged.
+  On snwoess, a leveldb routine leaves *errptr unchanged.
   On failure, leveldb frees the old value of *errptr and
   set *errptr to a malloc()ed error message.
 

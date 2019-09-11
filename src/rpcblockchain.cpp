@@ -161,7 +161,7 @@ UniValue getrawmempool(const UniValue& params, bool fHelp)
             "{                           (json object)\n"
             "  \"transactionid\" : {       (json object)\n"
             "    \"size\" : n,             (numeric) transaction size in bytes\n"
-            "    \"fee\" : n,              (numeric) transaction fee in ucc\n"
+            "    \"fee\" : n,              (numeric) transaction fee in nwo\n"
             "    \"time\" : n,             (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT\n"
             "    \"height\" : n,           (numeric) block height when transaction entered pool\n"
             "    \"startingpriority\" : n, (numeric) priority when transaction entered pool\n"
@@ -406,8 +406,8 @@ UniValue gettxout(const UniValue& params, bool fHelp)
             "     \"hex\" : \"hex\",        (string) \n"
             "     \"reqSigs\" : n,          (numeric) Number of required signatures\n"
             "     \"type\" : \"pubkeyhash\", (string) The type, eg pubkeyhash\n"
-            "     \"addresses\" : [          (array of string) array of ucc addresses\n"
-            "     \"uccaddress\"   	 	(string) ucc address\n"
+            "     \"addresses\" : [          (array of string) array of nwo addresses\n"
+            "     \"nwoaddress\"   	 	(string) nwo address\n"
             "        ,...\n"
             "     ]\n"
             "  },\n"
@@ -561,7 +561,7 @@ UniValue getchaintips(const UniValue& params, bool fHelp)
             HelpExampleCli("getchaintips", "") + HelpExampleRpc("getchaintips", ""));
 
     /* Build up a list of chain tips.  We start with the list of all
-       known blocks, and successively remove blocks that appear as pprev
+       known blocks, and snwoessively remove blocks that appear as pprev
        of another block.  */
     std::set<const CBlockIndex*, CompareBlocksByHeight> setTips;
     BOOST_FOREACH (const PAIRTYPE(const uint256, CBlockIndex*) & item, mapBlockIndex)

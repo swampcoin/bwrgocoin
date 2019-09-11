@@ -144,7 +144,7 @@ std::string CActiveMasternode::GetStatus()
     case ACTIVE_MASTERNODE_NOT_CAPABLE:
         return "Not capable masternode: " + notCapableReason;
     case ACTIVE_MASTERNODE_STARTED:
-        return "Masternode successfully started";
+        return "Masternode snwoessfully started";
     default:
         return "unknown";
     }

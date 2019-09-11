@@ -9,7 +9,7 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between ucc-cli and uccd)
+ * CBaseChainParams defines the base parameters (shared between nwo-cli and nwod)
  * of a given instance of the NWO system.
  */
 class CBaseChainParams

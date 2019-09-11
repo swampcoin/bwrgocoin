@@ -20,7 +20,7 @@ typedef vector<unsigned char> valtype;
 
 namespace {
 
-inline bool set_success(ScriptError* ret)
+inline bool set_snwoess(ScriptError* ret)
 {
     if (ret)
         *ret = SCRIPT_ERR_OK;
@@ -802,14 +802,14 @@ bool EvalScript(vector<vector<unsigned char> >& stack, const CScript& script, un
                         //serror is set
                         return false;
                     }
-                    bool fSuccess = checker.CheckSig(vchSig, vchPubKey, scriptCode);
+                    bool fSnwoess = checker.CheckSig(vchSig, vchPubKey, scriptCode);
 
                     popstack(stack);
                     popstack(stack);
-                    stack.push_back(fSuccess ? vchTrue : vchFalse);
+                    stack.push_back(fSnwoess ? vchTrue : vchFalse);
                     if (opcode == OP_CHECKSIGVERIFY)
                     {
-                        if (fSuccess)
+                        if (fSnwoess)
                             popstack(stack);
                         else
                             return set_error(serror, SCRIPT_ERR_CHECKSIGVERIFY);
@@ -855,8 +855,8 @@ bool EvalScript(vector<vector<unsigned char> >& stack, const CScript& script, un
                         scriptCode.FindAndDelete(CScript(vchSig));
                     }
 
-                    bool fSuccess = true;
-                    while (fSuccess && nSigsCount > 0)
+                    bool fSnwoess = true;
+                    while (fSnwoess && nSigsCount > 0)
                     {
                         valtype& vchSig    = stacktop(-isig);
                         valtype& vchPubKey = stacktop(-ikey);
@@ -883,7 +883,7 @@ bool EvalScript(vector<vector<unsigned char> >& stack, const CScript& script, un
                         // then too many signatures have failed. Exit early,
                         // without checking any further signatures.
                         if (nSigsCount > nKeysCount)
-                            fSuccess = false;
+                            fSnwoess = false;
                     }
 
                     // Clean up stack of actual arguments
@@ -902,11 +902,11 @@ bool EvalScript(vector<vector<unsigned char> >& stack, const CScript& script, un
                         return set_error(serror, SCRIPT_ERR_SIG_NULLDUMMY);
                     popstack(stack);
 
-                    stack.push_back(fSuccess ? vchTrue : vchFalse);
+                    stack.push_back(fSnwoess ? vchTrue : vchFalse);
 
                     if (opcode == OP_CHECKMULTISIGVERIFY)
                     {
-                        if (fSuccess)
+                        if (fSnwoess)
                             popstack(stack);
                         else
                             return set_error(serror, SCRIPT_ERR_CHECKMULTISIGVERIFY);
@@ -931,7 +931,7 @@ bool EvalScript(vector<vector<unsigned char> >& stack, const CScript& script, un
     if (!vfExec.empty())
         return set_error(serror, SCRIPT_ERR_UNBALANCED_CONDITIONAL);
 
-    return set_success(serror);
+    return set_snwoess(serror);
 }
 
 namespace {
@@ -1130,8 +1130,8 @@ bool VerifyScript(const CScript& scriptSig, const CScript& scriptPubKey, unsigne
         if (!CastToBool(stackCopy.back()))
             return set_error(serror, SCRIPT_ERR_EVAL_FALSE);
         else
-            return set_success(serror);
+            return set_snwoess(serror);
     }
 
-    return set_success(serror);
+    return set_snwoess(serror);
 }

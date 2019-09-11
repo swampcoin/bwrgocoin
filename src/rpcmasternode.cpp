@@ -66,8 +66,8 @@ UniValue obfuscation(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() == 0)
         throw runtime_error(
-            "obfuscation <uccaddress> <amount>\n"
-            "uccaddress, reset, or auto (AutoDenominate)"
+            "obfuscation <nwoaddress> <amount>\n"
+            "nwoaddress, reset, or auto (AutoDenominate)"
             "<amount> is a real and will be rounded to the next 0.1" +
             HelpRequiringPassphrase());
 
@@ -78,18 +78,18 @@ UniValue obfuscation(const UniValue& params, bool fHelp)
         if (fMasterNode)
             return "ObfuScation is not supported from masternodes";
 
-        return "DoAutomaticDenominating " + (obfuScationPool.DoAutomaticDenominating() ? "successful" : ("failed: " + obfuScationPool.GetStatus()));
+        return "DoAutomaticDenominating " + (obfuScationPool.DoAutomaticDenominating() ? "snwoessful" : ("failed: " + obfuScationPool.GetStatus()));
     }
 
     if (params[0].get_str() == "reset") {
         obfuScationPool.Reset();
-        return "successfully reset obfuscation";
+        return "snwoessfully reset obfuscation";
     }
 
     if (params.size() != 2)
         throw runtime_error(
-            "obfuscation <uccaddress> <amount>\n"
-            "uccaddress, denominate, or auto (AutoDenominate)"
+            "obfuscation <nwoaddress> <amount>\n"
+            "nwoaddress, denominate, or auto (AutoDenominate)"
             "<amount> is a real and will be rounded to the next 0.1" +
             HelpRequiringPassphrase());
 
@@ -167,7 +167,7 @@ UniValue masternode(const UniValue& params, bool fHelp)
             "  debug        - Print masternode status\n"
             "  genkey       - Generate new masternodeprivkey\n"
             "  outputs      - Print masternode compatible outputs\n"
-            "  start        - Start masternode configured in ucc.conf\n"
+            "  start        - Start masternode configured in nwo.conf\n"
             "  start-alias  - Start single masternode by assigned alias configured in masternode.conf\n"
             "  start-<mode> - Start masternodes configured in masternode.conf (<mode>: 'all', 'missing', 'disabled')\n"
             "  status       - Print masternode status information\n"
@@ -607,7 +607,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
             "  \"detail\": [\n"
             "    {\n"
             "      \"node\": \"xxxx\",    (string) Node name or alias\n"
-            "      \"result\": \"xxxx\",  (string) 'success' or 'failed'\n"
+            "      \"result\": \"xxxx\",  (string) 'snwoess' or 'failed'\n"
             "      \"error\": \"xxxx\"    (string) Error message, if failed\n"
             "    }\n"
             "    ,...\n"
@@ -647,7 +647,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
         std::vector<CMasternodeConfig::CMasternodeEntry> mnEntries;
         mnEntries = masternodeConfig.getEntries();
 
-        int successful = 0;
+        int snwoessful = 0;
         int failed = 0;
 
         UniValue resultsObj(UniValue::VARR);
@@ -669,10 +669,10 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
 
             UniValue statusObj(UniValue::VOBJ);
             statusObj.push_back(Pair("alias", mne.getAlias()));
-            statusObj.push_back(Pair("result", result ? "success" : "failed"));
+            statusObj.push_back(Pair("result", result ? "snwoess" : "failed"));
 
             if (result) {
-                successful++;
+                snwoessful++;
                 statusObj.push_back(Pair("error", ""));
             } else {
                 failed++;
@@ -685,7 +685,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
             pwalletMain->Lock();
 
         UniValue returnObj(UniValue::VOBJ);
-        returnObj.push_back(Pair("overall", strprintf("Successfully started %d masternodes, failed to start %d, total %d", successful, failed, successful + failed)));
+        returnObj.push_back(Pair("overall", strprintf("Snwoessfully started %d masternodes, failed to start %d, total %d", snwoessful, failed, snwoessful + failed)));
         returnObj.push_back(Pair("detail", resultsObj));
 
         return returnObj;
@@ -698,7 +698,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
             throw JSONRPCError(RPC_WALLET_UNLOCK_NEEDED, "Error: Please enter the wallet passphrase with walletpassphrase first.");
 
         bool found = false;
-        int successful = 0;
+        int snwoessful = 0;
         int failed = 0;
 
         UniValue resultsObj(UniValue::VARR);
@@ -714,10 +714,10 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
 
             bool result = activeMasternode.Register(mne.getIp(), mne.getPrivKey(), mne.getTxHash(), mne.getOutputIndex(), errorMessage);
 
-            statusObj.push_back(Pair("result", result ? "successful" : "failed"));
+            statusObj.push_back(Pair("result", result ? "snwoessful" : "failed"));
 
             if (result) {
-                successful++;
+                snwoessful++;
                 statusObj.push_back(Pair("error", ""));
             } else {
                 failed++;
@@ -738,7 +738,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
             pwalletMain->Lock();
 
         UniValue returnObj(UniValue::VOBJ);
-        returnObj.push_back(Pair("overall", strprintf("Successfully started %d masternodes, failed to start %d, total %d", successful, failed, successful + failed)));
+        returnObj.push_back(Pair("overall", strprintf("Snwoessfully started %d masternodes, failed to start %d, total %d", snwoessful, failed, snwoessful + failed)));
         returnObj.push_back(Pair("detail", resultsObj));
 
         return returnObj;
