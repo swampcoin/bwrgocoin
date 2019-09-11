@@ -255,7 +255,7 @@ public:
     bool fClient;
     bool fInbound;
     bool fNetworkNode;
-    bool fSnwoessfullyConnected;
+    bool fSuccessfullyConnected;
     bool fDisconnect;
     // We use fRelayTxes for two purposes -
     // a) it allows us to not relay tx invs before receiving the peer's version message
