@@ -206,10 +206,10 @@ QT_TRANSLATE_NOOP("nwo-core", ""
 QT_TRANSLATE_NOOP("nwo-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("nwo-core", "(41112 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("nwo-core", "(41110 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("nwo-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("nwo-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("nwo-core", "(must be 41112 for mainnet)"),
+QT_TRANSLATE_NOOP("nwo-core", "(must be 41110 for mainnet)"),
 QT_TRANSLATE_NOOP("nwo-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("nwo-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("nwo-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
