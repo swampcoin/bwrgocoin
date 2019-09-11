@@ -106,7 +106,7 @@ class BitcoinTestFramework(object):
 
         check_json_precision()
 
-        success = False
+        snwoess = False
         try:
             if not os.path.isdir(self.options.tmpdir):
                 os.makedirs(self.options.tmpdir)
@@ -116,7 +116,7 @@ class BitcoinTestFramework(object):
 
             self.run_test()
 
-            success = True
+            snwoess = True
 
         except JSONRPCException as e:
             print("JSONRPC error: "+e.error['message'])
@@ -134,8 +134,8 @@ class BitcoinTestFramework(object):
             wait_bitcoinds()
             shutil.rmtree(self.options.tmpdir)
 
-        if success:
-            print("Tests successful")
+        if snwoess:
+            print("Tests snwoessful")
             sys.exit(0)
         else:
             print("Failed")

@@ -142,6 +142,6 @@ wait $B2PID
 $CLI $B1ARGS stop > /dev/null 2>&1
 wait $B1PID
 
-echo "Tests successful, cleaning up"
+echo "Tests snwoessful, cleaning up"
 rm -rf $D
 exit 0
