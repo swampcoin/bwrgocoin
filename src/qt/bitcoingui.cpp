@@ -123,7 +123,7 @@ this->setStyleSheet(GUIUtil::loadStyleSheet());
 
 GUIUtil::restoreWindowGeometry("nWindow", QSize(1065, 670), this);
 //this->setFixedSize(1065,670);
-QFontDatabase::addApplicationFont(":/fonts/ucc_font");
+QFontDatabase::addApplicationFont(":/fonts/nwo_font");
 
 QString windowTitle = tr("NWO Wallet") + " - ";
 #ifdef ENABLE_WALLET

@@ -216,7 +216,7 @@
         <translation>Desencriptação da carteira falhou</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>A palavra-chave da carteira foi alterada com sucesso.</translation>
     </message>
     <message>
@@ -375,7 +375,7 @@
         <translation>Erro ao adicionar chave à Carteira</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>Chave privada adicionada com sucesso à carteira</translation>
     </message>
 </context>
@@ -594,8 +594,8 @@
         <translation>Enviar moedas para um endereço NWO</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
-        <translation>Requisitar pagamentos (gera códigos QR e ucc: URIs)</translation>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
+        <translation>Requisitar pagamentos (gera códigos QR e nwo: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -806,8 +806,8 @@ MultiSend: %1</translation>
         <translation>Rótulo</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucc.conf).</source>
-        <translation>Nem todas as transações serão exibidas. Para visualizar todas as transações você precisa definir txindex=1 no arquivo de configuração (ucc.conf). </translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (nwo.conf).</source>
+        <translation>Nem todas as transações serão exibidas. Para visualizar todas as transações você precisa definir txindex=1 no arquivo de configuração (nwo.conf). </translation>
     </message>
 </context>
 <context>
@@ -1492,15 +1492,15 @@ Favor verificar o endereço e tente novamente.</translation>
         <translation>Configuração de ofuscação</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Ofuscação foi definida com sucesso para o básico (%1 e 2 rodadas) Você pode mudar isto a qualquer tempo ao abrir a configuração de tela NWO's.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Ofuscação foi definida com sucesso para alto (%1 e 8 rodadas). Você pode mudar isto a qualquer tempo ao abrir a configuração de tela NWO's.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Ofuscação foi definida com sucesso para máxima (%1 e 16 rodadas). Você pode mudar isto a qualquer tempo ao abrir a configuração de tela NWO's.</translation>
     </message>
 </context>
@@ -1611,9 +1611,9 @@ Favor verificar o endereço e tente novamente.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/ucc-project/ucc-project-translations</source>
+https://www.transifex.com/nwo-project/nwo-project-translations</source>
         <translation>Linguagem não encontrada ou tradução incompleta? Ajude contribuido com traduções aqui:
-https://www.transifex.com/ucc-project/ucc-project-translations</translation>
+https://www.transifex.com/nwo-project/nwo-project-translations</translation>
     </message>
     <message>
         <source>Connect to the NWO network through a SOCKS5 proxy.</source>
@@ -1871,7 +1871,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Última mensagem de ofuscação:</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully reset.</source>
+        <source>Obfuscation was snwoessfully reset.</source>
         <translation>Ofuscação foi reiniciada com sucesso.</translation>
     </message>
     <message>
@@ -2996,7 +2996,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Situação</translation>
     </message>
     <message>
-        <source>, has not been successfully broadcast yet</source>
+        <source>, has not been snwoessfully broadcast yet</source>
         <translation>, não foi propagada com sucesso ainda</translation>
     </message>
     <message>
@@ -3369,11 +3369,11 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Aconteceu um erro na tentativa de salvar o histórico de transação para %1.</translation>
     </message>
     <message>
-        <source>Exporting Successful</source>
+        <source>Exporting Snwoessful</source>
         <translation>Exportado com sucesso</translation>
     </message>
     <message>
-        <source>The transaction history was successfully saved to %1.</source>
+        <source>The transaction history was snwoessfully saved to %1.</source>
         <translation>O histórico de transação foi salvo em %1 com sucesso.</translation>
     </message>
     <message>
@@ -3441,16 +3441,16 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Aconteceu um erro na tentativa de salvar os dados da carteira em %1.</translation>
     </message>
     <message>
-        <source>Backup Successful</source>
+        <source>Backup Snwoessful</source>
         <translation>Backup com sucesso</translation>
     </message>
     <message>
-        <source>The wallet data was successfully saved to %1.</source>
+        <source>The wallet data was snwoessfully saved to %1.</source>
         <translation>Os dados da carteira foram salvos em %1 com sucesso.</translation>
     </message>
 </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</source>
         <translation>Deletar todas as transações da carteira e somente recuperar aquelas partes da blockchain através de -rescan na inicialização</translation>
@@ -3812,7 +3812,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Última ofuscação foi muito recente.</translation>
     </message>
     <message>
-        <source>Last successful Obfuscation action was too recent.</source>
+        <source>Last snwoessful Obfuscation action was too recent.</source>
         <translation>Última ação de ofuscação com sucesso foi muito recente.</translation>
     </message>
     <message>
@@ -4080,7 +4080,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Quantias de transação devem ser positivas</translation>
     </message>
     <message>
-        <source>Transaction created successfully.</source>
+        <source>Transaction created snwoessfully.</source>
         <translation>Transação criada com sucesso.</translation>
     </message>
     <message>
@@ -4180,7 +4180,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Você precisa refazer a base de dados usando -reindex para mudar -txindex</translation>
     </message>
     <message>
-        <source>Your entries added successfully.</source>
+        <source>Your entries added snwoessfully.</source>
         <translation>Suas entradas foram adicionadas com sucesso.</translation>
     </message>
     <message>

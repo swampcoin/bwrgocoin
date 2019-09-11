@@ -220,7 +220,7 @@
         <translation>Odšifrování peněženky selhalo</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>Frázové heslo peněženky bylo úspěšně změněno.</translation>
     </message>
     <message>
@@ -387,7 +387,7 @@
         <translation>Chyba při vkládání klíče do peněženky</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>Klíč byl úspěšně přidán do peněženky</translation>
     </message>
 </context>
@@ -606,8 +606,8 @@
         <translation>Odeslat platbuna NWO adresu</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
-        <translation>Vyžádat platbu (generování QK kódu a ucc: URIs)</translation>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
+        <translation>Vyžádat platbu (generování QK kódu a nwo: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -809,8 +809,8 @@ MultiSend: %1</translation>
         <translation>TextPopisku</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucc.conf).</source>
-        <translation>Ne všechny transakce budou zobrazeny. Pro zobrazení všech transackí nastavte v konfiguračním souboru (ucc.conf) txindex=1.</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (nwo.conf).</source>
+        <translation>Ne všechny transakce budou zobrazeny. Pro zobrazení všech transackí nastavte v konfiguračním souboru (nwo.conf) txindex=1.</translation>
     </message>
 </context>
 <context>
@@ -1679,7 +1679,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Anonymizováno</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully reset.</source>
+        <source>Obfuscation was snwoessfully reset.</source>
         <translation>Obfuskace byla úspěšně resetována</translation>
     </message>
     <message>
@@ -2382,7 +2382,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     </message>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>Error</source>
         <translation>Chyba</translation>
@@ -2436,7 +2436,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Hodnota transakce musí být kladná</translation>
     </message>
     <message>
-        <source>Transaction created successfully.</source>
+        <source>Transaction created snwoessfully.</source>
         <translation>Transakce byla uspěšně vytvořena.</translation>
     </message>
     <message>

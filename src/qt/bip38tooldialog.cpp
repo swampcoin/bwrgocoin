@@ -248,7 +248,7 @@ void Bip38ToolDialog::on_importAddressButton_DEC_clicked()
     }
 
     ui->statusLabel_DEC->setStyleSheet("QLabel { color: green; }");
-    ui->statusLabel_DEC->setText(tr("Successfully Added Private Key To Wallet"));
+    ui->statusLabel_DEC->setText(tr("Snwoessfully Added Private Key To Wallet"));
 }
 
 void Bip38ToolDialog::on_clearButton_DEC_clicked()

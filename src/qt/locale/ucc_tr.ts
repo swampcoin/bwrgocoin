@@ -398,6 +398,6 @@
     <name>ZUccControlDialog</name>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     </context>
 </TS>

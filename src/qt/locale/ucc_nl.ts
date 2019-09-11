@@ -216,8 +216,8 @@
         <translation>Portemonnee-ontsleuteling mislukt</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
-        <translation>Portemonneewachtwoord is met succes gewijzigd.</translation>
+        <source>Wallet passphrase was snwoessfully changed.</source>
+        <translation>Portemonneewachtwoord is met snwoes gewijzigd.</translation>
     </message>
     <message>
         <source>Warning: The Caps Lock key is on!</source>
@@ -383,7 +383,7 @@
         <translation>Fout bij het toevoegen van de sleutel</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>De geheime sleutel is toegevoegd aan de portemonnee</translation>
     </message>
 </context>
@@ -606,7 +606,7 @@
         <translation>Verstuur munten naar een NWO adres</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
         <translation>Vraag betaling aan (genereert QR-codes en NWO: URI's)</translation>
     </message>
     <message>
@@ -805,8 +805,8 @@ MultiSend: %1</translation>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucc.conf).</source>
-        <translation>Niet alle transacties worden getoond. Om alle transacties te bekijken moet u txindex=1 instellen in het configuratie bestand (ucc.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (nwo.conf).</source>
+        <translation>Niet alle transacties worden getoond. Om alle transacties te bekijken moet u txindex=1 instellen in het configuratie bestand (nwo.conf).</translation>
     </message>
 </context>
 <context>
@@ -2429,8 +2429,8 @@ MultiSend: %1</translation>
         <translation>Export Mislukt</translation>
     </message>
     <message>
-        <source>Exporting Successful</source>
-        <translation>Exporteren succesvol</translation>
+        <source>Exporting Snwoessful</source>
+        <translation>Exporteren snwoesvol</translation>
     </message>
     <message>
         <source>to</source>
@@ -2477,12 +2477,12 @@ MultiSend: %1</translation>
         <translation>Backup mislukt</translation>
     </message>
     <message>
-        <source>Backup Successful</source>
-        <translation>Backup Succesvol</translation>
+        <source>Backup Snwoessful</source>
+        <translation>Backup Snwoesvol</translation>
     </message>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>(default: %s)</source>
         <translation>(standaard: %s)</translation>

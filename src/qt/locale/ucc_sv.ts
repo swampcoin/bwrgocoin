@@ -204,7 +204,7 @@
         <translation>plånboks avkryptering misslyckades</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>Ändring av plånbokens lösefras lyckades </translation>
     </message>
     <message>
@@ -372,7 +372,7 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Fel när nyckel skulle läggas till plånbok</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>privat nyckel framgångsrikt tillagd till plånbok</translation>
     </message>
 </context>
@@ -591,8 +591,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Skicka mynt till en NWO adress</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
-        <translation>Begär betalning (genererar QR kod och ucc: URls)</translation>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
+        <translation>Begär betalning (genererar QR kod och nwo: URls)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -1365,7 +1365,7 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
     </message>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>Error</source>
         <translation>Fel</translation>
@@ -1479,7 +1479,7 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Transaktionens värde måste vara possitivt</translation>
     </message>
     <message>
-        <source>Transaction created successfully.</source>
+        <source>Transaction created snwoessfully.</source>
         <translation>Transaktion skapad framgångsrikt</translation>
     </message>
     <message>

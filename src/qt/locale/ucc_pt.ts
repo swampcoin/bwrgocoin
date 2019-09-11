@@ -220,7 +220,7 @@
         <translation>Decriptação da carteira falhou</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>Senha da carteira alterada com sucesso.</translation>
     </message>
     <message>
@@ -868,7 +868,7 @@
     </message>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</source>
         <translation>Deletar todas as transações da carteira e somente recuperar aquelas partes do blockchain através de -rescan na inicialização</translation>
@@ -1154,7 +1154,7 @@
         <translation>Os valores das transações devem ser positivos</translation>
     </message>
     <message>
-        <source>Transaction created successfully.</source>
+        <source>Transaction created snwoessfully.</source>
         <translation>Transação criada com sucesso.</translation>
     </message>
     <message>

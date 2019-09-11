@@ -323,7 +323,7 @@ void MultisigDialog::on_createButton_clicked()
             //display status string
             ui->createButtonStatus->setStyleSheet("QTextEdit{ color: black }");
 
-            QString status(strprintf("Transaction has successfully created with a fee of %s.\n"
+            QString status(strprintf("Transaction has snwoessfully created with a fee of %s.\n"
                                      "The transaction has been automatically imported to the sign tab.\n"
                                      "Please continue on to sign the tx from this wallet, to access the hex to send to other owners.", fee).c_str());
 
@@ -712,9 +712,9 @@ void MultisigDialog::commitMultisigTx()
         }
         RelayTransaction(tx);
 #endif
-        //disable commit if successfully committed
+        //disable commit if snwoessfully committed
         ui->commitButton->setEnabled(false);
-        ui->signButtonStatus->setText(strprintf("Transaction has been successfully published with transaction ID:\n %s", tx.GetHash().GetHex()).c_str());
+        ui->signButtonStatus->setText(strprintf("Transaction has been snwoessfully published with transaction ID:\n %s", tx.GetHash().GetHex()).c_str());
     }catch(const runtime_error& e){
         ui->signButtonStatus->setText(e.what());
     }

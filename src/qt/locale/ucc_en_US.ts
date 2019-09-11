@@ -220,8 +220,8 @@
         <translation>Wallet decryption failed</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
-        <translation>Wallet passphrase was successfully changed.</translation>
+        <source>Wallet passphrase was snwoessfully changed.</source>
+        <translation>Wallet passphrase was snwoessfully changed.</translation>
     </message>
     <message>
         <source>Warning: The Caps Lock key is on!</source>
@@ -387,8 +387,8 @@
         <translation>Error Adding Key To Wallet</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
-        <translation>Successfully Added Private Key To Wallet</translation>
+        <source>Snwoessfully Added Private Key To Wallet</source>
+        <translation>Snwoessfully Added Private Key To Wallet</translation>
     </message>
 </context>
 <context>
@@ -610,8 +610,8 @@
         <translation>Send coins to a NWO address</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
-        <translation>Request payments (generates QR codes and ucc: URIs)</translation>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
+        <translation>Request payments (generates QR codes and nwo: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -837,8 +837,8 @@ Address: %4
         <translation>TextLabel</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucc.conf).</source>
-        <translation>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucc.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (nwo.conf).</source>
+        <translation>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (nwo.conf).</translation>
     </message>
 </context>
 <context>
@@ -1576,16 +1576,16 @@ Please check the address and try again.</translation>
         <translation>Obfuscation Configuration</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
-        <translation>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</translation>
+        <source>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <translation>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
-        <translation>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</translation>
+        <source>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <translation>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
-        <translation>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</translation>
+        <source>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <translation>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</translation>
     </message>
 </context>
 <context>
@@ -1719,9 +1719,9 @@ Please check the address and try again.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/ucc-project/ucc-project-translations</source>
+https://www.transifex.com/nwo-project/nwo-project-translations</source>
         <translation>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/ucc-project/ucc-project-translations</translation>
+https://www.transifex.com/nwo-project/nwo-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -2029,8 +2029,8 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
 </translation>
     </message>
     <message>
-        <source>Obfuscation was successfully reset.</source>
-        <translation>Obfuscation was successfully reset.</translation>
+        <source>Obfuscation was snwoessfully reset.</source>
+        <translation>Obfuscation was snwoessfully reset.</translation>
     </message>
     <message>
         <source>If you don't want to see internal Obfuscation fees/transactions select "Most Common" as Type on the "Transactions" tab.</source>
@@ -2092,8 +2092,8 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Invalid payment address %1</translation>
     </message>
     <message>
-        <source>Cannot start ucc: click-to-pay handler</source>
-        <translation>Cannot start ucc: click-to-pay handler</translation>
+        <source>Cannot start nwo: click-to-pay handler</source>
+        <translation>Cannot start nwo: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid NWO address or malformed URI parameters.</source>
@@ -3374,8 +3374,8 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Status</translation>
     </message>
     <message>
-        <source>, has not been successfully broadcast yet</source>
-        <translation>, has not been successfully broadcast yet</translation>
+        <source>, has not been snwoessfully broadcast yet</source>
+        <translation>, has not been snwoessfully broadcast yet</translation>
     </message>
     <message numerus="yes">
         <source>, broadcast through %n node(s)</source>
@@ -3807,12 +3807,12 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>There was an error trying to save the transaction history to %1.</translation>
     </message>
     <message>
-        <source>Exporting Successful</source>
-        <translation>Exporting Successful</translation>
+        <source>Exporting Snwoessful</source>
+        <translation>Exporting Snwoessful</translation>
     </message>
     <message>
-        <source>The transaction history was successfully saved to %1.</source>
-        <translation>The transaction history was successfully saved to %1.</translation>
+        <source>The transaction history was snwoessfully saved to %1.</source>
+        <translation>The transaction history was snwoessfully saved to %1.</translation>
     </message>
     <message>
         <source>Range:</source>
@@ -3879,16 +3879,16 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>There was an error trying to save the wallet data to %1.</translation>
     </message>
     <message>
-        <source>Backup Successful</source>
-        <translation>Backup Successful</translation>
+        <source>Backup Snwoessful</source>
+        <translation>Backup Snwoessful</translation>
     </message>
     <message>
-        <source>The wallet data was successfully saved to %1.</source>
-        <translation>The wallet data was successfully saved to %1.</translation>
+        <source>The wallet data was snwoessfully saved to %1.</source>
+        <translation>The wallet data was snwoessfully saved to %1.</translation>
     </message>
 </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</translation>
@@ -4070,8 +4070,8 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Set the number of threads for coin generation if enabled (-1 = all cores, default: %d)</translation>
     </message>
     <message>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
-        <translation>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</translation>
+        <source>Show N confirmations for a snwoessfully locked transaction (0-9999, default: %u)</source>
+        <translation>Show N confirmations for a snwoessfully locked transaction (0-9999, default: %u)</translation>
     </message>
     <message>
         <source>Support filtering of blocks and transaction with bloom filters (default: %u)</source>
@@ -4086,10 +4086,10 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit &lt;https://www.openssl.org/&gt; and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</translation>
     </message>
     <message>
-        <source>To use uccd, or the -server option to ucc-qt, you must set an rpcpassword in the configuration file:
+        <source>To use nwod, or the -server option to nwo-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=uccrpc
+rpcuser=nworpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -4097,10 +4097,10 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s "NWO Alert" admin@foo.com
 </source>
-        <translation>To use uccd, or the -server option to ucc-qt, you must set an rpcpassword in the configuration file:
+        <translation>To use nwod, or the -server option to nwo-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=uccrpc
+rpcuser=nworpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -4598,8 +4598,8 @@ for example: alertnotify=echo %%s | mail -s "NWO Alert" admin@foo.com
         <translation>Last Obfuscation was too recent.</translation>
     </message>
     <message>
-        <source>Last successful Obfuscation action was too recent.</source>
-        <translation>Last successful Obfuscation action was too recent.</translation>
+        <source>Last snwoessful Obfuscation action was too recent.</source>
+        <translation>Last snwoessful Obfuscation action was too recent.</translation>
     </message>
     <message>
         <source>Limit size of signature cache to &lt;n&gt; entries (default: %u)</source>
@@ -5006,8 +5006,8 @@ for example: alertnotify=echo %%s | mail -s "NWO Alert" admin@foo.com
         <translation>Transaction amounts must be positive</translation>
     </message>
     <message>
-        <source>Transaction created successfully.</source>
-        <translation>Transaction created successfully.</translation>
+        <source>Transaction created snwoessfully.</source>
+        <translation>Transaction created snwoessfully.</translation>
     </message>
     <message>
         <source>Transaction fees are too high.</source>
@@ -5130,8 +5130,8 @@ for example: alertnotify=echo %%s | mail -s "NWO Alert" admin@foo.com
         <translation>You need to rebuild the database using -reindex to change -txindex</translation>
     </message>
     <message>
-        <source>Your entries added successfully.</source>
-        <translation>Your entries added successfully.</translation>
+        <source>Your entries added snwoessfully.</source>
+        <translation>Your entries added snwoessfully.</translation>
     </message>
     <message>
         <source>Your transaction was accepted into the pool!</source>

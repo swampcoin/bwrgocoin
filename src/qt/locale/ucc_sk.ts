@@ -220,7 +220,7 @@
         <translation>Dešifrovanie peňaženky zlyhalo</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>Prístupová fráza pre peňaženku bola úspešne zmenená.</translation>
     </message>
     <message>
@@ -387,7 +387,7 @@
         <translation>Chyba pri pridávaní kľúča do peňaženky</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>Súkromný kľúč bol úspešne pridaný do peňaženky</translation>
     </message>
 </context>
@@ -606,8 +606,8 @@
         <translation>Odoslať mince na adresu NWO</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
-        <translation>Vyžiadať platby (generuje QR kódy a ucc: identifikátory URI)</translation>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
+        <translation>Vyžiadať platby (generuje QR kódy a nwo: identifikátory URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -813,8 +813,8 @@ MultiSend: %1</translation>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucc.conf).</source>
-        <translation>Nie všetky transakcie sa zobrazia. Ak chcete zobraziť všetky transakcie, musíte v konfiguračnom súbore (ucc.conf) nastaviť txindex = 1.</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (nwo.conf).</source>
+        <translation>Nie všetky transakcie sa zobrazia. Ak chcete zobraziť všetky transakcie, musíte v konfiguračnom súbore (nwo.conf) nastaviť txindex = 1.</translation>
     </message>
 </context>
 <context>
@@ -1260,7 +1260,7 @@ MultiSend: %1</translation>
     </message>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>Error</source>
         <translation>Chyba</translation>

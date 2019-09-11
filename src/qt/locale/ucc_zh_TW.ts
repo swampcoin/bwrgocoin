@@ -208,7 +208,7 @@
         <translation>錢包解密失敗</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>錢包密碼修改成功</translation>
     </message>
     <message>
@@ -371,7 +371,7 @@
         <translation>私鑰加入錢包發生錯誤</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>私鑰加入錢包成功</translation>
     </message>
 </context>
@@ -590,8 +590,8 @@
         <translation>送出錢幣到 NWO 地址</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
-        <translation>請求付款 (會產生 QR Code跟 ucc 位址)</translation>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
+        <translation>請求付款 (會產生 QR Code跟 nwo 位址)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -946,7 +946,7 @@
         <translation>資料匯出有誤</translation>
     </message>
     <message>
-        <source>Exporting Successful</source>
+        <source>Exporting Snwoessful</source>
         <translation>資料匯出成功</translation>
     </message>
     </context>
@@ -974,6 +974,6 @@
     <name>ZUccControlDialog</name>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     </context>
 </TS>

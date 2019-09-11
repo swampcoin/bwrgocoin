@@ -220,7 +220,7 @@
         <translation>钱包解密失败</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>钱包密码已经更换为新密码</translation>
     </message>
     <message>
@@ -387,7 +387,7 @@
         <translation>钱包无法加载该密钥（key）</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>为钱包成功添加私人密钥（Private Key）</translation>
     </message>
 </context>
@@ -606,8 +606,8 @@
         <translation>发送数字货币到NWO地址</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
-        <translation>请求支付（生成二维码和ucc：URIs）</translation>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
+        <translation>请求支付（生成二维码和nwo：URIs）</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -1518,7 +1518,7 @@ Address: %4
     <name>ZUccControlDialog</name>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
         <translation>在收到相关警报时执行命令，或者看到一个很长的分叉（cmd中的%s被消息替换）</translation>
@@ -1552,7 +1552,7 @@ Address: %4
         <translation>注意</translation>
     </message>
     <message>
-        <source>Your entries added successfully.</source>
+        <source>Your entries added snwoessfully.</source>
         <translation>您的输入成功添加。</translation>
     </message>
     <message>

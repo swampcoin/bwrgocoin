@@ -192,8 +192,8 @@
         <translation>Le décryptage de votre portefeuille a échoué.</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
-        <translation>La phrase secrète de votre portefeuille a été changée avec succès.</translation>
+        <source>Wallet passphrase was snwoessfully changed.</source>
+        <translation>La phrase secrète de votre portefeuille a été changée avec snwoès.</translation>
     </message>
     <message>
         <source>Warning: The Caps Lock key is on!</source>
@@ -347,8 +347,8 @@
         <translation>Erreur dans l'ajout de la clé au portefeuille</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
-        <translation>La clé privée a été ajoutée avec succès au portefeuille</translation>
+        <source>Snwoessfully Added Private Key To Wallet</source>
+        <translation>La clé privée a été ajoutée avec snwoès au portefeuille</translation>
     </message>
 </context>
 <context>
@@ -653,8 +653,8 @@ Adresse : %4
         <translation>Chercher</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucc.conf).</source>
-        <translation>Toutes les transaction ne seront pas affichés. Pour voir toutes les transactions, vous devez régler txindex=1 dans le fichier de configuration (ucc.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (nwo.conf).</source>
+        <translation>Toutes les transaction ne seront pas affichés. Pour voir toutes les transactions, vous devez régler txindex=1 dans le fichier de configuration (nwo.conf).</translation>
     </message>
 </context>
 <context>
@@ -1738,7 +1738,7 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     </message>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>Error</source>
         <translation>Erreur</translation>

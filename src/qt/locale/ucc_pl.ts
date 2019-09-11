@@ -180,7 +180,7 @@
         <translation>Kodowanie portfela nieudane</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>Hasło do portfela zostało zmienione</translation>
     </message>
     <message>
@@ -311,7 +311,7 @@
         <translation>Błąd w dodawaniu klucza do portfela</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>Dodawanie prywatnego klucza do portfela zakończone powodzeniem</translation>
     </message>
 </context>
@@ -526,8 +526,8 @@
         <translation>Wyślij monety do adresu NWO</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
-        <translation>Zarządaj płatności (generuje kod QR i ucc:URI)</translation>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
+        <translation>Zarządaj płatności (generuje kod QR i nwo:URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -1225,9 +1225,9 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/ucc-project/ucc-project-translations</source>
+https://www.transifex.com/nwo-project/nwo-project-translations</source>
         <translation>Brakuje języka bądź nieukończona pełnego tłumaczenia? Pomóż w tłumaczeniu tutaj:
-https://www.transifex.com/ucc-project/ucc-project-translations </translation>
+https://www.transifex.com/nwo-project/nwo-project-translations </translation>
     </message>
     <message>
         <source>Connect to the NWO network through a SOCKS5 proxy.</source>
@@ -2024,7 +2024,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations </translation>
     </message>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>Error</source>
         <translation>Błąd</translation>

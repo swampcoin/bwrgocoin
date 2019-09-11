@@ -216,7 +216,7 @@
         <translation>Не удалось дешифровать кошелек</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>Кодовая фраза кошелька успешно изменена.</translation>
     </message>
     <message>
@@ -383,7 +383,7 @@
         <translation>Ошибка при добавлении ключа к кошельку</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>Персональный ключ успешно добавлен к кошельку</translation>
     </message>
 </context>
@@ -602,7 +602,7 @@
         <translation>Отправить монеты на NWO адрес</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
         <translation>Запросить платежи (генерирует QR-код и NWO: URI)</translation>
     </message>
     <message>
@@ -829,8 +829,8 @@ MultiSend: %1</translation>
         <translation>Текстовая метка</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucc.conf).</source>
-        <translation>Будут показаны не все транзакции. Для отображения всех транзакций необходимо выставить txindex=1 в конфигурационном файле (ucc.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (nwo.conf).</source>
+        <translation>Будут показаны не все транзакции. Для отображения всех транзакций необходимо выставить txindex=1 в конфигурационном файле (nwo.conf).</translation>
     </message>
 </context>
 <context>
@@ -1568,15 +1568,15 @@ Please check the address and try again.</source>
         <translation>Настройка Перемешивания</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Перемешивание было успешно выставлено на стандартные значения (%1 и 2 цикла). Вы в любой момент можете это изменить, открыв окно настройки NWO.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Перемешивание было успешно выбрано как высокое (%1 и 8 циклов). Вы в любой момент можете это изменить, открыв окно настройки NWO.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Перемешивание было успешно выставлено на максимальное (%1 и 16 циклов). Вы в любой момент можете это изменить, открыв окно настройки NWO.</translation>
     </message>
 </context>
@@ -1711,9 +1711,9 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/ucc-project/ucc-project-translations</source>
+https://www.transifex.com/nwo-project/nwo-project-translations</source>
         <translation>Отсутствует ваш язык или заметили незавершенный перевод? Вы можете помочь нам стать лучше:
-https://www.transifex.com/ucc-project/ucc-project-translations</translation>
+https://www.transifex.com/nwo-project/nwo-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -2013,7 +2013,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
 </translation>
     </message>
     <message>
-        <source>Obfuscation was successfully reset.</source>
+        <source>Obfuscation was snwoessfully reset.</source>
         <translation>Обфускация была успешно сброшена.</translation>
     </message>
     <message>
@@ -2072,8 +2072,8 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Неверный адрес оплаты %1</translation>
     </message>
     <message>
-        <source>Cannot start ucc: click-to-pay handler</source>
-        <translation>Не удалось запустить ucc: обработчик click-to-pay </translation>
+        <source>Cannot start nwo: click-to-pay handler</source>
+        <translation>Не удалось запустить nwo: обработчик click-to-pay </translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid NWO address or malformed URI parameters.</source>
@@ -3144,7 +3144,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Ошибка экспорта</translation>
     </message>
     <message>
-        <source>Exporting Successful</source>
+        <source>Exporting Snwoessful</source>
         <translation>Экспортирование произошло успешно</translation>
     </message>
     </context>
@@ -3177,7 +3177,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
     </message>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>SwiftTX requires inputs with at least 6 confirmations, you might need to wait a few minutes and try again.</source>
         <translation>Для SwiftTX требуется как минимум 6 подтверждений, Вам нужно подождать несколько минут и попытаться снова.</translation>
@@ -3335,7 +3335,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Обнаружен неверный сценарий.</translation>
     </message>
     <message>
-        <source>Last successful Obfuscation action was too recent.</source>
+        <source>Last snwoessful Obfuscation action was too recent.</source>
         <translation>Последняя успешная операция обфускации была совсем недавно.</translation>
     </message>
     <message>
@@ -3511,7 +3511,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Суммы транзакций должны быть положительными</translation>
     </message>
     <message>
-        <source>Transaction created successfully.</source>
+        <source>Transaction created snwoessfully.</source>
         <translation>Транзакция создана успешно.</translation>
     </message>
     <message>

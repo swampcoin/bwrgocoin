@@ -216,7 +216,7 @@
         <translation>Lompakon salauksen purku epäonnistui</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>Lompakon salausavaimen vaihto onnistui.</translation>
     </message>
     <message>
@@ -384,7 +384,7 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Virhe avainta lisätessä</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>Onnistuneesti syötetty yksityisavain lompakkoon</translation>
     </message>
 </context>
@@ -599,8 +599,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Lähetä kolikkoja NWO osoitteeseen</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
-        <translation>Pyydä maksuja (Generoi QR koodeja ja ucc: URIja)</translation>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
+        <translation>Pyydä maksuja (Generoi QR koodeja ja nwo: URIja)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -2414,7 +2414,7 @@ Please check the address and try again.</source>
         <translation>Vienti epäonnistui</translation>
     </message>
     <message>
-        <source>Exporting Successful</source>
+        <source>Exporting Snwoessful</source>
         <translation>Vienti onnistui</translation>
     </message>
     </context>
@@ -2466,12 +2466,12 @@ Please check the address and try again.</source>
         <translation>Varmuuskopiointi epäonnistui</translation>
     </message>
     <message>
-        <source>Backup Successful</source>
+        <source>Backup Snwoessful</source>
         <translation>Varmuuskopiointi onnistui</translation>
     </message>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
         <translation>Varoitus: Verkko ei näytä olevan samaa mieltä! Jotkin mainaajat saattavat kokea ongelmia.</translation>
@@ -2649,7 +2649,7 @@ Please check the address and try again.</source>
         <translation>Rahansiirtojen tulee olla positiivisia</translation>
     </message>
     <message>
-        <source>Transaction created successfully.</source>
+        <source>Transaction created snwoessfully.</source>
         <translation>Rahansiirto luotu onnistuneesti.</translation>
     </message>
     <message>

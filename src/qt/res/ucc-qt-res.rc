@@ -1,5 +1,5 @@
-IDI_ICON1 ICON DISCARDABLE "icons/ucc.ico"
-IDI_ICON2 ICON DISCARDABLE "icons/ucc_testnet.ico"
+IDI_ICON1 ICON DISCARDABLE "icons/nwo.ico"
+IDI_ICON2 ICON DISCARDABLE "icons/nwo_testnet.ico"
 
 #include <windows.h>             // needed for VERSIONINFO
 #include "../../clientversion.h" // holds the needed client version information
@@ -22,10 +22,10 @@ BEGIN
             VALUE "CompanyName",        "NWO"
             VALUE "FileDescription",    "NWO Wallet"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "ucc-qt"
+            VALUE "InternalName",       "nwo-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "ucc-qt.exe"
+            VALUE "OriginalFilename",   "nwo-qt.exe"
             VALUE "ProductName",        "NWO Wallet"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END

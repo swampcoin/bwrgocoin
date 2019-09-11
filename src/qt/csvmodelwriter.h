@@ -26,7 +26,7 @@ public:
     void addColumn(const QString& title, int column, int role = Qt::EditRole);
 
     /** Perform export of the model to CSV.
-        @returns true on success, false otherwise
+        @returns true on snwoess, false otherwise
     */
     bool write();
 

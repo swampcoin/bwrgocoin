@@ -101,7 +101,7 @@ QString TransactionDesc::toHTML(CWallet* wallet, CWalletTx& wtx, TransactionReco
     int nRequests = wtx.GetRequestCount();
     if (nRequests != -1) {
         if (nRequests == 0)
-            strHTML += tr(", has not been successfully broadcast yet");
+            strHTML += tr(", has not been snwoessfully broadcast yet");
         else if (nRequests > 0)
             strHTML += tr(", broadcast through %n node(s)", "", nRequests);
     }
@@ -256,7 +256,7 @@ QString TransactionDesc::toHTML(CWallet* wallet, CWalletTx& wtx, TransactionReco
     strHTML += "<b>" + tr("Transaction ID") + ":</b> " + rec->getTxID() + "<br>";
     strHTML += "<b>" + tr("Output index") + ":</b> " + QString::number(rec->getOutputIndex()) + "<br>";
 
-    // Message from normal ucc:URI (ucc:XyZ...?message=example)
+    // Message from normal nwo:URI (nwo:XyZ...?message=example)
     foreach (const PAIRTYPE(string, string) & r, wtx.vOrderForm)
         if (r.first == "Message")
             strHTML += "<br><b>" + tr("Message") + ":</b><br>" + GUIUtil::HtmlEscape(r.second, true) + "<br>";

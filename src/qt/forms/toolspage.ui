@@ -423,7 +423,7 @@
             <string/>
            </property>
            <property name="icon">
-            <iconset resource="../ucc.qrc">
+            <iconset resource="../nwo.qrc">
              <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
            </property>
            <property name="shortcut">
@@ -1387,7 +1387,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../ucc.qrc"/>
+  <include location="../nwo.qrc"/>
  </resources>
  <connections/>
 </ui>

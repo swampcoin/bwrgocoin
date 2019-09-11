@@ -62,7 +62,7 @@ public:
     /*@}*/
 
     /* Add an address to the model.
-       Returns the added address on success, and an empty string otherwise.
+       Returns the added address on snwoess, and an empty string otherwise.
      */
     QString addRow(const QString& type, const QString& label, const QString& address);
 

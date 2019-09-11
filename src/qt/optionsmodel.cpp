@@ -8,7 +8,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/ucc-config.h"
+#include "config/nwo-config.h"
 #endif
 
 #include "optionsmodel.h"
@@ -160,7 +160,7 @@ void OptionsModel::Init()
     if (settings.contains("nObfuscationRounds"))
         SoftSetArg("-obfuscationrounds", settings.value("nObfuscationRounds").toString().toStdString());
     if (settings.contains("nAnonymizeUccAmount"))
-        SoftSetArg("-anonymizeuccamount", settings.value("nAnonymizeUccAmount").toString().toStdString());
+        SoftSetArg("-anonymizenwoamount", settings.value("nAnonymizeUccAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }
@@ -171,7 +171,7 @@ void OptionsModel::Reset()
 
     // Remove all entries from our QSettings object
     settings.clear();
-    resetSettings = true; // Needed in ucc.cpp during shotdown to also remove the window positions
+    resetSettings = true; // Needed in nwo.cpp during shotdown to also remove the window positions
 
     // default setting for OptionsModel::StartAtStartup - disabled
     if (GUIUtil::GetStartOnSystemStartup())
@@ -274,12 +274,12 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
 // write QSettings values
 bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int role)
 {
-    bool successful = true; /* set to false on parse error */
+    bool snwoessful = true; /* set to false on parse error */
     if (role == Qt::EditRole) {
         QSettings settings;
         switch (index.row()) {
         case StartAtStartup:
-            successful = GUIUtil::SetStartOnSystemStartup(value.toBool());
+            snwoessful = GUIUtil::SetStartOnSystemStartup(value.toBool());
             break;
         case MinimizeToTray:
             fMinimizeToTray = value.toBool();
@@ -427,7 +427,7 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
 
     emit dataChanged(index, index);
 
-    return successful;
+    return snwoessful;
 }
 
 /** Updates current unit in memory, settings and emits displayUnitChanged(newUnit) signal */

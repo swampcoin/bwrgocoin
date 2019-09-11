@@ -220,7 +220,7 @@
         <translation>Decriptazione portafoglio fallita</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>La passphrase del portafoglio è stata modificata correttamente.</translation>
     </message>
     <message>
@@ -387,7 +387,7 @@
         <translation>Errore nell'inserimento della chiave nel portafoglio</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>Chiave privata inserita correttamente nel portafoglio</translation>
     </message>
 </context>
@@ -598,8 +598,8 @@
         <translation>Invia monete all' indirizzo NWO</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
-        <translation>Richiedi pagamenti (genera codici QR e ucc: URIs)</translation>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
+        <translation>Richiedi pagamenti (genera codici QR e nwo: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -675,7 +675,7 @@
     </message>
     <message>
         <source>Transactions after this will not yet be visible.</source>
-        <translation>Le transazioni successive non saranno visibili per ora.</translation>
+        <translation>Le transazioni snwoessive non saranno visibili per ora.</translation>
     </message>
     <message>
         <source>Error</source>
@@ -753,8 +753,8 @@ MultiSend: %1</translation>
         <translation>Cerca</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucc.conf).</source>
-        <translation>Non tutte le transazioni verranno visualizzate. Per vedere tutte le transazioni è necessario aggiungere txindex=1 nel file di configurazione (ucc.conf)</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (nwo.conf).</source>
+        <translation>Non tutte le transazioni verranno visualizzate. Per vedere tutte le transazioni è necessario aggiungere txindex=1 nel file di configurazione (nwo.conf)</translation>
     </message>
 </context>
 <context>
@@ -1272,7 +1272,7 @@ MultiSend: %1</translation>
     </message>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>Error</source>
         <translation>Errore</translation>

@@ -14,7 +14,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"io.ucc.Ucc-Qt";
+        return @"io.nwo.Ucc-Qt";
     } else {
         return [self __bundleIdentifier];
     }

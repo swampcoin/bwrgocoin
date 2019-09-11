@@ -220,7 +220,7 @@
         <translation>지갑 암호화 해제 실패</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>지갑 암호가 변경되었습니다.</translation>
     </message>
     <message>
@@ -387,7 +387,7 @@
         <translation>지갑에 키를 추가하는 도중 에러가 발생했습니다</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>지갑에 개인 키를 추가하였습니다.</translation>
     </message>
 </context>
@@ -610,8 +610,8 @@
         <translation>NWO 주소로 전송하기</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
-        <translation>결제 요청 (QR 코드 및 ucc: URI 생성)</translation>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
+        <translation>결제 요청 (QR 코드 및 nwo: URI 생성)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -837,8 +837,8 @@ Address: %4
         <translation>텍스트라벨</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucc.conf).</source>
-        <translation>모든 트랜잭션이 표시되지는 않습니다. 모든 트랜잭션을 보려면 구성 파일 (ucc.conf)에 txindex = 1을 설정해야합니다.</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (nwo.conf).</source>
+        <translation>모든 트랜잭션이 표시되지는 않습니다. 모든 트랜잭션을 보려면 구성 파일 (nwo.conf)에 txindex = 1을 설정해야합니다.</translation>
     </message>
 </context>
 <context>
@@ -1576,15 +1576,15 @@ Please check the address and try again.</source>
         <translation>난독화 구성</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>난독화가 성공적으로 높게 설정되었습니다.(%1 및 2 rounds) NWO의 설정 화면을 열어 언제든지 다시 변경할 수 있습니다.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>난독화가 성공적으로 높게 설정되었습니다.(%1 및 8 rounds) NWO의 설정 화면을 열어 언제든지 다시 변경할 수 있습니다.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>난독화가 성공적으로 높게 설정되었습니다.(%1 및 16 rounds) NWO의 설정 화면을 열어 언제든지 다시 변경할 수 있습니다.</translation>
     </message>
 </context>
@@ -1719,9 +1719,9 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/ucc-project/ucc-project-translations</source>
+https://www.transifex.com/nwo-project/nwo-project-translations</source>
         <translation>지원 언어가 없거나 번역이 불완전한가요? 번역 기여 도움말:
-https://www.transifex.com/ucc-project/ucc-project-translations</translation>
+https://www.transifex.com/nwo-project/nwo-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -2029,7 +2029,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
 </translation>
     </message>
     <message>
-        <source>Obfuscation was successfully reset.</source>
+        <source>Obfuscation was snwoessfully reset.</source>
         <translation>난독화가 성공적으로 초기화 되었습니다.</translation>
     </message>
     <message>
@@ -2092,7 +2092,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>잘못된 결제 주소 %1</translation>
     </message>
     <message>
-        <source>Cannot start ucc: click-to-pay handler</source>
+        <source>Cannot start nwo: click-to-pay handler</source>
         <translation>NWO을 시작할 수 없습니다: 결제하기 위한 클릭 처리</translation>
     </message>
     <message>
@@ -3380,7 +3380,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>상태</translation>
     </message>
     <message>
-        <source>, has not been successfully broadcast yet</source>
+        <source>, has not been snwoessfully broadcast yet</source>
         <translation>, 아직 성공적으로 브로드캐스트되지 않았습니다</translation>
     </message>
     <message numerus="yes">
@@ -3813,11 +3813,11 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>트랜잭션 기록을 %1로 저장하는 동안 오류가 발생하였습니다.</translation>
     </message>
     <message>
-        <source>Exporting Successful</source>
+        <source>Exporting Snwoessful</source>
         <translation>내보내기 성공</translation>
     </message>
     <message>
-        <source>The transaction history was successfully saved to %1.</source>
+        <source>The transaction history was snwoessfully saved to %1.</source>
         <translation>트랜잭션 기록이 %1에 성공적으로 저장되었습니다.</translation>
     </message>
     <message>
@@ -3885,16 +3885,16 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>%1에 지갑 데이터를 저장하는 동안 오류가 발생하였습니다.</translation>
     </message>
     <message>
-        <source>Backup Successful</source>
+        <source>Backup Snwoessful</source>
         <translation>백업 성공하였습니다</translation>
     </message>
     <message>
-        <source>The wallet data was successfully saved to %1.</source>
+        <source>The wallet data was snwoessfully saved to %1.</source>
         <translation>지갑 데이터가 %1에 성공적으로 저장되었습니다.</translation>
     </message>
 </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = tx 메타 데이터 유지 예 : 계정 소유자 및 지불 요청 정보, 2 = tx 메타 데이터 삭제)</translation>
@@ -4076,7 +4076,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>활성화 시에 코인 생성을 위한 스레드 숫자를 설정합니다 (-1= 모든 코어, 기본값: %d)</translation>
     </message>
     <message>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
+        <source>Show N confirmations for a snwoessfully locked transaction (0-9999, default: %u)</source>
         <translation>성공적으로 잠긴 트랜잭션에 대한 확인을 N으로 나타냅니다 (0-9999, 기본값: %u)</translation>
     </message>
     <message>
@@ -4092,10 +4092,10 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>이 제품은 OpenSSL이 개발한 Open SSL 툴킷 &lt;https://www.openssl.org/&gt; 에서 사용하기 위한 프로젝트 소프트웨어, Eric Young이 개발한 암호화 소프트웨어, Thomas Bernard가 개발한 UPnP 소프트웨어가 포함되어 있습니다.</translation>
     </message>
     <message>
-        <source>To use uccd, or the -server option to ucc-qt, you must set an rpcpassword in the configuration file:
+        <source>To use nwod, or the -server option to nwo-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=uccrpc
+rpcuser=nworpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -4103,7 +4103,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s "NWO Alert" admin@foo.com
 </source>
-        <translation>uccd 또는 NWO-qt에 대한 -server 옵션 파일을 사용하려면 configuration 파일에서 rpcpassword를 설정해야 합니다:
+        <translation>nwod 또는 NWO-qt에 대한 -server 옵션 파일을 사용하려면 configuration 파일에서 rpcpassword를 설정해야 합니다:
 %s
 다음 무작위 암호를 사용하는 것을 추천합니다:
 rpcuser=NWOpc
@@ -4604,7 +4604,7 @@ rpcpassword=%s
         <translation>최근에 마지막으로 난독화를 진행했습니다.</translation>
     </message>
     <message>
-        <source>Last successful Obfuscation action was too recent.</source>
+        <source>Last snwoessful Obfuscation action was too recent.</source>
         <translation>최근에 마지막으로 성공한 난독화 작업이 있습니다.</translation>
     </message>
     <message>
@@ -5012,7 +5012,7 @@ rpcpassword=%s
         <translation>트랜잭션 금액에 반드시 양수값이 들어가야 합니다</translation>
     </message>
     <message>
-        <source>Transaction created successfully.</source>
+        <source>Transaction created snwoessfully.</source>
         <translation>트랜잭션이 성공적으로 생성되었습니다.</translation>
     </message>
     <message>
@@ -5136,7 +5136,7 @@ rpcpassword=%s
         <translation>-treindex를 변경하려면 -reindex를 사용하여 데이터베이스를 다시 빌드해야합니다.</translation>
     </message>
     <message>
-        <source>Your entries added successfully.</source>
+        <source>Your entries added snwoessfully.</source>
         <translation>항목이 성공적으로 추가되었습니다.</translation>
     </message>
     <message>

@@ -283,8 +283,8 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>Wallet passphrase was successfully changed.</source>
-        <translation>Wallet passphrase was successfully changed.</translation>
+        <source>Wallet passphrase was snwoessfully changed.</source>
+        <translation>Wallet passphrase was snwoessfully changed.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -498,7 +498,7 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -781,7 +781,7 @@
     </message>
     <message>
         <location line="+11"/>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1077,7 +1077,7 @@ Address: %4
     </message>
     <message>
         <location filename="../blockexplorer.cpp" line="+473"/>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucc.conf).</source>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (nwo.conf).</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1990,17 +1990,17 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="-27"/>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO&apos;s configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO&apos;s configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO&apos;s configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2167,7 +2167,7 @@ Please check the address and try again.</source>
     <message>
         <location line="+21"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/ucc-project/ucc-project-translations</source>
+https://www.transifex.com/nwo-project/nwo-project-translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2573,7 +2573,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</source>
     </message>
     <message>
         <location line="+27"/>
-        <source>Obfuscation was successfully reset.</source>
+        <source>Obfuscation was snwoessfully reset.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2661,7 +2661,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</source>
     </message>
     <message>
         <location line="-108"/>
-        <source>Cannot start ucc: click-to-pay handler</source>
+        <source>Cannot start nwo: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4330,8 +4330,8 @@ https://www.transifex.com/ucc-project/ucc-project-translations</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>, has not been successfully broadcast yet</source>
-        <translation>, has not been successfully broadcast yet</translation>
+        <source>, has not been snwoessfully broadcast yet</source>
+        <translation>, has not been snwoessfully broadcast yet</translation>
     </message>
     <message numerus="yes">
         <location line="+2"/>
@@ -4893,13 +4893,13 @@ https://www.transifex.com/ucc-project/ucc-project-translations</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Exporting Successful</source>
-        <translation>Exporting Successful</translation>
+        <source>Exporting Snwoessful</source>
+        <translation>Exporting Snwoessful</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>The transaction history was successfully saved to %1.</source>
-        <translation>The transaction history was successfully saved to %1.</translation>
+        <source>The transaction history was snwoessfully saved to %1.</source>
+        <translation>The transaction history was snwoessfully saved to %1.</translation>
     </message>
     <message>
         <location line="+117"/>
@@ -4983,19 +4983,19 @@ https://www.transifex.com/ucc-project/ucc-project-translations</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Backup Successful</source>
-        <translation>Backup Successful</translation>
+        <source>Backup Snwoessful</source>
+        <translation>Backup Snwoessful</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>The wallet data was successfully saved to %1.</source>
-        <translation>The wallet data was successfully saved to %1.</translation>
+        <source>The wallet data was snwoessfully saved to %1.</source>
+        <translation>The wallet data was snwoessfully saved to %1.</translation>
     </message>
 </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
-        <location filename="../uccstrings.cpp" line="+12"/>
+        <location filename="../nwostrings.cpp" line="+12"/>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation type="unfinished">(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</translation>
     </message>
@@ -5221,8 +5221,8 @@ https://www.transifex.com/ucc-project/ucc-project-translations</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
-        <translation type="unfinished">Show N confirmations for a successfully locked transaction (0-9999, default: %u)</translation>
+        <source>Show N confirmations for a snwoessfully locked transaction (0-9999, default: %u)</source>
+        <translation type="unfinished">Show N confirmations for a snwoessfully locked transaction (0-9999, default: %u)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5241,10 +5241,10 @@ https://www.transifex.com/ucc-project/ucc-project-translations</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>To use uccd, or the -server option to ucc-qt, you must set an rpcpassword in the configuration file:
+        <source>To use nwod, or the -server option to nwo-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=uccrpc
+rpcuser=nworpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -5861,7 +5861,7 @@ for example: alertnotify=echo %%s | mail -s &quot;NWO Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Last successful Obfuscation action was too recent.</source>
+        <source>Last snwoessful Obfuscation action was too recent.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6371,8 +6371,8 @@ for example: alertnotify=echo %%s | mail -s &quot;NWO Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Transaction created successfully.</source>
-        <translation type="unfinished">Transaction created successfully.</translation>
+        <source>Transaction created snwoessfully.</source>
+        <translation type="unfinished">Transaction created snwoessfully.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6526,8 +6526,8 @@ for example: alertnotify=echo %%s | mail -s &quot;NWO Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Your entries added successfully.</source>
-        <translation type="unfinished">Your entries added successfully.</translation>
+        <source>Your entries added snwoessfully.</source>
+        <translation type="unfinished">Your entries added snwoessfully.</translation>
     </message>
     <message>
         <location line="+1"/>

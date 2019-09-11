@@ -220,7 +220,7 @@
         <translation>Wallet-Entschlüsselung fehlgeschlagen</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>Die Wallet-Passphrase wurde erfolgreich geändert.</translation>
     </message>
     <message>
@@ -387,7 +387,7 @@
         <translation>Fehler beim hinzufügen des Schlüssels zum Wallet</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>Erfolgreiches hinzufügen eines privaten Schlüssels zum Wallet</translation>
     </message>
 </context>
@@ -610,8 +610,8 @@
         <translation>An eine NWO-Adresse überweisen</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
-        <translation>Zahlung anfordern (QR-Code Generierung und ucc: URIs)</translation>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
+        <translation>Zahlung anfordern (QR-Code Generierung und nwo: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -812,8 +812,8 @@ Adresse: %4</translation>
         <translation>TextEtikett</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucc.conf).</source>
-        <translation>Nicht alle Transaktionen können anzezeigt werden. Um alle Transaktionen zu sehen, müssen sie die Option  "txindex=1" in der "ucc.conf" Konfigurationsdatei hinzufügen.</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (nwo.conf).</source>
+        <translation>Nicht alle Transaktionen können anzezeigt werden. Um alle Transaktionen zu sehen, müssen sie die Option  "txindex=1" in der "nwo.conf" Konfigurationsdatei hinzufügen.</translation>
     </message>
 </context>
 <context>
@@ -2361,7 +2361,7 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Status</translation>
     </message>
     <message>
-        <source>, has not been successfully broadcast yet</source>
+        <source>, has not been snwoessfully broadcast yet</source>
         <translation>, wurde noch nicht erfolgreich übertragen</translation>
     </message>
     <message>
@@ -2774,11 +2774,11 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Beim Speichern des Transaktionsverlaufs nach %1 ist ein Fehler aufgetreten.</translation>
     </message>
     <message>
-        <source>Exporting Successful</source>
+        <source>Exporting Snwoessful</source>
         <translation>Exportieren erfolgreich</translation>
     </message>
     <message>
-        <source>The transaction history was successfully saved to %1.</source>
+        <source>The transaction history was snwoessfully saved to %1.</source>
         <translation>Speichern des Transaktionsverlaufs nach %1 war erfolgreich.</translation>
     </message>
     <message>
@@ -2846,16 +2846,16 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Beim Speichern der Wallet-Daten nach %1 ist ein Fehler aufgetreten.</translation>
     </message>
     <message>
-        <source>Backup Successful</source>
+        <source>Backup Snwoessful</source>
         <translation>Sicherung erfolgreich</translation>
     </message>
     <message>
-        <source>The wallet data was successfully saved to %1.</source>
+        <source>The wallet data was snwoessfully saved to %1.</source>
         <translation>Speichern der Wallet-Daten nach %1 war erfolgreich.</translation>
     </message>
 </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>Error</source>
         <translation>Fehler</translation>
@@ -2921,7 +2921,7 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Transaktionsbeträge müssen positiv sein</translation>
     </message>
     <message>
-        <source>Transaction created successfully.</source>
+        <source>Transaction created snwoessfully.</source>
         <translation>Transaktion erfolgreich erstellt.</translation>
     </message>
     <message>

@@ -220,7 +220,7 @@
         <translation>Dekryptering fejlede.</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>Kodeordet blev udskiftet.</translation>
     </message>
     <message>
@@ -387,7 +387,7 @@
         <translation>Fejl ved tilføjelse af nøgle</translation>
     </message>
     <message>
-        <source>Successfully Added Private Key To Wallet</source>
+        <source>Snwoessfully Added Private Key To Wallet</source>
         <translation>Den private nøgle blev tilføjet tegnebogen.</translation>
     </message>
 </context>
@@ -606,7 +606,7 @@
         <translation>Send mønter til en NWO adresse</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and ucc: URIs)</source>
+        <source>Request payments (generates QR codes and nwo: URIs)</source>
         <translation>Anmod om betaling (genrerer QR kode og NWO URL)</translation>
     </message>
     <message>
@@ -813,8 +813,8 @@ Adresse: %4
         <translation>Tekstmærke</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ucc.conf).</source>
-        <translation>Ikke alle transaktioner vil blive vist. For at vise alle transaktioner må De sætte "txindex=1" i konfigurationsfilen (ucc.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (nwo.conf).</source>
+        <translation>Ikke alle transaktioner vil blive vist. For at vise alle transaktioner må De sætte "txindex=1" i konfigurationsfilen (nwo.conf).</translation>
     </message>
 </context>
 <context>
@@ -1552,15 +1552,15 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Tilsløringskonfiguration</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Tilsløring blev sat til grundlæggende (%1 og 2 gennemløb) De kan ændre dette hvornår De vil ved at åbne NWO konfigurationsbillede.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Tilsløring blev sat til høj (%1 og 8 gennemløb) De kan ændre dette hvornår De vil ved at åbne NWO konfigurationsbillede.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Tilsløring blev sat til maksimum (%1 og 16 gennemløb) De kan ændre dette hvornår De vil ved at åbne NWO konfigurationsbillede.</translation>
     </message>
 </context>
@@ -1695,9 +1695,9 @@ Kontroller adressen og prøv igen.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/ucc-project/ucc-project-translations</source>
+https://www.transifex.com/nwo-project/nwo-project-translations</source>
         <translation>Det valgte sprog mangler, eller oversættelsen er mangelfuld. Hjælp ved at bidrage med oversættelser her:
-https://www.transifex.com/ucc-project/ucc-project-translations</translation>
+https://www.transifex.com/nwo-project/nwo-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1996,7 +1996,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Seneste besked fra tilsløringsprocessen</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully reset.</source>
+        <source>Obfuscation was snwoessfully reset.</source>
         <translation>Tilsløringsfunktionen blev nulstillet </translation>
     </message>
     <message>
@@ -2059,7 +2059,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Ugyldig betalingsadresse: %1</translation>
     </message>
     <message>
-        <source>Cannot start ucc: click-to-pay handler</source>
+        <source>Cannot start nwo: click-to-pay handler</source>
         <translation>Kan ikke starte NWO "klik for at betale" systemet</translation>
     </message>
     <message>
@@ -3333,7 +3333,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Status</translation>
     </message>
     <message>
-        <source>, has not been successfully broadcast yet</source>
+        <source>, has not been snwoessfully broadcast yet</source>
         <translation>, er ikke udsendt endnu</translation>
     </message>
     <message>
@@ -3754,11 +3754,11 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Der opstod en fejl under forsøget på at gemme transaktionshistorikken til %1.</translation>
     </message>
     <message>
-        <source>Exporting Successful</source>
+        <source>Exporting Snwoessful</source>
         <translation>Eksporteret!</translation>
     </message>
     <message>
-        <source>The transaction history was successfully saved to %1.</source>
+        <source>The transaction history was snwoessfully saved to %1.</source>
         <translation>Transaktionshistorikken blev gemt i %1</translation>
     </message>
     <message>
@@ -3826,16 +3826,16 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Der opstod en fejl i forsøget på at gemme tegnebogens data til %1</translation>
     </message>
     <message>
-        <source>Backup Successful</source>
+        <source>Backup Snwoessful</source>
         <translation>Sikkerhedskopiering fuldført</translation>
     </message>
     <message>
-        <source>The wallet data was successfully saved to %1.</source>
+        <source>The wallet data was snwoessfully saved to %1.</source>
         <translation>Tegnebogens data blev gemt i %1</translation>
     </message>
 </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = beholdtx metadata. For eksempel information om kontoejer og betalngsanmodninger, 2 = drop TX metadata)</translation>
@@ -4018,7 +4018,7 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Angiv antallet af tråde til møntgenerering hvis aktiveret (-1 = alle cores, default: %d)</translation>
     </message>
     <message>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
+        <source>Show N confirmations for a snwoessfully locked transaction (0-9999, default: %u)</source>
         <translation>Vis N bekræftelser for en gennemført låst transaktion (0-9999, default: %u)</translation>
     </message>
     <message>
@@ -4034,10 +4034,10 @@ https://www.transifex.com/ucc-project/ucc-project-translations</translation>
         <translation>Dette produkt anvender software udviklet i OpenSSL projektet til brug i OpenSSL værktøjssættet &lt;https://www.openssl.org/&gt; og kryptosoftware skrevet afEric Young og UPnP software skrevet af Thomas Bernard.</translation>
     </message>
     <message>
-        <source>To use uccd, or the -server option to ucc-qt, you must set an rpcpassword in the configuration file:
+        <source>To use nwod, or the -server option to nwo-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=uccrpc
+rpcuser=nworpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -4045,10 +4045,10 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s "NWO Alert" admin@foo.com
 </source>
-        <translation>For at bruge uccd eller -server muligheden sammen med ucc-qt skal der angives et rpc kodeord i konfigurationsfilen:
+        <translation>For at bruge nwod eller -server muligheden sammen med nwo-qt skal der angives et rpc kodeord i konfigurationsfilen:
 %s
 De anbefales at benytte følgende tilfældige kodeord
-Rpcuser=uccrpc
+Rpcuser=nworpc
 rpcpasswrd=%s
 (Det er ikke nødvendigt at huske dette kodeord)
 Brugernavn og kodeord MÅ IKKE VÆRE ENS!
@@ -4510,8 +4510,8 @@ For eksempel: alertnotify=Echo %% | mail - s "NWO ALARM!" e-mail@administrator.d
         <translation>Seneste tilsløring var for ny</translation>
     </message>
     <message>
-        <source>Last successful Obfuscation action was too recent.</source>
-        <translation>Seneste succesfulde tilsløring var for ny</translation>
+        <source>Last snwoessful Obfuscation action was too recent.</source>
+        <translation>Seneste snwoesfulde tilsløring var for ny</translation>
     </message>
     <message>
         <source>Limit size of signature cache to &lt;n&gt; entries (default: %u)</source>
@@ -4910,7 +4910,7 @@ For eksempel: alertnotify=Echo %% | mail - s "NWO ALARM!" e-mail@administrator.d
         <translation>Transaktionsbeløbet skal være positivt</translation>
     </message>
     <message>
-        <source>Transaction created successfully.</source>
+        <source>Transaction created snwoessfully.</source>
         <translation>Transaktionen blev oprettet.</translation>
     </message>
     <message>
@@ -5034,7 +5034,7 @@ For eksempel: alertnotify=Echo %% | mail - s "NWO ALARM!" e-mail@administrator.d
         <translation>Databasen skal genopbygges ved hjælp af -reindex for at ændre -txindex</translation>
     </message>
     <message>
-        <source>Your entries added successfully.</source>
+        <source>Your entries added snwoessfully.</source>
         <translation>Posterne blev tilføjet.</translation>
     </message>
     <message>

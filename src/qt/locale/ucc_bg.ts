@@ -212,7 +212,7 @@
         <translation>Декриптирането на портфейла беше неуспешно</translation>
     </message>
     <message>
-        <source>Wallet passphrase was successfully changed.</source>
+        <source>Wallet passphrase was snwoessfully changed.</source>
         <translation>Паролата на портфейла беше сменена успешно.</translation>
     </message>
     <message>
@@ -519,6 +519,6 @@
     </message>
     </context>
 <context>
-    <name>ucc-core</name>
+    <name>nwo-core</name>
     </context>
 </TS>
