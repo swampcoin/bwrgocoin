@@ -2,10 +2,10 @@
 Encoding=UTF-8
 Name=NWO
 Comment=NWO P2P Cryptocurrency
-Exec=ucc-qt %u
+Exec=nwo-qt %u
 Terminal=false
 Type=Application
-Icon=ucc128
-MimeType=x-scheme-handler/ucc;
+Icon=nwo128
+MimeType=x-scheme-handler/nwo;
 Categories=Office;Finance;
-Name[ru]=ucc-qt.desktop.desktop
+Name[ru]=nwo-qt.desktop.desktop

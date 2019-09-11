@@ -7,7 +7,7 @@ address (or addresses).
 Depends on [jsonrpc](http://json-rpc.org/).
 
 	spendfrom.py --from=FROMADDRESS1[,FROMADDRESS2] --to=TOADDRESS --amount=amount \
-	             --fee=fee --datadir=/path/to/.ucc --testnet --dry_run
+	             --fee=fee --datadir=/path/to/.nwo --testnet --dry_run
 
 With no arguments, outputs a list of amounts associated with addresses.
 
@@ -16,7 +16,7 @@ With arguments, sends coins received by the `FROMADDRESS` addresses to the `TOAD
 ### Notes ###
 
 - You may explicitly specify how much fee to pay (a fee more than 1% of the amount
-will fail,  though, to prevent ucc-losing accidents). Spendfrom may fail if
+will fail,  though, to prevent nwo-losing accidents). Spendfrom may fail if
 it thinks the transaction would never be confirmed (if the amount being sent is
 too small, or if the transaction is too many bytes for the fee).
 
@@ -28,7 +28,7 @@ too small, or if the transaction is too many bytes for the fee).
 - The `--dry_run` option will just create and sign the transaction and print
 the transaction data (as hexadecimal), instead of broadcasting it.
 
-- If the transaction is created and broadcast successfully, a transaction id
+- If the transaction is created and broadcast snwoessfully, a transaction id
 is printed.
 
 - If this was a tool for end-users and not programmers, it would have much friendlier

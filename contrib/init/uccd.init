@@ -1,31 +1,31 @@
 #!/bin/bash
 #
-#  uccd The NWO server.
+#  nwod The NWO server.
 #
 #
 # chkconfig: 345 80 20
-# description: uccd
-# processname: uccd
+# description: nwod
+# processname: nwod
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/uccd, see below
-if [ -f /etc/sysconfig/uccd ]; then
-        . /etc/sysconfig/uccd
+# you can override defaults in /etc/sysconfig/nwod, see below
+if [ -f /etc/sysconfig/nwod ]; then
+        . /etc/sysconfig/nwod
 fi
 
 RETVAL=0
 
-prog=uccd
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/uccd
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/uccd}
+prog=nwod
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/nwod
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/nwod}
 
-# uccd defaults to /usr/bin/uccd, override with BITCOIND_BIN
-bitcoind=${BITCOIND_BIN-/usr/bin/uccd}
+# nwod defaults to /usr/bin/nwod, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/usr/bin/nwod}
 
-# uccd opts default to -disablewallet, override with BITCOIND_OPTS
+# nwod opts default to -disablewallet, override with BITCOIND_OPTS
 bitcoind_opts=${BITCOIND_OPTS}
 
 start() {

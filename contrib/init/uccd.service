@@ -3,17 +3,17 @@ Description=NWO's distributed currency daemon
 After=network.target
 
 [Service]
-User=ucc
-Group=ucc
+User=nwo
+Group=nwo
 
 Type=forking
-PIDFile=/var/lib/uccd/uccd.pid
+PIDFile=/var/lib/nwod/nwod.pid
 
-ExecStart=/usr/bin/uccd -daemon -pid=/var/lib/uccd/uccd.pid \
-          -conf=/etc/ucc/ucc.conf -datadir=/var/lib/uccd
+ExecStart=/usr/bin/nwod -daemon -pid=/var/lib/nwod/nwod.pid \
+          -conf=/etc/nwo/nwo.conf -datadir=/var/lib/nwod
 
-ExecStop=-/usr/bin/ucc-cli -conf=/etc/ucc/ucc.conf \
-         -datadir=/var/lib/uccd stop
+ExecStop=-/usr/bin/nwo-cli -conf=/etc/nwo/nwo.conf \
+         -datadir=/var/lib/nwod stop
 
 Restart=always
 PrivateTmp=true

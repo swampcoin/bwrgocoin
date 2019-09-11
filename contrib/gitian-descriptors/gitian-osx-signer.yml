@@ -1,5 +1,5 @@
 ---
-name: "ucc-dmg-signer"
+name: "nwo-dmg-signer"
 suites:
 - "trusty"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/uccnetwork/ucc-detached-sigs.git"
+- "url": "https://github.com/nwonetwork/nwo-detached-sigs.git"
   "dir": "signature"
 files:
-- "ucc-osx-unsigned.tar.gz"
+- "nwo-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -27,8 +27,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=ucc-osx-unsigned.tar.gz
-  SIGNED=ucc-osx-signed.dmg
+  UNSIGNED=nwo-osx-unsigned.tar.gz
+  SIGNED=nwo-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

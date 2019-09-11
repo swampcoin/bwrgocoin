@@ -1,10 +1,10 @@
 Sample configuration files for:
 
-SystemD: uccd.service
-Upstart: uccd.conf
-OpenRC:  uccd.openrc
-         uccd.openrcconf
-CentOS:  uccd.init
+SystemD: nwod.service
+Upstart: nwod.conf
+OpenRC:  nwod.openrc
+         nwod.openrcconf
+CentOS:  nwod.init
 
 have been made available to assist packagers in creating node packages here.
 
