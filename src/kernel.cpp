@@ -275,7 +275,7 @@ bool GetKernelStakeModifier(uint256 hashBlockFrom, uint64_t& nStakeModifier, int
 
 uint256 stakeHash(unsigned int nTimeTx, CDataStream ss, unsigned int prevoutIndex, uint256 prevoutHash, unsigned int nTimeBlockFrom)
 {
-    //UCC will hash in the transaction hash and the index number in order to make sure each hash is unique
+    //NWO will hash in the transaction hash and the index number in order to make sure each hash is unique
 //    LogPrintf("stakehash: nTimeTx %d, prevoutIndex: %d, nTimeBlockFrom: %d\n\tprevoutHash: %s\n",
 //              nTimeTx, prevoutIndex, nTimeBlockFrom, prevoutHash.GetHex());
     ss << nTimeBlockFrom << prevoutIndex << prevoutHash << nTimeTx;

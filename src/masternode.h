@@ -102,7 +102,7 @@ public:
 };
 
 //
-// The Masternode Class. For managing the Obfuscation process. It contains the input of the (1000, 5000, 10000) UCC, signature to prove
+// The Masternode Class. For managing the Obfuscation process. It contains the input of the (1000, 5000, 10000) NWO, signature to prove
 // it's the one who own that ip address and code for calculating the payment election.
 //
 class CMasternode

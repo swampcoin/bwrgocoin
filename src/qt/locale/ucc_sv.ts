@@ -58,12 +58,12 @@
         <translation>Mottagar adresser</translation>
     </message>
     <message>
-        <source>These are your UCC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Det här är dina UCC adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
+        <source>These are your NWO addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Det här är dina NWO adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
     </message>
     <message>
-        <source>These are your UCC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Det här är dina UCC adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
+        <source>These are your NWO addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Det här är dina NWO adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,16 +160,16 @@
         <translation>Bekräfta plånboks krypering</translation>
     </message>
     <message>
-        <source>UCC will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your UCCs from being stolen by malware infecting your computer.</source>
-        <translation>UCC kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina UCCs från att bli stulna av skadeprogram som infekterat din dator.</translation>
+        <source>NWO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your NWOs from being stolen by malware infecting your computer.</source>
+        <translation>NWO kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina NWOs från att bli stulna av skadeprogram som infekterat din dator.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Är du säker på att du vill kryptera din plånbok?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR UCC&lt;/b&gt;!</source>
-        <translation>Varning: om du krypterar din plånbok och tappar bort din lösenfras kommer du &lt;b&gt; FÖRLORA ALLA DINA UCC&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NWO&lt;/b&gt;!</source>
+        <translation>Varning: om du krypterar din plånbok och tappar bort din lösenfras kommer du &lt;b&gt; FÖRLORA ALLA DINA NWO&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -223,8 +223,8 @@
         <translation>BIP 38 Kryptering</translation>
     </message>
     <message>
-        <source>Enter a UCC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Ange en UCC adress som du vill kryptera med BIP 38.
+        <source>Enter a NWO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Ange en NWO adress som du vill kryptera med BIP 38.
 Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den krypterade privata nyckeln.</translation>
     </message>
     <message>
@@ -232,8 +232,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Adress:</translation>
     </message>
     <message>
-        <source>The UCC address to sign the message with</source>
-        <translation>UCC adressen för signera meddelandet med</translation>
+        <source>The NWO address to sign the message with</source>
+        <translation>NWO adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -264,8 +264,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this UCC address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna UCC adress</translation>
+        <source>Sign the message to prove you own this NWO address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna NWO adress</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -288,12 +288,12 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Ange BIP 38 krypterade privata nyckeln. Ange lösenfrasen i med mittersta boxen. Tryck på krypetra nyckel för att beräkna den privata nyckeln. Efter att nyckeln är avkrypterad, Tryck på 'Importera Adress' kommer att lägga till denna privata nyckel till plånboken.</translation>
     </message>
     <message>
-        <source>The UCC address the message was signed with</source>
-        <translation>UCC adressen meddelandet blev signerat med</translation>
+        <source>The NWO address the message was signed with</source>
+        <translation>NWO adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified UCC address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika UCC adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified NWO address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika NWO adressen.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -583,12 +583,12 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>flik vertygsrad</translation>
     </message>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Kärna</translation>
+        <source>NWO Core</source>
+        <translation>NWO Kärna</translation>
     </message>
     <message>
-        <source>Send coins to a UCC address</source>
-        <translation>Skicka mynt till en UCC adress</translation>
+        <source>Send coins to a NWO address</source>
+        <translation>Skicka mynt till en NWO adress</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and ucc: URIs)</source>
@@ -603,24 +603,24 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Utforska masternoder</translation>
     </message>
     <message>
-        <source>&amp;About UCC Core</source>
-        <translation>Om UCC Kärnan</translation>
+        <source>&amp;About NWO Core</source>
+        <translation>Om NWO Kärnan</translation>
     </message>
     <message>
-        <source>Show information about UCC Core</source>
-        <translation>Visa information om UCC Kärnan</translation>
+        <source>Show information about NWO Core</source>
+        <translation>Visa information om NWO Kärnan</translation>
     </message>
     <message>
-        <source>Modify configuration options for UCC</source>
-        <translation>Ändra konfigurationsval för UCC</translation>
+        <source>Modify configuration options for NWO</source>
+        <translation>Ändra konfigurationsval för NWO</translation>
     </message>
     <message>
-        <source>Sign messages with your UCC addresses to prove you own them</source>
-        <translation>Signera meddelanden med din UCC adress för att visa att du äger dem</translation>
+        <source>Sign messages with your NWO addresses to prove you own them</source>
+        <translation>Signera meddelanden med din NWO adress för att visa att du äger dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified UCC addresses</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika UCC adressen.</translation>
+        <source>Verify messages to ensure they were signed with specified NWO addresses</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika NWO adressen.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -631,8 +631,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kryptera och avkryptera privata nycklar genom användning av lösenfras</translation>
     </message>
     <message>
-        <source>UCC Core client</source>
-        <translation>UCC kärn klient</translation>
+        <source>NWO Core client</source>
+        <translation>NWO kärn klient</translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -841,15 +841,15 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Kärna</translation>
+        <source>NWO Core</source>
+        <translation>NWO Kärna</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Kärna</translation>
+        <source>NWO Core</source>
+        <translation>NWO Kärna</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1106,8 +1106,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The UCC address to sign the message with</source>
-        <translation>UCC adressen för signera meddelandet med</translation>
+        <source>The NWO address to sign the message with</source>
+        <translation>NWO adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1130,16 +1130,16 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this UCC address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna UCC adress</translation>
+        <source>Sign the message to prove you own this NWO address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna NWO adress</translation>
     </message>
     <message>
-        <source>The UCC address the message was signed with</source>
-        <translation>UCC adressen meddelandet blev signerat med</translation>
+        <source>The NWO address the message was signed with</source>
+        <translation>NWO adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified UCC address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika UCC adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified NWO address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika NWO adressen.</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1181,8 +1181,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Kärna</translation>
+        <source>NWO Core</source>
+        <translation>NWO Kärna</translation>
     </message>
     </context>
 <context>

@@ -3,7 +3,7 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX Core developers
 // Copyright (c) 2017-2018 The XDNA Core developers
-// Copyright (c) 2018-2019 The UCC Core developers
+// Copyright (c) 2018-2019 The NWO Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -29,7 +29,7 @@ struct CDNSSeedData {
 
 /**
  * CChainParams defines various tweakable parameters of a given instance of the
- * UCC system. There are three: the main network on which people trade goods
+ * NWO system. There are three: the main network on which people trade goods
  * and services, the public test network which gets reset from time to time and
  * a regression test mode which is intended for private networks only. It has
  * minimal difficulty to ensure that blocks can be found instantly.
@@ -54,8 +54,8 @@ public:
     const MessageStartChars& MessageStart() const { return pchMessageStart; }
     const std::vector<unsigned char>& AlertKey() const { return vAlertPubKey; }
 
-    const std::vector<unsigned char>& xUCCDevKey() const { return vUCCDevKey; }
-    const std::vector<unsigned char>& xUCCFundKey() const { return vUCCFundKey; }
+    const std::vector<unsigned char>& xNWODevKey() const { return vNWODevKey; }
+    const std::vector<unsigned char>& xNWOFundKey() const { return vNWOFundKey; }
     int GetDevFee() const { return nDevFee; }
     int GetFundFee() const { return nFundFee; }
 
@@ -124,8 +124,8 @@ protected:
     MessageStartChars pchMessageStart;
     //! Raw pub key bytes for the broadcast alert signing key.
     std::vector<unsigned char> vAlertPubKey;
-    std::vector<unsigned char> vUCCDevKey;
-    std::vector<unsigned char> vUCCFundKey;
+    std::vector<unsigned char> vNWODevKey;
+    std::vector<unsigned char> vNWOFundKey;
     int nDevFee;
     int nFundFee;
     int nDefaultPort;

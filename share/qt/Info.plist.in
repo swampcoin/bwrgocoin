@@ -29,10 +29,10 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>UCC-Qt</string>
+  <string>NWO-Qt</string>
 
   <key>CFBundleIdentifier</key>
-  <string>io.ucc.UCC-Qt</string>
+  <string>io.ucc.NWO-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -54,7 +54,7 @@
       <key>UTTypeIdentifier</key>
       <string>io.ucc.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>UCC payment request</string>
+      <string>NWO payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

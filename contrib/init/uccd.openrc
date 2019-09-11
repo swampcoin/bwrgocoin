@@ -16,8 +16,8 @@ BITCOIND_USER=${BITCOIND_USER:-ucc}
 BITCOIND_GROUP=${BITCOIND_GROUP:-ucc}
 BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/uccd}
 
-name="UCC Daemon"
-description="UCC crypto-currency p2p network daemon"
+name="NWO Daemon"
+description="NWO crypto-currency p2p network daemon"
 
 command="/usr/bin/uccd"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
@@ -78,7 +78,7 @@ checkconfig()
 		eerror "It is also recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"UCC Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"NWO Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

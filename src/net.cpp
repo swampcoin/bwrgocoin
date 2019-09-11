@@ -576,7 +576,7 @@ void CNode::copyStats(CNodeStats& stats)
         nPingUsecWait = GetTimeMicros() - nPingUsecStart;
     }
 
-    // Raw ping time is in microseconds, but show it to user as whole seconds (UCC users should be well used to small numbers with many decimal places by now :)
+    // Raw ping time is in microseconds, but show it to user as whole seconds (NWO users should be well used to small numbers with many decimal places by now :)
     stats.dPingTime = (((double)nPingUsecTime) / 1e6);
     stats.dPingWait = (((double)nPingUsecWait) / 1e6);
 
@@ -1005,7 +1005,7 @@ void ThreadMapPort()
     struct UPNPDev* devlist = 0;
     char lanaddr[64];
 
-#ifndef UPNPDISCOVER_SUCCESS
+#ifndef UPNPDISCOVER_SNWOESS
     /* miniupnpc 1.5 */
     devlist = upnpDiscover(2000, multicastif, minissdpdpath, 0);
 #elif MINIUPNPC_API_VERSION < 14
@@ -1027,7 +1027,7 @@ void ThreadMapPort()
         if (fDiscover) {
             char externalIPAddress[40];
             r = UPNP_GetExternalIPAddress(urls.controlURL, data.first.servicetype, externalIPAddress);
-            if (r != UPNPCOMMAND_SUCCESS)
+            if (r != UPNPCOMMAND_SNWOESS)
                 LogPrintf("UPnP: GetExternalIPAddress() returned %d\n", r);
             else {
                 if (externalIPAddress[0]) {
@@ -1038,11 +1038,11 @@ void ThreadMapPort()
             }
         }
 
-        string strDesc = "UCC " + FormatFullVersion();
+        string strDesc = "NWO " + FormatFullVersion();
 
         try {
             while (true) {
-#ifndef UPNPDISCOVER_SUCCESS
+#ifndef UPNPDISCOVER_SNWOESS
                 /* miniupnpc 1.5 */
                 r = UPNP_AddPortMapping(urls.controlURL, data.first.servicetype,
                     port.c_str(), port.c_str(), lanaddr, strDesc.c_str(), "TCP", 0);
@@ -1052,7 +1052,7 @@ void ThreadMapPort()
                     port.c_str(), port.c_str(), lanaddr, strDesc.c_str(), "TCP", 0, "0");
 #endif
 
-                if (r != UPNPCOMMAND_SUCCESS)
+                if (r != UPNPCOMMAND_SNWOESS)
                     LogPrintf("AddPortMapping(%s, %s, %s) failed with code %d (%s)\n",
                         port, port, lanaddr, r, strupnperror(r));
                 else
@@ -1532,7 +1532,7 @@ bool BindListenPort(const CService& addrBind, string& strError, bool fWhiteliste
     if (::bind(hListenSocket, (struct sockaddr*)&sockaddr, len) == SOCKET_ERROR) {
         int nErr = WSAGetLastError();
         if (nErr == WSAEADDRINUSE)
-            strError = strprintf(_("Unable to bind to %s on this computer. UCC Core is probably already running."), addrBind.ToString());
+            strError = strprintf(_("Unable to bind to %s on this computer. NWO Core is probably already running."), addrBind.ToString());
         else
             strError = strprintf(_("Unable to bind to %s on this computer (bind returned error %s)"), addrBind.ToString(), NetworkErrorString(nErr));
         LogPrintf("%s\n", strError);

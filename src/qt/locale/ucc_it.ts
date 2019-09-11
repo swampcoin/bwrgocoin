@@ -62,12 +62,12 @@
         <translation>Indirizzi di ricezione</translation>
     </message>
     <message>
-        <source>These are your UCC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questi sono gli indirizzi UCC per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
+        <source>These are your NWO addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Questi sono gli indirizzi NWO per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
     </message>
     <message>
-        <source>These are your UCC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono gli indirizzi UCC per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
+        <source>These are your NWO addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Questi sono gli indirizzi NWO per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Conferma cifratura portafoglio</translation>
     </message>
     <message>
-        <source>UCC will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your DNAs from being stolen by malware infecting your computer.</source>
-        <translation>UCC verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi UCC dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
+        <source>NWO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your DNAs from being stolen by malware infecting your computer.</source>
+        <translation>NWO verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi NWO dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Confermi di voler crittografare il portafoglio?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR UCC&lt;/b&gt;!</source>
-        <translation>Attenzione: Se crittografi il portafoglio e poi perdi la parola d'ordine, &lt;b&gt;PERDERAI TUTTI I TUOI UCC&lt;7b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NWO&lt;/b&gt;!</source>
+        <translation>Attenzione: Se crittografi il portafoglio e poi perdi la parola d'ordine, &lt;b&gt;PERDERAI TUTTI I TUOI NWO&lt;7b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -239,16 +239,16 @@
         <translation>&amp;BIP 38 Criptato</translation>
     </message>
     <message>
-        <source>Enter a UCC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Inserisci un indirizzo UCC che desideri crittografare utilizzando BIP 38. Inserisci una passphrase nella casella centrale. Premi Cripta per calcolare la chiave privata crittografata.</translation>
+        <source>Enter a NWO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Inserisci un indirizzo NWO che desideri crittografare utilizzando BIP 38. Inserisci una passphrase nella casella centrale. Premi Cripta per calcolare la chiave privata crittografata.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Indirizzo:</translation>
     </message>
     <message>
-        <source>The UCC address to sign the message with</source>
-        <translation>L'indirizzo UCC per firmare il messaggio con</translation>
+        <source>The NWO address to sign the message with</source>
+        <translation>L'indirizzo NWO per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this UCC address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo UCC</translation>
+        <source>Sign the message to prove you own this NWO address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo NWO</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Immettere la chiave privata codificata BIP 38. Inserire la passphrase nella casella centrale. Fare clic su Decripta Chiave per calcolare la chiave privata. Dopo che la chiave viene decrittata, cliccando su "Importa indirizzo" verrà aggiunta questa chiave privata al portafoglio.</translation>
     </message>
     <message>
-        <source>The UCC address the message was signed with</source>
-        <translation>L'indirizzo UCC con cui è stato firmato il messaggio</translation>
+        <source>The NWO address the message was signed with</source>
+        <translation>L'indirizzo NWO con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified UCC address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo UCC specificato </translation>
+        <source>Verify the message to ensure it was signed with the specified NWO address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo NWO specificato </translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -590,12 +590,12 @@
         <translation>Schede degli strumenti</translation>
     </message>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Core</translation>
+        <source>NWO Core</source>
+        <translation>NWO Core</translation>
     </message>
     <message>
-        <source>Send coins to a UCC address</source>
-        <translation>Invia monete all' indirizzo UCC</translation>
+        <source>Send coins to a NWO address</source>
+        <translation>Invia monete all' indirizzo NWO</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and ucc: URIs)</source>
@@ -610,24 +610,24 @@
         <translation>Esplora i masternodes</translation>
     </message>
     <message>
-        <source>&amp;About UCC Core</source>
-        <translation>&amp;Informazioni UCC Core</translation>
+        <source>&amp;About NWO Core</source>
+        <translation>&amp;Informazioni NWO Core</translation>
     </message>
     <message>
-        <source>Show information about UCC Core</source>
-        <translation>Visualizza informazioni su UCC Core</translation>
+        <source>Show information about NWO Core</source>
+        <translation>Visualizza informazioni su NWO Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for UCC</source>
-        <translation>Modifica le opzioni di configurazione per UCC</translation>
+        <source>Modify configuration options for NWO</source>
+        <translation>Modifica le opzioni di configurazione per NWO</translation>
     </message>
     <message>
-        <source>Sign messages with your UCC addresses to prove you own them</source>
-        <translation>Firma i messaggi con i tuoi indirizzi UCC per dimostrare di essere il proprietario </translation>
+        <source>Sign messages with your NWO addresses to prove you own them</source>
+        <translation>Firma i messaggi con i tuoi indirizzi NWO per dimostrare di essere il proprietario </translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified UCC addresses</source>
-        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi UCC specifici</translation>
+        <source>Verify messages to ensure they were signed with specified NWO addresses</source>
+        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi NWO specifici</translation>
     </message>
     <message>
         <source>Encrypt and decrypt private keys using a passphrase</source>
@@ -638,16 +638,16 @@
         <translation>Impostazioni MultiSend</translation>
     </message>
     <message>
-        <source>Open a UCC: URI or payment request</source>
-        <translation>Apri un UCC: URI o richiesta di pagamento</translation>
+        <source>Open a NWO: URI or payment request</source>
+        <translation>Apri un NWO: URI o richiesta di pagamento</translation>
     </message>
     <message>
         <source>Block explorer window</source>
         <translation>Finestra Block Explorer</translation>
     </message>
     <message>
-        <source>Show the UCC Core help message to get a list with possible UCC command-line options</source>
-        <translation>Mostra il messaggio di aiuto UCC Core per ottenere un elenco con le possibili opzioni di riga di comando UCC</translation>
+        <source>Show the NWO Core help message to get a list with possible NWO command-line options</source>
+        <translation>Mostra il messaggio di aiuto NWO Core per ottenere un elenco con le possibili opzioni di riga di comando NWO</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -892,8 +892,8 @@ MultiSend: %1</translation>
         <translation>versione</translation>
     </message>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Core</translation>
+        <source>NWO Core</source>
+        <translation>NWO Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -919,8 +919,8 @@ MultiSend: %1</translation>
         <translation>Benvenuto</translation>
     </message>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Core</translation>
+        <source>NWO Core</source>
+        <translation>NWO Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1105,8 +1105,8 @@ MultiSend: %1</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The UCC address to sign the message with</source>
-        <translation>L'indirizzo UCC per firmare il messaggio con</translation>
+        <source>The NWO address to sign the message with</source>
+        <translation>L'indirizzo NWO per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1129,16 +1129,16 @@ MultiSend: %1</translation>
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this UCC address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo UCC</translation>
+        <source>Sign the message to prove you own this NWO address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo NWO</translation>
     </message>
     <message>
-        <source>The UCC address the message was signed with</source>
-        <translation>L'indirizzo UCC con cui è stato firmato il messaggio</translation>
+        <source>The NWO address the message was signed with</source>
+        <translation>L'indirizzo NWO con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified UCC address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo UCC specificato </translation>
+        <source>Verify the message to ensure it was signed with the specified NWO address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo NWO specificato </translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1176,8 +1176,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Core</translation>
+        <source>NWO Core</source>
+        <translation>NWO Core</translation>
     </message>
     </context>
 <context>

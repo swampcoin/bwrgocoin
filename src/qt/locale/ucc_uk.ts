@@ -62,12 +62,12 @@
         <translation>Адреса отримання</translation>
     </message>
     <message>
-        <source>These are your UCC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Це ваші UCC-адреси для надсилання платежів. Завжди перевіряйте суму та адресу одержувача перед відправленням монет.</translation>
+        <source>These are your NWO addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Це ваші NWO-адреси для надсилання платежів. Завжди перевіряйте суму та адресу одержувача перед відправленням монет.</translation>
     </message>
     <message>
-        <source>These are your UCC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Це ваші UCC адреси для отримання платежів. Для кожної транзакції рекомендується використовувати нову адресу одержувача.</translation>
+        <source>These are your NWO addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Це ваші NWO адреси для отримання платежів. Для кожної транзакції рекомендується використовувати нову адресу одержувача.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Підтвердження шифрування гаманця</translation>
     </message>
     <message>
-        <source>UCC will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your UCCs from being stolen by malware infecting your computer.</source>
-        <translation>UCC зараз закриється, щоб завершити процес шифрування. Пам'ятайте, що шифрування гаманця не може повністю захистити ваші UCC'и від крадіжки зловмисним програмним забезпеченням, що заражає ваш комп'ютер.</translation>
+        <source>NWO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your NWOs from being stolen by malware infecting your computer.</source>
+        <translation>NWO зараз закриється, щоб завершити процес шифрування. Пам'ятайте, що шифрування гаманця не може повністю захистити ваші NWO'и від крадіжки зловмисним програмним забезпеченням, що заражає ваш комп'ютер.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Ви впевнені, що хочете зашифрувати Ваш гаманець?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR UCC&lt;/b&gt;!</source>
-        <translation>Попередження: Якщо після шифрування гаманця Ви &lt;b&gt;загубите кодове слово, то ви втратите всі Ваші UCC'и&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NWO&lt;/b&gt;!</source>
+        <translation>Попередження: Якщо після шифрування гаманця Ви &lt;b&gt;загубите кодове слово, то ви втратите всі Ваші NWO'и&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>

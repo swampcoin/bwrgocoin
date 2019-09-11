@@ -148,8 +148,8 @@
         <translation>Czy na pewno chcesz zakodować portfel?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR UCC&lt;/b&gt;!</source>
-        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE UCC!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NWO&lt;/b&gt;!</source>
+        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE NWO!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -227,8 +227,8 @@
         <translation>Zakodowany klucz:</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this UCC address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres UCC jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this NWO address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres NWO jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -518,12 +518,12 @@
         <translation>&amp;Pomoc</translation>
     </message>
     <message>
-        <source>UCC Core</source>
-        <translation>&amp;Rdzeń UCC</translation>
+        <source>NWO Core</source>
+        <translation>&amp;Rdzeń NWO</translation>
     </message>
     <message>
-        <source>Send coins to a UCC address</source>
-        <translation>Wyślij monety do adresu UCC</translation>
+        <source>Send coins to a NWO address</source>
+        <translation>Wyślij monety do adresu NWO</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and ucc: URIs)</source>
@@ -538,24 +538,24 @@
         <translation>Przeglądaj masternodes</translation>
     </message>
     <message>
-        <source>&amp;About UCC Core</source>
+        <source>&amp;About NWO Core</source>
         <translation>&amp;O rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Show information about UCC Core</source>
+        <source>Show information about NWO Core</source>
         <translation>Pokaż informacje o rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Modify configuration options for UCC</source>
-        <translation>Modyfikuj opcje konfiguracji UCC</translation>
+        <source>Modify configuration options for NWO</source>
+        <translation>Modyfikuj opcje konfiguracji NWO</translation>
     </message>
     <message>
-        <source>Sign messages with your UCC addresses to prove you own them</source>
-        <translation>Zatwierdź wiadomość z twoimi adresami UCC, by udowodnić, że jesteś w ich posiadaniu</translation>
+        <source>Sign messages with your NWO addresses to prove you own them</source>
+        <translation>Zatwierdź wiadomość z twoimi adresami NWO, by udowodnić, że jesteś w ich posiadaniu</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified UCC addresses</source>
-        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu UCC</translation>
+        <source>Verify messages to ensure they were signed with specified NWO addresses</source>
+        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu NWO</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -582,8 +582,8 @@
         <translation>Otwórz &amp;Plik konfiguracji Masternode</translation>
     </message>
     <message>
-        <source>Open a UCC: URI or payment request</source>
-        <translation>Otwórz UCC: URI i żądanie zapłaty</translation>
+        <source>Open a NWO: URI or payment request</source>
+        <translation>Otwórz NWO: URI i żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -594,12 +594,12 @@
         <translation>Okno eksplorera bloków</translation>
     </message>
     <message>
-        <source>Show the UCC Core help message to get a list with possible UCC command-line options</source>
-        <translation>Pokaż wiadomość pomocy rdzenia UCC, aby dostać listę możliwych opcji UCC command-line</translation>
+        <source>Show the NWO Core help message to get a list with possible NWO command-line options</source>
+        <translation>Pokaż wiadomość pomocy rdzenia NWO, aby dostać listę możliwych opcji NWO command-line</translation>
     </message>
     <message>
-        <source>UCC Core client</source>
-        <translation>Rdzeń UCC klient</translation>
+        <source>NWO Core client</source>
+        <translation>Rdzeń NWO klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -916,8 +916,8 @@ MultiWysyłlka: %1</translation>
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>UCC Core</source>
-        <translation>&amp;Rdzeń UCC</translation>
+        <source>NWO Core</source>
+        <translation>&amp;Rdzeń NWO</translation>
     </message>
     </context>
 <context>
@@ -931,8 +931,8 @@ MultiWysyłlka: %1</translation>
         <translation>Użyj niestandardowej ścieżki danych</translation>
     </message>
     <message>
-        <source>UCC Core</source>
-        <translation>&amp;Rdzeń UCC</translation>
+        <source>NWO Core</source>
+        <translation>&amp;Rdzeń NWO</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1192,16 +1192,16 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>Zezwól na przychodzące połączenia</translation>
     </message>
     <message>
-        <source>Automatically start UCC after logging in to the system.</source>
-        <translation>Automatycznie uruchom UCC po zalogowaniu do systemu</translation>
+        <source>Automatically start NWO after logging in to the system.</source>
+        <translation>Automatycznie uruchom NWO po zalogowaniu do systemu</translation>
     </message>
     <message>
-        <source>&amp;Start UCC on system login</source>
-        <translation>&amp;Uruchom UCC podczas logowania do systemu</translation>
+        <source>&amp;Start NWO on system login</source>
+        <translation>&amp;Uruchom NWO podczas logowania do systemu</translation>
     </message>
     <message>
-        <source>Amount of UCC to keep anonymized</source>
-        <translation>Liczba UCC do anonimizacji</translation>
+        <source>Amount of NWO to keep anonymized</source>
+        <translation>Liczba NWO do anonimizacji</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1220,8 +1220,8 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>&amp;Sieć</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting UCC.</source>
-        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie UCC</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting NWO.</source>
+        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie NWO</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -1230,8 +1230,8 @@ https://www.transifex.com/ucc-project/ucc-project-translations</source>
 https://www.transifex.com/ucc-project/ucc-project-translations </translation>
     </message>
     <message>
-        <source>Connect to the UCC network through a SOCKS5 proxy.</source>
-        <translation>Połącz z siecią UCC poprzez SOCKS5 proxy.</translation>
+        <source>Connect to the NWO network through a SOCKS5 proxy.</source>
+        <translation>Połącz z siecią NWO poprzez SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1373,8 +1373,8 @@ https://www.transifex.com/ucc-project/ucc-project-translations </translation>
         <translation>Status:</translation>
     </message>
     <message>
-        <source>0 UCC / 0 Rounds</source>
-        <translation>0 UCC / 0 Rund</translation>
+        <source>0 NWO / 0 Rounds</source>
+        <translation>0 NWO / 0 Rund</translation>
     </message>
     <message>
         <source>Enabled/Disabled</source>
@@ -1458,8 +1458,8 @@ https://www.transifex.com/ucc-project/ucc-project-translations </translation>
         <translation>Liczba</translation>
     </message>
     <message>
-        <source>Enter a UCC address (e.g. %1)</source>
-        <translation>Wprowadź adres UCC (np. %1)</translation>
+        <source>Enter a NWO address (e.g. %1)</source>
+        <translation>Wprowadź adres NWO (np. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1897,8 +1897,8 @@ https://www.transifex.com/ucc-project/ucc-project-translations </translation>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this UCC address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres UCC jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this NWO address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres NWO jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Clear &amp;All</source>
@@ -1932,8 +1932,8 @@ https://www.transifex.com/ucc-project/ucc-project-translations </translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>UCC Core</source>
-        <translation>&amp;Rdzeń UCC</translation>
+        <source>NWO Core</source>
+        <translation>&amp;Rdzeń NWO</translation>
     </message>
     </context>
 <context>

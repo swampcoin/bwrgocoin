@@ -1,9 +1,9 @@
-UCC
+NWO
 =====================
 
 Intro
 -----
-UCC is a free open source peer-to-peer electronic cash system that is
+NWO is a free open source peer-to-peer electronic cash system that is
 completely decentralized, without the need for a central server or trusted
 parties.  Users hold the crypto keys to their own money and transact directly
 with each other, with the help of a P2P network to check for double-spending.
@@ -13,7 +13,7 @@ Setup
 -----
 Unpack the files into a directory and run ucc-qt.exe.
 
-UCC is the original client of UCC Cryptocurrency and it builds the backbone of the network.
-However, it downloads and stores the entire history of UCC transactions;
+NWO is the original client of NWO Cryptocurrency and it builds the backbone of the network.
+However, it downloads and stores the entire history of NWO transactions;
 depending on the speed of your computer and network connection, the synchronization
 process can take anywhere from a few hours to a day or more.

@@ -30,7 +30,7 @@ QT_TRANSLATE_NOOP("ucc-core", ""
 "notation for IPv6. This option can be specified multiple times (default: "
 "bind to all interfaces)"),
 QT_TRANSLATE_NOOP("ucc-core", ""
-"Cannot obtain a lock on data directory %s. UCC Core is probably already "
+"Cannot obtain a lock on data directory %s. NWO Core is probably already "
 "running."),
 QT_TRANSLATE_NOOP("ucc-core", ""
 "Continuously rate-limit free transactions to <n>*1000 bytes per minute "
@@ -42,7 +42,7 @@ QT_TRANSLATE_NOOP("ucc-core", ""
 "Delete all wallet transactions and only recover those parts of the "
 "blockchain through -rescan on startup"),
 QT_TRANSLATE_NOOP("ucc-core", ""
-"Disable all UCC specific functionality (Masternodes, Obfuscation, SwiftX) "
+"Disable all NWO specific functionality (Masternodes, Obfuscation, SwiftX) "
 "(0-1, default: %u)"),
 QT_TRANSLATE_NOOP("ucc-core", ""
 "Distributed under the MIT software license, see the accompanying file "
@@ -73,10 +73,10 @@ QT_TRANSLATE_NOOP("ucc-core", ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"),
 QT_TRANSLATE_NOOP("ucc-core", ""
-"Fees (in UCC/Kb) smaller than this are considered zero fee for relaying "
+"Fees (in NWO/Kb) smaller than this are considered zero fee for relaying "
 "(default: %s)"),
 QT_TRANSLATE_NOOP("ucc-core", ""
-"Fees (in UCC/Kb) smaller than this are considered zero fee for transaction "
+"Fees (in NWO/Kb) smaller than this are considered zero fee for transaction "
 "creation (default: %s)"),
 QT_TRANSLATE_NOOP("ucc-core", ""
 "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -161,17 +161,17 @@ QT_TRANSLATE_NOOP("ucc-core", ""
 "If the file does not exist, create it with owner-readable-only file "
 "permissions.\n"
 "It is also recommended to set alertnotify so you are notified of problems;\n"
-"for example: alertnotify=echo %%s | mail -s \"UCC Alert\" admin@foo.com\n"),
+"for example: alertnotify=echo %%s | mail -s \"NWO Alert\" admin@foo.com\n"),
 QT_TRANSLATE_NOOP("ucc-core", ""
-"Unable to bind to %s on this computer. UCC Core is probably already running."),
+"Unable to bind to %s on this computer. NWO Core is probably already running."),
 QT_TRANSLATE_NOOP("ucc-core", ""
 "Unable to locate enough Obfuscation denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("ucc-core", ""
 "Unable to locate enough Obfuscation non-denominated funds for this "
-"transaction that are not equal 1000/3000/5000 UCC."),
+"transaction that are not equal 1000/3000/5000 NWO."),
 QT_TRANSLATE_NOOP("ucc-core", ""
 "Unable to locate enough funds for this transaction that are not equal 1000/3000/5000 "
-"UCC."),
+"NWO."),
 QT_TRANSLATE_NOOP("ucc-core", ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "%s)"),
@@ -183,7 +183,7 @@ QT_TRANSLATE_NOOP("ucc-core", ""
 "pay if you send a transaction."),
 QT_TRANSLATE_NOOP("ucc-core", ""
 "Warning: Please check that your computer's date and time are correct! If "
-"your clock is wrong UCC Core will not work properly."),
+"your clock is wrong NWO Core will not work properly."),
 QT_TRANSLATE_NOOP("ucc-core", ""
 "Warning: The network does not appear to fully agree! Some miners appear to "
 "be experiencing issues."),
@@ -239,7 +239,7 @@ QT_TRANSLATE_NOOP("ucc-core", "Copyright (C) 2009-%i The Bitcoin Core Developers
 QT_TRANSLATE_NOOP("ucc-core", "Copyright (C) 2014-%i The Dash Core Developers"),
 QT_TRANSLATE_NOOP("ucc-core", "Copyright (C) 2015-%i The PIVX Core Developers"),
 QT_TRANSLATE_NOOP("ucc-core", "Copyright (C) 2015-%i The XDNA Core Developers"),
-QT_TRANSLATE_NOOP("ucc-core", "Copyright (C) 2018-%i The UCC Core Developers"),
+QT_TRANSLATE_NOOP("ucc-core", "Copyright (C) 2018-%i The NWO Core Developers"),
 QT_TRANSLATE_NOOP("ucc-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("ucc-core", "Could not parse -rpcbind value %s as network address"),
 QT_TRANSLATE_NOOP("ucc-core", "Could not parse masternode.conf"),
@@ -266,7 +266,7 @@ QT_TRANSLATE_NOOP("ucc-core", "Error initializing wallet database environment %s
 QT_TRANSLATE_NOOP("ucc-core", "Error loading block database"),
 QT_TRANSLATE_NOOP("ucc-core", "Error loading wallet.dat"),
 QT_TRANSLATE_NOOP("ucc-core", "Error loading wallet.dat: Wallet corrupted"),
-QT_TRANSLATE_NOOP("ucc-core", "Error loading wallet.dat: Wallet requires newer version of UCC Core"),
+QT_TRANSLATE_NOOP("ucc-core", "Error loading wallet.dat: Wallet requires newer version of NWO Core"),
 QT_TRANSLATE_NOOP("ucc-core", "Error opening block database"),
 QT_TRANSLATE_NOOP("ucc-core", "Error reading from database, shutting down."),
 QT_TRANSLATE_NOOP("ucc-core", "Error recovering public key."),
@@ -279,7 +279,7 @@ QT_TRANSLATE_NOOP("ucc-core", "Error: Wallet locked, unable to create transactio
 QT_TRANSLATE_NOOP("ucc-core", "Error: You already have pending entries in the Obfuscation pool"),
 QT_TRANSLATE_NOOP("ucc-core", "Failed to listen on any port. Use -listen=0 if you want this."),
 QT_TRANSLATE_NOOP("ucc-core", "Failed to read block"),
-QT_TRANSLATE_NOOP("ucc-core", "Fee (in UCC/kB) to add to transactions you send (default: %s)"),
+QT_TRANSLATE_NOOP("ucc-core", "Fee (in NWO/kB) to add to transactions you send (default: %s)"),
 QT_TRANSLATE_NOOP("ucc-core", "Finalizing transaction."),
 QT_TRANSLATE_NOOP("ucc-core", "Force safe mode (default: %u)"),
 QT_TRANSLATE_NOOP("ucc-core", "Found enough users, signing ( waiting %s )"),
@@ -294,7 +294,7 @@ QT_TRANSLATE_NOOP("ucc-core", "Incompatible mode."),
 QT_TRANSLATE_NOOP("ucc-core", "Incompatible version."),
 QT_TRANSLATE_NOOP("ucc-core", "Incorrect or no genesis block found. Wrong datadir for network?"),
 QT_TRANSLATE_NOOP("ucc-core", "Information"),
-QT_TRANSLATE_NOOP("ucc-core", "Initialization sanity check failed. UCC Core is shutting down."),
+QT_TRANSLATE_NOOP("ucc-core", "Initialization sanity check failed. NWO Core is shutting down."),
 QT_TRANSLATE_NOOP("ucc-core", "Input is not valid."),
 QT_TRANSLATE_NOOP("ucc-core", "Insufficient funds."),
 QT_TRANSLATE_NOOP("ucc-core", "Invalid -onion address or hostname: '%s'"),
@@ -310,7 +310,7 @@ QT_TRANSLATE_NOOP("ucc-core", "Invalid netmask specified in -whitelist: '%s'"),
 QT_TRANSLATE_NOOP("ucc-core", "Invalid port detected in masternode.conf"),
 QT_TRANSLATE_NOOP("ucc-core", "Invalid private key."),
 QT_TRANSLATE_NOOP("ucc-core", "Invalid script detected."),
-QT_TRANSLATE_NOOP("ucc-core", "Keep N UCC anonymized (default: %u)"),
+QT_TRANSLATE_NOOP("ucc-core", "Keep N NWO anonymized (default: %u)"),
 QT_TRANSLATE_NOOP("ucc-core", "Keep at most <n> unconnectable transactions in memory (default: %u)"),
 QT_TRANSLATE_NOOP("ucc-core", "Last Obfuscation was too recent."),
 QT_TRANSLATE_NOOP("ucc-core", "Last successful Obfuscation action was too recent."),
@@ -435,7 +435,7 @@ QT_TRANSLATE_NOOP("ucc-core", "Verifying blocks..."),
 QT_TRANSLATE_NOOP("ucc-core", "Verifying wallet..."),
 QT_TRANSLATE_NOOP("ucc-core", "Wallet %s resides outside data directory %s"),
 QT_TRANSLATE_NOOP("ucc-core", "Wallet is locked."),
-QT_TRANSLATE_NOOP("ucc-core", "Wallet needed to be rewritten: restart UCC Core to complete"),
+QT_TRANSLATE_NOOP("ucc-core", "Wallet needed to be rewritten: restart NWO Core to complete"),
 QT_TRANSLATE_NOOP("ucc-core", "Wallet options:"),
 QT_TRANSLATE_NOOP("ucc-core", "Wallet window title"),
 QT_TRANSLATE_NOOP("ucc-core", "Warning"),

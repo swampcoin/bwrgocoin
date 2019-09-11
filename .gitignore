@@ -89,7 +89,7 @@ libconftest.dylib*
 *.qm
 Makefile
 ucc-qt
-UCC-Qt.app
+NWO-Qt.app
 
 # Unit-tests
 Makefile.test

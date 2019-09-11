@@ -2,8 +2,8 @@ Multi masternode config
 =======================
 
 The multi masternode config allows you to control multiple masternodes from a single wallet. The wallet needs to have a valid collateral output of coins for each masternode type. To use this, place a file named masternode.conf in the data directory of your install:
- * Windows: %APPDATA%\UCC\
- * Mac OS: ~/Library/Application Support/UCC/
+ * Windows: %APPDATA%\NWO\
+ * Mac OS: ~/Library/Application Support/NWO/
  * Unix/Linux: ~/.ucc/
 
 The new masternode.conf format consists of a space seperated text file. Each line consisting of an alias, IP address followed by port, masternode private key, collateral output transaction id, collateral output index, donation address and donation percentage (the latter two are optional and should be in format "address:percentage").

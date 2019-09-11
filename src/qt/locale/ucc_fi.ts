@@ -62,12 +62,12 @@
         <translation>Vastaanottavat osoitteet</translation>
     </message>
     <message>
-        <source>These are your UCC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Nämä ovat sinun UCC osoitteesi maksujen lähetystä varten. Tarkista aina määrä ja vastaanottava osoite ennen kolikoiden lähettämistä.</translation>
+        <source>These are your NWO addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Nämä ovat sinun NWO osoitteesi maksujen lähetystä varten. Tarkista aina määrä ja vastaanottava osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
-        <source>These are your UCC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Nämä ovat sinun UCC osoitteesi maksujen vastaanottamista varten. On suositeltavaa käyttää uutta vastaanottavaa osoitetta jokaiselle uudelle rahansiirrolle.</translation>
+        <source>These are your NWO addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Nämä ovat sinun NWO osoitteesi maksujen vastaanottamista varten. On suositeltavaa käyttää uutta vastaanottavaa osoitetta jokaiselle uudelle rahansiirrolle.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,16 +172,16 @@
         <translation>Vahvista lompakon salaus</translation>
     </message>
     <message>
-        <source>UCC will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your UCCs from being stolen by malware infecting your computer.</source>
-        <translation>UCC sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella UCCien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
+        <source>NWO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your NWOs from being stolen by malware infecting your computer.</source>
+        <translation>NWO sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella NWOien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Oletko varma että tahdot salata lompakkosi?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR UCC&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki UCCisi&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NWO&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki NWOisi&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -235,8 +235,8 @@
         <translation>&amp;BIP 38 Salaus</translation>
     </message>
     <message>
-        <source>Enter a UCC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Syötä UCC osoite, jonnka tahtoisit salata käyttäen BIP 38.
+        <source>Enter a NWO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Syötä NWO osoite, jonnka tahtoisit salata käyttäen BIP 38.
 Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityisavaimen.</translation>
     </message>
     <message>
@@ -244,8 +244,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Osoite:</translation>
     </message>
     <message>
-        <source>The UCC address to sign the message with</source>
-        <translation>UCC osoite, jolla viesti allekirjoitetaan</translation>
+        <source>The NWO address to sign the message with</source>
+        <translation>NWO osoite, jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -276,8 +276,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Kopioi nykyinen allekirjoitus järjestelmän leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this UCC address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän UCC osoitteen</translation>
+        <source>Sign the message to prove you own this NWO address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän NWO osoitteen</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -300,12 +300,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Syötä BIP 38 salattu yksityisavain. Syötä salausavain laatikkoon. Paina Avaa Salaus tuottaaksesi yksityisavaimen. Kun avain on dekryptattu, painamalla "Import osoite" lisää tämän yksityisavaimen lompakkoon.</translation>
     </message>
     <message>
-        <source>The UCC address the message was signed with</source>
-        <translation>UCC osoite, jolla viesti allekirjoitettiin</translation>
+        <source>The NWO address the message was signed with</source>
+        <translation>NWO osoite, jolla viesti allekirjoitettiin</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified UCC address</source>
-        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla UCC osoitteella.</translation>
+        <source>Verify the message to ensure it was signed with the specified NWO address</source>
+        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla NWO osoitteella.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -591,12 +591,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>&amp;Apua</translation>
     </message>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Ydin</translation>
+        <source>NWO Core</source>
+        <translation>NWO Ydin</translation>
     </message>
     <message>
-        <source>Send coins to a UCC address</source>
-        <translation>Lähetä kolikkoja UCC osoitteeseen</translation>
+        <source>Send coins to a NWO address</source>
+        <translation>Lähetä kolikkoja NWO osoitteeseen</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and ucc: URIs)</source>
@@ -611,24 +611,24 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Selaa masternodeja</translation>
     </message>
     <message>
-        <source>&amp;About UCC Core</source>
-        <translation>UCC Core &amp;ytimestä</translation>
+        <source>&amp;About NWO Core</source>
+        <translation>NWO Core &amp;ytimestä</translation>
     </message>
     <message>
-        <source>Show information about UCC Core</source>
-        <translation>Näytä tietoja UCC Ytimestä</translation>
+        <source>Show information about NWO Core</source>
+        <translation>Näytä tietoja NWO Ytimestä</translation>
     </message>
     <message>
-        <source>Modify configuration options for UCC</source>
-        <translation>Muokkaa konfiguraatio vaihtoehtoja UCC:lle</translation>
+        <source>Modify configuration options for NWO</source>
+        <translation>Muokkaa konfiguraatio vaihtoehtoja NWO:lle</translation>
     </message>
     <message>
-        <source>Sign messages with your UCC addresses to prove you own them</source>
+        <source>Sign messages with your NWO addresses to prove you own them</source>
         <translation>Allekirjoita viestejä todistaaksesi, että omistat ne.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified UCC addresses</source>
-        <translation>Vahvista viestit varmistaaksesi, että ne allekirjoitettiin tietyllä UCC osoiteella.</translation>
+        <source>Verify messages to ensure they were signed with specified NWO addresses</source>
+        <translation>Vahvista viestit varmistaaksesi, että ne allekirjoitettiin tietyllä NWO osoiteella.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -659,8 +659,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Avaa Masternode konfiguraatiotiedosto</translation>
     </message>
     <message>
-        <source>Open a UCC: URI or payment request</source>
-        <translation>Avaa UCC: URI tai pyydä maksua</translation>
+        <source>Open a NWO: URI or payment request</source>
+        <translation>Avaa NWO: URI tai pyydä maksua</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -671,12 +671,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Lohkon tutkija näkymä</translation>
     </message>
     <message>
-        <source>Show the UCC Core help message to get a list with possible UCC command-line options</source>
-        <translation>Näytä UCC Ydin apuviesti saadaksesi lista mahdollisista UCC komentolinja komennoista.</translation>
+        <source>Show the NWO Core help message to get a list with possible NWO command-line options</source>
+        <translation>Näytä NWO Ydin apuviesti saadaksesi lista mahdollisista NWO komentolinja komennoista.</translation>
     </message>
     <message>
-        <source>UCC Core client</source>
-        <translation>UCC Ydin asiakasohjelma</translation>
+        <source>NWO Core client</source>
+        <translation>NWO Ydin asiakasohjelma</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -934,8 +934,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Ydin</translation>
+        <source>NWO Core</source>
+        <translation>NWO Ydin</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -953,12 +953,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Tervetuloa</translation>
     </message>
     <message>
-        <source>Welcome to UCC Core.</source>
-        <translation>Tervetuloa UCC Ytimeen.</translation>
+        <source>Welcome to NWO Core.</source>
+        <translation>Tervetuloa NWO Ytimeen.</translation>
     </message>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Ydin</translation>
+        <source>NWO Core</source>
+        <translation>NWO Ydin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1135,32 +1135,32 @@ Please check the address and try again.</source>
         <translation>Valitse yksityisyyden taso.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 UCC</source>
-        <translation>Käytä 2 erillistä masternodea sekoittaaksesi enintään 10000 UCC</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 NWO</source>
+        <translation>Käytä 2 erillistä masternodea sekoittaaksesi enintään 10000 NWO</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 UCC</source>
-        <translation>Käytä 8 erillistä masternodea sekoittaaksesi enintään 10000 UCC</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 NWO</source>
+        <translation>Käytä 8 erillistä masternodea sekoittaaksesi enintään 10000 NWO</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Käytä 16 erillistä masternodea</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 UCC to anonymize 10000 UCC</source>
-        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 UCC anonymoidaksesi 10000 UCC</translation>
+        <source>This option is the quickest and will cost about ~0.025 NWO to anonymize 10000 NWO</source>
+        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 NWO anonymoidaksesi 10000 NWO</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 UCC to anonymize 10000 UCC</source>
-        <translation>Tämä vaihtoehto on suhteellisen nopea ja maksaa 0.05 UCC anonymoidaksesi 10000 UCC</translation>
+        <source>This option is moderately fast and will cost about 0.05 NWO to anonymize 10000 NWO</source>
+        <translation>Tämä vaihtoehto on suhteellisen nopea ja maksaa 0.05 NWO anonymoidaksesi 10000 NWO</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Tämä on hitain ja turvallisin vaihtoehto. Täydesti anonymisoiminen ei maksa mitään.</translation>
     </message>
     <message>
-        <source>0.1 UCC per 10000 UCC you anonymize.</source>
-        <translation>0.1 per 10000 UCC, jotka anonymisoit.</translation>
+        <source>0.1 NWO per 10000 NWO you anonymize.</source>
+        <translation>0.1 per 10000 NWO, jotka anonymisoit.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1209,16 +1209,16 @@ Please check the address and try again.</source>
         <translation>Ekspertti</translation>
     </message>
     <message>
-        <source>Automatically start UCC after logging in to the system.</source>
-        <translation>Automaattisesti käynnistä UCC kun kirjaudut sisään.</translation>
+        <source>Automatically start NWO after logging in to the system.</source>
+        <translation>Automaattisesti käynnistä NWO kun kirjaudut sisään.</translation>
     </message>
     <message>
-        <source>&amp;Start UCC on system login</source>
-        <translation>&amp;Aloita UCC järjestelmän kirjautumisessa</translation>
+        <source>&amp;Start NWO on system login</source>
+        <translation>&amp;Aloita NWO järjestelmän kirjautumisessa</translation>
     </message>
     <message>
-        <source>Amount of UCC to keep anonymized</source>
-        <translation>UCC määrä joka pidetään anonymisoituna</translation>
+        <source>Amount of NWO to keep anonymized</source>
+        <translation>NWO määrä joka pidetään anonymisoituna</translation>
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
@@ -1237,12 +1237,12 @@ Please check the address and try again.</source>
         <translation>&amp;Verkko</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting UCC.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting NWO.</source>
         <translation>Käyttöliittymän kielen voi säätää täällä. Tämä asetus tulee voimaan uudelleenkäynnistettyäsi lompakon.</translation>
     </message>
     <message>
-        <source>Connect to the UCC network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä UCC verkkoon SOCKS5 proxyn kautta</translation>
+        <source>Connect to the NWO network through a SOCKS5 proxy.</source>
+        <translation>Yhdistä NWO verkkoon SOCKS5 proxyn kautta</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1475,8 +1475,8 @@ Please check the address and try again.</source>
         <translation>Lohko ketju</translation>
     </message>
     <message>
-        <source>Open the UCC debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Avaa UCC debug loki nykyisestä sijainnista. Tämä voi kestää muutaman sekunnin suurille lokeille</translation>
+        <source>Open the NWO debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Avaa NWO debug loki nykyisestä sijainnista. Tämä voi kestää muutaman sekunnin suurille lokeille</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -1587,8 +1587,8 @@ Please check the address and try again.</source>
         <translation>Ulos:</translation>
     </message>
     <message>
-        <source>Welcome to the UCC RPC console.</source>
-        <translation>Tervetuloa UCC RPC konsoliin.</translation>
+        <source>Welcome to the NWO RPC console.</source>
+        <translation>Tervetuloa NWO RPC konsoliin.</translation>
     </message>
     <message>
         <source>never</source>
@@ -1630,12 +1630,12 @@ Please check the address and try again.</source>
         <translation>Vaihtoehtoinen nimike uudelle vastaanottavalle osoitteelle</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the UCC network.</source>
-        <translation>Vaihtoehtoinen viesti joka liitetään maksupyyntöön, joka näytetään kun pyyntö avataan. Huomio: Viestiä ei lähetetä maksun mukana UCC verkolle.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the NWO network.</source>
+        <translation>Vaihtoehtoinen viesti joka liitetään maksupyyntöön, joka näytetään kun pyyntö avataan. Huomio: Viestiä ei lähetetä maksun mukana NWO verkolle.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the UCC network.</source>
-        <translation>Vaihtoehtoinen viesti, joka liitetään maksupyyntöö, joka näytetään kun pyyntö avataan. &lt;br&gt; Huomio: Tätä viestiä ei lähetetä maksun mukana UCC  verkolle.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the NWO network.</source>
+        <translation>Vaihtoehtoinen viesti, joka liitetään maksupyyntöö, joka näytetään kun pyyntö avataan. &lt;br&gt; Huomio: Tätä viestiä ei lähetetä maksun mukana NWO  verkolle.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -1835,8 +1835,8 @@ Please check the address and try again.</source>
         <translation>Muutos:</translation>
     </message>
     <message>
-        <source>0 UCC</source>
-        <translation>0 UCC</translation>
+        <source>0 NWO</source>
+        <translation>0 NWO</translation>
     </message>
     <message>
         <source>Choose...</source>
@@ -1919,8 +1919,8 @@ Please check the address and try again.</source>
         <translation>käyttää</translation>
     </message>
     <message>
-        <source>Warning: Invalid UCC address</source>
-        <translation>Varoitus: Virheellinen UCC osoite</translation>
+        <source>Warning: Invalid NWO address</source>
+        <translation>Varoitus: Virheellinen NWO osoite</translation>
     </message>
     <message>
         <source>Are you sure you want to send?</source>
@@ -1966,8 +1966,8 @@ Please check the address and try again.</source>
         <translation>Tämä on normaali maksu.</translation>
     </message>
     <message>
-        <source>The UCC address to send the payment to</source>
-        <translation>UCC osoite johon maksu lähetetään</translation>
+        <source>The NWO address to send the payment to</source>
+        <translation>NWO osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2009,8 +2009,8 @@ Please check the address and try again.</source>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>UCC Core is shutting down...</source>
-        <translation>UCC core sammuu...</translation>
+        <source>NWO Core is shutting down...</source>
+        <translation>NWO core sammuu...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2028,8 +2028,8 @@ Please check the address and try again.</source>
         <translation>Voit allekirjoittaa viestejä osoitteillasi todistaaksesi, että omistat ne. Ole varovainen ettet allekirjoita mitään kummallista, sillä kalasteluyritykset saattavat yrittää huijata sinut luovuttamaan tietoja. Allekirjoita vain täysin yksityiskohtaisia sanomia, jotka hyväksyt.</translation>
     </message>
     <message>
-        <source>The UCC address to sign the message with</source>
-        <translation>UCC osoite, jolla viesti allekirjoitetaan</translation>
+        <source>The NWO address to sign the message with</source>
+        <translation>NWO osoite, jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2060,16 +2060,16 @@ Please check the address and try again.</source>
         <translation>Kopioi nykyinen allekirjoitus järjestelmän leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this UCC address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän UCC osoitteen</translation>
+        <source>Sign the message to prove you own this NWO address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän NWO osoitteen</translation>
     </message>
     <message>
-        <source>The UCC address the message was signed with</source>
-        <translation>UCC osoite, jolla viesti allekirjoitettiin</translation>
+        <source>The NWO address the message was signed with</source>
+        <translation>NWO osoite, jolla viesti allekirjoitettiin</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified UCC address</source>
-        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla UCC osoitteella.</translation>
+        <source>Verify the message to ensure it was signed with the specified NWO address</source>
+        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla NWO osoitteella.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2151,8 +2151,8 @@ Please check the address and try again.</source>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Ydin</translation>
+        <source>NWO Core</source>
+        <translation>NWO Ydin</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2167,8 +2167,8 @@ Please check the address and try again.</source>
         <translation>Dash Core kehittäjät</translation>
     </message>
     <message>
-        <source>The UCC Core developers</source>
-        <translation>UCC core kehittäjät</translation>
+        <source>The NWO Core developers</source>
+        <translation>NWO core kehittäjät</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2521,8 +2521,8 @@ Please check the address and try again.</source>
         <translation>Virhe ladattaessa wallet.dat tiedostoa: Lompakko korruptoitunut</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of UCC Core</source>
-        <translation>Virhe ladattaessa wallet.dat tiedostoa: Lompakko vaatii uudemman version UCC Coresta</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of NWO Core</source>
+        <translation>Virhe ladattaessa wallet.dat tiedostoa: Lompakko vaatii uudemman version NWO Coresta</translation>
     </message>
     <message>
         <source>Error reading from database, shutting down.</source>

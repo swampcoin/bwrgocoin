@@ -1,11 +1,11 @@
-[![Build Status](https://travis-ci.org/UCCNetwork/ucc.svg?branch=master)](https://travis-ci.org/UCCNetwork/ucc)
+[![Build Status](https://travis-ci.org/NWONetwork/ucc.svg?branch=master)](https://travis-ci.org/NWONetwork/ucc)
 
-UCC Core integration/staging repository
+NWO Core integration/staging repository
 =====================================
 
-UCC is a brand new digital currency building up a global Community to be united against scam-attempts. We will offer Swap-Solutions for Communities that have been scammed by fake projects. We will also support Charity Organisations and, who knows, perhaps one day you will be able to pay in big online stores United Community Coin (UCC). The Community stands as our priority, so there will be a Government System where each holder can vote for actual projects. It is NOT intented to be a HIGH ROI Coin, and we will be offering support for scammed communities for as long as we have coins available for swapping.  This ongoing swap objective is the reason for the huge Premine.  To offer swaps for scammed coins, we need a lot of coins for the lifetime of the project, in order to offer swaps at a ratio determined in a case by case basis.
+NWO is a brand new digital currency building up a global Community to be united against scam-attempts. We will offer Swap-Solutions for Communities that have been scammed by fake projects. We will also support Charity Organisations and, who knows, perhaps one day you will be able to pay in big online stores United Community Coin (NWO). The Community stands as our priority, so there will be a Government System where each holder can vote for actual projects. It is NOT intented to be a HIGH ROI Coin, and we will be offering support for scammed communities for as long as we have coins available for swapping.  This ongoing swap objective is the reason for the huge Premine.  To offer swaps for scammed coins, we need a lot of coins for the lifetime of the project, in order to offer swaps at a ratio determined in a case by case basis.
 
-The UCC Code was forked from [XDNA Project](https://xdna.io/).
+The NWO Code was forked from [XDNA Project](https://xdna.io/).
 
 More information soon at [uccnetwork.org](http://www.uccnetwork.org).
 
@@ -14,19 +14,19 @@ If you like our Idea, feel free to contact us and work with us. For Discussions 
 ### Coin Specs
 
 <table>
-<tr><td>Name & ticker</td><td>United Community Coin (UCC)</td></tr>
+<tr><td>Name & ticker</td><td>United Community Coin (NWO)</td></tr>
 <tr><td>Consensus algorithm</td><td>PoW/POS</td></tr>
 <tr><td>POW phase duration</td><td>777000 blocks</td></tr>
-<tr><td>PoW block reward</td><td>Dynamic from 4 to 511 UCC</td></tr>
+<tr><td>PoW block reward</td><td>Dynamic from 4 to 511 NWO</td></tr>
 <tr><td>Instamine protection</td><td>First 720 blocks</td></tr>
 <tr><td>Hashing algorithm</td><td>HEX</td></tr>
-<tr><td>Estimated UCC supply during POW</td><td>8,405,839</td></tr>
+<tr><td>Estimated NWO supply during POW</td><td>8,405,839</td></tr>
 <tr><td>POS starting block</td><td>777001</td></tr>
 <tr><td>POS phase duration</td><td>56 years</td></tr>
 <tr><td>POS block reward distribution</td><td>SeeSaw</td></tr>
-<tr><td>Estimated UCC supply after 6 years of POS</td><td>18,352,239</td></tr>
-<tr><td>Maximum UCC supply</td><td>45,000,000</td></tr>
-<tr><td>Premine</td><td>5,300,000 UCC (primarily for swapping coins)</td></tr>
+<tr><td>Estimated NWO supply after 6 years of POS</td><td>18,352,239</td></tr>
+<tr><td>Maximum NWO supply</td><td>45,000,000</td></tr>
+<tr><td>Premine</td><td>5,300,000 NWO (primarily for swapping coins)</td></tr>
 <tr><td>Blocksize</td><td>1 MB</td></tr>
 <tr><td>Blocktime average</td><td>1 min (DGW3)</td></tr>
 <tr><td>Number of transaction confirmations</td><td>6</td></tr>

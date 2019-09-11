@@ -4,7 +4,7 @@
 // Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2017-2018 The Bulwark developers
 // Copyright (c) 2017-2018 The XDNA Core developers
-// Copyright (c) 2018-2018 The UCC developers
+// Copyright (c) 2018-2018 The NWO developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -108,7 +108,7 @@ std::string to_internal(const std::string&);
 
 using namespace std;
 
-// UCC only features
+// NWO only features
 // Masternode
 bool fMasterNode = false;
 string strMasterNodePrivKey = "";
@@ -235,7 +235,7 @@ bool LogAcceptCategory(const char* category)
             const vector<string>& categories = mapMultiArgs["-debug"];
             ptrCategory.reset(new set<string>(categories.begin(), categories.end()));
             // thread_specific_ptr automatically deletes the set when the thread ends.
-            // "ucc" is a composite category enabling all UCC-related debug output
+            // "ucc" is a composite category enabling all NWO-related debug output
             if (ptrCategory->count(string("ucc"))) {
                 ptrCategory->insert(string("obfuscation"));
                 ptrCategory->insert(string("swiftx"));
@@ -420,13 +420,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-// Windows < Vista: C:\Documents and Settings\Username\Application Data\UCC
-// Windows >= Vista: C:\Users\Username\AppData\Roaming\UCC
-// Mac: ~/Library/Application Support/UCC
+// Windows < Vista: C:\Documents and Settings\Username\Application Data\NWO
+// Windows >= Vista: C:\Users\Username\AppData\Roaming\NWO
+// Mac: ~/Library/Application Support/NWO
 // Unix: ~/.ucc
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "UCC";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "NWO";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -438,7 +438,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "UCC";
+    return pathRet / "NWO";
 #else
     // Unix
     return pathRet / ".ucc";

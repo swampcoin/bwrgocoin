@@ -37,7 +37,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the UCC Qt UI.
+/** Utility functions used by the NWO Qt UI.
  */
 namespace GUIUtil
 {
@@ -45,7 +45,7 @@ namespace GUIUtil
 QString dateTimeStr(const QDateTime& datetime);
 QString dateTimeStr(qint64 nTime);
 
-// Render UCC addresses in monospace font
+// Render NWO addresses in monospace font
 QFont bitcoinAddressFont();
 
 // Set up widgets for address and amounts

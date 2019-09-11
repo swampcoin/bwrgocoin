@@ -40,7 +40,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle* networkStyle) 
     QString copyrightTextDash = QChar(0xA9) + QString(" 2014-2019 ").arg(COPYRIGHT_YEAR) + QString(tr("The Dash Core developers"));
     QString copyrightTextPIVX = QChar(0xA9) + QString(" 2015-2019 ").arg(COPYRIGHT_YEAR) + QString(tr("The PIVX Core developers"));
     QString copyrightTextXDNA = QChar(0xA9) + QString(" 2017-2019 ").arg(COPYRIGHT_YEAR) + QString(tr("The XDNA Core developers"));
-    QString copyrightTextUCC = QChar(0xA9) + QString(" 2018-2019 ").arg(COPYRIGHT_YEAR) + QString(tr("The UCC developers"));
+    QString copyrightTextNWO = QChar(0xA9) + QString(" 2018-2019 ").arg(COPYRIGHT_YEAR) + QString(tr("The NWO developers"));
     QString titleAddText = networkStyle->getTitleAddText();
 
     QString font = QApplication::font().toString();
@@ -75,7 +75,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle* networkStyle) 
     pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 10, copyrightTextDash);
     pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 20, copyrightTextPIVX);
     pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 30, copyrightTextXDNA);
-    pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 40, copyrightTextUCC);
+    pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 40, copyrightTextNWO);
 
     // draw additional text if special network
     if (!titleAddText.isEmpty()) {

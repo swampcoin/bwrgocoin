@@ -30,10 +30,10 @@
        <item>
         <widget class="QCheckBox" name="bitcoinAtStartup">
          <property name="toolTip">
-          <string>Automatically start UCC Wallet after logging in to the system.</string>
+          <string>Automatically start NWO Wallet after logging in to the system.</string>
          </property>
          <property name="text">
-          <string>&amp;Start UCC Wallet on system login</string>
+          <string>&amp;Start NWO Wallet on system login</string>
          </property>
         </widget>
        </item>
@@ -174,7 +174,7 @@
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Amount of UCC to keep anonymized</string>
+            <string>Amount of NWO to keep anonymized</string>
            </property>
           </widget>
          </item>
@@ -361,7 +361,7 @@
                <item row="0" column="0">
                 <widget class="QLabel" name="autoCombineLabel">
                  <property name="toolTip">
-                  <string>Wallet will automatically monitor for UTXOs with values below the threshold amount, and combine them into transactions sized to the threshold amount, if they reside with the same UCC address.</string>
+                  <string>Wallet will automatically monitor for UTXOs with values below the threshold amount, and combine them into transactions sized to the threshold amount, if they reside with the same NWO address.</string>
                  </property>
                  <property name="text">
                   <string>Autocombine threshold:</string>
@@ -438,7 +438,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the UCC client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the NWO client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -458,7 +458,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocks">
          <property name="toolTip">
-          <string>Connect to the UCC network through a SOCKS5 proxy.</string>
+          <string>Connect to the NWO network through a SOCKS5 proxy.</string>
          </property>
          <property name="text">
           <string>&amp;Connect through SOCKS5 proxy (default proxy):</string>
@@ -624,7 +624,7 @@
          <item>
           <widget class="QValueComboBox" name="lang">
            <property name="toolTip">
-            <string>The user interface language can be set here. This setting will take effect after restarting UCC.</string>
+            <string>The user interface language can be set here. This setting will take effect after restarting NWO.</string>
            </property>
           </widget>
          </item>

@@ -1,13 +1,13 @@
-UCC
+NWO
 =====================
 
 Setup
 ---------------------
-[UCC](http://uccnetwork.org/wallet) is the original UCC client and it builds the backbone of the network. However, it downloads and stores the entire history of UCC transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[NWO](http://uccnetwork.org/wallet) is the original NWO client and it builds the backbone of the network. However, it downloads and stores the entire history of NWO transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run UCC on your native platform.
+The following are some helpful notes on how to run NWO on your native platform.
 
 ### Unix
 
@@ -22,18 +22,18 @@ Unpack the files into a directory, and then run ucc-qt.exe.
 
 ### OSX
 
-Drag UCC-Qt to your applications folder, and then run UCC-Qt.
+Drag NWO-Qt to your applications folder, and then run NWO-Qt.
 
 ### Need Help?
 
-* See the documentation at the [UCC Wiki](https://en.uccnetwork.org/wiki/Main_Page) ***TODO***
+* See the documentation at the [NWO Wiki](https://en.uccnetwork.org/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org) or on the [UCC Forum](http://forum.uccnetwork.org/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org) or on the [NWO Forum](http://forum.uccnetwork.org/).
 * Join our Discord server [Discord Server](https://discord.gg/S9adMgS)
 
 Building
 ---------------------
-The following are developer notes on how to build UCC on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build NWO on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -42,7 +42,7 @@ The following are developer notes on how to build UCC on your native platform. T
 
 Development
 ---------------------
-The UCC repo's [root README](https://github.com/UCC-Core/UCC/blob/master/README.md) contains relevant information on the development process and automated testing.
+The NWO repo's [root README](https://github.com/NWO-Core/NWO/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -56,7 +56,7 @@ The UCC repo's [root README](https://github.com/UCC-Core/UCC/blob/master/README.
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [UCC](http://forum.uccnetwork.org/) forum.
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [NWO](http://forum.uccnetwork.org/) forum.
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

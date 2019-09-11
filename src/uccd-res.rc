@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "UCC"
-            VALUE "FileDescription",    "uccd (OSS daemon/client for UCC)"
+            VALUE "CompanyName",        "NWO"
+            VALUE "FileDescription",    "uccd (OSS daemon/client for NWO)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "uccd"
             VALUE "LegalCopyright",     COPYRIGHT_STR

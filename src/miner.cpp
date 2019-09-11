@@ -3,7 +3,7 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2017-2018 The XDNA Core developers
-// Copyright (c) 2018-2019 The UCC Core developers
+// Copyright (c) 2018-2019 The NWO Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -32,7 +32,7 @@ using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// UCCMiner
+// NWOMiner
 //
 
 //
@@ -358,9 +358,9 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
         pblocktemplate->vTxFees[0] = -nFees;
 
         if(nHeight > 1) { // exclude premine
-	    // Add UCC Dev and Fund Payments
-            CScript scriptDevPubKeyIn  = CScript{} << Params().xUCCDevKey() << OP_CHECKSIG;
-            CScript scriptFundPubKeyIn = CScript{} << Params().xUCCFundKey() << OP_CHECKSIG;
+	    // Add NWO Dev and Fund Payments
+            CScript scriptDevPubKeyIn  = CScript{} << Params().xNWODevKey() << OP_CHECKSIG;
+            CScript scriptFundPubKeyIn = CScript{} << Params().xNWOFundKey() << OP_CHECKSIG;
 
             auto vDevReward  = block_value * Params().GetDevFee() / 100;
             auto vFundReward = block_value * Params().GetFundFee() / 100;
@@ -463,7 +463,7 @@ bool ProcessBlockFound(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != chainActive.Tip()->GetBlockHash())
-            return error("UCCMiner : generated block is stale");
+            return error("NWOMiner : generated block is stale");
     }
 
     // Remove key from key pool
@@ -478,7 +478,7 @@ bool ProcessBlockFound(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     // Process this block the same as if we had received it from another node
     CValidationState state;
     if (!ProcessNewBlock(state, NULL, pblock))
-        return error("UCCMiner : ProcessNewBlock, block not accepted");
+        return error("NWOMiner : ProcessNewBlock, block not accepted");
 
     for (CNode* node : vNodes) {
         node->PushInventory(CInv(MSG_BLOCK, pblock->GetHash()));
@@ -495,7 +495,7 @@ int nMintableLastCheck = 0;
 
 void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
 {
-    LogPrintf("UCCMiner started\n");
+    LogPrintf("NWOMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
     RenameThread("ucc-miner");
 
@@ -585,7 +585,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
             continue;
         }
 
-        LogPrintf("Running UCCMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
+        LogPrintf("Running NWOMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
             ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //

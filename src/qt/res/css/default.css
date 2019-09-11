@@ -1,4 +1,4 @@
-/**************************************UCC**********************************************/
+/**************************************NWO**********************************************/
 /****************************************************************************************/
                     /*************** GLOBAL STYLE*****************/
 /****************************************************************************************/
@@ -698,7 +698,7 @@
         
 
      
-         QWidget .QPushButton#blabel_UCC {
+         QWidget .QPushButton#blabel_NWO {
             background-color: transparent;
             border:0;
             border-radius:0px;
@@ -733,7 +733,7 @@
      }
 
 
-     QWidget .QFrame#frame_blue .QLabel#label_UCC2 { /*UCC */
+     QWidget .QFrame#frame_blue .QLabel#label_NWO2 { /*NWO */
         background-color:transparent;
         color:rgb(255, 255, 255);
         font-size:15px;
@@ -751,7 +751,7 @@
         font-size:30px;
      }
 
-     QWidget .QFrame#frame_blue .QLabel#label_UCC3 { /*UCC */
+     QWidget .QFrame#frame_blue .QLabel#label_NWO3 { /*NWO */
         background-color:transparent;
         color:rgb(255, 255, 255);
         font-size:15px;
@@ -771,7 +771,7 @@
      }
 
 
-     QWidget .QFrame#frame_blue .QLabel#label_UCC4 { /*UCC */
+     QWidget .QFrame#frame_blue .QLabel#label_NWO4 { /*NWO */
         background-color:transparent;
         color:rgb(255, 255, 255);
         font-size:15px;
@@ -2150,7 +2150,7 @@
     border:0;
     }
 
-    /* About UCC Dialog */
+    /* About NWO Dialog */
     QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Bulwark Contents */
     margin-left:10px;
     }

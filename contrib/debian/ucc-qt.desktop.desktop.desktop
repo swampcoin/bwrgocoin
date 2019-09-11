@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=UCC
-Comment=UCC P2P Cryptocurrency
+Name=NWO
+Comment=NWO P2P Cryptocurrency
 Exec=ucc-qt %u
 Terminal=false
 Type=Application

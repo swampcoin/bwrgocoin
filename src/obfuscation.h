@@ -31,7 +31,7 @@ class CActiveMasternode;
 #define POOL_STATUS_SIGNING 5              // check inputs/outputs, sign final tx
 #define POOL_STATUS_TRANSMISSION 6         // transmit transaction
 #define POOL_STATUS_ERROR 7                // error
-#define POOL_STATUS_SUCCESS 8              // success
+#define POOL_STATUS_SNWOESS 8              // success
 
 // status update message constants
 #define MASTERNODE_ACCEPTED 1
@@ -247,7 +247,7 @@ public:
 class CObfuScationSigner
 {
 public:
-    /// Is the inputs associated with this public key? (and there is deposit UCC amount - checking if valid masternode)
+    /// Is the inputs associated with this public key? (and there is deposit NWO amount - checking if valid masternode)
     bool IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey);
     /// Set the private/public key values, returns true if successful
     bool GetKeysFromSecret(std::string strSecret, CKey& keyRet, CPubKey& pubkeyRet);
@@ -319,7 +319,7 @@ public:
         ERR_MISSING_TX,
         ERR_VERSION,
         MSG_NOERR,
-        MSG_SUCCESS,
+        MSG_SNWOESS,
         MSG_ENTRIES_ADDED
     };
 
@@ -410,8 +410,8 @@ public:
     // Set the 'state' value, with some logging and capturing when the state changed
     void UpdateState(unsigned int newState)
     {
-        if (fMasterNode && (newState == POOL_STATUS_ERROR || newState == POOL_STATUS_SUCCESS)) {
-            LogPrint("obfuscation", "CObfuscationPool::UpdateState() - Can't set state to ERROR or SUCCESS as a Masternode. \n");
+        if (fMasterNode && (newState == POOL_STATUS_ERROR || newState == POOL_STATUS_SNWOESS)) {
+            LogPrint("obfuscation", "CObfuscationPool::UpdateState() - Can't set state to ERROR or SNWOESS as a Masternode. \n");
             return;
         }
 
@@ -493,7 +493,7 @@ public:
 
     void GetDenominationsToString(int nDenom, std::string& strDenom);
 
-    /// Get the denominations for a specific amount of UCC.
+    /// Get the denominations for a specific amount of NWO.
     int GetDenominationsByAmount(CAmount nAmount, int nDenomTarget = 0); // is not used anymore?
     int GetDenominationsByAmounts(std::vector<CAmount>& vecAmount);
 

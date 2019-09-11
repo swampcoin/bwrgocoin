@@ -10,7 +10,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between ucc-cli and uccd)
- * of a given instance of the UCC system.
+ * of a given instance of the NWO system.
  */
 class CBaseChainParams
 {

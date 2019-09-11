@@ -4,14 +4,14 @@
 #
 # SYNOPSIS
 #
-#   AX_CHECK_LINK_FLAG(FLAG, [ACTION-SUCCESS], [ACTION-FAILURE], [EXTRA-FLAGS])
+#   AX_CHECK_LINK_FLAG(FLAG, [ACTION-SNWOESS], [ACTION-FAILURE], [EXTRA-FLAGS])
 #
 # DESCRIPTION
 #
 #   Check whether the given FLAG works with the linker or gives an error.
 #   (Warnings, however, are ignored)
 #
-#   ACTION-SUCCESS/ACTION-FAILURE are shell commands to execute on
+#   ACTION-SNWOESS/ACTION-FAILURE are shell commands to execute on
 #   success/failure.
 #
 #   If EXTRA-FLAGS is defined, it is added to the linker's default flags

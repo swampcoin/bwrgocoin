@@ -62,12 +62,12 @@
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your UCC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw UCCadressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
+        <source>These are your NWO addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw NWOadressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
     </message>
     <message>
-        <source>These are your UCC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw UCCadressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <source>These are your NWO addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit zijn uw NWOadressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,16 +172,16 @@
         <translation>Bevestig versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>UCC will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your UCCs from being stolen by malware infecting your computer.</source>
-        <translation>UCC zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw UCCs stelen.</translation>
+        <source>NWO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your NWOs from being stolen by malware infecting your computer.</source>
+        <translation>NWO zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw NWOs stelen.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Weet u zeker dat u uw portemonnee wilt versleutelen?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR UCC&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW UCC VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NWO&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW NWO VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -235,16 +235,16 @@
         <translation>&amp;BIP 38 Versleuteling</translation>
     </message>
     <message>
-        <source>Enter a UCC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Voer een UCC adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
+        <source>Enter a NWO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Voer een NWO adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adres:</translation>
     </message>
     <message>
-        <source>The UCC address to sign the message with</source>
-        <translation>Het UCC adres om het bericht met te ondertekenen</translation>
+        <source>The NWO address to sign the message with</source>
+        <translation>Het NWO adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -275,8 +275,8 @@
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this UCC address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het UCC adres bezit</translation>
+        <source>Sign the message to prove you own this NWO address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het NWO adres bezit</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -299,12 +299,12 @@
         <translation>Voer de BIP 38 versleutelde geheime sleutel in. Voer het wachtwoord in, in het middelste veld. Druk op Ontsleutelen Sleutel om de geheime sleutel te berekenen.  Nadat de geheime sleutel is ontsleuteld, zal het klikken op 'Adres Importeren' de geheime sleutel toevoegen aan de portemonnee.</translation>
     </message>
     <message>
-        <source>The UCC address the message was signed with</source>
-        <translation>Het UCC adres waarmee het bericht was ondertekend</translation>
+        <source>The NWO address the message was signed with</source>
+        <translation>Het NWO adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified UCC address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde UCC adres</translation>
+        <source>Verify the message to ensure it was signed with the specified NWO address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde NWO adres</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -598,16 +598,16 @@
         <translation>Tabblad werkbalk</translation>
     </message>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Kern</translation>
+        <source>NWO Core</source>
+        <translation>NWO Kern</translation>
     </message>
     <message>
-        <source>Send coins to a UCC address</source>
-        <translation>Verstuur munten naar een UCC adres</translation>
+        <source>Send coins to a NWO address</source>
+        <translation>Verstuur munten naar een NWO adres</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and ucc: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR-codes en UCC: URI's)</translation>
+        <translation>Vraag betaling aan (genereert QR-codes en NWO: URI's)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -618,24 +618,24 @@
         <translation>Bekijk masternodes</translation>
     </message>
     <message>
-        <source>&amp;About UCC Core</source>
-        <translation>&amp;Over UCC Kern</translation>
+        <source>&amp;About NWO Core</source>
+        <translation>&amp;Over NWO Kern</translation>
     </message>
     <message>
-        <source>Show information about UCC Core</source>
-        <translation>Toon informatie over UCC Kern</translation>
+        <source>Show information about NWO Core</source>
+        <translation>Toon informatie over NWO Kern</translation>
     </message>
     <message>
-        <source>Modify configuration options for UCC</source>
-        <translation>Wijzig UCC configuratie opties</translation>
+        <source>Modify configuration options for NWO</source>
+        <translation>Wijzig NWO configuratie opties</translation>
     </message>
     <message>
-        <source>Sign messages with your UCC addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw UCC adressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your NWO addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw NWO adressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified UCC addresses</source>
-        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde UCC adressen</translation>
+        <source>Verify messages to ensure they were signed with specified NWO addresses</source>
+        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde NWO adressen</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -666,8 +666,8 @@
         <translation>Open Masternode configuratiebestand</translation>
     </message>
     <message>
-        <source>Open a UCC: URI or payment request</source>
-        <translation>Open een UCC: URI of betaalverzoek</translation>
+        <source>Open a NWO: URI or payment request</source>
+        <translation>Open een NWO: URI of betaalverzoek</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -678,12 +678,12 @@
         <translation>Block verkenner venster</translation>
     </message>
     <message>
-        <source>UCC Core client</source>
-        <translation>UCC Core client</translation>
+        <source>NWO Core client</source>
+        <translation>NWO Core client</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to UCC network</source>
-        <translation><numerusform>%n actieve verbinding(en) naar het UCC netwerk</numerusform><numerusform>%n actieve verbinding(en) naar het UCC netwerk</numerusform></translation>
+        <source>%n active connection(s) to NWO network</source>
+        <translation><numerusform>%n actieve verbinding(en) naar het NWO netwerk</numerusform><numerusform>%n actieve verbinding(en) naar het NWO netwerk</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -1010,8 +1010,8 @@ MultiSend: %1</translation>
         <translation>Wijzig verzendadres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid UCC address.</source>
-        <translation>Het ingevoerde adres: "%1" is geen geldig UCC adres.</translation>
+        <source>The entered address "%1" is not a valid NWO address.</source>
+        <translation>Het ingevoerde adres: "%1" is geen geldig NWO adres.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1040,16 +1040,16 @@ MultiSend: %1</translation>
         <translation>versie</translation>
     </message>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Kern</translation>
+        <source>NWO Core</source>
+        <translation>NWO Kern</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About UCC Core</source>
-        <translation>Over UCC Core</translation>
+        <source>About NWO Core</source>
+        <translation>Over NWO Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1079,16 +1079,16 @@ MultiSend: %1</translation>
         <translation>Welkom</translation>
     </message>
     <message>
-        <source>Welcome to UCC Core.</source>
-        <translation>Welkom bij UCC Core</translation>
+        <source>Welcome to NWO Core.</source>
+        <translation>Welkom bij NWO Core</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
         <translation>Gebruik de standaard datafolder </translation>
     </message>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Kern</translation>
+        <source>NWO Core</source>
+        <translation>NWO Kern</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1300,24 +1300,24 @@ MultiSend: %1</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start UCC after logging in to the system.</source>
-        <translation>UCC automatisch opstarten na inloggen op het systeem.</translation>
+        <source>Automatically start NWO after logging in to the system.</source>
+        <translation>NWO automatisch opstarten na inloggen op het systeem.</translation>
     </message>
     <message>
-        <source>&amp;Start UCC on system login</source>
-        <translation>&amp;UCC starten bij systeemlogin</translation>
+        <source>&amp;Start NWO on system login</source>
+        <translation>&amp;NWO starten bij systeemlogin</translation>
     </message>
     <message>
-        <source>Amount of UCC to keep anonymized</source>
-        <translation>Hoeveelheid UCC anoniem te houden</translation>
+        <source>Amount of NWO to keep anonymized</source>
+        <translation>Hoeveelheid NWO anoniem te houden</translation>
     </message>
     <message>
         <source>&amp;Network</source>
         <translation>&amp;Netwerk</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting UCC.</source>
-        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van UCC.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting NWO.</source>
+        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van NWO.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1427,8 +1427,8 @@ MultiSend: %1</translation>
         <translation>Status:</translation>
     </message>
     <message>
-        <source>0 UCC / 0 Rounds</source>
-        <translation>0 UCC / 0 Rondes</translation>
+        <source>0 NWO / 0 Rounds</source>
+        <translation>0 NWO / 0 Rondes</translation>
     </message>
     <message>
         <source>Enabled/Disabled</source>
@@ -1512,8 +1512,8 @@ MultiSend: %1</translation>
         <translation>Hoeveelheid</translation>
     </message>
     <message>
-        <source>Enter a UCC address (e.g. %1)</source>
-        <translation>Voer een UCC adres in (b.v. %1)</translation>
+        <source>Enter a NWO address (e.g. %1)</source>
+        <translation>Voer een NWO adres in (b.v. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1702,8 +1702,8 @@ MultiSend: %1</translation>
         <translation>Uit:</translation>
     </message>
     <message>
-        <source>Welcome to the UCC RPC console.</source>
-        <translation>Welkom bij de UCC RPC console.</translation>
+        <source>Welcome to the NWO RPC console.</source>
+        <translation>Welkom bij de NWO RPC console.</translation>
     </message>
     <message>
         <source>%1 B</source>
@@ -1894,8 +1894,8 @@ MultiSend: %1</translation>
         <translation>Wijzig:</translation>
     </message>
     <message>
-        <source>0 UCC</source>
-        <translation>0 UCC</translation>
+        <source>0 NWO</source>
+        <translation>0 NWO</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2024,8 +2024,8 @@ MultiSend: %1</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>UCC Core is shutting down...</source>
-        <translation>UCC Core is aan het afsluiten...</translation>
+        <source>NWO Core is shutting down...</source>
+        <translation>NWO Core is aan het afsluiten...</translation>
     </message>
     </context>
 <context>
@@ -2035,8 +2035,8 @@ MultiSend: %1</translation>
         <translation>&amp;Onderteken Bericht</translation>
     </message>
     <message>
-        <source>The UCC address to sign the message with</source>
-        <translation>Het UCC adres om het bericht met te ondertekenen</translation>
+        <source>The NWO address to sign the message with</source>
+        <translation>Het NWO adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2067,16 +2067,16 @@ MultiSend: %1</translation>
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this UCC address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het UCC adres bezit</translation>
+        <source>Sign the message to prove you own this NWO address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het NWO adres bezit</translation>
     </message>
     <message>
-        <source>The UCC address the message was signed with</source>
-        <translation>Het UCC adres waarmee het bericht was ondertekend</translation>
+        <source>The NWO address the message was signed with</source>
+        <translation>Het NWO adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified UCC address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde UCC adres</translation>
+        <source>Verify the message to ensure it was signed with the specified NWO address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde NWO adres</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -2134,8 +2134,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>UCC Core</source>
-        <translation>UCC Kern</translation>
+        <source>NWO Core</source>
+        <translation>NWO Kern</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2150,8 +2150,8 @@ MultiSend: %1</translation>
         <translation>De Dash Core ontwikkelaars</translation>
     </message>
     <message>
-        <source>The UCC Core developers</source>
-        <translation>De UCC Core ontwikkelaars</translation>
+        <source>The NWO Core developers</source>
+        <translation>De NWO Core ontwikkelaars</translation>
     </message>
     <message>
         <source>[testnet]</source>

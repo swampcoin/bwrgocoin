@@ -13,7 +13,7 @@
  * for both uccd and ucc-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("UCC Core");
+const std::string CLIENT_NAME("NWO Core");
 
 /**
  * Client version number
