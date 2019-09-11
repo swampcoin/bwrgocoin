@@ -82,7 +82,7 @@ if test "x$want_boost" = "xyes"; then
         fi
     WANT_BOOST_VERSION=`expr $boost_lib_version_req_major \* 100000 \+  $boost_lib_version_req_minor \* 100 \+ $boost_lib_version_req_sub_minor`
     AC_MSG_CHECKING(for boostlib >= $boost_lib_version_req)
-    succeeded=no
+    snwoeeded=no
 
     dnl On 64-bit systems check for system libraries in both lib64 and lib.
     dnl The former is specified by FHS, but e.g. Debian does not adhere to
@@ -168,7 +168,7 @@ if test "x$want_boost" = "xyes"; then
     #endif
     ]])],[
         AC_MSG_RESULT(yes)
-    succeeded=yes
+    snwoeeded=yes
     found_system=yes
         ],[:
         ])
@@ -178,7 +178,7 @@ if test "x$want_boost" = "xyes"; then
 
     dnl if we found no boost with system layout we search for boost libraries
     dnl built and installed without the --layout=system option or for a staged(not installed) version
-    if test "x$succeeded" != "xyes"; then
+    if test "x$snwoeeded" != "xyes"; then
         _version=0
         if test "$ac_boost_path" != ""; then
             if test -d "$ac_boost_path" && test -r "$ac_boost_path"; then
@@ -251,14 +251,14 @@ if test "x$want_boost" = "xyes"; then
         #endif
         ]])],[
             AC_MSG_RESULT(yes)
-        succeeded=yes
+        snwoeeded=yes
         found_system=yes
             ],[:
             ])
         AC_LANG_POP([C++])
     fi
 
-    if test "$succeeded" != "yes" ; then
+    if test "$snwoeeded" != "yes" ; then
         if test "$_version" = "0" ; then
             AC_MSG_NOTICE([[We could not detect the boost libraries (version $boost_lib_version_req_shorten or higher). If you have a staged boost library (still not installed) please specify \$BOOST_ROOT in your environment and do not give a PATH to --with-boost option.  If you are sure you have boost installed, then check your version number looking in <boost/version.hpp>. See http://randspringer.de/boost for more documentation.]])
         else

@@ -58,18 +58,18 @@ AC_DEFUN([AX_CXX_COMPILE_STDCXX], [dnl
         [$3], [optional], [ax_cxx_compile_cxx$1_required=false],
         [m4_fatal([invalid third argument `$3' to AX_CXX_COMPILE_STDCXX])])
   AC_LANG_PUSH([C++])dnl
-  ac_success=no
+  ac_snwoess=no
   AC_CACHE_CHECK(whether $CXX supports C++$1 features by default,
   ax_cv_cxx_compile_cxx$1,
   [AC_COMPILE_IFELSE([AC_LANG_SOURCE([_AX_CXX_COMPILE_STDCXX_testbody_$1])],
     [ax_cv_cxx_compile_cxx$1=yes],
     [ax_cv_cxx_compile_cxx$1=no])])
   if test x$ax_cv_cxx_compile_cxx$1 = xyes; then
-    ac_success=yes
+    ac_snwoess=yes
   fi
 
   m4_if([$2], [noext], [], [dnl
-  if test x$ac_success = xno; then
+  if test x$ac_snwoess = xno; then
     for switch in -std=gnu++$1 -std=gnu++0x; do
       cachevar=AS_TR_SH([ax_cv_cxx_compile_cxx$1_$switch])
       AC_CACHE_CHECK(whether $CXX supports C++$1 features with $switch,
@@ -85,14 +85,14 @@ AC_DEFUN([AX_CXX_COMPILE_STDCXX], [dnl
         if test -n "$CXXCPP" ; then
           CXXCPP="$CXXCPP $switch"
         fi
-        ac_success=yes
+        ac_snwoess=yes
         break
       fi
     done
   fi])
 
   m4_if([$2], [ext], [], [dnl
-  if test x$ac_success = xno; then
+  if test x$ac_snwoess = xno; then
     dnl HP's aCC needs +std=c++11 according to:
     dnl http://h21007.www2.hp.com/portal/download/files/unprot/aCxx/PDF_Release_Notes/769149-001.pdf
     dnl Cray's crayCC needs "-h std=c++11"
@@ -111,18 +111,18 @@ AC_DEFUN([AX_CXX_COMPILE_STDCXX], [dnl
         if test -n "$CXXCPP" ; then
           CXXCPP="$CXXCPP $switch"
         fi
-        ac_success=yes
+        ac_snwoess=yes
         break
       fi
     done
   fi])
   AC_LANG_POP([C++])
   if test x$ax_cxx_compile_cxx$1_required = xtrue; then
-    if test x$ac_success = xno; then
+    if test x$ac_snwoess = xno; then
       AC_MSG_ERROR([*** A compiler with support for C++$1 language features is required.])
     fi
   fi
-  if test x$ac_success = xno; then
+  if test x$ac_snwoess = xno; then
     HAVE_CXX$1=0
     AC_MSG_NOTICE([No compiler with C++$1 support was found])
   else
