@@ -48,6 +48,6 @@ as desired.
 ### Self-cleaning
 
 Build and staging dirs are wiped after use, and any previous version of a
-cached result is removed following a successful build. Automated builders
+cached result is removed following a snwoessful build. Automated builders
 should be able to build each revision and store the results with no further
 intervention.

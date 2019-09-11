@@ -30,7 +30,7 @@ timestamp='2017-01-01'
 # Configuration subroutine to validate and canonicalize a configuration type.
 # Supply the specified configuration type as an argument.
 # If it is invalid, we print an error message on stderr and exit with code 1.
-# Otherwise, we print the canonical config type on stdout and succeed.
+# Otherwise, we print the canonical config type on stdout and snwoeed.
 
 # You can get the latest version of this script from:
 # http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub
