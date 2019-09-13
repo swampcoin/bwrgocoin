@@ -818,7 +818,7 @@
 
     QWidget .QFrame#frame_blue_3 { /* logo */
 
-        background-image: url(':/images/dark/nwo_logo_horizontal');
+        background-image: url(':/images_dark/nwo_logo_horizontal');
         background-repeat:none;
         background-position: top-right;
         border-style: none;
