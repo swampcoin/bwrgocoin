@@ -11,13 +11,13 @@ reset-files.bash
 *.tar.gz
 
 *.exe
-src/ucc
-src/uccd
-src/ucc-cli
-src/ucc-tx
-src/test/test_ucc
-src/qt/test/test_ucc-qt
-src/bench/bench_ucc
+src/nwo
+src/nwod
+src/nwo-cli
+src/nwo-tx
+src/test/test_nwo
+src/qt/test/test_nwo-qt
+src/bench/bench_nwo
 
 # autoreconf
 Makefile.in
@@ -43,8 +43,8 @@ confdefs.h
 conftest.cpp
 conftest.err
 libtool
-src/config/ucc-config.h
-src/config/ucc-config.h.in
+src/config/nwo-config.h
+src/config/nwo-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -69,7 +69,7 @@ libconftest.dylib*
 *.o
 *.o-*
 *.patch
-.ucc
+.nwo
 *.a
 *.pb.cc
 *.pb.h
@@ -88,12 +88,12 @@ libconftest.dylib*
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-ucc-qt
+nwo-qt
 NWO-Qt.app
 
 # Unit-tests
 Makefile.test
-ucc-qt_test
+nwo-qt_test
 src/test/buildenv.py
 
 # Resources cpp
@@ -107,7 +107,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_ucc.coverage/
+test_nwo.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -132,13 +132,13 @@ share/BitcoindComparisonTool.jar
 
 libbitcoinconsensus.pc
 libuccconsensus.pc
-src/qt/ucc-qt.bash
+src/qt/nwo-qt.bash
 qa/pull-tester/tests-config.sh
 
 #development symlinks
-ucc-cli
-uccd
-ucc-qt
+nwo-cli
+nwod
+nwo-qt
 make
 
 #development local files
