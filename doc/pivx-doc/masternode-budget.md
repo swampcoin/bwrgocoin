@@ -84,7 +84,7 @@ Example:
 mnbudget vote a2b29778ae82e45a973a94309ffa6aa2e2388b8f95b39ab3739f0078835f0491 yes
 ```
 
-Output: `Voted snwoessfully` - Your vote has been submitted and accepted.
+Output: `Voted successfully` - Your vote has been submitted and accepted.
 
 Make it into the budget
 ------------------------

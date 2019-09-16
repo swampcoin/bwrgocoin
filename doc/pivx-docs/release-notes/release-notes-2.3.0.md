@@ -107,7 +107,7 @@ An additional parameter has been added to `mnbudget` to allow a controller walle
 
 `mnbudget vote-alias <proposal-hash> <yes|no> <alias>`
 
-All fields are required to snwoessfully vote.
+All fields are required to successfully vote.
 
 #### walletpassphrase command
 

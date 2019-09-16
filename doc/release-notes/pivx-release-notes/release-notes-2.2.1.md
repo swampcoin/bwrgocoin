@@ -32,7 +32,7 @@ Block Data Corruption
 Additional startup procedures have been added to fix corrupted blockchain databases.
 The majority of users that are experiencing #106 (ConnectBlock() assertion on startup)
 that have tested the new wallet have reported that their corrupt blockchain has
-snwoessfully been repaired. The new code will automatically detect and repair the
+successfully been repaired. The new code will automatically detect and repair the
 blockchain if it is able to.
 
 If users still experience corruptions with the new wallet and it is not fixed

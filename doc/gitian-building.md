@@ -333,7 +333,7 @@ To build NWO (for Linux, OSX and Windows) just follow the steps under 'perform
 gitian builds' in [doc/release-process.md](release-process.md) in the nwo repository.
 
 This may take a long time as it also builds the dependencies needed for each descriptor.
-These dependencies will be cached after a snwoessful build to avoid rebuilding them when possible.
+These dependencies will be cached after a successful build to avoid rebuilding them when possible.
 
 At any time you can check the package installation and build progress with
 
