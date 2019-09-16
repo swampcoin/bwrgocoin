@@ -274,12 +274,12 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
 // write QSettings values
 bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int role)
 {
-    bool snwoessful = true; /* set to false on parse error */
+    bool successful = true; /* set to false on parse error */
     if (role == Qt::EditRole) {
         QSettings settings;
         switch (index.row()) {
         case StartAtStartup:
-            snwoessful = GUIUtil::SetStartOnSystemStartup(value.toBool());
+            successful = GUIUtil::SetStartOnSystemStartup(value.toBool());
             break;
         case MinimizeToTray:
             fMinimizeToTray = value.toBool();
@@ -427,7 +427,7 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
 
     emit dataChanged(index, index);
 
-    return snwoessful;
+    return successful;
 }
 
 /** Updates current unit in memory, settings and emits displayUnitChanged(newUnit) signal */

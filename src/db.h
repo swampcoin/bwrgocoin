@@ -65,7 +65,7 @@ public:
     /**
      * Salvage data from a file that Verify says is bad.
      * fAggressive sets the DB_AGGRESSIVE flag (see berkeley DB->verify() method documentation).
-     * Appends binary key/value pairs to vResult, returns true if snwoessful.
+     * Appends binary key/value pairs to vResult, returns true if successful.
      * NOTE: reads the entire database into memory, so cannot be used
      * for huge databases.
      */

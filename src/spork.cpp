@@ -227,7 +227,7 @@ bool CSporkManager::SetPrivKey(std::string strPrivKey)
 {
     CSporkMessage msg;
 
-    // Test signing snwoessful, proceed
+    // Test signing successful, proceed
     strMasterPrivKey = strPrivKey;
 
     Sign(msg);

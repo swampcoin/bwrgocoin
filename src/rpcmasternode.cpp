@@ -78,7 +78,7 @@ UniValue obfuscation(const UniValue& params, bool fHelp)
         if (fMasterNode)
             return "ObfuScation is not supported from masternodes";
 
-        return "DoAutomaticDenominating " + (obfuScationPool.DoAutomaticDenominating() ? "snwoessful" : ("failed: " + obfuScationPool.GetStatus()));
+        return "DoAutomaticDenominating " + (obfuScationPool.DoAutomaticDenominating() ? "successful" : ("failed: " + obfuScationPool.GetStatus()));
     }
 
     if (params[0].get_str() == "reset") {
@@ -647,7 +647,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
         std::vector<CMasternodeConfig::CMasternodeEntry> mnEntries;
         mnEntries = masternodeConfig.getEntries();
 
-        int snwoessful = 0;
+        int successful = 0;
         int failed = 0;
 
         UniValue resultsObj(UniValue::VARR);
@@ -672,7 +672,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
             statusObj.push_back(Pair("result", result ? "snwoess" : "failed"));
 
             if (result) {
-                snwoessful++;
+                successful++;
                 statusObj.push_back(Pair("error", ""));
             } else {
                 failed++;
@@ -685,7 +685,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
             pwalletMain->Lock();
 
         UniValue returnObj(UniValue::VOBJ);
-        returnObj.push_back(Pair("overall", strprintf("Successfully started %d masternodes, failed to start %d, total %d", snwoessful, failed, snwoessful + failed)));
+        returnObj.push_back(Pair("overall", strprintf("Successfully started %d masternodes, failed to start %d, total %d", successful, failed, successful + failed)));
         returnObj.push_back(Pair("detail", resultsObj));
 
         return returnObj;
@@ -698,7 +698,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
             throw JSONRPCError(RPC_WALLET_UNLOCK_NEEDED, "Error: Please enter the wallet passphrase with walletpassphrase first.");
 
         bool found = false;
-        int snwoessful = 0;
+        int successful = 0;
         int failed = 0;
 
         UniValue resultsObj(UniValue::VARR);
@@ -714,10 +714,10 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
 
             bool result = activeMasternode.Register(mne.getIp(), mne.getPrivKey(), mne.getTxHash(), mne.getOutputIndex(), errorMessage);
 
-            statusObj.push_back(Pair("result", result ? "snwoessful" : "failed"));
+            statusObj.push_back(Pair("result", result ? "successful" : "failed"));
 
             if (result) {
-                snwoessful++;
+                successful++;
                 statusObj.push_back(Pair("error", ""));
             } else {
                 failed++;
@@ -738,7 +738,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
             pwalletMain->Lock();
 
         UniValue returnObj(UniValue::VOBJ);
-        returnObj.push_back(Pair("overall", strprintf("Successfully started %d masternodes, failed to start %d, total %d", snwoessful, failed, snwoessful + failed)));
+        returnObj.push_back(Pair("overall", strprintf("Successfully started %d masternodes, failed to start %d, total %d", successful, failed, successful + failed)));
         returnObj.push_back(Pair("detail", resultsObj));
 
         return returnObj;

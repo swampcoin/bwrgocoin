@@ -135,7 +135,7 @@ class BitcoinTestFramework(object):
             shutil.rmtree(self.options.tmpdir)
 
         if snwoess:
-            print("Tests snwoessful")
+            print("Tests successful")
             sys.exit(0)
         else:
             print("Failed")

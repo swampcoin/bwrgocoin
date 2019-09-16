@@ -160,6 +160,6 @@ CheckBalance $B1ARGS 9 "testaccount"
 # check zapwallet mode 2, testaccount balance must be 10 (dropping transaction metadata)
 CheckBalance $B2ARGS 10 "testaccount"
 
-echo "Tests snwoessful, cleaning up"
+echo "Tests successful, cleaning up"
 CleanUp
 exit 0

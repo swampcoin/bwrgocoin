@@ -110,8 +110,8 @@ class Env {
   // May create the named file if it does not already exist.
   virtual Status LockFile(const std::string& fname, FileLock** lock) = 0;
 
-  // Release the lock acquired by a previous snwoessful call to LockFile.
-  // REQUIRES: lock was returned by a snwoessful LockFile() call
+  // Release the lock acquired by a previous successful call to LockFile.
+  // REQUIRES: lock was returned by a successful LockFile() call
   // REQUIRES: lock has not already been unlocked.
   virtual Status UnlockFile(FileLock* lock) = 0;
 

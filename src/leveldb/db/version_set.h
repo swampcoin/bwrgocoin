@@ -357,7 +357,7 @@ class Compaction {
   bool ShouldStopBefore(const Slice& internal_key);
 
   // Release the input version for the compaction, once the compaction
-  // is snwoessful.
+  // is successful.
   void ReleaseInputs();
 
  private:

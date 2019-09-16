@@ -451,7 +451,7 @@ void BitcoinApplication::requestShutdown()
 void BitcoinApplication::initializeResult(int retval)
 {
     qDebug() << __func__ << ": Initialization result: " << retval;
-    // Set exit result: 0 if snwoessful, 1 if failure
+    // Set exit result: 0 if successful, 1 if failure
     returnValue = retval ? 0 : 1;
     if (retval) {
 #ifdef ENABLE_WALLET

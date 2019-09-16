@@ -136,7 +136,7 @@ public:
         Loop();
     }
 
-    //! Wait until execution finishes, and return whether all evaluations where snwoessful.
+    //! Wait until execution finishes, and return whether all evaluations where successful.
     bool Wait()
     {
         return Loop(true);

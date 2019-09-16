@@ -637,7 +637,7 @@ void CObfuscationPool::CheckFinalTransaction()
         CInv inv(MSG_DSTX, txNew.GetHash());
         RelayInv(inv);
 
-        // Tell the clients it was snwoessful
+        // Tell the clients it was successful
         RelayCompletedTransaction(sessionID, false, MSG_SNWOESS);
 
         // Randomly charge clients
@@ -779,7 +779,7 @@ void CObfuscationPool::ChargeRandomFees()
                 Being that Obfuscation has "no fees" we need to have some kind of cost associated
                 with using it to stop abuse. Otherwise it could serve as an attack vector and
                 allow endless transaction that would bloat NWO and make it unusable. To
-                stop these kinds of attacks 1 in 10 snwoessful transactions are charged. This
+                stop these kinds of attacks 1 in 10 successful transactions are charged. This
                 adds up to a cost of 0.001 NWO per transaction on average.
             */
             if (r <= 10) {
@@ -1344,7 +1344,7 @@ void CObfuscationPool::NewBlock()
     obfuScationPool.CheckTimeout();
 }
 
-// Obfuscation transaction was completed (failed or snwoessful)
+// Obfuscation transaction was completed (failed or successful)
 void CObfuscationPool::CompletedTransaction(bool error, int errorID)
 {
     if (fMasterNode) return;
@@ -1406,8 +1406,8 @@ bool CObfuscationPool::DoAutomaticDenominating(bool fDryRun)
     }
 
     if (chainActive.Tip()->nHeight - cachedLastSnwoess < minBlockSpacing) {
-        LogPrintf("CObfuscationPool::DoAutomaticDenominating - Last snwoessful Obfuscation action was too recent\n");
-        strAutoDenomResult = _("Last snwoessful Obfuscation action was too recent.");
+        LogPrintf("CObfuscationPool::DoAutomaticDenominating - Last successful Obfuscation action was too recent\n");
+        strAutoDenomResult = _("Last successful Obfuscation action was too recent.");
         return false;
     }
 

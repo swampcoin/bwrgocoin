@@ -707,7 +707,7 @@ UniValue movecmd(const UniValue& params, bool fHelp)
             "3. minconf           (numeric, optional, default=1) Only use funds with at least this many confirmations.\n"
             "4. \"comment\"       (string, optional) An optional comment, stored in the wallet only.\n"
             "\nResult:\n"
-            "true|false           (boolean) true if snwoessfull.\n"
+            "true|false           (boolean) true if successfull.\n"
             "\nExamples:\n"
             "\nMove 0.01 btc from the default account to the account named tabby\n" +
             HelpExampleCli("move", "\"\" \"tabby\" 0.01") +
@@ -1799,7 +1799,7 @@ UniValue lockunspent(const UniValue& params, bool fHelp)
             "     ]\n"
 
             "\nResult:\n"
-            "true|false    (boolean) Whether the command was snwoessful or not\n"
+            "true|false    (boolean) Whether the command was successful or not\n"
 
             "\nExamples:\n"
             "\nList the unspent transactions\n" +
@@ -1898,7 +1898,7 @@ UniValue settxfee(const UniValue& params, bool fHelp)
             "\nArguments:\n"
             "1. amount         (numeric, required) The transaction fee in NWO/kB rounded to the nearest 0.00000001\n"
             "\nResult\n"
-            "true|false        (boolean) Returns true if snwoessful\n"
+            "true|false        (boolean) Returns true if successful\n"
             "\nExamples:\n" +
             HelpExampleCli("settxfee", "0.00001") + HelpExampleRpc("settxfee", "0.00001"));
 

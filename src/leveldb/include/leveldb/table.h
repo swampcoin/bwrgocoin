@@ -27,7 +27,7 @@ class Table {
   // of "file", and read the metadata entries necessary to allow
   // retrieving data from the table.
   //
-  // If snwoessful, returns ok and sets "*table" to the newly opened
+  // If successful, returns ok and sets "*table" to the newly opened
   // table.  The client should delete "*table" when no longer needed.
   // If there was an error while initializing the table, sets "*table"
   // to NULL and returns a non-ok status.  Does not take ownership of

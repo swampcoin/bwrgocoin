@@ -711,7 +711,7 @@ void StartRPCThreads()
             rpc_acceptors.push_back(acceptor);
             fListening = true;
             rpc_acceptors.push_back(acceptor);
-            // If dual IPv6/IPv4 bind snwoessful, skip binding to IPv4 separately
+            // If dual IPv6/IPv4 bind successful, skip binding to IPv4 separately
             if (bBindAny && bindAddress == asio::ip::address_v6::any() && !v6_only_error)
                 break;
         } catch (boost::system::system_error& e) {

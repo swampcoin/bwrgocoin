@@ -122,7 +122,7 @@ def main():
         shutil.rmtree(options.tmpdir)
 
     if snwoess:
-        print("Tests snwoessful")
+        print("Tests successful")
         sys.exit(0)
     else:
         print("Failed")

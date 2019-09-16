@@ -86,7 +86,7 @@ class DBImpl : public DB {
   void DeleteObsoleteFiles();
 
   // Compact the in-memory write buffer to disk.  Switches to a new
-  // log-file/memtable and writes a new descriptor iff snwoessful.
+  // log-file/memtable and writes a new descriptor iff successful.
   // Errors are recorded in bg_error_.
   void CompactMemTable() EXCLUSIVE_LOCKS_REQUIRED(mutex_);
 
