@@ -220,7 +220,7 @@
         <translation>钱包解密失败</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>钱包密码已经更换为新密码</translation>
     </message>
     <message>
@@ -1552,7 +1552,7 @@ Address: %4
         <translation>注意</translation>
     </message>
     <message>
-        <source>Your entries added snwoessfully.</source>
+        <source>Your entries added successfully.</source>
         <translation>您的输入成功添加。</translation>
     </message>
     <message>

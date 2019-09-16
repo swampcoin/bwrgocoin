@@ -204,7 +204,7 @@
         <translation>plånboks avkryptering misslyckades</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>Ändring av plånbokens lösefras lyckades </translation>
     </message>
     <message>
@@ -1479,7 +1479,7 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Transaktionens värde måste vara possitivt</translation>
     </message>
     <message>
-        <source>Transaction created snwoessfully.</source>
+        <source>Transaction created successfully.</source>
         <translation>Transaktion skapad framgångsrikt</translation>
     </message>
     <message>

@@ -220,7 +220,7 @@
         <translation>Dekryptering fejlede.</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>Kodeordet blev udskiftet.</translation>
     </message>
     <message>
@@ -1552,15 +1552,15 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Tilsløringskonfiguration</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Tilsløring blev sat til grundlæggende (%1 og 2 gennemløb) De kan ændre dette hvornår De vil ved at åbne NWO konfigurationsbillede.</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Tilsløring blev sat til høj (%1 og 8 gennemløb) De kan ændre dette hvornår De vil ved at åbne NWO konfigurationsbillede.</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Tilsløring blev sat til maksimum (%1 og 16 gennemløb) De kan ændre dette hvornår De vil ved at åbne NWO konfigurationsbillede.</translation>
     </message>
 </context>
@@ -1996,7 +1996,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Seneste besked fra tilsløringsprocessen</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully reset.</source>
+        <source>Obfuscation was successfully reset.</source>
         <translation>Tilsløringsfunktionen blev nulstillet </translation>
     </message>
     <message>
@@ -3333,7 +3333,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Status</translation>
     </message>
     <message>
-        <source>, has not been snwoessfully broadcast yet</source>
+        <source>, has not been successfully broadcast yet</source>
         <translation>, er ikke udsendt endnu</translation>
     </message>
     <message>
@@ -3758,7 +3758,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Eksporteret!</translation>
     </message>
     <message>
-        <source>The transaction history was snwoessfully saved to %1.</source>
+        <source>The transaction history was successfully saved to %1.</source>
         <translation>Transaktionshistorikken blev gemt i %1</translation>
     </message>
     <message>
@@ -3830,7 +3830,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Sikkerhedskopiering fuldført</translation>
     </message>
     <message>
-        <source>The wallet data was snwoessfully saved to %1.</source>
+        <source>The wallet data was successfully saved to %1.</source>
         <translation>Tegnebogens data blev gemt i %1</translation>
     </message>
 </context>
@@ -4018,7 +4018,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Angiv antallet af tråde til møntgenerering hvis aktiveret (-1 = alle cores, default: %d)</translation>
     </message>
     <message>
-        <source>Show N confirmations for a snwoessfully locked transaction (0-9999, default: %u)</source>
+        <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
         <translation>Vis N bekræftelser for en gennemført låst transaktion (0-9999, default: %u)</translation>
     </message>
     <message>
@@ -4510,7 +4510,7 @@ For eksempel: alertnotify=Echo %% | mail - s "NWO ALARM!" e-mail@administrator.d
         <translation>Seneste tilsløring var for ny</translation>
     </message>
     <message>
-        <source>Last snwoessful Obfuscation action was too recent.</source>
+        <source>Last successful Obfuscation action was too recent.</source>
         <translation>Seneste snwoesfulde tilsløring var for ny</translation>
     </message>
     <message>
@@ -4910,7 +4910,7 @@ For eksempel: alertnotify=Echo %% | mail - s "NWO ALARM!" e-mail@administrator.d
         <translation>Transaktionsbeløbet skal være positivt</translation>
     </message>
     <message>
-        <source>Transaction created snwoessfully.</source>
+        <source>Transaction created successfully.</source>
         <translation>Transaktionen blev oprettet.</translation>
     </message>
     <message>
@@ -5034,7 +5034,7 @@ For eksempel: alertnotify=Echo %% | mail - s "NWO ALARM!" e-mail@administrator.d
         <translation>Databasen skal genopbygges ved hjælp af -reindex for at ændre -txindex</translation>
     </message>
     <message>
-        <source>Your entries added snwoessfully.</source>
+        <source>Your entries added successfully.</source>
         <translation>Posterne blev tilføjet.</translation>
     </message>
     <message>

@@ -220,7 +220,7 @@
         <translation>지갑 암호화 해제 실패</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>지갑 암호가 변경되었습니다.</translation>
     </message>
     <message>
@@ -1576,15 +1576,15 @@ Please check the address and try again.</source>
         <translation>난독화 구성</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>난독화가 성공적으로 높게 설정되었습니다.(%1 및 2 rounds) NWO의 설정 화면을 열어 언제든지 다시 변경할 수 있습니다.</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>난독화가 성공적으로 높게 설정되었습니다.(%1 및 8 rounds) NWO의 설정 화면을 열어 언제든지 다시 변경할 수 있습니다.</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>난독화가 성공적으로 높게 설정되었습니다.(%1 및 16 rounds) NWO의 설정 화면을 열어 언제든지 다시 변경할 수 있습니다.</translation>
     </message>
 </context>
@@ -2029,7 +2029,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
 </translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully reset.</source>
+        <source>Obfuscation was successfully reset.</source>
         <translation>난독화가 성공적으로 초기화 되었습니다.</translation>
     </message>
     <message>
@@ -3380,7 +3380,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>상태</translation>
     </message>
     <message>
-        <source>, has not been snwoessfully broadcast yet</source>
+        <source>, has not been successfully broadcast yet</source>
         <translation>, 아직 성공적으로 브로드캐스트되지 않았습니다</translation>
     </message>
     <message numerus="yes">
@@ -3817,7 +3817,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>내보내기 성공</translation>
     </message>
     <message>
-        <source>The transaction history was snwoessfully saved to %1.</source>
+        <source>The transaction history was successfully saved to %1.</source>
         <translation>트랜잭션 기록이 %1에 성공적으로 저장되었습니다.</translation>
     </message>
     <message>
@@ -3889,7 +3889,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>백업 성공하였습니다</translation>
     </message>
     <message>
-        <source>The wallet data was snwoessfully saved to %1.</source>
+        <source>The wallet data was successfully saved to %1.</source>
         <translation>지갑 데이터가 %1에 성공적으로 저장되었습니다.</translation>
     </message>
 </context>
@@ -4076,7 +4076,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>활성화 시에 코인 생성을 위한 스레드 숫자를 설정합니다 (-1= 모든 코어, 기본값: %d)</translation>
     </message>
     <message>
-        <source>Show N confirmations for a snwoessfully locked transaction (0-9999, default: %u)</source>
+        <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
         <translation>성공적으로 잠긴 트랜잭션에 대한 확인을 N으로 나타냅니다 (0-9999, 기본값: %u)</translation>
     </message>
     <message>
@@ -4604,7 +4604,7 @@ rpcpassword=%s
         <translation>최근에 마지막으로 난독화를 진행했습니다.</translation>
     </message>
     <message>
-        <source>Last snwoessful Obfuscation action was too recent.</source>
+        <source>Last successful Obfuscation action was too recent.</source>
         <translation>최근에 마지막으로 성공한 난독화 작업이 있습니다.</translation>
     </message>
     <message>
@@ -5012,7 +5012,7 @@ rpcpassword=%s
         <translation>트랜잭션 금액에 반드시 양수값이 들어가야 합니다</translation>
     </message>
     <message>
-        <source>Transaction created snwoessfully.</source>
+        <source>Transaction created successfully.</source>
         <translation>트랜잭션이 성공적으로 생성되었습니다.</translation>
     </message>
     <message>
@@ -5136,7 +5136,7 @@ rpcpassword=%s
         <translation>-treindex를 변경하려면 -reindex를 사용하여 데이터베이스를 다시 빌드해야합니다.</translation>
     </message>
     <message>
-        <source>Your entries added snwoessfully.</source>
+        <source>Your entries added successfully.</source>
         <translation>항목이 성공적으로 추가되었습니다.</translation>
     </message>
     <message>

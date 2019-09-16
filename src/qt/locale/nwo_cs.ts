@@ -220,7 +220,7 @@
         <translation>Odšifrování peněženky selhalo</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>Frázové heslo peněženky bylo úspěšně změněno.</translation>
     </message>
     <message>
@@ -1679,7 +1679,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Anonymizováno</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully reset.</source>
+        <source>Obfuscation was successfully reset.</source>
         <translation>Obfuskace byla úspěšně resetována</translation>
     </message>
     <message>
@@ -2436,7 +2436,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Hodnota transakce musí být kladná</translation>
     </message>
     <message>
-        <source>Transaction created snwoessfully.</source>
+        <source>Transaction created successfully.</source>
         <translation>Transakce byla uspěšně vytvořena.</translation>
     </message>
     <message>

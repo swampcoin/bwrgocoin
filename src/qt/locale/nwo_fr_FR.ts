@@ -192,7 +192,7 @@
         <translation>Le décryptage de votre portefeuille a échoué.</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>La phrase secrète de votre portefeuille a été changée avec snwoès.</translation>
     </message>
     <message>

@@ -220,7 +220,7 @@
         <translation>Decriptazione portafoglio fallita</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>La passphrase del portafoglio è stata modificata correttamente.</translation>
     </message>
     <message>

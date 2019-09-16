@@ -283,8 +283,8 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>Wallet passphrase was snwoessfully changed.</source>
-        <translation>Wallet passphrase was snwoessfully changed.</translation>
+        <source>Wallet passphrase was successfully changed.</source>
+        <translation>Wallet passphrase was successfully changed.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -1990,17 +1990,17 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="-27"/>
-        <source>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2573,7 +2573,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</source>
     </message>
     <message>
         <location line="+27"/>
-        <source>Obfuscation was snwoessfully reset.</source>
+        <source>Obfuscation was successfully reset.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4330,8 +4330,8 @@ https://www.transifex.com/nwo-project/nwo-project-translations</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>, has not been snwoessfully broadcast yet</source>
-        <translation>, has not been snwoessfully broadcast yet</translation>
+        <source>, has not been successfully broadcast yet</source>
+        <translation>, has not been successfully broadcast yet</translation>
     </message>
     <message numerus="yes">
         <location line="+2"/>
@@ -4898,8 +4898,8 @@ https://www.transifex.com/nwo-project/nwo-project-translations</source>
     </message>
     <message>
         <location line="+0"/>
-        <source>The transaction history was snwoessfully saved to %1.</source>
-        <translation>The transaction history was snwoessfully saved to %1.</translation>
+        <source>The transaction history was successfully saved to %1.</source>
+        <translation>The transaction history was successfully saved to %1.</translation>
     </message>
     <message>
         <location line="+117"/>
@@ -4988,8 +4988,8 @@ https://www.transifex.com/nwo-project/nwo-project-translations</source>
     </message>
     <message>
         <location line="+0"/>
-        <source>The wallet data was snwoessfully saved to %1.</source>
-        <translation>The wallet data was snwoessfully saved to %1.</translation>
+        <source>The wallet data was successfully saved to %1.</source>
+        <translation>The wallet data was successfully saved to %1.</translation>
     </message>
 </context>
 <context>
@@ -5221,8 +5221,8 @@ https://www.transifex.com/nwo-project/nwo-project-translations</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Show N confirmations for a snwoessfully locked transaction (0-9999, default: %u)</source>
-        <translation type="unfinished">Show N confirmations for a snwoessfully locked transaction (0-9999, default: %u)</translation>
+        <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
+        <translation type="unfinished">Show N confirmations for a successfully locked transaction (0-9999, default: %u)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5861,7 +5861,7 @@ for example: alertnotify=echo %%s | mail -s &quot;NWO Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Last snwoessful Obfuscation action was too recent.</source>
+        <source>Last successful Obfuscation action was too recent.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6371,8 +6371,8 @@ for example: alertnotify=echo %%s | mail -s &quot;NWO Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Transaction created snwoessfully.</source>
-        <translation type="unfinished">Transaction created snwoessfully.</translation>
+        <source>Transaction created successfully.</source>
+        <translation type="unfinished">Transaction created successfully.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6526,8 +6526,8 @@ for example: alertnotify=echo %%s | mail -s &quot;NWO Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Your entries added snwoessfully.</source>
-        <translation type="unfinished">Your entries added snwoessfully.</translation>
+        <source>Your entries added successfully.</source>
+        <translation type="unfinished">Your entries added successfully.</translation>
     </message>
     <message>
         <location line="+1"/>

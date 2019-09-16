@@ -216,7 +216,7 @@
         <translation>Portemonnee-ontsleuteling mislukt</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>Portemonneewachtwoord is met snwoes gewijzigd.</translation>
     </message>
     <message>

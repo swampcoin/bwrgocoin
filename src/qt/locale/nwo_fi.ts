@@ -216,7 +216,7 @@
         <translation>Lompakon salauksen purku epäonnistui</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>Lompakon salausavaimen vaihto onnistui.</translation>
     </message>
     <message>
@@ -2649,7 +2649,7 @@ Please check the address and try again.</source>
         <translation>Rahansiirtojen tulee olla positiivisia</translation>
     </message>
     <message>
-        <source>Transaction created snwoessfully.</source>
+        <source>Transaction created successfully.</source>
         <translation>Rahansiirto luotu onnistuneesti.</translation>
     </message>
     <message>

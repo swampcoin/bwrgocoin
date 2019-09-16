@@ -220,7 +220,7 @@
         <translation>Descifrado del monedero fallido</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>Se cambió la contraseña con éxito.</translation>
     </message>
     <message>
@@ -1576,15 +1576,15 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Configuración de Ofuscación</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>La Ofuscación se configuró correctamente en modo básico (%1 y 2 rondas). Puedes cambiar esto en cualquier momento accediendo a la ventana de configuración de NWO.</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>La Ofuscación se activó correctamente en modo alto (%1 y 8 rondas). Usted puede cambiar esto en cualquier momento abriendo la ventana de configuración de NWO.</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>La Ofuscación se activó correctamente en su grado máximo (%1 y 16 rondas). Usted puede cambiar ésto en cualquier momento en la ventana de configuración de NWO.</translation>
     </message>
 </context>
@@ -2030,7 +2030,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
 </translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully reset.</source>
+        <source>Obfuscation was successfully reset.</source>
         <translation>La Ofuscación fue reiniciada satisfactoriamente.</translation>
     </message>
     <message>
@@ -3371,7 +3371,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Estado</translation>
     </message>
     <message>
-        <source>, has not been snwoessfully broadcast yet</source>
+        <source>, has not been successfully broadcast yet</source>
         <translation>, no ha sido correctamente transmitida todavía</translation>
     </message>
     <message numerus="yes">
@@ -3808,7 +3808,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Exportación Correcta</translation>
     </message>
     <message>
-        <source>The transaction history was snwoessfully saved to %1.</source>
+        <source>The transaction history was successfully saved to %1.</source>
         <translation>El historial de transacción fue guardado satisfactoriamente a %1.</translation>
     </message>
     <message>
@@ -3880,7 +3880,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Copia de Seguridad Satisfactoria</translation>
     </message>
     <message>
-        <source>The wallet data was snwoessfully saved to %1.</source>
+        <source>The wallet data was successfully saved to %1.</source>
         <translation>Los datos del monedero se guardaron correctamente a %1.</translation>
     </message>
 </context>
@@ -4067,7 +4067,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Define el número de hilos para generación de moneda si esta habilitado (-1 = todos los núcleos, predeterminado: %d)</translation>
     </message>
     <message>
-        <source>Show N confirmations for a snwoessfully locked transaction (0-9999, default: %u)</source>
+        <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
         <translation>Mostrar N confirmaciones para una transacción cerrada exitosamente (0-9999, predefinido: %u)</translation>
     </message>
     <message>
@@ -4595,7 +4595,7 @@ por ejemplo: alertnotify=echo %%s | mail -s "NWO Alert" admin@foo.com
         <translation>La última Ofuscación fue demasiado reciente.</translation>
     </message>
     <message>
-        <source>Last snwoessful Obfuscation action was too recent.</source>
+        <source>Last successful Obfuscation action was too recent.</source>
         <translation>La última acción de Ofuscación exitosa fue demasiado reciente.</translation>
     </message>
     <message>
@@ -5003,7 +5003,7 @@ por ejemplo: alertnotify=echo %%s | mail -s "NWO Alert" admin@foo.com
         <translation>El monto de la transacción debe ser positivo</translation>
     </message>
     <message>
-        <source>Transaction created snwoessfully.</source>
+        <source>Transaction created successfully.</source>
         <translation>Transacción creada satisfactoriamente.</translation>
     </message>
     <message>
@@ -5127,7 +5127,7 @@ por ejemplo: alertnotify=echo %%s | mail -s "NWO Alert" admin@foo.com
         <translation>Usted necesita reconstruir la base de datos usando -reindex para cambiar -txindex</translation>
     </message>
     <message>
-        <source>Your entries added snwoessfully.</source>
+        <source>Your entries added successfully.</source>
         <translation>Su entrada a sido agregada satisfactoriamente.</translation>
     </message>
     <message>

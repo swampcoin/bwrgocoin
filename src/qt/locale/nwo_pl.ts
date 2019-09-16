@@ -180,7 +180,7 @@
         <translation>Kodowanie portfela nieudane</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>Hasło do portfela zostało zmienione</translation>
     </message>
     <message>

@@ -208,7 +208,7 @@
         <translation>錢包解密失敗</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>錢包密碼修改成功</translation>
     </message>
     <message>

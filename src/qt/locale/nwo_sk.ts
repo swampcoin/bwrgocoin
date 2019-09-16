@@ -220,7 +220,7 @@
         <translation>Dešifrovanie peňaženky zlyhalo</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>Prístupová fráza pre peňaženku bola úspešne zmenená.</translation>
     </message>
     <message>

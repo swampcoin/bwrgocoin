@@ -220,7 +220,7 @@
         <translation>Decriptação da carteira falhou</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>Senha da carteira alterada com sucesso.</translation>
     </message>
     <message>
@@ -1154,7 +1154,7 @@
         <translation>Os valores das transações devem ser positivos</translation>
     </message>
     <message>
-        <source>Transaction created snwoessfully.</source>
+        <source>Transaction created successfully.</source>
         <translation>Transação criada com sucesso.</translation>
     </message>
     <message>

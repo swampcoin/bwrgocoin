@@ -216,7 +216,7 @@
         <translation>Не удалось дешифровать кошелек</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>Кодовая фраза кошелька успешно изменена.</translation>
     </message>
     <message>
@@ -1568,15 +1568,15 @@ Please check the address and try again.</source>
         <translation>Настройка Перемешивания</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Перемешивание было успешно выставлено на стандартные значения (%1 и 2 цикла). Вы в любой момент можете это изменить, открыв окно настройки NWO.</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Перемешивание было успешно выбрано как высокое (%1 и 8 циклов). Вы в любой момент можете это изменить, открыв окно настройки NWO.</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
         <translation>Перемешивание было успешно выставлено на максимальное (%1 и 16 циклов). Вы в любой момент можете это изменить, открыв окно настройки NWO.</translation>
     </message>
 </context>
@@ -2013,7 +2013,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
 </translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully reset.</source>
+        <source>Obfuscation was successfully reset.</source>
         <translation>Обфускация была успешно сброшена.</translation>
     </message>
     <message>
@@ -3335,7 +3335,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Обнаружен неверный сценарий.</translation>
     </message>
     <message>
-        <source>Last snwoessful Obfuscation action was too recent.</source>
+        <source>Last successful Obfuscation action was too recent.</source>
         <translation>Последняя успешная операция обфускации была совсем недавно.</translation>
     </message>
     <message>
@@ -3511,7 +3511,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Суммы транзакций должны быть положительными</translation>
     </message>
     <message>
-        <source>Transaction created snwoessfully.</source>
+        <source>Transaction created successfully.</source>
         <translation>Транзакция создана успешно.</translation>
     </message>
     <message>

@@ -220,8 +220,8 @@
         <translation>Wallet decryption failed</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
-        <translation>Wallet passphrase was snwoessfully changed.</translation>
+        <source>Wallet passphrase was successfully changed.</source>
+        <translation>Wallet passphrase was successfully changed.</translation>
     </message>
     <message>
         <source>Warning: The Caps Lock key is on!</source>
@@ -1576,16 +1576,16 @@ Please check the address and try again.</translation>
         <translation>Obfuscation Configuration</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
-        <translation>Obfuscation was snwoessfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</translation>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <translation>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
-        <translation>Obfuscation was snwoessfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</translation>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <translation>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
-        <translation>Obfuscation was snwoessfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</translation>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
+        <translation>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</translation>
     </message>
 </context>
 <context>
@@ -2029,8 +2029,8 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
 </translation>
     </message>
     <message>
-        <source>Obfuscation was snwoessfully reset.</source>
-        <translation>Obfuscation was snwoessfully reset.</translation>
+        <source>Obfuscation was successfully reset.</source>
+        <translation>Obfuscation was successfully reset.</translation>
     </message>
     <message>
         <source>If you don't want to see internal Obfuscation fees/transactions select "Most Common" as Type on the "Transactions" tab.</source>
@@ -3374,8 +3374,8 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Status</translation>
     </message>
     <message>
-        <source>, has not been snwoessfully broadcast yet</source>
-        <translation>, has not been snwoessfully broadcast yet</translation>
+        <source>, has not been successfully broadcast yet</source>
+        <translation>, has not been successfully broadcast yet</translation>
     </message>
     <message numerus="yes">
         <source>, broadcast through %n node(s)</source>
@@ -3811,8 +3811,8 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Exporting Snwoessful</translation>
     </message>
     <message>
-        <source>The transaction history was snwoessfully saved to %1.</source>
-        <translation>The transaction history was snwoessfully saved to %1.</translation>
+        <source>The transaction history was successfully saved to %1.</source>
+        <translation>The transaction history was successfully saved to %1.</translation>
     </message>
     <message>
         <source>Range:</source>
@@ -3883,8 +3883,8 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Backup Snwoessful</translation>
     </message>
     <message>
-        <source>The wallet data was snwoessfully saved to %1.</source>
-        <translation>The wallet data was snwoessfully saved to %1.</translation>
+        <source>The wallet data was successfully saved to %1.</source>
+        <translation>The wallet data was successfully saved to %1.</translation>
     </message>
 </context>
 <context>
@@ -4070,8 +4070,8 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Set the number of threads for coin generation if enabled (-1 = all cores, default: %d)</translation>
     </message>
     <message>
-        <source>Show N confirmations for a snwoessfully locked transaction (0-9999, default: %u)</source>
-        <translation>Show N confirmations for a snwoessfully locked transaction (0-9999, default: %u)</translation>
+        <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
+        <translation>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</translation>
     </message>
     <message>
         <source>Support filtering of blocks and transaction with bloom filters (default: %u)</source>
@@ -4598,8 +4598,8 @@ for example: alertnotify=echo %%s | mail -s "NWO Alert" admin@foo.com
         <translation>Last Obfuscation was too recent.</translation>
     </message>
     <message>
-        <source>Last snwoessful Obfuscation action was too recent.</source>
-        <translation>Last snwoessful Obfuscation action was too recent.</translation>
+        <source>Last successful Obfuscation action was too recent.</source>
+        <translation>Last successful Obfuscation action was too recent.</translation>
     </message>
     <message>
         <source>Limit size of signature cache to &lt;n&gt; entries (default: %u)</source>
@@ -5006,8 +5006,8 @@ for example: alertnotify=echo %%s | mail -s "NWO Alert" admin@foo.com
         <translation>Transaction amounts must be positive</translation>
     </message>
     <message>
-        <source>Transaction created snwoessfully.</source>
-        <translation>Transaction created snwoessfully.</translation>
+        <source>Transaction created successfully.</source>
+        <translation>Transaction created successfully.</translation>
     </message>
     <message>
         <source>Transaction fees are too high.</source>
@@ -5130,8 +5130,8 @@ for example: alertnotify=echo %%s | mail -s "NWO Alert" admin@foo.com
         <translation>You need to rebuild the database using -reindex to change -txindex</translation>
     </message>
     <message>
-        <source>Your entries added snwoessfully.</source>
-        <translation>Your entries added snwoessfully.</translation>
+        <source>Your entries added successfully.</source>
+        <translation>Your entries added successfully.</translation>
     </message>
     <message>
         <source>Your transaction was accepted into the pool!</source>

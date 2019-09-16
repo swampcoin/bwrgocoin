@@ -212,7 +212,7 @@
         <translation>Декриптирането на портфейла беше неуспешно</translation>
     </message>
     <message>
-        <source>Wallet passphrase was snwoessfully changed.</source>
+        <source>Wallet passphrase was successfully changed.</source>
         <translation>Паролата на портфейла беше сменена успешно.</translation>
     </message>
     <message>
