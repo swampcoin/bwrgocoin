@@ -2092,9 +2092,9 @@ std::string CObfuscationPool::GetMessageByID(int messageID)
     case ERR_VERSION:
         return _("Incompatible version.");
     case MSG_SNWOESS:
-        return _("Transaction created snwoessfully.");
+        return _("Transaction created successfully.");
     case MSG_ENTRIES_ADDED:
-        return _("Your entries added snwoessfully.");
+        return _("Your entries added successfully.");
     case MSG_NOERR:
     default:
         return "";

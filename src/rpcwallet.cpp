@@ -1996,7 +1996,7 @@ UniValue setstakesplitthreshold(const UniValue& params, bool fHelp)
             "\nResult:\n"
             "{\n"
             "  \"threshold\": n,    (numeric) Threshold value set\n"
-            "  \"saved\": true|false    (boolean) 'true' if snwoessfully saved to the wallet file\n"
+            "  \"saved\": true|false    (boolean) 'true' if successfully saved to the wallet file\n"
             "}\n"
             "\nExamples:\n" +
             HelpExampleCli("setstakesplitthreshold", "5000") + HelpExampleRpc("setstakesplitthreshold", "5000"));

@@ -2,7 +2,7 @@
 // https://github.com/nst/JSONTestSuite.
 //
 // It reads JSON input from stdin and exits with code 0 if it can be parsed
-// snwoessfully. It also pretty prints the parsed JSON value to stdout.
+// successfully. It also pretty prints the parsed JSON value to stdout.
 
 #include <iostream>
 #include <string>

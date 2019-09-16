@@ -162,7 +162,7 @@ void AskPassphraseDialog::accept()
         if (newpass1 == newpass2) {
             if (model->changePassphrase(oldpass, newpass1)) {
                 QMessageBox::information(this, tr("Wallet encrypted"),
-                    tr("Wallet passphrase was snwoessfully changed."));
+                    tr("Wallet passphrase was successfully changed."));
                 QDialog::accept(); // Snwoess
             } else {
                 QMessageBox::critical(this, tr("Wallet encryption failed"),

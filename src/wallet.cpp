@@ -3522,7 +3522,7 @@ bool CWallet::MultiSend()
         if (!walletdb.WriteMSettings(fMultiSendStake, fMultiSendMasternodeReward, nLastMultiSendHeight))
             LogPrintf("Failed to write MultiSend setting to DB\n");
 
-        LogPrintf("MultiSend snwoessfully sent\n");
+        LogPrintf("MultiSend successfully sent\n");
 
 	//set which Multisend triggered
         if (sendMSOnStake)

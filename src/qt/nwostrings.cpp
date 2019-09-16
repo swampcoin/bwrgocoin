@@ -135,7 +135,7 @@ QT_TRANSLATE_NOOP("nwo-core", ""
 "Set the number of threads for coin generation if enabled (-1 = all cores, "
 "default: %d)"),
 QT_TRANSLATE_NOOP("nwo-core", ""
-"Show N confirmations for a snwoessfully locked transaction (0-9999, default: "
+"Show N confirmations for a successfully locked transaction (0-9999, default: "
 "%u)"),
 QT_TRANSLATE_NOOP("nwo-core", ""
 "Support filtering of blocks and transaction with bloom filters (default: %u)"),
@@ -413,7 +413,7 @@ QT_TRANSLATE_NOOP("nwo-core", "This is not a Masternode."),
 QT_TRANSLATE_NOOP("nwo-core", "Threshold for disconnecting misbehaving peers (default: %u)"),
 QT_TRANSLATE_NOOP("nwo-core", "Transaction amount too small"),
 QT_TRANSLATE_NOOP("nwo-core", "Transaction amounts must be positive"),
-QT_TRANSLATE_NOOP("nwo-core", "Transaction created snwoessfully."),
+QT_TRANSLATE_NOOP("nwo-core", "Transaction created successfully."),
 QT_TRANSLATE_NOOP("nwo-core", "Transaction fees are too high."),
 QT_TRANSLATE_NOOP("nwo-core", "Transaction not valid."),
 QT_TRANSLATE_NOOP("nwo-core", "Transaction too large for fee policy"),
@@ -444,7 +444,7 @@ QT_TRANSLATE_NOOP("nwo-core", "Warning: Unsupported argument -benchmark ignored,
 QT_TRANSLATE_NOOP("nwo-core", "Warning: Unsupported argument -debugnet ignored, use -debug=net."),
 QT_TRANSLATE_NOOP("nwo-core", "Will retry..."),
 QT_TRANSLATE_NOOP("nwo-core", "You need to rebuild the database using -reindex to change -txindex"),
-QT_TRANSLATE_NOOP("nwo-core", "Your entries added snwoessfully."),
+QT_TRANSLATE_NOOP("nwo-core", "Your entries added successfully."),
 QT_TRANSLATE_NOOP("nwo-core", "Your transaction was accepted into the pool!"),
 QT_TRANSLATE_NOOP("nwo-core", "Zapping all transactions from wallet..."),
 QT_TRANSLATE_NOOP("nwo-core", "ZeroMQ notification options:"),

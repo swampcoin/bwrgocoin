@@ -350,7 +350,7 @@ bool CheckStakeKernelHash(unsigned int nBits, const CBlock blockFrom, const CTra
         if (!stakeTargetHit(hashProofOfStake, nValueIn, bnTargetPerCoinDay))
             continue;
 
-        fSnwoess = true; // if we make it this far then we have snwoessfully created a stake hash
+        fSnwoess = true; // if we make it this far then we have successfully created a stake hash
         nTimeTx = nTryTime;
 
         if (fDebug || fPrintProofOfStake) {

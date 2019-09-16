@@ -130,7 +130,7 @@ class DBImpl : public DB {
   // table_cache_ provides its own synchronization
   TableCache* table_cache_;
 
-  // Lock over the persistent DB state.  Non-NULL iff snwoessfully acquired.
+  // Lock over the persistent DB state.  Non-NULL iff successfully acquired.
   FileLock* db_lock_;
 
   // State below is protected by mutex_

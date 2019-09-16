@@ -28,7 +28,7 @@ too small, or if the transaction is too many bytes for the fee).
 - The `--dry_run` option will just create and sign the transaction and print
 the transaction data (as hexadecimal), instead of broadcasting it.
 
-- If the transaction is created and broadcast snwoessfully, a transaction id
+- If the transaction is created and broadcast successfully, a transaction id
 is printed.
 
 - If this was a tool for end-users and not programmers, it would have much friendlier

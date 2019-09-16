@@ -373,7 +373,7 @@ void TransactionView::exportClicked()
     }
 
     if (fExport) {
-        emit message(tr("Exporting Snwoessful"), tr("The transaction history was snwoessfully saved to %1.").arg(filename),
+        emit message(tr("Exporting Snwoessful"), tr("The transaction history was successfully saved to %1.").arg(filename),
             CClientUIInterface::MSG_INFORMATION);
     }
     else {

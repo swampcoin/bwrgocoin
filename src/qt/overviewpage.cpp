@@ -627,7 +627,7 @@ void OverviewPage::obfuscationReset()
     obfuScationPool.Reset();
 
     QMessageBox::warning(this, tr("Obfuscation"),
-        tr("Obfuscation was snwoessfully reset."),
+        tr("Obfuscation was successfully reset."),
         QMessageBox::Ok, QMessageBox::Ok);
 }
 

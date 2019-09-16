@@ -59,7 +59,7 @@ fi
 #first we fetch the file containing the signature
 WGETOUT=$(wget -N "$BASEDIR$SIGNATUREFILENAME" 2>&1)
 
-#and then see if wget completed snwoessfully
+#and then see if wget completed successfully
 if [ $? -ne 0 ]; then
    echo "Error: couldn't fetch signature file. Have you specified the version number in the following format?"
    echo "[bitcoin-]<version>-[rc[0-9]] (example: bitcoin-0.9.2-rc1)"

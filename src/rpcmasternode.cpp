@@ -83,7 +83,7 @@ UniValue obfuscation(const UniValue& params, bool fHelp)
 
     if (params[0].get_str() == "reset") {
         obfuScationPool.Reset();
-        return "snwoessfully reset obfuscation";
+        return "successfully reset obfuscation";
     }
 
     if (params.size() != 2)

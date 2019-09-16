@@ -121,7 +121,7 @@ SECP256K1_WARN_UNUSED_RESULT int secp256k1_ecdsa_sign_compact(
 ) SECP256K1_ARG_NONNULL(1) SECP256K1_ARG_NONNULL(3) SECP256K1_ARG_NONNULL(4) SECP256K1_ARG_NONNULL(5);
 
 /** Recover an ECDSA public key from a compact signature.
- *  Returns: 1: public key snwoessfully recovered (which guarantees a correct signature).
+ *  Returns: 1: public key successfully recovered (which guarantees a correct signature).
  *           0: otherwise.
  *  In:      msg:        the message assumed to be signed (cannot be NULL)
  *           msglen:     the length of the message (at most 32)

@@ -214,8 +214,8 @@ public:
      *  \return true if all conditions are met:
      *     1) we have an active Masternode,
      *     2) we have a valid Masternode private key,
-     *     3) we signed the message snwoessfully, and
-     *     4) we verified the message snwoessfully
+     *     3) we signed the message successfully, and
+     *     4) we verified the message successfully
      */
     bool Sign();
 

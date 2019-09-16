@@ -46,7 +46,7 @@ class Reader {
   ~Reader();
 
   // Read the next record into *record.  Returns true if read
-  // snwoessfully, false if we hit end of the input.  May use
+  // successfully, false if we hit end of the input.  May use
   // "*scratch" as temporary storage.  The contents filled in *record
   // will only be valid until the next mutating operation on this
   // reader or the next mutation to *scratch.
