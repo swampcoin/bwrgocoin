@@ -944,7 +944,7 @@ bool CObfuscationPool::SignatureValid(const CScript& newSig, const CTxIn& newVin
         }
     }
 
-    LogPrint("obfuscation", "CObfuscationPool::SignatureValid() - Signing - Snwoessfully validated input\n");
+    LogPrint("obfuscation", "CObfuscationPool::SignatureValid() - Signing - Successfully validated input\n");
     return true;
 }
 

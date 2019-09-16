@@ -685,7 +685,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
             pwalletMain->Lock();
 
         UniValue returnObj(UniValue::VOBJ);
-        returnObj.push_back(Pair("overall", strprintf("Snwoessfully started %d masternodes, failed to start %d, total %d", snwoessful, failed, snwoessful + failed)));
+        returnObj.push_back(Pair("overall", strprintf("Successfully started %d masternodes, failed to start %d, total %d", snwoessful, failed, snwoessful + failed)));
         returnObj.push_back(Pair("detail", resultsObj));
 
         return returnObj;
@@ -738,7 +738,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
             pwalletMain->Lock();
 
         UniValue returnObj(UniValue::VOBJ);
-        returnObj.push_back(Pair("overall", strprintf("Snwoessfully started %d masternodes, failed to start %d, total %d", snwoessful, failed, snwoessful + failed)));
+        returnObj.push_back(Pair("overall", strprintf("Successfully started %d masternodes, failed to start %d, total %d", snwoessful, failed, snwoessful + failed)));
         returnObj.push_back(Pair("detail", resultsObj));
 
         return returnObj;

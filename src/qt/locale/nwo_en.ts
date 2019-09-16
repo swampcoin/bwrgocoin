@@ -498,7 +498,7 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

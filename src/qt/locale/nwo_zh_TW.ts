@@ -371,7 +371,7 @@
         <translation>私鑰加入錢包發生錯誤</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation>私鑰加入錢包成功</translation>
     </message>
 </context>

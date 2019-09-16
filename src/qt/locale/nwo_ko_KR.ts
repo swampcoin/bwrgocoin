@@ -387,7 +387,7 @@
         <translation>지갑에 키를 추가하는 도중 에러가 발생했습니다</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation>지갑에 개인 키를 추가하였습니다.</translation>
     </message>
 </context>

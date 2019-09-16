@@ -375,7 +375,7 @@
         <translation>Erro ao adicionar chave à Carteira</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation>Chave privada adicionada com sucesso à carteira</translation>
     </message>
 </context>

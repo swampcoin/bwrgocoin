@@ -384,7 +384,7 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Virhe avainta lisätessä</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation>Onnistuneesti syötetty yksityisavain lompakkoon</translation>
     </message>
 </context>

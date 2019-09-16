@@ -387,7 +387,7 @@
         <translation>Fejl ved tilføjelse af nøgle</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation>Den private nøgle blev tilføjet tegnebogen.</translation>
     </message>
 </context>

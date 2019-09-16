@@ -383,7 +383,7 @@
         <translation>Fout bij het toevoegen van de sleutel</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation>De geheime sleutel is toegevoegd aan de portemonnee</translation>
     </message>
 </context>

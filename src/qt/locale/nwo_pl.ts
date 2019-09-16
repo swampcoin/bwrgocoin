@@ -311,7 +311,7 @@
         <translation>Błąd w dodawaniu klucza do portfela</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation>Dodawanie prywatnego klucza do portfela zakończone powodzeniem</translation>
     </message>
 </context>

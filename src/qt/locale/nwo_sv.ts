@@ -372,7 +372,7 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Fel när nyckel skulle läggas till plånbok</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation>privat nyckel framgångsrikt tillagd till plånbok</translation>
     </message>
 </context>

@@ -2481,7 +2481,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, uint32_t nTime, unsigne
             return error("CreateCoinStake : failed to sign coinstake");
     }
 
-    // Snwoessfully generated coinstake
+    // Successfully generated coinstake
     nLastStakeSetUpdate = 0; //this will trigger stake set to repopulate next round
     return true;
 }

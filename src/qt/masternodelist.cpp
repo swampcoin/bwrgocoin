@@ -201,7 +201,7 @@ void MasternodeList::StartAll(std::string strCommand)
     pwalletMain->Lock();
 
     std::string returnObj;
-    returnObj = strprintf("Snwoessfully started %d masternodes, failed to start %d, total %d", nCountSnwoessful, nCountFailed, nCountFailed + nCountSnwoessful);
+    returnObj = strprintf("Successfully started %d masternodes, failed to start %d, total %d", nCountSnwoessful, nCountFailed, nCountFailed + nCountSnwoessful);
     if (nCountFailed > 0) {
         returnObj += strFailedHtml;
     }

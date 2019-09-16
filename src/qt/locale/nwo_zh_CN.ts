@@ -387,7 +387,7 @@
         <translation>钱包无法加载该密钥（key）</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation>为钱包成功添加私人密钥（Private Key）</translation>
     </message>
 </context>

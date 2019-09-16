@@ -387,7 +387,7 @@
         <translation>Fehler beim hinzufügen des Schlüssels zum Wallet</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation>Erfolgreiches hinzufügen eines privaten Schlüssels zum Wallet</translation>
     </message>
 </context>

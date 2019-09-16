@@ -233,7 +233,7 @@ bool CSporkManager::SetPrivKey(std::string strPrivKey)
     Sign(msg);
 
     if (CheckSignature(msg)) {
-        LogPrintf("CSporkManager::SetPrivKey - Snwoessfully initialized as spork signer\n");
+        LogPrintf("CSporkManager::SetPrivKey - Successfully initialized as spork signer\n");
         return true;
     } else {
         return false;

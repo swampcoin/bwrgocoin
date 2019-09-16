@@ -387,7 +387,7 @@
         <translation>Error Añadiendo la Clave en la Wallet</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation>Clave privada añadida a la wallet con éxito</translation>
     </message>
 </context>

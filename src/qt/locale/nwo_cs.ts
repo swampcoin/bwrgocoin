@@ -387,7 +387,7 @@
         <translation>Chyba při vkládání klíče do peněženky</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation>Klíč byl úspěšně přidán do peněženky</translation>
     </message>
 </context>

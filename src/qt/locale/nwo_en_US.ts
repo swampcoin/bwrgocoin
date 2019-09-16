@@ -387,8 +387,8 @@
         <translation>Error Adding Key To Wallet</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
-        <translation>Snwoessfully Added Private Key To Wallet</translation>
+        <source>Successfully Added Private Key To Wallet</source>
+        <translation>Successfully Added Private Key To Wallet</translation>
     </message>
 </context>
 <context>

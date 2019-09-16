@@ -347,7 +347,7 @@
         <translation>Erreur dans l'ajout de la clé au portefeuille</translation>
     </message>
     <message>
-        <source>Snwoessfully Added Private Key To Wallet</source>
+        <source>Successfully Added Private Key To Wallet</source>
         <translation>La clé privée a été ajoutée avec snwoès au portefeuille</translation>
     </message>
 </context>
