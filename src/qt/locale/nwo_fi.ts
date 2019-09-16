@@ -2414,7 +2414,7 @@ Please check the address and try again.</source>
         <translation>Vienti epäonnistui</translation>
     </message>
     <message>
-        <source>Exporting Snwoessful</source>
+        <source>Exporting Successful</source>
         <translation>Vienti onnistui</translation>
     </message>
     </context>
@@ -2466,7 +2466,7 @@ Please check the address and try again.</source>
         <translation>Varmuuskopiointi epäonnistui</translation>
     </message>
     <message>
-        <source>Backup Snwoessful</source>
+        <source>Backup Successful</source>
         <translation>Varmuuskopiointi onnistui</translation>
     </message>
     </context>

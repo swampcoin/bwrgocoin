@@ -946,7 +946,7 @@
         <translation>資料匯出有誤</translation>
     </message>
     <message>
-        <source>Exporting Snwoessful</source>
+        <source>Exporting Successful</source>
         <translation>資料匯出成功</translation>
     </message>
     </context>

@@ -3813,7 +3813,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>트랜잭션 기록을 %1로 저장하는 동안 오류가 발생하였습니다.</translation>
     </message>
     <message>
-        <source>Exporting Snwoessful</source>
+        <source>Exporting Successful</source>
         <translation>내보내기 성공</translation>
     </message>
     <message>
@@ -3885,7 +3885,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>%1에 지갑 데이터를 저장하는 동안 오류가 발생하였습니다.</translation>
     </message>
     <message>
-        <source>Backup Snwoessful</source>
+        <source>Backup Successful</source>
         <translation>백업 성공하였습니다</translation>
     </message>
     <message>

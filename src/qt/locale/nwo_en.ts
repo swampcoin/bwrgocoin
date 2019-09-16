@@ -4893,8 +4893,8 @@ https://www.transifex.com/nwo-project/nwo-project-translations</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Exporting Snwoessful</source>
-        <translation>Exporting Snwoessful</translation>
+        <source>Exporting Successful</source>
+        <translation>Exporting Successful</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -4983,8 +4983,8 @@ https://www.transifex.com/nwo-project/nwo-project-translations</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Backup Snwoessful</source>
-        <translation>Backup Snwoessful</translation>
+        <source>Backup Successful</source>
+        <translation>Backup Successful</translation>
     </message>
     <message>
         <location line="+0"/>

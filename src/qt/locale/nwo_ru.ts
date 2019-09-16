@@ -3144,7 +3144,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Ошибка экспорта</translation>
     </message>
     <message>
-        <source>Exporting Snwoessful</source>
+        <source>Exporting Successful</source>
         <translation>Экспортирование произошло успешно</translation>
     </message>
     </context>

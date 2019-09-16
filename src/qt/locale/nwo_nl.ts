@@ -2429,7 +2429,7 @@ MultiSend: %1</translation>
         <translation>Export Mislukt</translation>
     </message>
     <message>
-        <source>Exporting Snwoessful</source>
+        <source>Exporting Successful</source>
         <translation>Exporteren snwoesvol</translation>
     </message>
     <message>
@@ -2477,7 +2477,7 @@ MultiSend: %1</translation>
         <translation>Backup mislukt</translation>
     </message>
     <message>
-        <source>Backup Snwoessful</source>
+        <source>Backup Successful</source>
         <translation>Backup Snwoesvol</translation>
     </message>
     </context>

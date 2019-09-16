@@ -170,7 +170,7 @@ void MasternodeList::StartAlias(std::string strAlias)
 
 void MasternodeList::StartAll(std::string strCommand)
 {
-    int nCountSnwoessful = 0;
+    int nCountSuccessful = 0;
     int nCountFailed = 0;
     std::string strFailedHtml;
 
@@ -192,7 +192,7 @@ void MasternodeList::StartAll(std::string strCommand)
         bool fSnwoess = RpcStartMasternode(strAlias,strOverall,strError,strResult);
 
         if (fSnwoess) {
-            nCountSnwoessful++;
+            nCountSuccessful++;
         } else {
             nCountFailed++;
             strFailedHtml += "\nFailed to start " + mne.getAlias() + ". Error: " + strError;
@@ -201,7 +201,7 @@ void MasternodeList::StartAll(std::string strCommand)
     pwalletMain->Lock();
 
     std::string returnObj;
-    returnObj = strprintf("Successfully started %d masternodes, failed to start %d, total %d", nCountSnwoessful, nCountFailed, nCountFailed + nCountSnwoessful);
+    returnObj = strprintf("Successfully started %d masternodes, failed to start %d, total %d", nCountSuccessful, nCountFailed, nCountFailed + nCountSuccessful);
     if (nCountFailed > 0) {
         returnObj += strFailedHtml;
     }

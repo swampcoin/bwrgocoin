@@ -3754,7 +3754,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Der opstod en fejl under forsøget på at gemme transaktionshistorikken til %1.</translation>
     </message>
     <message>
-        <source>Exporting Snwoessful</source>
+        <source>Exporting Successful</source>
         <translation>Eksporteret!</translation>
     </message>
     <message>
@@ -3826,7 +3826,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Der opstod en fejl i forsøget på at gemme tegnebogens data til %1</translation>
     </message>
     <message>
-        <source>Backup Snwoessful</source>
+        <source>Backup Successful</source>
         <translation>Sikkerhedskopiering fuldført</translation>
     </message>
     <message>

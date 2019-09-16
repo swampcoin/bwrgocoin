@@ -2774,7 +2774,7 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Beim Speichern des Transaktionsverlaufs nach %1 ist ein Fehler aufgetreten.</translation>
     </message>
     <message>
-        <source>Exporting Snwoessful</source>
+        <source>Exporting Successful</source>
         <translation>Exportieren erfolgreich</translation>
     </message>
     <message>
@@ -2846,7 +2846,7 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Beim Speichern der Wallet-Daten nach %1 ist ein Fehler aufgetreten.</translation>
     </message>
     <message>
-        <source>Backup Snwoessful</source>
+        <source>Backup Successful</source>
         <translation>Sicherung erfolgreich</translation>
     </message>
     <message>

@@ -3369,7 +3369,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Aconteceu um erro na tentativa de salvar o histórico de transação para %1.</translation>
     </message>
     <message>
-        <source>Exporting Snwoessful</source>
+        <source>Exporting Successful</source>
         <translation>Exportado com sucesso</translation>
     </message>
     <message>
@@ -3441,7 +3441,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Aconteceu um erro na tentativa de salvar os dados da carteira em %1.</translation>
     </message>
     <message>
-        <source>Backup Snwoessful</source>
+        <source>Backup Successful</source>
         <translation>Backup com sucesso</translation>
     </message>
     <message>

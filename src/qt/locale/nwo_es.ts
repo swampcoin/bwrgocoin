@@ -3804,7 +3804,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Hubo un error intentando guardar el historial de transacciones a %1.</translation>
     </message>
     <message>
-        <source>Exporting Snwoessful</source>
+        <source>Exporting Successful</source>
         <translation>Exportación Correcta</translation>
     </message>
     <message>
@@ -3876,7 +3876,7 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>Hubo un error intentando guardar los datos del monedero a %1.</translation>
     </message>
     <message>
-        <source>Backup Snwoessful</source>
+        <source>Backup Successful</source>
         <translation>Copia de Seguridad Satisfactoria</translation>
     </message>
     <message>

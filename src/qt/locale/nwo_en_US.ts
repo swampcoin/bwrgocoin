@@ -3807,8 +3807,8 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>There was an error trying to save the transaction history to %1.</translation>
     </message>
     <message>
-        <source>Exporting Snwoessful</source>
-        <translation>Exporting Snwoessful</translation>
+        <source>Exporting Successful</source>
+        <translation>Exporting Successful</translation>
     </message>
     <message>
         <source>The transaction history was successfully saved to %1.</source>
@@ -3879,8 +3879,8 @@ https://www.transifex.com/nwo-project/nwo-project-translations</translation>
         <translation>There was an error trying to save the wallet data to %1.</translation>
     </message>
     <message>
-        <source>Backup Snwoessful</source>
-        <translation>Backup Snwoessful</translation>
+        <source>Backup Successful</source>
+        <translation>Backup Successful</translation>
     </message>
     <message>
         <source>The wallet data was successfully saved to %1.</source>
