@@ -7,21 +7,20 @@ NWO is a brand new digital currency building up a global Community to be united 
 
 The NWO Code was forked from [XDNA Project](https://xdna.io/).
 
-More information soon at [uccnetwork.org](http://www.uccnetwork.org).
 
 If you like our Idea, feel free to contact us and work with us. For Discussions we use Discord: [Click here to follow invite Link](https://discord.gg/CcMaHNh).
 
 ### Coin Specs
 
 <table>
-<tr><td>Name & ticker</td><td>United Community Coin (NWO)</td></tr>
+<tr><td>Name & ticker</td><td>New World Order (NWO)</td></tr>
 <tr><td>Consensus algorithm</td><td>PoW/POS</td></tr>
-<tr><td>POW phase duration</td><td>777000 blocks</td></tr>
+<tr><td>POW phase duration</td><td>100 blocks</td></tr>
 <tr><td>PoW block reward</td><td>Dynamic from 4 to 511 NWO</td></tr>
 <tr><td>Instamine protection</td><td>First 720 blocks</td></tr>
 <tr><td>Hashing algorithm</td><td>HEX</td></tr>
-<tr><td>Estimated NWO supply during POW</td><td>8,405,839</td></tr>
-<tr><td>POS starting block</td><td>777001</td></tr>
+<tr><td>Estimated NWO supply during POW</td><td>~5,301,000</td></tr>
+<tr><td>POS starting block</td><td>101</td></tr>
 <tr><td>POS phase duration</td><td>56 years</td></tr>
 <tr><td>POS block reward distribution</td><td>SeeSaw</td></tr>
 <tr><td>Estimated NWO supply after 6 years of POS</td><td>18,352,239</td></tr>
@@ -37,7 +36,7 @@ If you like our Idea, feel free to contact us and work with us. For Discussions 
 
 <table>
 <tr><th>Starting Block</th><th>Ending Block</th><th>Block Reward</th><th>Total Supply</th><th>Phase Length</th></tr>
-<tr><th>777,001</th><th>787,000</th><th>1</th><th>8,415,839</th><th>1 week</th></tr>
+<tr><th>101</th><th>787,000</th><th>1</th><th>8,415,839</th><th>1 week</th></tr>
 <tr><th>787,001</th><th>1,302,600</th><th>5</th><th>10,993,839</th><th>51 weeks</th></tr>
 <tr><th>1,302,601</th><th>1,828,200</th><th>4</th><th>13,096,239</th><th>52 weeks</th></tr>
 <tr><th>1,828,201</th><th>2,353,800</th><th>3</th><th>14,673,039</th><th>52 weeks</th></tr>
