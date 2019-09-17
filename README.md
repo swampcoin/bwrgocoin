@@ -3,12 +3,12 @@
 NWO Core integration/staging repository
 =====================================
 
-NWO is a brand new digital currency building up a global Community to be united against scam-attempts. We will offer Swap-Solutions for Communities that have been scammed by fake projects. We will also support Charity Organisations and, who knows, perhaps one day you will be able to pay in big online stores United Community Coin (NWO). The Community stands as our priority, so there will be a Government System where each holder can vote for actual projects. It is NOT intented to be a HIGH ROI Coin, and we will be offering support for scammed communities for as long as we have coins available for swapping.  This ongoing swap objective is the reason for the huge Premine.  To offer swaps for scammed coins, we need a lot of coins for the lifetime of the project, in order to offer swaps at a ratio determined in a case by case basis.
+NWO is a brand new digital currency building up a global Community to be united against the inflationary nature of all world Fiat currency.  We support various charities long term as well.
 
 The NWO Code was forked from [XDNA Project](https://xdna.io/).
 
 
-If you like our Idea, feel free to contact us and work with us. For Discussions we use Discord: [Click here to follow invite Link](https://discord.gg/CcMaHNh).
+If you like our Idea, feel free to contact us and work with us. For Discussions we use Discord: [Click here to follow invite Link](https://discord.gg/R4FAu6b).
 
 ### Coin Specs
 
