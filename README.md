@@ -1,14 +1,17 @@
-[![Build Status](https://travis-ci.org/NWONetwork/ucc.svg?branch=master)](https://travis-ci.org/NWONetwork/ucc)
 
-NWO Core integration/staging repository
+
+New World Order (NWO) Currency
 =====================================
 
-NWO is a brand new digital currency building up a global Community to be united against the inflationary nature of all world Fiat currency.  We support various charities long term as well.
+NWO is a digital currency building up a global community to be united against the inflationary nature of all world Fiat currency. As governments print an infinite amount of dollars, euros etc., NWO remains finite and predicable.  NWO is superior to fiat and traditional banks by:
+- Tiered masternodes to support consensus by the people
+- Staking to earn exponentionally more retun on your money than traditional banks
+- Instant send and recieve funds globally without boarders or middle men
+- Transparancy with a built in block explorer
+- Permissionless access to YOUR money... unlike banks
+- Optional private sent features 
 
-The NWO Code was forked from [XDNA Project](https://xdna.io/).
-
-
-If you like our Idea, feel free to contact us and work with us. For Discussions we use Discord: [Click here to follow invite Link](https://discord.gg/R4FAu6b).
+If you like the idea of owning and controlling your own money, feel free to contact us and work with us. For Discussions we use Discord: [Click here to follow invite Link](https://discord.gg/R4FAu6b).  Seek out the NWO channel
 
 ### Coin Specs
 
