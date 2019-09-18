@@ -4,12 +4,13 @@ New World Order (NWO) Currency
 =====================================
 
 NWO is a digital currency building up a global community to be united against the inflationary nature of all world Fiat currency. As governments print an infinite amount of dollars, euros etc., NWO remains finite and predicable.  NWO is superior to fiat and traditional banks by:
-- Tiered masternodes to support consensus by the people
+- Tiered masternodes to support consensus by the people (1k, 3k, and 5k levels)
 - Staking to earn exponentionally more retun on your money than traditional banks
 - Instant send and recieve funds globally without boarders or middle men
 - Transparancy with a built in block explorer
 - Permissionless access to YOUR money... unlike banks
 - Optional private sent features 
+- Proof of Stake to eliminate the costly need for GPUs or ASICS to power the chain
 
 If you like the idea of owning and controlling your own money, feel free to contact us and work with us. For Discussions we use Discord: [Click here to follow invite Link](https://discord.gg/R4FAu6b).  Seek out the NWO channel
 
