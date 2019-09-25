@@ -186,7 +186,7 @@ public:
         nLastPOWBlock = 105;
         nModifierUpdateBlock = std::numeric_limits<decltype(nModifierUpdateBlock)>::max();
 
-        const char* pszTimestamp = "One World United! 2018-09-09";
+        const char* pszTimestamp = "One World United! 2019-09-25";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -282,7 +282,7 @@ public:
         assert(subsidySwitchPoints.size());
 
         vAlertPubKey = ParseHex("0470278d0645942e9816abfb0596ddb92c9e15f4efcb59d05f46579398de5f0cbc73c5dad1bf3078d26b7eff021c5628140933a8cfc430ab7c00276304d7353d9e");
-        nDefaultPort = 51112;
+        nDefaultPort = 5555;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
@@ -392,7 +392,7 @@ public:
         genesis.nNonce = 3909880;
 
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 61112;
+        nDefaultPort = 6666;
 
 	    //MineGenesis(genesis);
 
