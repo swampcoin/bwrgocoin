@@ -6,7 +6,7 @@ define(_CLIENT_VERSION_REVISION, 0)
 define(_CLIENT_VERSION_BUILD, 0)
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2019)
-AC_INIT([NWO Wallet],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[www.swampthing.net],[bwrgocoin])
+AC_INIT([BWRGO Wallet],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[www.swampthing.net],[bwrgocoin])
 AC_CONFIG_SRCDIR([src/main.cpp])
 AC_CONFIG_HEADERS([src/config/bwrgocoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
@@ -19,9 +19,9 @@ BITCOIN_TX_NAME=bwrgocoin-tx
 
 AC_CANONICAL_HOST
 
-AH_TOP([#ifndef NWO_CONFIG_H])
-AH_TOP([#define NWO_CONFIG_H])
-AH_BOTTOM([#endif //NWO_CONFIG_H])
+AH_TOP([#ifndef BWRGO_CONFIG_H])
+AH_TOP([#define BWRGO_CONFIG_H])
+AH_BOTTOM([#endif //BWRGO_CONFIG_H])
 
 dnl faketime breaks configure and is only needed for make. Disable it here.
 unset FAKETIME

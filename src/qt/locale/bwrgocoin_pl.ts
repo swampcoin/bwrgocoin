@@ -148,8 +148,8 @@
         <translation>Czy na pewno chcesz zakodować portfel?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NWO&lt;/b&gt;!</source>
-        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE NWO!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BWRGO&lt;/b&gt;!</source>
+        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE BWRGO!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -227,8 +227,8 @@
         <translation>Zakodowany klucz:</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this NWO address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres NWO jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this BWRGO address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres BWRGO jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -518,12 +518,12 @@
         <translation>&amp;Pomoc</translation>
     </message>
     <message>
-        <source>NWO Core</source>
-        <translation>&amp;Rdzeń NWO</translation>
+        <source>BWRGO Core</source>
+        <translation>&amp;Rdzeń BWRGO</translation>
     </message>
     <message>
-        <source>Send coins to a NWO address</source>
-        <translation>Wyślij monety do adresu NWO</translation>
+        <source>Send coins to a BWRGO address</source>
+        <translation>Wyślij monety do adresu BWRGO</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and bwrgocoin: URIs)</source>
@@ -538,24 +538,24 @@
         <translation>Przeglądaj masternodes</translation>
     </message>
     <message>
-        <source>&amp;About NWO Core</source>
+        <source>&amp;About BWRGO Core</source>
         <translation>&amp;O rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Show information about NWO Core</source>
+        <source>Show information about BWRGO Core</source>
         <translation>Pokaż informacje o rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Modify configuration options for NWO</source>
-        <translation>Modyfikuj opcje konfiguracji NWO</translation>
+        <source>Modify configuration options for BWRGO</source>
+        <translation>Modyfikuj opcje konfiguracji BWRGO</translation>
     </message>
     <message>
-        <source>Sign messages with your NWO addresses to prove you own them</source>
-        <translation>Zatwierdź wiadomość z twoimi adresami NWO, by udowodnić, że jesteś w ich posiadaniu</translation>
+        <source>Sign messages with your BWRGO addresses to prove you own them</source>
+        <translation>Zatwierdź wiadomość z twoimi adresami BWRGO, by udowodnić, że jesteś w ich posiadaniu</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified NWO addresses</source>
-        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu NWO</translation>
+        <source>Verify messages to ensure they were signed with specified BWRGO addresses</source>
+        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu BWRGO</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -582,8 +582,8 @@
         <translation>Otwórz &amp;Plik konfiguracji Masternode</translation>
     </message>
     <message>
-        <source>Open a NWO: URI or payment request</source>
-        <translation>Otwórz NWO: URI i żądanie zapłaty</translation>
+        <source>Open a BWRGO: URI or payment request</source>
+        <translation>Otwórz BWRGO: URI i żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -594,12 +594,12 @@
         <translation>Okno eksplorera bloków</translation>
     </message>
     <message>
-        <source>Show the NWO Core help message to get a list with possible NWO command-line options</source>
-        <translation>Pokaż wiadomość pomocy rdzenia NWO, aby dostać listę możliwych opcji NWO command-line</translation>
+        <source>Show the BWRGO Core help message to get a list with possible BWRGO command-line options</source>
+        <translation>Pokaż wiadomość pomocy rdzenia BWRGO, aby dostać listę możliwych opcji BWRGO command-line</translation>
     </message>
     <message>
-        <source>NWO Core client</source>
-        <translation>Rdzeń NWO klient</translation>
+        <source>BWRGO Core client</source>
+        <translation>Rdzeń BWRGO klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -916,8 +916,8 @@ MultiWysyłlka: %1</translation>
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>NWO Core</source>
-        <translation>&amp;Rdzeń NWO</translation>
+        <source>BWRGO Core</source>
+        <translation>&amp;Rdzeń BWRGO</translation>
     </message>
     </context>
 <context>
@@ -931,8 +931,8 @@ MultiWysyłlka: %1</translation>
         <translation>Użyj niestandardowej ścieżki danych</translation>
     </message>
     <message>
-        <source>NWO Core</source>
-        <translation>&amp;Rdzeń NWO</translation>
+        <source>BWRGO Core</source>
+        <translation>&amp;Rdzeń BWRGO</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1192,16 +1192,16 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>Zezwól na przychodzące połączenia</translation>
     </message>
     <message>
-        <source>Automatically start NWO after logging in to the system.</source>
-        <translation>Automatycznie uruchom NWO po zalogowaniu do systemu</translation>
+        <source>Automatically start BWRGO after logging in to the system.</source>
+        <translation>Automatycznie uruchom BWRGO po zalogowaniu do systemu</translation>
     </message>
     <message>
-        <source>&amp;Start NWO on system login</source>
-        <translation>&amp;Uruchom NWO podczas logowania do systemu</translation>
+        <source>&amp;Start BWRGO on system login</source>
+        <translation>&amp;Uruchom BWRGO podczas logowania do systemu</translation>
     </message>
     <message>
-        <source>Amount of NWO to keep anonymized</source>
-        <translation>Liczba NWO do anonimizacji</translation>
+        <source>Amount of BWRGO to keep anonymized</source>
+        <translation>Liczba BWRGO do anonimizacji</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1220,8 +1220,8 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>&amp;Sieć</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting NWO.</source>
-        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie NWO</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting BWRGO.</source>
+        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie BWRGO</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -1230,8 +1230,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</sour
 https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations </translation>
     </message>
     <message>
-        <source>Connect to the NWO network through a SOCKS5 proxy.</source>
-        <translation>Połącz z siecią NWO poprzez SOCKS5 proxy.</translation>
+        <source>Connect to the BWRGO network through a SOCKS5 proxy.</source>
+        <translation>Połącz z siecią BWRGO poprzez SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1373,8 +1373,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations </tra
         <translation>Status:</translation>
     </message>
     <message>
-        <source>0 NWO / 0 Rounds</source>
-        <translation>0 NWO / 0 Rund</translation>
+        <source>0 BWRGO / 0 Rounds</source>
+        <translation>0 BWRGO / 0 Rund</translation>
     </message>
     <message>
         <source>Enabled/Disabled</source>
@@ -1458,8 +1458,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations </tra
         <translation>Liczba</translation>
     </message>
     <message>
-        <source>Enter a NWO address (e.g. %1)</source>
-        <translation>Wprowadź adres NWO (np. %1)</translation>
+        <source>Enter a BWRGO address (e.g. %1)</source>
+        <translation>Wprowadź adres BWRGO (np. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1897,8 +1897,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations </tra
         <translation>Alt+P</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this NWO address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres NWO jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this BWRGO address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres BWRGO jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Clear &amp;All</source>
@@ -1932,8 +1932,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations </tra
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>NWO Core</source>
-        <translation>&amp;Rdzeń NWO</translation>
+        <source>BWRGO Core</source>
+        <translation>&amp;Rdzeń BWRGO</translation>
     </message>
     </context>
 <context>

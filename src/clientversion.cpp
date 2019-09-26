@@ -13,7 +13,7 @@
  * for both bwrgocoind and bwrgocoin-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("NWO Core");
+const std::string CLIENT_NAME("BWRGO Core");
 
 /**
  * Client version number

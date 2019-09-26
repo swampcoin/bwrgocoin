@@ -30,7 +30,7 @@ QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "notation for IPv6. This option can be specified multiple times (default: "
 "bind to all interfaces)"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
-"Cannot obtain a lock on data directory %s. NWO Core is probably already "
+"Cannot obtain a lock on data directory %s. BWRGO Core is probably already "
 "running."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "Continuously rate-limit free transactions to <n>*1000 bytes per minute "
@@ -42,7 +42,7 @@ QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "Delete all wallet transactions and only recover those parts of the "
 "blockchain through -rescan on startup"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
-"Disable all NWO specific functionality (Masternodes, Obfuscation, SwiftX) "
+"Disable all BWRGO specific functionality (Masternodes, Obfuscation, SwiftX) "
 "(0-1, default: %u)"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "Distributed under the MIT software license, see the accompanying file "
@@ -73,10 +73,10 @@ QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
-"Fees (in NWO/Kb) smaller than this are considered zero fee for relaying "
+"Fees (in BWRGO/Kb) smaller than this are considered zero fee for relaying "
 "(default: %s)"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
-"Fees (in NWO/Kb) smaller than this are considered zero fee for transaction "
+"Fees (in BWRGO/Kb) smaller than this are considered zero fee for transaction "
 "creation (default: %s)"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -161,17 +161,17 @@ QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "If the file does not exist, create it with owner-readable-only file "
 "permissions.\n"
 "It is also recommended to set alertnotify so you are notified of problems;\n"
-"for example: alertnotify=echo %%s | mail -s \"NWO Alert\" admin@foo.com\n"),
+"for example: alertnotify=echo %%s | mail -s \"BWRGO Alert\" admin@foo.com\n"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
-"Unable to bind to %s on this computer. NWO Core is probably already running."),
+"Unable to bind to %s on this computer. BWRGO Core is probably already running."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "Unable to locate enough Obfuscation denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "Unable to locate enough Obfuscation non-denominated funds for this "
-"transaction that are not equal 1000/3000/5000 NWO."),
+"transaction that are not equal 1000/3000/5000 BWRGO."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "Unable to locate enough funds for this transaction that are not equal 1000/3000/5000 "
-"NWO."),
+"BWRGO."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "%s)"),
@@ -183,7 +183,7 @@ QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "pay if you send a transaction."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "Warning: Please check that your computer's date and time are correct! If "
-"your clock is wrong NWO Core will not work properly."),
+"your clock is wrong BWRGO Core will not work properly."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", ""
 "Warning: The network does not appear to fully agree! Some miners appear to "
 "be experiencing issues."),
@@ -239,7 +239,7 @@ QT_TRANSLATE_NOOP("bwrgocoin-core", "Copyright (C) 2009-%i The Bitcoin Core Deve
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Copyright (C) 2014-%i The Dash Core Developers"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Copyright (C) 2015-%i The PIVX Core Developers"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Copyright (C) 2015-%i The XDNA Core Developers"),
-QT_TRANSLATE_NOOP("bwrgocoin-core", "Copyright (C) 2018-%i The NWO Core Developers"),
+QT_TRANSLATE_NOOP("bwrgocoin-core", "Copyright (C) 2018-%i The BWRGO Core Developers"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Could not parse -rpcbind value %s as network address"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Could not parse masternode.conf"),
@@ -266,7 +266,7 @@ QT_TRANSLATE_NOOP("bwrgocoin-core", "Error initializing wallet database environm
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Error loading block database"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Error loading wallet.dat"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Error loading wallet.dat: Wallet corrupted"),
-QT_TRANSLATE_NOOP("bwrgocoin-core", "Error loading wallet.dat: Wallet requires newer version of NWO Core"),
+QT_TRANSLATE_NOOP("bwrgocoin-core", "Error loading wallet.dat: Wallet requires newer version of BWRGO Core"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Error opening block database"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Error reading from database, shutting down."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Error recovering public key."),
@@ -279,7 +279,7 @@ QT_TRANSLATE_NOOP("bwrgocoin-core", "Error: Wallet locked, unable to create tran
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Error: You already have pending entries in the Obfuscation pool"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Failed to listen on any port. Use -listen=0 if you want this."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Failed to read block"),
-QT_TRANSLATE_NOOP("bwrgocoin-core", "Fee (in NWO/kB) to add to transactions you send (default: %s)"),
+QT_TRANSLATE_NOOP("bwrgocoin-core", "Fee (in BWRGO/kB) to add to transactions you send (default: %s)"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Finalizing transaction."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Force safe mode (default: %u)"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Found enough users, signing ( waiting %s )"),
@@ -294,7 +294,7 @@ QT_TRANSLATE_NOOP("bwrgocoin-core", "Incompatible mode."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Incompatible version."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Incorrect or no genesis block found. Wrong datadir for network?"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Information"),
-QT_TRANSLATE_NOOP("bwrgocoin-core", "Initialization sanity check failed. NWO Core is shutting down."),
+QT_TRANSLATE_NOOP("bwrgocoin-core", "Initialization sanity check failed. BWRGO Core is shutting down."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Input is not valid."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Insufficient funds."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Invalid -onion address or hostname: '%s'"),
@@ -310,7 +310,7 @@ QT_TRANSLATE_NOOP("bwrgocoin-core", "Invalid netmask specified in -whitelist: '%
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Invalid port detected in masternode.conf"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Invalid private key."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Invalid script detected."),
-QT_TRANSLATE_NOOP("bwrgocoin-core", "Keep N NWO anonymized (default: %u)"),
+QT_TRANSLATE_NOOP("bwrgocoin-core", "Keep N BWRGO anonymized (default: %u)"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Keep at most <n> unconnectable transactions in memory (default: %u)"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Last Obfuscation was too recent."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Last successful Obfuscation action was too recent."),
@@ -435,7 +435,7 @@ QT_TRANSLATE_NOOP("bwrgocoin-core", "Verifying blocks..."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Verifying wallet..."),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Wallet %s resides outside data directory %s"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Wallet is locked."),
-QT_TRANSLATE_NOOP("bwrgocoin-core", "Wallet needed to be rewritten: restart NWO Core to complete"),
+QT_TRANSLATE_NOOP("bwrgocoin-core", "Wallet needed to be rewritten: restart BWRGO Core to complete"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Wallet options:"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Wallet window title"),
 QT_TRANSLATE_NOOP("bwrgocoin-core", "Warning"),

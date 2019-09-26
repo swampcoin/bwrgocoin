@@ -62,12 +62,12 @@
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your NWO addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw NWOadressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
+        <source>These are your BWRGO addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw BWRGOadressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
     </message>
     <message>
-        <source>These are your NWO addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw NWOadressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <source>These are your BWRGO addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit zijn uw BWRGOadressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,16 +172,16 @@
         <translation>Bevestig versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>NWO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your NWOs from being stolen by malware infecting your computer.</source>
-        <translation>NWO zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw NWOs stelen.</translation>
+        <source>BWRGO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BWRGOs from being stolen by malware infecting your computer.</source>
+        <translation>BWRGO zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw BWRGOs stelen.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Weet u zeker dat u uw portemonnee wilt versleutelen?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NWO&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW NWO VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BWRGO&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW BWRGO VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -235,16 +235,16 @@
         <translation>&amp;BIP 38 Versleuteling</translation>
     </message>
     <message>
-        <source>Enter a NWO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Voer een NWO adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
+        <source>Enter a BWRGO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Voer een BWRGO adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adres:</translation>
     </message>
     <message>
-        <source>The NWO address to sign the message with</source>
-        <translation>Het NWO adres om het bericht met te ondertekenen</translation>
+        <source>The BWRGO address to sign the message with</source>
+        <translation>Het BWRGO adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -275,8 +275,8 @@
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this NWO address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het NWO adres bezit</translation>
+        <source>Sign the message to prove you own this BWRGO address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het BWRGO adres bezit</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -299,12 +299,12 @@
         <translation>Voer de BIP 38 versleutelde geheime sleutel in. Voer het wachtwoord in, in het middelste veld. Druk op Ontsleutelen Sleutel om de geheime sleutel te berekenen.  Nadat de geheime sleutel is ontsleuteld, zal het klikken op 'Adres Importeren' de geheime sleutel toevoegen aan de portemonnee.</translation>
     </message>
     <message>
-        <source>The NWO address the message was signed with</source>
-        <translation>Het NWO adres waarmee het bericht was ondertekend</translation>
+        <source>The BWRGO address the message was signed with</source>
+        <translation>Het BWRGO adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified NWO address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde NWO adres</translation>
+        <source>Verify the message to ensure it was signed with the specified BWRGO address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde BWRGO adres</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -598,16 +598,16 @@
         <translation>Tabblad werkbalk</translation>
     </message>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Kern</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Kern</translation>
     </message>
     <message>
-        <source>Send coins to a NWO address</source>
-        <translation>Verstuur munten naar een NWO adres</translation>
+        <source>Send coins to a BWRGO address</source>
+        <translation>Verstuur munten naar een BWRGO adres</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and bwrgocoin: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR-codes en NWO: URI's)</translation>
+        <translation>Vraag betaling aan (genereert QR-codes en BWRGO: URI's)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -618,24 +618,24 @@
         <translation>Bekijk masternodes</translation>
     </message>
     <message>
-        <source>&amp;About NWO Core</source>
-        <translation>&amp;Over NWO Kern</translation>
+        <source>&amp;About BWRGO Core</source>
+        <translation>&amp;Over BWRGO Kern</translation>
     </message>
     <message>
-        <source>Show information about NWO Core</source>
-        <translation>Toon informatie over NWO Kern</translation>
+        <source>Show information about BWRGO Core</source>
+        <translation>Toon informatie over BWRGO Kern</translation>
     </message>
     <message>
-        <source>Modify configuration options for NWO</source>
-        <translation>Wijzig NWO configuratie opties</translation>
+        <source>Modify configuration options for BWRGO</source>
+        <translation>Wijzig BWRGO configuratie opties</translation>
     </message>
     <message>
-        <source>Sign messages with your NWO addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw NWO adressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your BWRGO addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw BWRGO adressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified NWO addresses</source>
-        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde NWO adressen</translation>
+        <source>Verify messages to ensure they were signed with specified BWRGO addresses</source>
+        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde BWRGO adressen</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -666,8 +666,8 @@
         <translation>Open Masternode configuratiebestand</translation>
     </message>
     <message>
-        <source>Open a NWO: URI or payment request</source>
-        <translation>Open een NWO: URI of betaalverzoek</translation>
+        <source>Open a BWRGO: URI or payment request</source>
+        <translation>Open een BWRGO: URI of betaalverzoek</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -678,12 +678,12 @@
         <translation>Block verkenner venster</translation>
     </message>
     <message>
-        <source>NWO Core client</source>
-        <translation>NWO Core client</translation>
+        <source>BWRGO Core client</source>
+        <translation>BWRGO Core client</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to NWO network</source>
-        <translation><numerusform>%n actieve verbinding(en) naar het NWO netwerk</numerusform><numerusform>%n actieve verbinding(en) naar het NWO netwerk</numerusform></translation>
+        <source>%n active connection(s) to BWRGO network</source>
+        <translation><numerusform>%n actieve verbinding(en) naar het BWRGO netwerk</numerusform><numerusform>%n actieve verbinding(en) naar het BWRGO netwerk</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -1010,8 +1010,8 @@ MultiSend: %1</translation>
         <translation>Wijzig verzendadres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid NWO address.</source>
-        <translation>Het ingevoerde adres: "%1" is geen geldig NWO adres.</translation>
+        <source>The entered address "%1" is not a valid BWRGO address.</source>
+        <translation>Het ingevoerde adres: "%1" is geen geldig BWRGO adres.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1040,16 +1040,16 @@ MultiSend: %1</translation>
         <translation>versie</translation>
     </message>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Kern</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Kern</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About NWO Core</source>
-        <translation>Over NWO Core</translation>
+        <source>About BWRGO Core</source>
+        <translation>Over BWRGO Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1079,16 +1079,16 @@ MultiSend: %1</translation>
         <translation>Welkom</translation>
     </message>
     <message>
-        <source>Welcome to NWO Core.</source>
-        <translation>Welkom bij NWO Core</translation>
+        <source>Welcome to BWRGO Core.</source>
+        <translation>Welkom bij BWRGO Core</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
         <translation>Gebruik de standaard datafolder </translation>
     </message>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Kern</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Kern</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1300,24 +1300,24 @@ MultiSend: %1</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start NWO after logging in to the system.</source>
-        <translation>NWO automatisch opstarten na inloggen op het systeem.</translation>
+        <source>Automatically start BWRGO after logging in to the system.</source>
+        <translation>BWRGO automatisch opstarten na inloggen op het systeem.</translation>
     </message>
     <message>
-        <source>&amp;Start NWO on system login</source>
-        <translation>&amp;NWO starten bij systeemlogin</translation>
+        <source>&amp;Start BWRGO on system login</source>
+        <translation>&amp;BWRGO starten bij systeemlogin</translation>
     </message>
     <message>
-        <source>Amount of NWO to keep anonymized</source>
-        <translation>Hoeveelheid NWO anoniem te houden</translation>
+        <source>Amount of BWRGO to keep anonymized</source>
+        <translation>Hoeveelheid BWRGO anoniem te houden</translation>
     </message>
     <message>
         <source>&amp;Network</source>
         <translation>&amp;Netwerk</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting NWO.</source>
-        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van NWO.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting BWRGO.</source>
+        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van BWRGO.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1427,8 +1427,8 @@ MultiSend: %1</translation>
         <translation>Status:</translation>
     </message>
     <message>
-        <source>0 NWO / 0 Rounds</source>
-        <translation>0 NWO / 0 Rondes</translation>
+        <source>0 BWRGO / 0 Rounds</source>
+        <translation>0 BWRGO / 0 Rondes</translation>
     </message>
     <message>
         <source>Enabled/Disabled</source>
@@ -1512,8 +1512,8 @@ MultiSend: %1</translation>
         <translation>Hoeveelheid</translation>
     </message>
     <message>
-        <source>Enter a NWO address (e.g. %1)</source>
-        <translation>Voer een NWO adres in (b.v. %1)</translation>
+        <source>Enter a BWRGO address (e.g. %1)</source>
+        <translation>Voer een BWRGO adres in (b.v. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1702,8 +1702,8 @@ MultiSend: %1</translation>
         <translation>Uit:</translation>
     </message>
     <message>
-        <source>Welcome to the NWO RPC console.</source>
-        <translation>Welkom bij de NWO RPC console.</translation>
+        <source>Welcome to the BWRGO RPC console.</source>
+        <translation>Welkom bij de BWRGO RPC console.</translation>
     </message>
     <message>
         <source>%1 B</source>
@@ -1894,8 +1894,8 @@ MultiSend: %1</translation>
         <translation>Wijzig:</translation>
     </message>
     <message>
-        <source>0 NWO</source>
-        <translation>0 NWO</translation>
+        <source>0 BWRGO</source>
+        <translation>0 BWRGO</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2024,8 +2024,8 @@ MultiSend: %1</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>NWO Core is shutting down...</source>
-        <translation>NWO Core is aan het afsluiten...</translation>
+        <source>BWRGO Core is shutting down...</source>
+        <translation>BWRGO Core is aan het afsluiten...</translation>
     </message>
     </context>
 <context>
@@ -2035,8 +2035,8 @@ MultiSend: %1</translation>
         <translation>&amp;Onderteken Bericht</translation>
     </message>
     <message>
-        <source>The NWO address to sign the message with</source>
-        <translation>Het NWO adres om het bericht met te ondertekenen</translation>
+        <source>The BWRGO address to sign the message with</source>
+        <translation>Het BWRGO adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2067,16 +2067,16 @@ MultiSend: %1</translation>
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this NWO address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het NWO adres bezit</translation>
+        <source>Sign the message to prove you own this BWRGO address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het BWRGO adres bezit</translation>
     </message>
     <message>
-        <source>The NWO address the message was signed with</source>
-        <translation>Het NWO adres waarmee het bericht was ondertekend</translation>
+        <source>The BWRGO address the message was signed with</source>
+        <translation>Het BWRGO adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified NWO address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde NWO adres</translation>
+        <source>Verify the message to ensure it was signed with the specified BWRGO address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde BWRGO adres</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -2134,8 +2134,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Kern</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Kern</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2150,8 +2150,8 @@ MultiSend: %1</translation>
         <translation>De Dash Core ontwikkelaars</translation>
     </message>
     <message>
-        <source>The NWO Core developers</source>
-        <translation>De NWO Core ontwikkelaars</translation>
+        <source>The BWRGO Core developers</source>
+        <translation>De BWRGO Core ontwikkelaars</translation>
     </message>
     <message>
         <source>[testnet]</source>

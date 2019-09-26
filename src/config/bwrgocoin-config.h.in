@@ -1,8 +1,8 @@
 /* src/config/bwrgocoin-config.h.in.  Generated from configure.ac by autoheader.  */
 
-#ifndef NWO_CONFIG_H
+#ifndef BWRGO_CONFIG_H
 
-#define NWO_CONFIG_H
+#define BWRGO_CONFIG_H
 
 /* Define if building universal (internal helper macro) */
 #undef AC_APPLE_UNIVERSAL_BUILD
@@ -339,4 +339,4 @@
 /* Define for large files, on AIX-style hosts. */
 #undef _LARGE_FILES
 
-#endif //NWO_CONFIG_H
+#endif //BWRGO_CONFIG_H

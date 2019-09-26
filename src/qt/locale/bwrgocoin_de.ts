@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Wählen Sie die Adresse aus, an die Sie NWO überweisen möchten</translation>
+        <translation>Wählen Sie die Adresse aus, an die Sie BWRGO überweisen möchten</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Wählen Sie die Adresse aus, über die Sie NWO empfangen wollen</translation>
+        <translation>Wählen Sie die Adresse aus, über die Sie BWRGO empfangen wollen</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -62,12 +62,12 @@
         <translation>Empfangsadressen</translation>
     </message>
     <message>
-        <source>These are your NWO addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dies sind ihre NWO-Adressen zum Tätigen von Überweisungen. Bitte prüfen Sie den Betrag und die Empfangsadresse, bevor Sie NWO überweisen.</translation>
+        <source>These are your BWRGO addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dies sind ihre BWRGO-Adressen zum Tätigen von Überweisungen. Bitte prüfen Sie den Betrag und die Empfangsadresse, bevor Sie BWRGO überweisen.</translation>
     </message>
     <message>
-        <source>These are your NWO addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dies sind ihre NWO-Adressen zum Empfangen von Zahlungen. Es wird empfohlen für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
+        <source>These are your BWRGO addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dies sind ihre BWRGO-Adressen zum Empfangen von Zahlungen. Es wird empfohlen für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Wallet-Verschlüsselung bestätigen</translation>
     </message>
     <message>
-        <source>NWO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your NWOs from being stolen by malware infecting your computer.</source>
-        <translation>Die Anwendungs wird nun geschlossen um die Verschlüsselung abzuschließen. Bitte beachten Sie, dass auch Verschlüsselung nicht nicht vollständig vor Diebstahl ihrer NWOs durch Schadsoftware schützt, die ihren Computer befällt.</translation>
+        <source>BWRGO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BWRGOs from being stolen by malware infecting your computer.</source>
+        <translation>Die Anwendungs wird nun geschlossen um die Verschlüsselung abzuschließen. Bitte beachten Sie, dass auch Verschlüsselung nicht nicht vollständig vor Diebstahl ihrer BWRGOs durch Schadsoftware schützt, die ihren Computer befällt.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Sind Sie sich sicher, dass Sie ihre Wallet verschlüsseln möchten?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NWO&lt;/b&gt;!</source>
-        <translation>Warnung: Wenn Sie ihre Wallet verschlüsseln und Ihre Passphrase verlieren werden Sie &lt;b&gt;alle ihre NWOs verlieren&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BWRGO&lt;/b&gt;!</source>
+        <translation>Warnung: Wenn Sie ihre Wallet verschlüsseln und Ihre Passphrase verlieren werden Sie &lt;b&gt;alle ihre BWRGOs verlieren&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -239,16 +239,16 @@
         <translation>&amp;BIP 38 Verschlüsselung</translation>
     </message>
     <message>
-        <source>Enter a NWO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Gib eine NWO Adresse ein welche mit BIP 38 verschlüsselt werden soll. Gib ein Passwort in die mittleren Box ein. Drücke auf verschlüsseln, um den privaten schlüssel zu errechenen.</translation>
+        <source>Enter a BWRGO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Gib eine BWRGO Adresse ein welche mit BIP 38 verschlüsselt werden soll. Gib ein Passwort in die mittleren Box ein. Drücke auf verschlüsseln, um den privaten schlüssel zu errechenen.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresse:</translation>
     </message>
     <message>
-        <source>The NWO address to sign the message with</source>
-        <translation>NWO Adresse mit welcher die Nachricht signiert werden soll</translation>
+        <source>The BWRGO address to sign the message with</source>
+        <translation>BWRGO Adresse mit welcher die Nachricht signiert werden soll</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Kopiert die aktuelle Signatur in den Zwischenspeicher</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this NWO address</source>
-        <translation>Signiere die Nachricht um zu Beweisen, dass du diese NWO Adresse besitzt</translation>
+        <source>Sign the message to prove you own this BWRGO address</source>
+        <translation>Signiere die Nachricht um zu Beweisen, dass du diese BWRGO Adresse besitzt</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Geben Sie den BIP 38 verschlüsselten privaten Schlüssel ein. Geben Sie die Passphrase im mittleren Feld ein. Klicken Sie auf Entschlüsselung, um den privaten Schlüssel zu berechnen. Nachdem der Schlüssel entschlüsselt wurde, klicken Sie auf 'Adresse importieren', fügen Sie diesen privaten Schlüssel der Wallet hinzu.</translation>
     </message>
     <message>
-        <source>The NWO address the message was signed with</source>
-        <translation>Die NWO Adresse mit welcher die Nachricht signiert wurde.</translation>
+        <source>The BWRGO address the message was signed with</source>
+        <translation>Die BWRGO Adresse mit welcher die Nachricht signiert wurde.</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified NWO address</source>
-        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen NWO-Adresse signiert wurde.</translation>
+        <source>Verify the message to ensure it was signed with the specified BWRGO address</source>
+        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen BWRGO-Adresse signiert wurde.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -602,12 +602,12 @@
         <translation>Registerkartenleiste</translation>
     </message>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Core</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Core</translation>
     </message>
     <message>
-        <source>Send coins to a NWO address</source>
-        <translation>An eine NWO-Adresse überweisen</translation>
+        <source>Send coins to a BWRGO address</source>
+        <translation>An eine BWRGO-Adresse überweisen</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and bwrgocoin: URIs)</source>
@@ -622,24 +622,24 @@
         <translation>Masternodes durchsuchen</translation>
     </message>
     <message>
-        <source>&amp;About NWO Core</source>
-        <translation>Über.NWO Core</translation>
+        <source>&amp;About BWRGO Core</source>
+        <translation>Über.BWRGO Core</translation>
     </message>
     <message>
-        <source>Show information about NWO Core</source>
-        <translation>Zeigt Informationen über NWO Core</translation>
+        <source>Show information about BWRGO Core</source>
+        <translation>Zeigt Informationen über BWRGO Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for NWO</source>
-        <translation>Konfiguration von NWO verändern</translation>
+        <source>Modify configuration options for BWRGO</source>
+        <translation>Konfiguration von BWRGO verändern</translation>
     </message>
     <message>
-        <source>Sign messages with your NWO addresses to prove you own them</source>
-        <translation>Unterschreibt eine Nachricht mit Ihrer NWO-Adresse und beweist, dass sie Ihnen gehört</translation>
+        <source>Sign messages with your BWRGO addresses to prove you own them</source>
+        <translation>Unterschreibt eine Nachricht mit Ihrer BWRGO-Adresse und beweist, dass sie Ihnen gehört</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified NWO addresses</source>
-        <translation>Überprüft eine Nachricht um zu prüfen ob diese mit einer bestimmten NWO-Adresse signiert wurde</translation>
+        <source>Verify messages to ensure they were signed with specified BWRGO addresses</source>
+        <translation>Überprüft eine Nachricht um zu prüfen ob diese mit einer bestimmten BWRGO-Adresse signiert wurde</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -666,8 +666,8 @@
         <translation>Öffne Masternode Einstellungsdatei</translation>
     </message>
     <message>
-        <source>Open a NWO: URI or payment request</source>
-        <translation>Öffne eine NWO: URI or Zahlungsanfrage</translation>
+        <source>Open a BWRGO: URI or payment request</source>
+        <translation>Öffne eine BWRGO: URI or Zahlungsanfrage</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -678,12 +678,12 @@
         <translation>Blockchain Betrachter Fenster</translation>
     </message>
     <message>
-        <source>Show the NWO Core help message to get a list with possible NWO command-line options</source>
-        <translation>Zeige die NWO-Core Hilfe, um mögliche NWO Kommando-Zeilen-Optionen anzuzeigen</translation>
+        <source>Show the BWRGO Core help message to get a list with possible BWRGO command-line options</source>
+        <translation>Zeige die BWRGO-Core Hilfe, um mögliche BWRGO Kommando-Zeilen-Optionen anzuzeigen</translation>
     </message>
     <message>
-        <source>NWO Core client</source>
-        <translation>NWO Core Client</translation>
+        <source>BWRGO Core client</source>
+        <translation>BWRGO Core Client</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -1113,8 +1113,8 @@ Adresse: %4</translation>
         <translation>Zahlungsadresse bearbeiten</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid NWO address.</source>
-        <translation>Die eingegebene Adresse "%1" ist keine gültige NWO-Adresse.</translation>
+        <source>The entered address "%1" is not a valid BWRGO address.</source>
+        <translation>Die eingegebene Adresse "%1" ist keine gültige BWRGO-Adresse.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1159,16 +1159,16 @@ Adresse: %4</translation>
         <translation>Version</translation>
     </message>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Core</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-Bit)</translation>
     </message>
     <message>
-        <source>About NWO Core</source>
-        <translation>Über NWO Core</translation>
+        <source>About BWRGO Core</source>
+        <translation>Über BWRGO Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1214,16 +1214,16 @@ Adresse: %4</translation>
         <translation>Willkommen</translation>
     </message>
     <message>
-        <source>Welcome to NWO Core.</source>
-        <translation>Willkommen zu NWO Core.</translation>
+        <source>Welcome to BWRGO Core.</source>
+        <translation>Willkommen zu BWRGO Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where NWO Core will store its data.</source>
-        <translation>Da dies das erste Mal ist, dass Sie NWO Core starten, legen Sie jetzt bitte fest, an welchem Ort die Daten gespeichert werden sollen.</translation>
+        <source>As this is the first time the program is launched, you can choose where BWRGO Core will store its data.</source>
+        <translation>Da dies das erste Mal ist, dass Sie BWRGO Core starten, legen Sie jetzt bitte fest, an welchem Ort die Daten gespeichert werden sollen.</translation>
     </message>
     <message>
-        <source>NWO Core will download and store a copy of the NWO block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>NWO Core wird die Blockchain laden und lokal speichern. Dafür sind mindestens %1GB freier Speicherplatz erforderlich. Der Speicherbedarf wird mit der Zeit anwachsen. Die Wallet wird ebenfalls in diesem Verzeichnis gespeichert.</translation>
+        <source>BWRGO Core will download and store a copy of the BWRGO block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>BWRGO Core wird die Blockchain laden und lokal speichern. Dafür sind mindestens %1GB freier Speicherplatz erforderlich. Der Speicherbedarf wird mit der Zeit anwachsen. Die Wallet wird ebenfalls in diesem Verzeichnis gespeichert.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1234,8 +1234,8 @@ Adresse: %4</translation>
         <translation>Ein benutzerdefiniertes Datenverzeichnis verwenden:</translation>
     </message>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Core</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1372,12 +1372,12 @@ Adresse: %4</translation>
         <translation>Zieladresse eingeben</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other NWO addresses after it matures.
-To Add: enter percentage to give and NWO address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other BWRGO addresses after it matures.
+To Add: enter percentage to give and BWRGO address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>MultiSend ermöglicht es automatisch bis zu 100% Ihrer Stake- oder Masternode-Belohnung zu einer Liste von anderen NWO-Adressen zu senden.
-Zum hinzufügen: Gebe den Prozentsätze ein, um die NWO-Adressen des MultiSend-Vektor hinzuzufügen.
+        <translation>MultiSend ermöglicht es automatisch bis zu 100% Ihrer Stake- oder Masternode-Belohnung zu einer Liste von anderen BWRGO-Adressen zu senden.
+Zum hinzufügen: Gebe den Prozentsätze ein, um die BWRGO-Adressen des MultiSend-Vektor hinzuzufügen.
 Zum entfernen: Gebe die zu löschende Adresse ein und drücke löschen.
 MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translation>
     </message>
@@ -1572,8 +1572,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Verschleierter Betrag:</translation>
     </message>
     <message>
-        <source>0 NWO / 0 Rounds</source>
-        <translation>0 NWO/ 0 Runden</translation>
+        <source>0 BWRGO / 0 Rounds</source>
+        <translation>0 BWRGO/ 0 Runden</translation>
     </message>
     <message>
         <source>Enabled/Disabled</source>
@@ -1705,8 +1705,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Betrag</translation>
     </message>
     <message>
-        <source>Enter a NWO address (e.g. %1)</source>
-        <translation>NWO-Adresse eingeben (z.B. %1)</translation>
+        <source>Enter a BWRGO address (e.g. %1)</source>
+        <translation>BWRGO-Adresse eingeben (z.B. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1892,7 +1892,7 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>NWOs überweisen</translation>
+        <translation>BWRGOs überweisen</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -1967,8 +1967,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>UTXO Größe:</translation>
     </message>
     <message>
-        <source>0 NWO</source>
-        <translation>0 NWO</translation>
+        <source>0 BWRGO</source>
+        <translation>0 BWRGO</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2106,8 +2106,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>E&amp;mpfänger:</translation>
     </message>
     <message>
-        <source>The NWO address to send the payment to</source>
-        <translation>NWO-Adresse, an die überwiesen werden soll</translation>
+        <source>The BWRGO address to send the payment to</source>
+        <translation>BWRGO-Adresse, an die überwiesen werden soll</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2146,8 +2146,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Nachricht:</translation>
     </message>
     <message>
-        <source>A message that was attached to the NWO: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the NWO network.</source>
-        <translation>Eine an die NWO-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das NWO-Netzwerk gesendet.</translation>
+        <source>A message that was attached to the BWRGO: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BWRGO network.</source>
+        <translation>Eine an die BWRGO-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das BWRGO-Netzwerk gesendet.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2173,8 +2173,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>NWO Core is shutting down...</source>
-        <translation>NWO Core wird beendet...</translation>
+        <source>BWRGO Core is shutting down...</source>
+        <translation>BWRGO Core wird beendet...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2188,8 +2188,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Nachricht &amp;signieren</translation>
     </message>
     <message>
-        <source>The NWO address to sign the message with</source>
-        <translation>NWO Adresse mit welcher die Nachricht signiert werden soll</translation>
+        <source>The BWRGO address to sign the message with</source>
+        <translation>BWRGO Adresse mit welcher die Nachricht signiert werden soll</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2216,16 +2216,16 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Kopiert die aktuelle Signatur in den Zwischenspeicher</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this NWO address</source>
-        <translation>Signiere die Nachricht um zu Beweisen, dass du diese NWO Adresse besitzt</translation>
+        <source>Sign the message to prove you own this BWRGO address</source>
+        <translation>Signiere die Nachricht um zu Beweisen, dass du diese BWRGO Adresse besitzt</translation>
     </message>
     <message>
-        <source>The NWO address the message was signed with</source>
-        <translation>Die NWO Adresse mit welcher die Nachricht signiert wurde.</translation>
+        <source>The BWRGO address the message was signed with</source>
+        <translation>Die BWRGO Adresse mit welcher die Nachricht signiert wurde.</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified NWO address</source>
-        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen NWO-Adresse signiert wurde.</translation>
+        <source>Verify the message to ensure it was signed with the specified BWRGO address</source>
+        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen BWRGO-Adresse signiert wurde.</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -2263,8 +2263,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Core</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2287,8 +2287,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Die XDNA Core Entwickler</translation>
     </message>
     <message>
-        <source>The NWO developers</source>
-        <translation>Die NWO Entwickler</translation>
+        <source>The BWRGO developers</source>
+        <translation>Die BWRGO Entwickler</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2446,7 +2446,7 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Erzeugte NWOs müssen %1 Blöcke lang reifen, bevor sie ausgegeben werden können. Als Sie diesen Block erzeugten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in "nicht angenommen" geändert und Sie werden keine DNAs gutgeschrieben bekommen. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block fast zeitgleich erzeugt.</translation>
+        <translation>Erzeugte BWRGOs müssen %1 Blöcke lang reifen, bevor sie ausgegeben werden können. Als Sie diesen Block erzeugten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in "nicht angenommen" geändert und Sie werden keine DNAs gutgeschrieben bekommen. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block fast zeitgleich erzeugt.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -2808,11 +2808,11 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>NWOs überweisen</translation>
+        <translation>BWRGOs überweisen</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 NWO.</source>
-        <translation>SwiftTX unterstützt das Versenden von Beträgen dieser Höhe noch nicht. Transaktionen sind zur Zeit auf maximal %1 NWO begrenzt.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 BWRGO.</source>
+        <translation>SwiftTX unterstützt das Versenden von Beträgen dieser Höhe noch nicht. Transaktionen sind zur Zeit auf maximal %1 BWRGO begrenzt.</translation>
     </message>
 </context>
 <context>
@@ -3005,8 +3005,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Wallet gesperrt.</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart NWO Core to complete</source>
-        <translation>Wallet musste neu geschrieben werden: Bitte NWO Core neu starten</translation>
+        <source>Wallet needed to be rewritten: restart BWRGO Core to complete</source>
+        <translation>Wallet musste neu geschrieben werden: Bitte BWRGO Core neu starten</translation>
     </message>
     <message>
         <source>Wallet options:</source>

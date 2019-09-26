@@ -1,13 +1,13 @@
-NWO
+BWRGO
 =====================
 
 Setup
 ---------------------
-[NWO](http://bwrgocoinnetwork.org/wallet) is the original NWO client and it builds the backbone of the network. However, it downloads and stores the entire history of NWO transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[BWRGO](http://bwrgocoinnetwork.org/wallet) is the original BWRGO client and it builds the backbone of the network. However, it downloads and stores the entire history of BWRGO transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run NWO on your native platform.
+The following are some helpful notes on how to run BWRGO on your native platform.
 
 ### Unix
 
@@ -22,18 +22,18 @@ Unpack the files into a directory, and then run bwrgocoin-qt.exe.
 
 ### OSX
 
-Drag NWO-Qt to your applications folder, and then run NWO-Qt.
+Drag BWRGO-Qt to your applications folder, and then run BWRGO-Qt.
 
 ### Need Help?
 
-* See the documentation at the [NWO Wiki](https://en.bwrgocoinnetwork.org/wiki/Main_Page) ***TODO***
+* See the documentation at the [BWRGO Wiki](https://en.bwrgocoinnetwork.org/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org) or on the [NWO Forum](http://forum.bwrgocoinnetwork.org/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org) or on the [BWRGO Forum](http://forum.bwrgocoinnetwork.org/).
 * Join our Discord server [Discord Server](https://discord.gg/S9adMgS)
 
 Building
 ---------------------
-The following are developer notes on how to build NWO on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build BWRGO on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -42,7 +42,7 @@ The following are developer notes on how to build NWO on your native platform. T
 
 Development
 ---------------------
-The NWO repo's [root README](https://github.com/NWO-Core/NWO/blob/master/README.md) contains relevant information on the development process and automated testing.
+The BWRGO repo's [root README](https://github.com/BWRGO-Core/BWRGO/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -56,7 +56,7 @@ The NWO repo's [root README](https://github.com/NWO-Core/NWO/blob/master/README.
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [NWO](http://forum.bwrgocoinnetwork.org/) forum.
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [BWRGO](http://forum.bwrgocoinnetwork.org/) forum.
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

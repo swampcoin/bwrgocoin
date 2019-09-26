@@ -16,8 +16,8 @@ BITCOIND_USER=${BITCOIND_USER:-bwrgocoin}
 BITCOIND_GROUP=${BITCOIND_GROUP:-bwrgocoin}
 BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/bwrgocoind}
 
-name="NWO Daemon"
-description="NWO crypto-currency p2p network daemon"
+name="BWRGO Daemon"
+description="BWRGO crypto-currency p2p network daemon"
 
 command="/usr/bin/bwrgocoind"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
@@ -78,7 +78,7 @@ checkconfig()
 		eerror "It is also recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"NWO Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"BWRGO Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

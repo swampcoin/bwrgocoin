@@ -38,7 +38,7 @@ map<uint256, CObfuscationBroadcastTx> mapObfuscationBroadcastTxes;
 // Keep track of the active Masternode
 CActiveMasternode activeMasternode;
 
-/* *** BEGIN OBFUSCATION MAGIC - NWO **********
+/* *** BEGIN OBFUSCATION MAGIC - BWRGO **********
     Copyright (c) 2014-2015, Dash Developers
         eduffield - evan@dashpay.io
         udjinm6   - udjinm6@dashpay.io
@@ -496,7 +496,7 @@ std::string CObfuscationPool::GetStatus()
         return _("Finalizing transaction.");
     case POOL_STATUS_ERROR:
         return _("Obfuscation request incomplete:") + " " + lastMessage + " " + _("Will retry...");
-    case POOL_STATUS_SNWOESS:
+    case POOL_STATUS_SBWRGOESS:
         return _("Obfuscation request complete:") + " " + lastMessage;
     case POOL_STATUS_QUEUE:
         if (showingObfuScationMessage % 70 <= 30)
@@ -569,7 +569,7 @@ void CObfuscationPool::Check()
     }
 
     // reset if we're here for 10 seconds
-    if ((state == POOL_STATUS_ERROR || state == POOL_STATUS_SNWOESS) && GetTimeMillis() - lastTimeChanged >= 10000) {
+    if ((state == POOL_STATUS_ERROR || state == POOL_STATUS_SBWRGOESS) && GetTimeMillis() - lastTimeChanged >= 10000) {
         LogPrint("obfuscation", "CObfuscationPool::Check() -- timeout, RESETTING\n");
         UnlockCoins();
         SetNull();
@@ -638,7 +638,7 @@ void CObfuscationPool::CheckFinalTransaction()
         RelayInv(inv);
 
         // Tell the clients it was successful
-        RelayCompletedTransaction(sessionID, false, MSG_SNWOESS);
+        RelayCompletedTransaction(sessionID, false, MSG_SBWRGOESS);
 
         // Randomly charge clients
         ChargeRandomFees();
@@ -778,9 +778,9 @@ void CObfuscationPool::ChargeRandomFees()
 
                 Being that Obfuscation has "no fees" we need to have some kind of cost associated
                 with using it to stop abuse. Otherwise it could serve as an attack vector and
-                allow endless transaction that would bloat NWO and make it unusable. To
+                allow endless transaction that would bloat BWRGO and make it unusable. To
                 stop these kinds of attacks 1 in 10 successful transactions are charged. This
-                adds up to a cost of 0.001 NWO per transaction on average.
+                adds up to a cost of 0.001 BWRGO per transaction on average.
             */
             if (r <= 10) {
                 LogPrintf("CObfuscationPool::ChargeRandomFees -- charging random fees. %u\n", i);
@@ -816,7 +816,7 @@ void CObfuscationPool::CheckTimeout()
             LogPrint("obfuscation", "CObfuscationPool::CheckTimeout() -- Pool error -- Running Check()\n");
             Check();
             break;
-        case POOL_STATUS_SNWOESS:
+        case POOL_STATUS_SBWRGOESS:
             LogPrint("obfuscation", "CObfuscationPool::CheckTimeout() -- Pool sbwrgocoiness -- Running Check()\n");
             Check();
             break;
@@ -1211,7 +1211,7 @@ void CObfuscationPool::SendObfuscationDenominate(std::vector<CTxIn>& vin, std::v
 bool CObfuscationPool::StatusUpdate(int newState, int newEntriesCount, int newAccepted, int& errorID, int newSessionID)
 {
     if (fMasterNode) return false;
-    if (state == POOL_STATUS_ERROR || state == POOL_STATUS_SNWOESS) return false;
+    if (state == POOL_STATUS_ERROR || state == POOL_STATUS_SBWRGOESS) return false;
 
     UpdateState(newState);
     entriesCount = newEntriesCount;
@@ -1358,7 +1358,7 @@ void CObfuscationPool::CompletedTransaction(bool error, int errorID)
         SetNull();
     } else {
         LogPrintf("CompletedTransaction -- sbwrgocoiness \n");
-        UpdateState(POOL_STATUS_SNWOESS);
+        UpdateState(POOL_STATUS_SBWRGOESS);
 
         UnlockCoins();
         SetNull();
@@ -1383,7 +1383,7 @@ bool CObfuscationPool::DoAutomaticDenominating(bool fDryRun)
 {
     if (!fEnableObfuscation) return false;
     if (fMasterNode) return false;
-    if (state == POOL_STATUS_ERROR || state == POOL_STATUS_SNWOESS) return false;
+    if (state == POOL_STATUS_ERROR || state == POOL_STATUS_SBWRGOESS) return false;
     if (GetEntriesCount() > 0) {
         strAutoDenomResult = _("Mixing in progress...");
         return false;
@@ -1916,10 +1916,10 @@ void CObfuscationPool::GetDenominationsToString(int nDenom, std::string& strDeno
 {
     // Function returns as follows:
     //
-    // bit 0 - 100NWO+1 ( bit on if present )
-    // bit 1 - 10NWO+1
-    // bit 2 - 1NWO+1
-    // bit 3 - .1NWO+1
+    // bit 0 - 100BWRGO+1 ( bit on if present )
+    // bit 1 - 10BWRGO+1
+    // bit 2 - 1BWRGO+1
+    // bit 3 - .1BWRGO+1
     // bit 3 - non-denom
 
 
@@ -1989,10 +1989,10 @@ int CObfuscationPool::GetDenominations(const std::vector<CTxOut>& vout, bool fSi
 
     // Function returns as follows:
     //
-    // bit 0 - 100NWO+1 ( bit on if present )
-    // bit 1 - 10NWO+1
-    // bit 2 - 1NWO+1
-    // bit 3 - .1NWO+1
+    // bit 0 - 100BWRGO+1 ( bit on if present )
+    // bit 1 - 10BWRGO+1
+    // bit 2 - 1BWRGO+1
+    // bit 3 - .1BWRGO+1
 
     return denom;
 }
@@ -2091,7 +2091,7 @@ std::string CObfuscationPool::GetMessageByID(int messageID)
         return _("Missing input transaction information.");
     case ERR_VERSION:
         return _("Incompatible version.");
-    case MSG_SNWOESS:
+    case MSG_SBWRGOESS:
         return _("Transaction created successfully.");
     case MSG_ENTRIES_ADDED:
         return _("Your entries added successfully.");

@@ -14,7 +14,7 @@ static const int MODEL_UPDATE_DELAY = 250;
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
-/* NWO GUI -- Size of icons in status bar */
+/* BWRGO GUI -- Size of icons in status bar */
 static const int STATUSBAR_ICONSIZE = 20;
 static const int STATUSBARTOP_ICONSIZE = 32;
 
@@ -50,9 +50,9 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 30
 
-#define QAPP_ORG_NAME "NWO"
+#define QAPP_ORG_NAME "BWRGO"
 #define QAPP_ORG_DOMAIN "bwrgocoinnetwork.org"
-#define QAPP_APP_NAME_DEFAULT "NWO-Qt"
-#define QAPP_APP_NAME_TESTNET "NWO-Qt-testnet"
+#define QAPP_APP_NAME_DEFAULT "BWRGO-Qt"
+#define QAPP_APP_NAME_TESTNET "BWRGO-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

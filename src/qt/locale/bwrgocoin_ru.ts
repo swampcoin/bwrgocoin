@@ -62,12 +62,12 @@
         <translation>Адреса получения</translation>
     </message>
     <message>
-        <source>These are your NWO addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши NWO-адреса для отправки платежей. Перед отправкой монет всегда проверяйте сумму и адрес получателя.</translation>
+        <source>These are your BWRGO addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши BWRGO-адреса для отправки платежей. Перед отправкой монет всегда проверяйте сумму и адрес получателя.</translation>
     </message>
     <message>
-        <source>These are your NWO addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши NWO-адреса для получения платежей. Для каждой транзакции рекомендуется использовать новый адрес получения.</translation>
+        <source>These are your BWRGO addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши BWRGO-адреса для получения платежей. Для каждой транзакции рекомендуется использовать новый адрес получения.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,16 +172,16 @@
         <translation>Подтвердить шифрование кошелька</translation>
     </message>
     <message>
-        <source>NWO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your NWOs from being stolen by malware infecting your computer.</source>
-        <translation>NWO сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши NWO от кражи с использованием вредоносного ПО.</translation>
+        <source>BWRGO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BWRGOs from being stolen by malware infecting your computer.</source>
+        <translation>BWRGO сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши BWRGO от кражи с использованием вредоносного ПО.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Вы действительно хотите зашифровать свой кошелек?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NWO&lt;/b&gt;!</source>
-        <translation>Внимание: если вы зашифруете свой кошелёк и потеряете от него пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ СВОИ NWO&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BWRGO&lt;/b&gt;!</source>
+        <translation>Внимание: если вы зашифруете свой кошелёк и потеряете от него пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ СВОИ BWRGO&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -235,16 +235,16 @@
         <translation>&amp;BIP 38 Шифрование</translation>
     </message>
     <message>
-        <source>Enter a NWO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Введите NWO адрес, который вы хотите зашифровать, используя BIP 38. Введите пароль в среднем поле. Нажмите "Зашифровать", чтобы создать зашифрованный секретный ключ.</translation>
+        <source>Enter a BWRGO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Введите BWRGO адрес, который вы хотите зашифровать, используя BIP 38. Введите пароль в среднем поле. Нажмите "Зашифровать", чтобы создать зашифрованный секретный ключ.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Адрес:</translation>
     </message>
     <message>
-        <source>The NWO address to sign the message with</source>
-        <translation>Адрес NWO для подписи сообщения</translation>
+        <source>The BWRGO address to sign the message with</source>
+        <translation>Адрес BWRGO для подписи сообщения</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -275,8 +275,8 @@
         <translation>Копировать текущую подпись в системный буфер обмена</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this NWO address</source>
-        <translation>Подпишите сообщение, чтобы подтвердить владение данным NWO адресом</translation>
+        <source>Sign the message to prove you own this BWRGO address</source>
+        <translation>Подпишите сообщение, чтобы подтвердить владение данным BWRGO адресом</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -299,12 +299,12 @@
         <translation>Введите зашифрованный с помощью BIP 38 секретный ключ. Введите секретную фразу в среднем окне. Нажмите `Дешифровать Ключ` чтобы создать секретный ключ. Нажав на `Импортировать Адрес` после дешифровки, вы добавите секретный ключ к кошельку.</translation>
     </message>
     <message>
-        <source>The NWO address the message was signed with</source>
-        <translation>Адрес NWO, которым подписано сообщение</translation>
+        <source>The BWRGO address the message was signed with</source>
+        <translation>Адрес BWRGO, которым подписано сообщение</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified NWO address</source>
-        <translation>Проверте сообщение, чтобы убедиться, что оно было подписано указанным NWO адресом </translation>
+        <source>Verify the message to ensure it was signed with the specified BWRGO address</source>
+        <translation>Проверте сообщение, чтобы убедиться, что оно было подписано указанным BWRGO адресом </translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -594,16 +594,16 @@
         <translation>Панель вкладок</translation>
     </message>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Core</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Core</translation>
     </message>
     <message>
-        <source>Send coins to a NWO address</source>
-        <translation>Отправить монеты на NWO адрес</translation>
+        <source>Send coins to a BWRGO address</source>
+        <translation>Отправить монеты на BWRGO адрес</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and bwrgocoin: URIs)</source>
-        <translation>Запросить платежи (генерирует QR-код и NWO: URI)</translation>
+        <translation>Запросить платежи (генерирует QR-код и BWRGO: URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -614,24 +614,24 @@
         <translation>Обзор мастернод</translation>
     </message>
     <message>
-        <source>&amp;About NWO Core</source>
-        <translation>&amp;О NWO Core</translation>
+        <source>&amp;About BWRGO Core</source>
+        <translation>&amp;О BWRGO Core</translation>
     </message>
     <message>
-        <source>Show information about NWO Core</source>
-        <translation>Показать информацию о NWO Core</translation>
+        <source>Show information about BWRGO Core</source>
+        <translation>Показать информацию о BWRGO Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for NWO</source>
-        <translation>Изменение параметров конфигурации NWO</translation>
+        <source>Modify configuration options for BWRGO</source>
+        <translation>Изменение параметров конфигурации BWRGO</translation>
     </message>
     <message>
-        <source>Sign messages with your NWO addresses to prove you own them</source>
-        <translation>Подписывайте сообщения вашими NWO адресами, чтобы доказать, что вы их владелец</translation>
+        <source>Sign messages with your BWRGO addresses to prove you own them</source>
+        <translation>Подписывайте сообщения вашими BWRGO адресами, чтобы доказать, что вы их владелец</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified NWO addresses</source>
-        <translation>Проверте сообщения, чтобы убедиться, что они были подписаны указанным NWO адресом </translation>
+        <source>Verify messages to ensure they were signed with specified BWRGO addresses</source>
+        <translation>Проверте сообщения, чтобы убедиться, что они были подписаны указанным BWRGO адресом </translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -662,8 +662,8 @@
         <translation>Открыть файл настроек мастернод</translation>
     </message>
     <message>
-        <source>Open a NWO: URI or payment request</source>
-        <translation>Открыть NWO: URI или запрос платежа</translation>
+        <source>Open a BWRGO: URI or payment request</source>
+        <translation>Открыть BWRGO: URI или запрос платежа</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -674,16 +674,16 @@
         <translation>Окно обзора блока</translation>
     </message>
     <message>
-        <source>Show the NWO Core help message to get a list with possible NWO command-line options</source>
-        <translation>Смотрите помощь к программе, чтобы получить документацию ко всем возможным опциям коммандной строки NWO</translation>
+        <source>Show the BWRGO Core help message to get a list with possible BWRGO command-line options</source>
+        <translation>Смотрите помощь к программе, чтобы получить документацию ко всем возможным опциям коммандной строки BWRGO</translation>
     </message>
     <message>
-        <source>NWO Core client</source>
-        <translation>Клиент NWO Core</translation>
+        <source>BWRGO Core client</source>
+        <translation>Клиент BWRGO Core</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to NWO network</source>
-        <translation><numerusform>%n активное подключение к сети NWO</numerusform></translation>
+        <source>%n active connection(s) to BWRGO network</source>
+        <translation><numerusform>%n активное подключение к сети BWRGO</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -1130,8 +1130,8 @@ MultiSend: %1</translation>
         <translation>Изменить адрес отправки</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid NWO address.</source>
-        <translation>Введенный адрес "%1" не является NWO адресом.</translation>
+        <source>The entered address "%1" is not a valid BWRGO address.</source>
+        <translation>Введенный адрес "%1" не является BWRGO адресом.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1176,16 +1176,16 @@ MultiSend: %1</translation>
         <translation>версия</translation>
     </message>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Core</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-бит)</translation>
     </message>
     <message>
-        <source>About NWO Core</source>
-        <translation>О NWO Core</translation>
+        <source>About BWRGO Core</source>
+        <translation>О BWRGO Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1231,16 +1231,16 @@ MultiSend: %1</translation>
         <translation>Добро пожаловать</translation>
     </message>
     <message>
-        <source>Welcome to NWO Core.</source>
-        <translation>Добро пожаловать в NWO Core.</translation>
+        <source>Welcome to BWRGO Core.</source>
+        <translation>Добро пожаловать в BWRGO Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where NWO Core will store its data.</source>
-        <translation>Поскольку это первый запуск программы, вы можете выбрать, где будут храниться данные NWO Core.</translation>
+        <source>As this is the first time the program is launched, you can choose where BWRGO Core will store its data.</source>
+        <translation>Поскольку это первый запуск программы, вы можете выбрать, где будут храниться данные BWRGO Core.</translation>
     </message>
     <message>
-        <source>NWO Core will download and store a copy of the NWO block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>NWO Core загрузит и сохранит копию цепочки блоков NWO. Каталог будет занимать около %1GB и со временем размер будет увеличиваться. Кроме того, в этом каталоге будет храниться файл кошелька.</translation>
+        <source>BWRGO Core will download and store a copy of the BWRGO block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>BWRGO Core загрузит и сохранит копию цепочки блоков BWRGO. Каталог будет занимать около %1GB и со временем размер будет увеличиваться. Кроме того, в этом каталоге будет храниться файл кошелька.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1251,8 +1251,8 @@ MultiSend: %1</translation>
         <translation>Использовать другой каталог данных:</translation>
     </message>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Core</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1393,12 +1393,12 @@ MultiSend: %1</translation>
         <translation>Введите адрес для отправки</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other NWO addresses after it matures.
-To Add: enter percentage to give and NWO address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other BWRGO addresses after it matures.
+To Add: enter percentage to give and BWRGO address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>MultiSend позволяет вам автоматически отправлять до 100% вознаграждения за мастерноды и стэйкинг, после их созревания, на другие NWO адреса.
-Для добавления: введите передаваемый процент и NWO адрес для добавления к вектору MultiSend.
+        <translation>MultiSend позволяет вам автоматически отправлять до 100% вознаграждения за мастерноды и стэйкинг, после их созревания, на другие BWRGO адреса.
+Для добавления: введите передаваемый процент и BWRGO адрес для добавления к вектору MultiSend.
 Для удаления: введите удаляемый адрес и нажмите удалить.
 MultiSend будет неактивен до тех пор, пока вы не нажмете Включить</translation>
     </message>
@@ -1536,48 +1536,48 @@ Please check the address and try again.</source>
         <translation>Выберите уровень конфиденциальности.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 NWO</source>
-        <translation>Используйте 2 разные мастерноды для смешивания средств до 10000 NWO</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 BWRGO</source>
+        <translation>Используйте 2 разные мастерноды для смешивания средств до 10000 BWRGO</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 NWO</source>
-        <translation>Используйте 8 разных мастернод для смешивания средств до 10000 NWO</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 BWRGO</source>
+        <translation>Используйте 8 разных мастернод для смешивания средств до 10000 BWRGO</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Используйте 16 разных мастернод</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 NWO to anonymize 10000 NWO</source>
-        <translation>Этот вариант является самым быстрым и будет стоить порядка ~0.025 NWO для анонимизации 10000 NWO</translation>
+        <source>This option is the quickest and will cost about ~0.025 BWRGO to anonymize 10000 BWRGO</source>
+        <translation>Этот вариант является самым быстрым и будет стоить порядка ~0.025 BWRGO для анонимизации 10000 BWRGO</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 NWO to anonymize 10000 NWO</source>
-        <translation>Это средний по скорости вариант и он будет стоить около 0.05 NWO для анонимизации 10000 NWO</translation>
+        <source>This option is moderately fast and will cost about 0.05 BWRGO to anonymize 10000 BWRGO</source>
+        <translation>Это средний по скорости вариант и он будет стоить около 0.05 BWRGO для анонимизации 10000 BWRGO</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Это самый медленный и безопасный вариант. Максимальная анонимность стоит</translation>
     </message>
     <message>
-        <source>0.1 NWO per 10000 NWO you anonymize.</source>
-        <translation>0.1 NWO за 10000 NWO которые вы собираетесь анонимизировать.</translation>
+        <source>0.1 BWRGO per 10000 BWRGO you anonymize.</source>
+        <translation>0.1 BWRGO за 10000 BWRGO которые вы собираетесь анонимизировать.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
         <translation>Настройка Перемешивания</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening NWO's configuration screen.</source>
-        <translation>Перемешивание было успешно выставлено на стандартные значения (%1 и 2 цикла). Вы в любой момент можете это изменить, открыв окно настройки NWO.</translation>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening BWRGO's configuration screen.</source>
+        <translation>Перемешивание было успешно выставлено на стандартные значения (%1 и 2 цикла). Вы в любой момент можете это изменить, открыв окно настройки BWRGO.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening NWO's configuration screen.</source>
-        <translation>Перемешивание было успешно выбрано как высокое (%1 и 8 циклов). Вы в любой момент можете это изменить, открыв окно настройки NWO.</translation>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening BWRGO's configuration screen.</source>
+        <translation>Перемешивание было успешно выбрано как высокое (%1 и 8 циклов). Вы в любой момент можете это изменить, открыв окно настройки BWRGO.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening NWO's configuration screen.</source>
-        <translation>Перемешивание было успешно выставлено на максимальное (%1 и 16 циклов). Вы в любой момент можете это изменить, открыв окно настройки NWO.</translation>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening BWRGO's configuration screen.</source>
+        <translation>Перемешивание было успешно выставлено на максимальное (%1 и 16 циклов). Вы в любой момент можете это изменить, открыв окно настройки BWRGO.</translation>
     </message>
 </context>
 <context>
@@ -1638,8 +1638,8 @@ Please check the address and try again.</source>
         <translation>Отключив проведение неподтвержденных изменений все изменения о транзакции &lt;br/&gt;не будут использованы пока транзакция не получит хотя бы одно подтверждение.&lt;br/&gt;Также это влияет на расчет вашего баланса.</translation>
     </message>
     <message>
-        <source>Automatically open the NWO client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматически открыть клиентский порт NWO через роутер. Ваш роутер должен поддерживать UPnP, а сам сервис должен быть включен.</translation>
+        <source>Automatically open the BWRGO client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматически открыть клиентский порт BWRGO через роутер. Ваш роутер должен поддерживать UPnP, а сам сервис должен быть включен.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1658,12 +1658,12 @@ Please check the address and try again.</source>
         <translation>Эксперт</translation>
     </message>
     <message>
-        <source>Automatically start NWO after logging in to the system.</source>
-        <translation>Автоматически запускать NWO после входа в систему.</translation>
+        <source>Automatically start BWRGO after logging in to the system.</source>
+        <translation>Автоматически запускать BWRGO после входа в систему.</translation>
     </message>
     <message>
-        <source>&amp;Start NWO on system login</source>
-        <translation>&amp;Запускать NWO при входе в систему</translation>
+        <source>&amp;Start BWRGO on system login</source>
+        <translation>&amp;Запускать BWRGO при входе в систему</translation>
     </message>
     <message>
         <source>This setting determines the amount of individual masternodes that an input will be anonymized through.&lt;br/&gt;More rounds of anonymization gives a higher degree of privacy, but also costs more in fees.</source>
@@ -1678,8 +1678,8 @@ Please check the address and try again.</source>
         <translation>При достижении этого значения Перемешивание будет отключено.</translation>
     </message>
     <message>
-        <source>Amount of NWO to keep anonymized</source>
-        <translation>Количество NWO, держащихся анонимизированными</translation>
+        <source>Amount of BWRGO to keep anonymized</source>
+        <translation>Количество BWRGO, держащихся анонимизированными</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1706,8 +1706,8 @@ Please check the address and try again.</source>
         <translation>&amp;Сеть</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting NWO.</source>
-        <translation>Здесь можно выставить язык интерфейса. Изменения вступят в силу после перезапуска NWO.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting BWRGO.</source>
+        <translation>Здесь можно выставить язык интерфейса. Изменения вступят в силу после перезапуска BWRGO.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -1720,8 +1720,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
         <translation>Карта порта, использующего &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the NWO network through a SOCKS5 proxy.</source>
-        <translation>Подключиться к сети NWO через SOCKS5 прокси.</translation>
+        <source>Connect to the BWRGO network through a SOCKS5 proxy.</source>
+        <translation>Подключиться к сети BWRGO через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1875,8 +1875,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
         <translation>Балансы</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the NWO network after a connection is established, but this process has not completed yet.</source>
-        <translation>Возможно отображаемая информация устарела. Ваш кошелек автоматически синхронизируется с сетью NWO после установки соединения, но этот процесс еще не завершен. </translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BWRGO network after a connection is established, but this process has not completed yet.</source>
+        <translation>Возможно отображаемая информация устарела. Ваш кошелек автоматически синхронизируется с сетью BWRGO после установки соединения, но этот процесс еще не завершен. </translation>
     </message>
     <message>
         <source>Unconfirmed transactions to watch-only addresses</source>
@@ -1919,8 +1919,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
         <translation>Баланс Обфускации</translation>
     </message>
     <message>
-        <source>0 NWO / 0 Rounds</source>
-        <translation>0 NWO / 0 Циклов</translation>
+        <source>0 BWRGO / 0 Rounds</source>
+        <translation>0 BWRGO / 0 Циклов</translation>
     </message>
     <message>
         <source>Enabled/Disabled</source>
@@ -2076,8 +2076,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
         <translation>Не удалось запустить bwrgocoin: обработчик click-to-pay </translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid NWO address or malformed URI parameters.</source>
-        <translation>URI не интерпретируется! Причиной этому может быть неверный NWO адрес или неверные параметеры URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid BWRGO address or malformed URI parameters.</source>
+        <translation>URI не интерпретируется! Причиной этому может быть неверный BWRGO адрес или неверные параметеры URI.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2162,8 +2162,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
         <translation>Сумма</translation>
     </message>
     <message>
-        <source>Enter a NWO address (e.g. %1)</source>
-        <translation>Введите адрес NWO (например %1)</translation>
+        <source>Enter a BWRGO address (e.g. %1)</source>
+        <translation>Введите адрес BWRGO (например %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2296,8 +2296,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
         <translation>Блокчейн</translation>
     </message>
     <message>
-        <source>Open the NWO debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Открыть протокол отладки NWO. Это может занять некоторе время, если файл протокола очень большой.</translation>
+        <source>Open the BWRGO debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Открыть протокол отладки BWRGO. Это может занять некоторе время, если файл протокола очень большой.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2457,8 +2457,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
         <translation>Вывод:</translation>
     </message>
     <message>
-        <source>Welcome to the NWO RPC console.</source>
-        <translation>Добро пожаловать в окружение NWO RPC.</translation>
+        <source>Welcome to the BWRGO RPC console.</source>
+        <translation>Добро пожаловать в окружение BWRGO RPC.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2677,8 +2677,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
         <translation>Изменить:</translation>
     </message>
     <message>
-        <source>0 NWO</source>
-        <translation>0 NWO</translation>
+        <source>0 BWRGO</source>
+        <translation>0 BWRGO</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2761,8 +2761,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
         <translation>Копировать изменение</translation>
     </message>
     <message>
-        <source>Warning: Invalid NWO address</source>
-        <translation>Предупреждение: неправильный NWO адрес</translation>
+        <source>Warning: Invalid BWRGO address</source>
+        <translation>Предупреждение: неправильный BWRGO адрес</translation>
     </message>
     <message>
         <source>and SwiftTX</source>
@@ -2815,8 +2815,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>NWO Core is shutting down...</source>
-        <translation>NWO Core выключается...</translation>
+        <source>BWRGO Core is shutting down...</source>
+        <translation>BWRGO Core выключается...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2826,8 +2826,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The NWO address to sign the message with</source>
-        <translation>Адрес NWO для подписи сообщения </translation>
+        <source>The BWRGO address to sign the message with</source>
+        <translation>Адрес BWRGO для подписи сообщения </translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2850,16 +2850,16 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
         <translation>Копировать текущую подпись в системный буфер обмена</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this NWO address</source>
-        <translation>Подпишите сообщение, чтобы подтвердить владение адресом NWO</translation>
+        <source>Sign the message to prove you own this BWRGO address</source>
+        <translation>Подпишите сообщение, чтобы подтвердить владение адресом BWRGO</translation>
     </message>
     <message>
-        <source>The NWO address the message was signed with</source>
-        <translation>Адрес NWO, которым подписано сообщение</translation>
+        <source>The BWRGO address the message was signed with</source>
+        <translation>Адрес BWRGO, которым подписано сообщение</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified NWO address</source>
-        <translation>Проверьте сообщение, чтобы убедиться, что оно было подписано указанным NWO адресом </translation>
+        <source>Verify the message to ensure it was signed with the specified BWRGO address</source>
+        <translation>Проверьте сообщение, чтобы убедиться, что оно было подписано указанным BWRGO адресом </translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -2905,8 +2905,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Core</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2925,8 +2925,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
         <translation>Разработчики PIVX Core</translation>
     </message>
     <message>
-        <source>The NWO Core developers</source>
-        <translation>Разработчики NWO Core</translation>
+        <source>The BWRGO Core developers</source>
+        <translation>Разработчики BWRGO Core</translation>
     </message>
     <message>
         <source>[testnet]</source>

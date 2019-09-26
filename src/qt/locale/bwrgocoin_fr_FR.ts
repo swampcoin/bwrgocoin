@@ -152,16 +152,16 @@
         <translation>Confirmer le cryptage du portefeuille</translation>
     </message>
     <message>
-        <source>NWO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your NWOs from being stolen by malware infecting your computer.</source>
-        <translation>NWO va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos NWOs d'un vol par un malware ayant infecté votre ordinateur. </translation>
+        <source>BWRGO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BWRGOs from being stolen by malware infecting your computer.</source>
+        <translation>BWRGO va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos BWRGOs d'un vol par un malware ayant infecté votre ordinateur. </translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Êtes-vous sûr de vouloir crypter votre portefeuille?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NWO&lt;/b&gt;!</source>
-        <translation>Attention : si vous cryptez votre portefeuille et perdez votre phrase secrète, vous &lt;b&gt;PERDREZ TOUS VOS NWO&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BWRGO&lt;/b&gt;!</source>
+        <translation>Attention : si vous cryptez votre portefeuille et perdez votre phrase secrète, vous &lt;b&gt;PERDREZ TOUS VOS BWRGO&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -211,16 +211,16 @@
         <translation>BIP 38 crypter</translation>
     </message>
     <message>
-        <source>Enter a NWO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Entrez une adresse NWO que vous voulez crypter en utilisant BIP 38. Entrez une phrase secrète dans le champ du milieu. Cliquez sur crypter pour calculer la clé de cryptage privée.</translation>
+        <source>Enter a BWRGO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Entrez une adresse BWRGO que vous voulez crypter en utilisant BIP 38. Entrez une phrase secrète dans le champ du milieu. Cliquez sur crypter pour calculer la clé de cryptage privée.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresse :</translation>
     </message>
     <message>
-        <source>The NWO address to sign the message with</source>
-        <translation>L'adresse NWO avec laquelle signer le message</translation>
+        <source>The BWRGO address to sign the message with</source>
+        <translation>L'adresse BWRGO avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -251,8 +251,8 @@
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this NWO address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse NWO</translation>
+        <source>Sign the message to prove you own this BWRGO address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse BWRGO</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -271,12 +271,12 @@
         <translation>BIP 38 Décrypter</translation>
     </message>
     <message>
-        <source>The NWO address the message was signed with</source>
-        <translation>L'adresse NWO avec laquelle le message a été signé</translation>
+        <source>The BWRGO address the message was signed with</source>
+        <translation>L'adresse BWRGO avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified NWO address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse NWO renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified BWRGO address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse BWRGO renseignée</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -534,8 +534,8 @@
         <translation>&amp;Aide</translation>
     </message>
     <message>
-        <source>Send coins to a NWO address</source>
-        <translation>Envoyer des pièces à une adresse NWO</translation>
+        <source>Send coins to a BWRGO address</source>
+        <translation>Envoyer des pièces à une adresse BWRGO</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -546,16 +546,16 @@
         <translation>Afficher les masternodes</translation>
     </message>
     <message>
-        <source>Modify configuration options for NWO</source>
-        <translation>Modifier les options de configuration pour NWO</translation>
+        <source>Modify configuration options for BWRGO</source>
+        <translation>Modifier les options de configuration pour BWRGO</translation>
     </message>
     <message>
-        <source>Sign messages with your NWO addresses to prove you own them</source>
-        <translation>Signer les messages avec votre adresse NWO pour prouver qu'elles sont bien à vous.</translation>
+        <source>Sign messages with your BWRGO addresses to prove you own them</source>
+        <translation>Signer les messages avec votre adresse BWRGO pour prouver qu'elles sont bien à vous.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified NWO addresses</source>
-        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse NWO spécifié</translation>
+        <source>Verify messages to ensure they were signed with specified BWRGO addresses</source>
+        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse BWRGO spécifié</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -854,8 +854,8 @@ Adresse : %4
         <translation>Modifier l'adresse d'envoi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid NWO address.</source>
-        <translation>L'adresse entrée "%1" n'est pas une adresse NWO valide</translation>
+        <source>The entered address "%1" is not a valid BWRGO address.</source>
+        <translation>L'adresse entrée "%1" n'est pas une adresse BWRGO valide</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1038,32 +1038,32 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Veuillez sélectionner un niveau de confidentialité.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 NWO</source>
-        <translation>Utiliser 2 masternodes différentes pour mélanger les fonds jusqu'a 10000 NWO</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 BWRGO</source>
+        <translation>Utiliser 2 masternodes différentes pour mélanger les fonds jusqu'a 10000 BWRGO</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 NWO</source>
-        <translation>Utiliser 8 masternodes différentes pour mélanger les fonds jusqu'a 10000 NWO</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 BWRGO</source>
+        <translation>Utiliser 8 masternodes différentes pour mélanger les fonds jusqu'a 10000 BWRGO</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Utiliser 16 masternodes différentes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 NWO to anonymize 10000 NWO</source>
-        <translation>Cette option est la plus rapide, et coutera ~0.025 NWO pour anonymiser 10000 NWO</translation>
+        <source>This option is the quickest and will cost about ~0.025 BWRGO to anonymize 10000 BWRGO</source>
+        <translation>Cette option est la plus rapide, et coutera ~0.025 BWRGO pour anonymiser 10000 BWRGO</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 NWO to anonymize 10000 NWO</source>
-        <translation>Cette option est moyennement rapide, et coutera 0.05 NWO pour anonymiser 10000 NWO</translation>
+        <source>This option is moderately fast and will cost about 0.05 BWRGO to anonymize 10000 BWRGO</source>
+        <translation>Cette option est moyennement rapide, et coutera 0.05 BWRGO pour anonymiser 10000 BWRGO</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Il s'agit de l'option la plus lente est la plus sécurisé. Utiliser l'anonymat maximum coutera</translation>
     </message>
     <message>
-        <source>0.1 NWO per 10000 NWO you anonymize.</source>
-        <translation>0.1 NWO par 10000 NWO vous anonymisez.</translation>
+        <source>0.1 BWRGO per 10000 BWRGO you anonymize.</source>
+        <translation>0.1 BWRGO par 10000 BWRGO vous anonymisez.</translation>
     </message>
     </context>
 <context>
@@ -1370,8 +1370,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Après commission</translation>
     </message>
     <message>
-        <source>0 NWO</source>
-        <translation>0 NWO</translation>
+        <source>0 BWRGO</source>
+        <translation>0 BWRGO</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -1461,8 +1461,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Payer à :</translation>
     </message>
     <message>
-        <source>The NWO address to send the payment to</source>
-        <translation>L'adresse NWO à laquelle envoyer le paiement</translation>
+        <source>The BWRGO address to send the payment to</source>
+        <translation>L'adresse BWRGO à laquelle envoyer le paiement</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1507,8 +1507,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Signer le message</translation>
     </message>
     <message>
-        <source>The NWO address to sign the message with</source>
-        <translation>L'adresse NWO avec laquelle signer le message</translation>
+        <source>The BWRGO address to sign the message with</source>
+        <translation>L'adresse BWRGO avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1535,16 +1535,16 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this NWO address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse NWO</translation>
+        <source>Sign the message to prove you own this BWRGO address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse BWRGO</translation>
     </message>
     <message>
-        <source>The NWO address the message was signed with</source>
-        <translation>L'adresse NWO avec laquelle le message a été signé</translation>
+        <source>The BWRGO address the message was signed with</source>
+        <translation>L'adresse BWRGO avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified NWO address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse NWO renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified BWRGO address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse BWRGO renseignée</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>

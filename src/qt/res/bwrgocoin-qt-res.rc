@@ -19,14 +19,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "NWO"
-            VALUE "FileDescription",    "NWO Wallet"
+            VALUE "CompanyName",        "BWRGO"
+            VALUE "FileDescription",    "BWRGO Wallet"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "bwrgocoin-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "bwrgocoin-qt.exe"
-            VALUE "ProductName",        "NWO Wallet"
+            VALUE "ProductName",        "BWRGO Wallet"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

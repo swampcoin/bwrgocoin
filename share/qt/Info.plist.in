@@ -29,10 +29,10 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>NWO-Qt</string>
+  <string>BWRGO-Qt</string>
 
   <key>CFBundleIdentifier</key>
-  <string>io.bwrgocoin.NWO-Qt</string>
+  <string>io.bwrgocoin.BWRGO-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -54,7 +54,7 @@
       <key>UTTypeIdentifier</key>
       <string>io.bwrgocoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>NWO payment request</string>
+      <string>BWRGO payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

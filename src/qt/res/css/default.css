@@ -1,4 +1,4 @@
-/**************************************NWO**********************************************/
+/**************************************BWRGO**********************************************/
 /****************************************************************************************/
                     /*************** GLOBAL STYLE*****************/
 /****************************************************************************************/
@@ -698,7 +698,7 @@
         
 
      
-         QWidget .QPushButton#blabel_NWO {
+         QWidget .QPushButton#blabel_BWRGO {
             background-color: transparent;
             border:0;
             border-radius:0px;
@@ -733,7 +733,7 @@
      }
 
 
-     QWidget .QFrame#frame_blue .QLabel#label_NWO2 { /*NWO */
+     QWidget .QFrame#frame_blue .QLabel#label_BWRGO2 { /*BWRGO */
         background-color:transparent;
         color:rgb(255, 255, 255);
         font-size:15px;
@@ -751,7 +751,7 @@
         font-size:30px;
      }
 
-     QWidget .QFrame#frame_blue .QLabel#label_NWO3 { /*NWO */
+     QWidget .QFrame#frame_blue .QLabel#label_BWRGO3 { /*BWRGO */
         background-color:transparent;
         color:rgb(255, 255, 255);
         font-size:15px;
@@ -771,7 +771,7 @@
      }
 
 
-     QWidget .QFrame#frame_blue .QLabel#label_NWO4 { /*NWO */
+     QWidget .QFrame#frame_blue .QLabel#label_BWRGO4 { /*BWRGO */
         background-color:transparent;
         color:rgb(255, 255, 255);
         font-size:15px;
@@ -2150,7 +2150,7 @@
     border:0;
     }
 
-    /* About NWO Dialog */
+    /* About BWRGO Dialog */
     QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Bulwark Contents */
     margin-left:10px;
     }

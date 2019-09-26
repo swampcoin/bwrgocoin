@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=NWO
-Comment=NWO P2P Cryptocurrency
+Name=BWRGO
+Comment=BWRGO P2P Cryptocurrency
 Exec=bwrgocoin-qt %u
 Terminal=false
 Type=Application

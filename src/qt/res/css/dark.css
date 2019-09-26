@@ -735,7 +735,7 @@
             font-size:55px;
          }
 
-    QWidget .QPushButton#blabel_NWO {
+    QWidget .QPushButton#blabel_BWRGO {
             background-color: transparent;
             border:0;
             border-radius:0px;
@@ -769,7 +769,7 @@
      }
 
 
-     QWidget .QFrame#frame_blue .QLabel#label_NWO2 { /*bwrgocoin */
+     QWidget .QFrame#frame_blue .QLabel#label_BWRGO2 { /*bwrgocoin */
         background-color:transparent;
         color:#EBAB7B;
         font-size:15px;
@@ -787,7 +787,7 @@
         font-size:30px;
      }
 
-     QWidget .QFrame#frame_blue .QLabel#label_NWO3 { /*bwrgocoin */
+     QWidget .QFrame#frame_blue .QLabel#label_BWRGO3 { /*bwrgocoin */
         background-color:transparent;
         color:#EBAB7B;
         font-size:15px;
@@ -807,7 +807,7 @@
      }
 
 
-     QWidget .QFrame#frame_blue .QLabel#label_NWO4 { /*bwrgocoin */
+     QWidget .QFrame#frame_blue .QLabel#label_BWRGO4 { /*bwrgocoin */
         background-color:transparent;
         color:#EBAB7B;
         font-size:15px;

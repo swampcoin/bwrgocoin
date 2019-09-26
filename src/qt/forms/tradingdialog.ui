@@ -181,7 +181,7 @@
       <string>Asks</string>
      </property>
     </widget>
-    <widget class="QLabel" name="NWOSupply">
+    <widget class="QLabel" name="BWRGOSupply">
      <property name="geometry">
       <rect>
        <x>540</x>
@@ -432,7 +432,7 @@
     <attribute name="title">
      <string>Buy</string>
     </attribute>
-    <widget class="QPushButton" name="BuyNWO">
+    <widget class="QPushButton" name="BuyBWRGO">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -442,7 +442,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Buy NWO</string>
+      <string>Buy BWRGO</string>
      </property>
      <property name="icon">
       <iconset resource="../bwrgocoin.qrc">
@@ -512,7 +512,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>NWO</string>
+      <string>BWRGO</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
@@ -1704,10 +1704,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>NWO</string>
+      <string>BWRGO</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="UnitsInputNWO">
+    <widget class="QLineEdit" name="UnitsInputBWRGO">
      <property name="geometry">
       <rect>
        <x>310</x>
@@ -1741,7 +1741,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QPushButton" name="SellNWOBTN">
+    <widget class="QPushButton" name="SellBWRGOBTN">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -1751,7 +1751,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Sell NWO</string>
+      <string>Sell BWRGO</string>
      </property>
      <property name="icon">
       <iconset resource="../bwrgocoin">
@@ -1777,12 +1777,12 @@
          </font>
         </property>
         <property name="text">
-         <string>NWO Available:</string>
+         <string>BWRGO Available:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="NWOAvailableLabel">
+       <widget class="QLabel" name="BWRGOAvailableLabel">
         <property name="palette">
          <palette>
           <active>
@@ -2213,7 +2213,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="labelNWO">
+       <widget class="QLabel" name="labelBWRGO">
         <property name="font">
          <font>
           <weight>75</weight>
@@ -2221,7 +2221,7 @@
          </font>
         </property>
         <property name="text">
-         <string>NWO</string>
+         <string>BWRGO</string>
         </property>
        </widget>
       </item>
@@ -2733,7 +2733,7 @@
       <string>TextLabel</string>
      </property>
     </widget>
-    <widget class="QLabel" name="NWOBalanceLabel">
+    <widget class="QLabel" name="BWRGOBalanceLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2762,7 +2762,7 @@
       </font>
      </property>
      <property name="text">
-      <string>NWO Balance:</string>
+      <string>BWRGO Balance:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_12">
@@ -2784,7 +2784,7 @@
       <string>BTC Balance:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="NWOAvailableLabel_2">
+    <widget class="QLabel" name="BWRGOAvailableLabel_2">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2813,7 +2813,7 @@
       </font>
      </property>
      <property name="text">
-      <string>NWO Available:</string>
+      <string>BWRGO Available:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_14">
@@ -2832,10 +2832,10 @@
       </font>
      </property>
      <property name="text">
-      <string>NWO Pending:</string>
+      <string>BWRGO Pending:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="NWOPendingLabel">
+    <widget class="QLabel" name="BWRGOPendingLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2928,7 +2928,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Bittrex NWO Deposit Address:</string>
+      <string>Bittrex BWRGO Deposit Address:</string>
      </property>
     </widget>
     <widget class="QPushButton" name="GenDepositBTN">
@@ -2941,7 +2941,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Generate NWO Deposit Address</string>
+      <string>Generate BWRGO Deposit Address</string>
      </property>
      <property name="icon">
       <iconset resource="../bwrgocoin.qrc">

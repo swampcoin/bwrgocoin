@@ -10,7 +10,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between bwrgocoin-cli and bwrgocoind)
- * of a given instance of the NWO system.
+ * of a given instance of the BWRGO system.
  */
 class CBaseChainParams
 {

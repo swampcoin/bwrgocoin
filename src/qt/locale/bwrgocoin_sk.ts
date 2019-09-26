@@ -62,12 +62,12 @@
         <translation>Prijímacia adresa</translation>
     </message>
     <message>
-        <source>These are your NWO addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Toto sú vaše NWO adresy na odosielanie platieb. Pred odoslaním vždy skontrolujte výšku a adresu prijemcu.</translation>
+        <source>These are your BWRGO addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Toto sú vaše BWRGO adresy na odosielanie platieb. Pred odoslaním vždy skontrolujte výšku a adresu prijemcu.</translation>
     </message>
     <message>
-        <source>These are your NWO addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Toto sú vaše NWO adresy na prijímanie platieb. Pre každú transakciu sa odporúča použiť novú prijímaciu adresu.</translation>
+        <source>These are your BWRGO addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Toto sú vaše BWRGO adresy na prijímanie platieb. Pre každú transakciu sa odporúča použiť novú prijímaciu adresu.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Potvrďte šifrovanie peňaženky</translation>
     </message>
     <message>
-        <source>NWO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your NWOs from being stolen by malware infecting your computer.</source>
-        <translation>NWO sa teraz ukončí, aby dokončil proces šifrovania. Nezabudnite, že šifrovanie peňaženky nemôže úplne ochrániť vaše NWO pred odcudzením škodlivým softvérom, ktorý infikuje váš počítač.</translation>
+        <source>BWRGO will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BWRGOs from being stolen by malware infecting your computer.</source>
+        <translation>BWRGO sa teraz ukončí, aby dokončil proces šifrovania. Nezabudnite, že šifrovanie peňaženky nemôže úplne ochrániť vaše BWRGO pred odcudzením škodlivým softvérom, ktorý infikuje váš počítač.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Naozaj chcete zašifrovať svoju peňaženku?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NWO&lt;/b&gt;!</source>
-        <translation>Upozornenie: Ak zašifrujete svoju peňaženku a stratíte svoju prístupovú frázu, &lt;b&gt; PRÍDETE O VŠETKY NWO &lt;/ b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BWRGO&lt;/b&gt;!</source>
+        <translation>Upozornenie: Ak zašifrujete svoju peňaženku a stratíte svoju prístupovú frázu, &lt;b&gt; PRÍDETE O VŠETKY BWRGO &lt;/ b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -239,16 +239,16 @@
         <translation>BIP 38 Šifrovanie</translation>
     </message>
     <message>
-        <source>Enter a NWO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Zadajte adresu NWO, ktorú chcete zašifrovať pomocou BIP 38. Zadajte prístupovú frázu do stredného poľa. Stlačte šifrovanie na výpočet šifrovaného privátneho kľúča.</translation>
+        <source>Enter a BWRGO Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Zadajte adresu BWRGO, ktorú chcete zašifrovať pomocou BIP 38. Zadajte prístupovú frázu do stredného poľa. Stlačte šifrovanie na výpočet šifrovaného privátneho kľúča.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresa:</translation>
     </message>
     <message>
-        <source>The NWO address to sign the message with</source>
-        <translation>Adresa NWO, ktorou chcete správu podpísať</translation>
+        <source>The BWRGO address to sign the message with</source>
+        <translation>Adresa BWRGO, ktorou chcete správu podpísať</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Skopírujte aktuálny podpis do schránky</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this NWO address</source>
-        <translation>Podpíšte správu, aby ste preukázali, že ste vlastníkom tejto NWO adresy</translation>
+        <source>Sign the message to prove you own this BWRGO address</source>
+        <translation>Podpíšte správu, aby ste preukázali, že ste vlastníkom tejto BWRGO adresy</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Zadajte súkromný kľúč zašifrovaný BIP 38. Zadajte prístupovú frázu do stredného poľa. Kliknite na Dešifrovať kľúč, ak chcete vypočítať privátny kľúč. Po dešifrovaní kľúča pridáte do peňaženky tento súkromný kľúč kliknutím na položku 'Importovať adresu'.</translation>
     </message>
     <message>
-        <source>The NWO address the message was signed with</source>
-        <translation>NWO adresa, ktorou bola správa podpísaná</translation>
+        <source>The BWRGO address the message was signed with</source>
+        <translation>BWRGO adresa, ktorou bola správa podpísaná</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified NWO address</source>
-        <translation>Skontrolujte správu, aby ste sa uistili, že bola podpísaná zadanou NWO adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified BWRGO address</source>
+        <translation>Skontrolujte správu, aby ste sa uistili, že bola podpísaná zadanou BWRGO adresou</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -598,12 +598,12 @@
         <translation>Panel nástrojov Záložky</translation>
     </message>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Core</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Core</translation>
     </message>
     <message>
-        <source>Send coins to a NWO address</source>
-        <translation>Odoslať mince na adresu NWO</translation>
+        <source>Send coins to a BWRGO address</source>
+        <translation>Odoslať mince na adresu BWRGO</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and bwrgocoin: URIs)</source>
@@ -618,24 +618,24 @@
         <translation>Prezrieť masternody</translation>
     </message>
     <message>
-        <source>&amp;About NWO Core</source>
-        <translation>O NWO Core</translation>
+        <source>&amp;About BWRGO Core</source>
+        <translation>O BWRGO Core</translation>
     </message>
     <message>
-        <source>Show information about NWO Core</source>
-        <translation>Zobraziť informácie o NWO Core</translation>
+        <source>Show information about BWRGO Core</source>
+        <translation>Zobraziť informácie o BWRGO Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for NWO</source>
-        <translation>Zmeňte možnosti konfigurácie pre NWO</translation>
+        <source>Modify configuration options for BWRGO</source>
+        <translation>Zmeňte možnosti konfigurácie pre BWRGO</translation>
     </message>
     <message>
-        <source>Sign messages with your NWO addresses to prove you own them</source>
-        <translation>Podpíšte správy pomocou adresy NWO, aby ste preukázali, že ich vlastníte</translation>
+        <source>Sign messages with your BWRGO addresses to prove you own them</source>
+        <translation>Podpíšte správy pomocou adresy BWRGO, aby ste preukázali, že ich vlastníte</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified NWO addresses</source>
-        <translation>Overte správy, aby sa zabezpečilo, že boli podpísané zadanými NWO adresami</translation>
+        <source>Verify messages to ensure they were signed with specified BWRGO addresses</source>
+        <translation>Overte správy, aby sa zabezpečilo, že boli podpísané zadanými BWRGO adresami</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -666,8 +666,8 @@
         <translation>Otvoriť konfiguračný súbor masternodu</translation>
     </message>
     <message>
-        <source>Open a NWO: URI or payment request</source>
-        <translation>Otvorte NWO: URI alebo žiadosť o platbu</translation>
+        <source>Open a BWRGO: URI or payment request</source>
+        <translation>Otvorte BWRGO: URI alebo žiadosť o platbu</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -678,12 +678,12 @@
         <translation>Okno blockchain prehliadača</translation>
     </message>
     <message>
-        <source>Show the NWO Core help message to get a list with possible NWO command-line options</source>
-        <translation>Zobraziť pomocnú správu programu NWO Core a získajte zoznam možností príkazového riadka NWO</translation>
+        <source>Show the BWRGO Core help message to get a list with possible BWRGO command-line options</source>
+        <translation>Zobraziť pomocnú správu programu BWRGO Core a získajte zoznam možností príkazového riadka BWRGO</translation>
     </message>
     <message>
-        <source>NWO Core client</source>
-        <translation>NWO Core klient</translation>
+        <source>BWRGO Core client</source>
+        <translation>BWRGO Core klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -908,15 +908,15 @@ MultiSend: %1</translation>
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Core</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Core</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Core</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1093,8 +1093,8 @@ MultiSend: %1</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The NWO address to sign the message with</source>
-        <translation>Adresa NWO, ktorou chcete správu podpísať</translation>
+        <source>The BWRGO address to sign the message with</source>
+        <translation>Adresa BWRGO, ktorou chcete správu podpísať</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1117,16 +1117,16 @@ MultiSend: %1</translation>
         <translation>Skopírujte aktuálny podpis do schránky</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this NWO address</source>
-        <translation>Podpíšte správu, aby ste preukázali, že ste vlastníkom tejto NWO adresy</translation>
+        <source>Sign the message to prove you own this BWRGO address</source>
+        <translation>Podpíšte správu, aby ste preukázali, že ste vlastníkom tejto BWRGO adresy</translation>
     </message>
     <message>
-        <source>The NWO address the message was signed with</source>
-        <translation>NWO adresa, ktorou bola správa podpísaná</translation>
+        <source>The BWRGO address the message was signed with</source>
+        <translation>BWRGO adresa, ktorou bola správa podpísaná</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified NWO address</source>
-        <translation>Skontrolujte správu, aby ste sa uistili, že bola podpísaná zadanou NWO adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified BWRGO address</source>
+        <translation>Skontrolujte správu, aby ste sa uistili, že bola podpísaná zadanou BWRGO adresou</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1164,8 +1164,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>NWO Core</source>
-        <translation>NWO Core</translation>
+        <source>BWRGO Core</source>
+        <translation>BWRGO Core</translation>
     </message>
     </context>
 <context>

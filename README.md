@@ -1,9 +1,9 @@
 
 
-New World Order (NWO) Currency
+New World Order (BWRGO) Currency
 =====================================
 
-NWO is a digital currency building up a global community to be united against the inflationary nature of all world Fiat currency. As governments print an infinite amount of dollars, euros etc., NWO remains finite and predicable.  NWO is superior to fiat and traditional banks by:
+BWRGO is a digital currency building up a global community to be united against the inflationary nature of all world Fiat currency. As governments print an infinite amount of dollars, euros etc., BWRGO remains finite and predicable.  BWRGO is superior to fiat and traditional banks by:
 - Tiered masternodes to support consensus by the people (1k, 3k, and 5k levels)
 - Staking to earn exponentionally more retun on your money than traditional banks
 - Instant send and recieve funds globally without boarders or middle men
@@ -12,24 +12,24 @@ NWO is a digital currency building up a global community to be united against th
 - Optional private sent features 
 - Proof of Stake to eliminate the costly need for GPUs or ASICS to power the chain
 
-If you like the idea of owning and controlling your own money, feel free to contact us and work with us. For Discussions we use Discord: [Click here to follow invite Link](https://discord.gg/R4FAu6b).  Seek out the NWO channel
+If you like the idea of owning and controlling your own money, feel free to contact us and work with us. For Discussions we use Discord: [Click here to follow invite Link](https://discord.gg/R4FAu6b).  Seek out the BWRGO channel
 
 ### Coin Specs
 
 <table>
-<tr><td>Name & ticker</td><td>New World Order (NWO)</td></tr>
+<tr><td>Name & ticker</td><td>New World Order (BWRGO)</td></tr>
 <tr><td>Consensus algorithm</td><td>PoW/POS</td></tr>
 <tr><td>POW phase duration</td><td>100 blocks</td></tr>
-<tr><td>PoW block reward</td><td>Dynamic from 4 to 511 NWO</td></tr>
+<tr><td>PoW block reward</td><td>Dynamic from 4 to 511 BWRGO</td></tr>
 <tr><td>Instamine protection</td><td>First 720 blocks</td></tr>
 <tr><td>Hashing algorithm</td><td>HEX</td></tr>
-<tr><td>Estimated NWO supply during POW</td><td>~5,301,000</td></tr>
+<tr><td>Estimated BWRGO supply during POW</td><td>~5,301,000</td></tr>
 <tr><td>POS starting block</td><td>101</td></tr>
 <tr><td>POS phase duration</td><td>56 years</td></tr>
 <tr><td>POS block reward distribution</td><td>SeeSaw</td></tr>
-<tr><td>Estimated NWO supply after 6 years of POS</td><td>18,352,239</td></tr>
-<tr><td>Maximum NWO supply</td><td>45,000,000</td></tr>
-<tr><td>Premine</td><td>5,300,000 NWO (primarily for swapping coins)</td></tr>
+<tr><td>Estimated BWRGO supply after 6 years of POS</td><td>18,352,239</td></tr>
+<tr><td>Maximum BWRGO supply</td><td>45,000,000</td></tr>
+<tr><td>Premine</td><td>5,300,000 BWRGO (primarily for swapping coins)</td></tr>
 <tr><td>Blocksize</td><td>1 MB</td></tr>
 <tr><td>Blocktime average</td><td>1 min (DGW3)</td></tr>
 <tr><td>Number of transaction confirmations</td><td>6</td></tr>
