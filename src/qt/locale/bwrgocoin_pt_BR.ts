@@ -3536,8 +3536,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
         <translation>Você deve especificar uma masternodeprivkey na configuração. Favor verificar o manual para obter ajuda.</translation>
     </message>
     <message>
-        <source>(41110 could be used only on mainnet)</source>
-        <translation>(41110 could be used only on mainnet)</translation>
+        <source>(4444 could be used only on mainnet)</source>
+        <translation>(4444 could be used only on mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -3548,8 +3548,8 @@ https://www.transifex.com/bwrgocoin-project/bwrgocoin-project-translations</tran
         <translation>(padrão: 1)</translation>
     </message>
     <message>
-        <source>(must be 41110 for mainnet)</source>
-        <translation>(deve ser 41110 para mainnet)</translation>
+        <source>(must be 4444 for mainnet)</source>
+        <translation>(deve ser 4444 para mainnet)</translation>
     </message>
     <message>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
