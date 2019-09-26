@@ -1,6 +1,6 @@
 
 
-New World Order (BWRGO) Currency
+BWRGO Currency
 =====================================
 
 BWRGO is a digital currency building up a global community to be united against the inflationary nature of all world Fiat currency. As governments print an infinite amount of dollars, euros etc., BWRGO remains finite and predicable.  BWRGO is superior to fiat and traditional banks by:
@@ -17,7 +17,7 @@ If you like the idea of owning and controlling your own money, feel free to cont
 ### Coin Specs
 
 <table>
-<tr><td>Name & ticker</td><td>New World Order (BWRGO)</td></tr>
+<tr><td>Name & ticker</td><td>BWRGO</td></tr>
 <tr><td>Consensus algorithm</td><td>PoW/POS</td></tr>
 <tr><td>POW phase duration</td><td>100 blocks</td></tr>
 <tr><td>PoW block reward</td><td>Dynamic from 4 to 511 BWRGO</td></tr>
@@ -33,7 +33,7 @@ If you like the idea of owning and controlling your own money, feel free to cont
 <tr><td>Blocksize</td><td>1 MB</td></tr>
 <tr><td>Blocktime average</td><td>1 min (DGW3)</td></tr>
 <tr><td>Number of transaction confirmations</td><td>6</td></tr>
-<tr><td>Maturity</td><td>60 confirmations</td></tr>
+<tr><td>Maturity</td><td>20 confirmations</td></tr>
 </table>
 
 ### Block reward for PoS (assuming current PoW rate)
