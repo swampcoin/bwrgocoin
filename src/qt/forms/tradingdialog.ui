@@ -197,7 +197,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="nwodemand">
+    <widget class="QLabel" name="bwrgocoindemand">
      <property name="geometry">
       <rect>
        <x>160</x>
@@ -445,7 +445,7 @@
       <string>Buy NWO</string>
      </property>
      <property name="icon">
-      <iconset resource="../nwo.qrc">
+      <iconset resource="../bwrgocoin.qrc">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -1754,7 +1754,7 @@
       <string>Sell NWO</string>
      </property>
      <property name="icon">
-      <iconset resource="../nwo">
+      <iconset resource="../bwrgocoin">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -2944,7 +2944,7 @@
       <string>Generate NWO Deposit Address</string>
      </property>
      <property name="icon">
-      <iconset resource="../nwo.qrc">
+      <iconset resource="../bwrgocoin.qrc">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -3206,7 +3206,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="../nwo.qrc">:/icons/transaction_1</pixmap>
+       <pixmap resource="../bwrgocoin.qrc">:/icons/transaction_1</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -3253,7 +3253,7 @@
       <string>Update API Keys</string>
      </property>
      <property name="icon">
-      <iconset resource="../nwo.qrc">
+      <iconset resource="../bwrgocoin.qrc">
        <normaloff>:/icons/bitcoin</normaloff>:/icons/bitcoin</iconset>
      </property>
     </widget>
@@ -3408,7 +3408,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="../nwo.qrc"/>
+  <include location="../bwrgocoin.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -51,7 +51,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 30
 
 #define QAPP_ORG_NAME "NWO"
-#define QAPP_ORG_DOMAIN "nwonetwork.org"
+#define QAPP_ORG_DOMAIN "bwrgocoinnetwork.org"
 #define QAPP_APP_NAME_DEFAULT "NWO-Qt"
 #define QAPP_APP_NAME_TESTNET "NWO-Qt-testnet"
 

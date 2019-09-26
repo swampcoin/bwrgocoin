@@ -32,7 +32,7 @@ index a130590..4af99a1 100644
          tmp = __atomic_exchange_n(&v_, tmp, atomics::detail::convert_memory_order_to_gcc(order));
          value_type res;
 @@ -994,7 +997,9 @@ class base_atomic<T, void, 16, Sign>
-         memory_order snwoess_order,
+         memory_order sbwrgocoiness_order,
          memory_order failure_order) volatile BOOST_NOEXCEPT
      {
 -        storage_type expected_s = 0, desired_s = 0;
@@ -41,9 +41,9 @@ index a130590..4af99a1 100644
 +        memset(&desired_s, 0, sizeof(desired_s));
          memcpy(&expected_s, &expected, sizeof(value_type));
          memcpy(&desired_s, &desired, sizeof(value_type));
-         const bool snwoess = __atomic_compare_exchange_n(&v_, &expected_s, desired_s, false,
+         const bool sbwrgocoiness = __atomic_compare_exchange_n(&v_, &expected_s, desired_s, false,
 @@ -1010,7 +1015,9 @@ class base_atomic<T, void, 16, Sign>
-         memory_order snwoess_order,
+         memory_order sbwrgocoiness_order,
          memory_order failure_order) volatile BOOST_NOEXCEPT
      {
 -        storage_type expected_s = 0, desired_s = 0;
@@ -52,4 +52,4 @@ index a130590..4af99a1 100644
 +        memset(&desired_s, 0, sizeof(desired_s));
          memcpy(&expected_s, &expected, sizeof(value_type));
          memcpy(&desired_s, &desired, sizeof(value_type));
-         const bool snwoess = __atomic_compare_exchange_n(&v_, &expected_s, desired_s, true,
+         const bool sbwrgocoiness = __atomic_compare_exchange_n(&v_, &expected_s, desired_s, true,

@@ -46,7 +46,7 @@ for i in `find ${TEMPDIR} -name "*.sign"`; do
   dd if=$i of=${i}.tmp bs=1 seek=${OFFSET} count=${SIZE} 2>/dev/null
   mv ${i}.tmp ${TARGET_FILE}
   rm ${i}
-  echo "Snwoess."
+  echo "Sbwrgocoiness."
 done
 mv ${TEMPDIR}/${ROOTDIR} ${OUTDIR}
 rm -rf ${TEMPDIR}

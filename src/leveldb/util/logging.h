@@ -32,7 +32,7 @@ extern std::string NumberToString(uint64_t num);
 // Escapes any non-printable characters found in "value".
 extern std::string EscapeString(const Slice& value);
 
-// Parse a human-readable number from "*in" into *value.  On snwoess,
+// Parse a human-readable number from "*in" into *value.  On sbwrgocoiness,
 // advances "*in" past the consumed number and sets "*val" to the
 // numeric value.  Otherwise, returns false and leaves *in in an
 // unspecified state.

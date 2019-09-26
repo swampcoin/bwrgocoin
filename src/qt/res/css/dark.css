@@ -769,7 +769,7 @@
      }
 
 
-     QWidget .QFrame#frame_blue .QLabel#label_NWO2 { /*nwo */
+     QWidget .QFrame#frame_blue .QLabel#label_NWO2 { /*bwrgocoin */
         background-color:transparent;
         color:#EBAB7B;
         font-size:15px;
@@ -787,7 +787,7 @@
         font-size:30px;
      }
 
-     QWidget .QFrame#frame_blue .QLabel#label_NWO3 { /*nwo */
+     QWidget .QFrame#frame_blue .QLabel#label_NWO3 { /*bwrgocoin */
         background-color:transparent;
         color:#EBAB7B;
         font-size:15px;
@@ -807,7 +807,7 @@
      }
 
 
-     QWidget .QFrame#frame_blue .QLabel#label_NWO4 { /*nwo */
+     QWidget .QFrame#frame_blue .QLabel#label_NWO4 { /*bwrgocoin */
         background-color:transparent;
         color:#EBAB7B;
         font-size:15px;
@@ -818,7 +818,7 @@
 
     QWidget .QFrame#frame_blue_3 { /* logo */
 
-        background-image: url(':/images_dark/nwo_logo_horizontal');
+        background-image: url(':/images_dark/bwrgocoin_logo_horizontal');
         background-repeat:none;
         background-position: top-right;
         border-style: none;
@@ -2252,7 +2252,7 @@
     border:0;
     }
 
-    /* About nwo Dialog */
+    /* About bwrgocoin Dialog */
     QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Bulwark Contents */
     margin-left:10px;
     }

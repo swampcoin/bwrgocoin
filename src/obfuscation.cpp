@@ -315,16 +315,16 @@ void CObfuscationPool::ProcessMessageObfuscation(CNode* pfrom, std::string& strC
         vector<CTxIn> sigs;
         vRecv >> sigs;
 
-        bool snwoess = false;
+        bool sbwrgocoiness = false;
         int count = 0;
 
         BOOST_FOREACH (const CTxIn item, sigs) {
-            if (AddScriptSig(item)) snwoess = true;
+            if (AddScriptSig(item)) sbwrgocoiness = true;
             LogPrint("obfuscation", " -- sigs count %d %d\n", (int)sigs.size(), count);
             count++;
         }
 
-        if (snwoess) {
+        if (sbwrgocoiness) {
             obfuScationPool.Check();
             RelayStatus(obfuScationPool.sessionID, obfuScationPool.GetState(), obfuScationPool.GetEntriesCount(), MASTERNODE_RESET);
         }
@@ -381,7 +381,7 @@ int randomizeList(int i) { return std::rand() % i; }
 
 void CObfuscationPool::Reset()
 {
-    cachedLastSnwoess = 0;
+    cachedLastSbwrgocoiness = 0;
     lastNewBlock = 0;
     txCollateral = CMutableTransaction();
     vecMasternodesUsed.clear();
@@ -428,7 +428,7 @@ bool CObfuscationPool::SetCollateralAddress(std::string strAddress)
 }
 
 //
-// Unlock coins after Obfuscation fails or snwoeeds
+// Unlock coins after Obfuscation fails or sbwrgocoineeds
 //
 void CObfuscationPool::UnlockCoins()
 {
@@ -452,7 +452,7 @@ std::string CObfuscationPool::GetStatus()
     showingObfuScationMessage += 10;
     std::string suffix = "";
 
-    if (chainActive.Tip()->nHeight - cachedLastSnwoess < minBlockSpacing || !masternodeSync.IsBlockchainSynced()) {
+    if (chainActive.Tip()->nHeight - cachedLastSbwrgocoiness < minBlockSpacing || !masternodeSync.IsBlockchainSynced()) {
         return strAutoDenomResult;
     }
     switch (state) {
@@ -817,7 +817,7 @@ void CObfuscationPool::CheckTimeout()
             Check();
             break;
         case POOL_STATUS_SNWOESS:
-            LogPrint("obfuscation", "CObfuscationPool::CheckTimeout() -- Pool snwoess -- Running Check()\n");
+            LogPrint("obfuscation", "CObfuscationPool::CheckTimeout() -- Pool sbwrgocoiness -- Running Check()\n");
             Check();
             break;
         }
@@ -1357,14 +1357,14 @@ void CObfuscationPool::CompletedTransaction(bool error, int errorID)
         UnlockCoins();
         SetNull();
     } else {
-        LogPrintf("CompletedTransaction -- snwoess \n");
+        LogPrintf("CompletedTransaction -- sbwrgocoiness \n");
         UpdateState(POOL_STATUS_SNWOESS);
 
         UnlockCoins();
         SetNull();
 
         // To avoid race conditions, we'll only let DS run once per block
-        cachedLastSnwoess = chainActive.Tip()->nHeight;
+        cachedLastSbwrgocoiness = chainActive.Tip()->nHeight;
     }
     lastMessage = GetMessageByID(errorID);
 }
@@ -1405,7 +1405,7 @@ bool CObfuscationPool::DoAutomaticDenominating(bool fDryRun)
         return false;
     }
 
-    if (chainActive.Tip()->nHeight - cachedLastSnwoess < minBlockSpacing) {
+    if (chainActive.Tip()->nHeight - cachedLastSbwrgocoiness < minBlockSpacing) {
         LogPrintf("CObfuscationPool::DoAutomaticDenominating - Last successful Obfuscation action was too recent\n");
         strAutoDenomResult = _("Last successful Obfuscation action was too recent.");
         return false;
@@ -1690,15 +1690,15 @@ bool CObfuscationPool::SendRandomPaymentToSelf()
     vecSend.push_back(make_pair(scriptChange, nPayment));
 
     CCoinControl* coinControl = NULL;
-    bool snwoess = pwalletMain->CreateTransaction(vecSend, wtx, reservekey, nFeeRet, strFail, coinControl, ONLY_DENOMINATED);
-    if (!snwoess) {
+    bool sbwrgocoiness = pwalletMain->CreateTransaction(vecSend, wtx, reservekey, nFeeRet, strFail, coinControl, ONLY_DENOMINATED);
+    if (!sbwrgocoiness) {
         LogPrintf("SendRandomPaymentToSelf: Error - %s\n", strFail);
         return false;
     }
 
     pwalletMain->CommitTransaction(wtx, reservekey);
 
-    LogPrintf("SendRandomPaymentToSelf Snwoess: tx %s\n", wtx.GetHash().GetHex());
+    LogPrintf("SendRandomPaymentToSelf Sbwrgocoiness: tx %s\n", wtx.GetHash().GetHex());
 
     return true;
 }
@@ -1726,16 +1726,16 @@ bool CObfuscationPool::MakeCollateralAmounts()
     vecSend.push_back(make_pair(scriptCollateral, OBFUSCATION_COLLATERAL * 4));
 
     // try to use non-denominated and not mn-like funds
-    bool snwoess = pwalletMain->CreateTransaction(vecSend, wtx, reservekeyChange,
+    bool sbwrgocoiness = pwalletMain->CreateTransaction(vecSend, wtx, reservekeyChange,
         nFeeRet, strFail, &coinControl, ONLY_NONDENOMINATED_NOTDEPOSITIFMN);
-    if (!snwoess) {
+    if (!sbwrgocoiness) {
         // if we failed (most likeky not enough funds), try to use all coins instead -
         // MN-like funds should not be touched in any case and we can't mix denominated without collaterals anyway
         CCoinControl* coinControlNull = NULL;
         LogPrintf("MakeCollateralAmounts: ONLY_NONDENOMINATED_NOTDEPOSITIFMN Error - %s\n", strFail);
-        snwoess = pwalletMain->CreateTransaction(vecSend, wtx, reservekeyChange,
+        sbwrgocoiness = pwalletMain->CreateTransaction(vecSend, wtx, reservekeyChange,
             nFeeRet, strFail, coinControlNull, ONLY_NOTDEPOSITIFMN);
-        if (!snwoess) {
+        if (!sbwrgocoiness) {
             LogPrintf("MakeCollateralAmounts: ONLY_NOTDEPOSITIFMN Error - %s\n", strFail);
             reservekeyCollateral.ReturnKey();
             return false;
@@ -1746,13 +1746,13 @@ bool CObfuscationPool::MakeCollateralAmounts()
 
     LogPrintf("MakeCollateralAmounts: tx %s\n", wtx.GetHash().GetHex());
 
-    // use the same cachedLastSnwoess as for DS mixinx to prevent race
+    // use the same cachedLastSbwrgocoiness as for DS mixinx to prevent race
     if (!pwalletMain->CommitTransaction(wtx, reservekeyChange)) {
         LogPrintf("MakeCollateralAmounts: CommitTransaction failed!\n");
         return false;
     }
 
-    cachedLastSnwoess = chainActive.Tip()->nHeight;
+    cachedLastSbwrgocoiness = chainActive.Tip()->nHeight;
 
     return true;
 }
@@ -1813,9 +1813,9 @@ bool CObfuscationPool::CreateDenominated(CAmount nTotalValue)
     // if we have anything left over, it will be automatically send back as change - there is no need to send it manually
 
     CCoinControl* coinControl = NULL;
-    bool snwoess = pwalletMain->CreateTransaction(vecSend, wtx, reservekeyChange,
+    bool sbwrgocoiness = pwalletMain->CreateTransaction(vecSend, wtx, reservekeyChange,
         nFeeRet, strFail, coinControl, ONLY_NONDENOMINATED_NOTDEPOSITIFMN);
-    if (!snwoess) {
+    if (!sbwrgocoiness) {
         LogPrintf("CreateDenominated: Error - %s\n", strFail);
         // TODO: return reservekeyDenom here
         reservekeyCollateral.ReturnKey();
@@ -1825,9 +1825,9 @@ bool CObfuscationPool::CreateDenominated(CAmount nTotalValue)
     // TODO: keep reservekeyDenom here
     reservekeyCollateral.KeepKey();
 
-    // use the same cachedLastSnwoess as for DS mixinx to prevent race
+    // use the same cachedLastSbwrgocoiness as for DS mixinx to prevent race
     if (pwalletMain->CommitTransaction(wtx, reservekeyChange))
-        cachedLastSnwoess = chainActive.Tip()->nHeight;
+        cachedLastSbwrgocoiness = chainActive.Tip()->nHeight;
     else
         LogPrintf("CreateDenominated: CommitTransaction failed!\n");
 
@@ -2289,7 +2289,7 @@ void ThreadCheckObfuScationPool()
     if (fLiteMode) return; //disable all Obfuscation/Masternode related functionality
 
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("nwo-obfuscation");
+    RenameThread("bwrgocoin-obfuscation");
 
     unsigned int c = 0;
 

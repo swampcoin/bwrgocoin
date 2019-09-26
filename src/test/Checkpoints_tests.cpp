@@ -28,7 +28,7 @@ BOOST_AUTO_TEST_CASE(sanity)
     BOOST_CHECK(!Checkpoints::CheckBlock(259201, p623933));
     BOOST_CHECK(!Checkpoints::CheckBlock(623933, p259201));
 
-    // ... but any hash not at a checkpoint should snwoeed:
+    // ... but any hash not at a checkpoint should sbwrgocoineed:
     BOOST_CHECK(Checkpoints::CheckBlock(259201+1, p623933));
     BOOST_CHECK(Checkpoints::CheckBlock(623933+1, p259201));
 

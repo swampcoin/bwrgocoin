@@ -24,10 +24,10 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/nwo-project/gitian.sigs.git
-    git clone https://github.com/nwo-project/nwo-detached-sigs.git
+    git clone https://github.com/bwrgocoin-project/gitian.sigs.git
+    git clone https://github.com/bwrgocoin-project/bwrgocoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/nwo-project/nwo.git
+    git clone https://github.com/bwrgocoin-project/bwrgocoin.git
 
 ### NWO maintainers/release engineers, suggestion for writing release notes
 
@@ -50,7 +50,7 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./nwo
+    pushd ./bwrgocoin
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -84,7 +84,7 @@ Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, a
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../nwo/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../bwrgocoin/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -92,7 +92,7 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url nwo=/path/to/nwo,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url bwrgocoin=/path/to/bwrgocoin,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
@@ -100,47 +100,47 @@ The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 ### Build and sign NWO Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
-    ./bin/gbuild --memory 3000 --commit nwo=v${VERSION} ../nwo/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../nwo/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/nwo-*.tar.gz build/out/src/nwo-*.tar.gz ../
+    ./bin/gbuild --memory 3000 --commit bwrgocoin=v${VERSION} ../bwrgocoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../bwrgocoin/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/bwrgocoin-*.tar.gz build/out/src/bwrgocoin-*.tar.gz ../
 
-    ./bin/gbuild --memory 3000 --commit nwo=v${VERSION} ../nwo/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../nwo/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/nwo-*-win-unsigned.tar.gz inputs/nwo-win-unsigned.tar.gz
-    mv build/out/nwo-*.zip build/out/nwo-*.exe ../
+    ./bin/gbuild --memory 3000 --commit bwrgocoin=v${VERSION} ../bwrgocoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../bwrgocoin/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/bwrgocoin-*-win-unsigned.tar.gz inputs/bwrgocoin-win-unsigned.tar.gz
+    mv build/out/bwrgocoin-*.zip build/out/bwrgocoin-*.exe ../
 
-    ./bin/gbuild --memory 3000 --commit nwo=v${VERSION} ../nwo/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../nwo/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/nwo-*-osx-unsigned.tar.gz inputs/nwo-osx-unsigned.tar.gz
-    mv build/out/nwo-*.tar.gz build/out/nwo-*.dmg ../
+    ./bin/gbuild --memory 3000 --commit bwrgocoin=v${VERSION} ../bwrgocoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../bwrgocoin/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/bwrgocoin-*-osx-unsigned.tar.gz inputs/bwrgocoin-osx-unsigned.tar.gz
+    mv build/out/bwrgocoin-*.tar.gz build/out/bwrgocoin-*.dmg ../
 
-    ./bin/gbuild --memory 3000 --commit nwo=v${VERSION} ../nwo/contrib/gitian-descriptors/gitian-aarch64.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../nwo/contrib/gitian-descriptors/gitian-aarch64.yml
-    mv build/out/nwo-*.tar.gz build/out/src/nwo-*.tar.gz ../
+    ./bin/gbuild --memory 3000 --commit bwrgocoin=v${VERSION} ../bwrgocoin/contrib/gitian-descriptors/gitian-aarch64.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../bwrgocoin/contrib/gitian-descriptors/gitian-aarch64.yml
+    mv build/out/bwrgocoin-*.tar.gz build/out/src/bwrgocoin-*.tar.gz ../
     popd
 
 Build output expected:
 
-  1. source tarball (`nwo-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`nwo-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`nwo-${VERSION}-win[32|64]-setup-unsigned.exe`, `nwo-${VERSION}-win[32|64].zip`)
-  4. OS X unsigned installer and dist tarball (`nwo-${VERSION}-osx-unsigned.dmg`, `nwo-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`bwrgocoin-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`bwrgocoin-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`bwrgocoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `bwrgocoin-${VERSION}-win[32|64].zip`)
+  4. OS X unsigned installer and dist tarball (`bwrgocoin-${VERSION}-osx-unsigned.dmg`, `bwrgocoin-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import nwo/contrib/gitian-keys/*.pgp
+    gpg --import bwrgocoin/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../nwo/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../nwo/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../nwo/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-aarch64 ../nwo/contrib/gitian-descriptors/gitian-aarch64.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../bwrgocoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../bwrgocoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../bwrgocoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-aarch64 ../bwrgocoin/contrib/gitian-descriptors/gitian-aarch64.yml
     popd
 
 ### Next steps:
@@ -162,22 +162,22 @@ Codesigner only: Create Windows/OS X detached signatures:
 
 Codesigner only: Sign the osx binary:
 
-    transfer nwo-osx-unsigned.tar.gz to osx for signing
-    tar xf nwo-osx-unsigned.tar.gz
+    transfer bwrgocoin-osx-unsigned.tar.gz to osx for signing
+    tar xf bwrgocoin-osx-unsigned.tar.gz
     ./detached-sig-create.sh -s "Key ID"
     Enter the keychain password and authorize the signature
     Move signature-osx.tar.gz back to the gitian host
 
 Codesigner only: Sign the windows binaries:
 
-    tar xf nwo-win-unsigned.tar.gz
+    tar xf bwrgocoin-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
 
 Codesigner only: Commit the detached codesign payloads:
 
-    cd ~/nwo-detached-sigs
+    cd ~/bwrgocoin-detached-sigs
     checkout the appropriate branch for this release series
     rm -rf *
     tar xf signature-osx.tar.gz
@@ -190,25 +190,25 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [nwo-detached-sigs](https://github.com/PIVX-Project/nwo-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [bwrgocoin-detached-sigs](https://github.com/PIVX-Project/bwrgocoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../nwo/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../nwo/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../nwo/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/nwo-osx-signed.dmg ../nwo-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../bwrgocoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../bwrgocoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../bwrgocoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/bwrgocoin-osx-signed.dmg ../bwrgocoin-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../nwo/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../nwo/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../nwo/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/nwo-*win64-setup.exe ../nwo-${VERSION}-win64-setup.exe
-    mv build/out/nwo-*win32-setup.exe ../nwo-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../bwrgocoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../bwrgocoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../bwrgocoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/bwrgocoin-*win64-setup.exe ../bwrgocoin-${VERSION}-win64-setup.exe
+    mv build/out/bwrgocoin-*win32-setup.exe ../bwrgocoin-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -230,23 +230,23 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-nwo-${VERSION}-aarch64-linux-gnu.tar.gz
-nwo-${VERSION}-arm-linux-gnueabihf.tar.gz
-nwo-${VERSION}-i686-pc-linux-gnu.tar.gz
-nwo-${VERSION}-x86_64-linux-gnu.tar.gz
-nwo-${VERSION}-osx64.tar.gz
-nwo-${VERSION}-osx.dmg
-nwo-${VERSION}.tar.gz
-nwo-${VERSION}-win32-setup.exe
-nwo-${VERSION}-win32.zip
-nwo-${VERSION}-win64-setup.exe
-nwo-${VERSION}-win64.zip
+bwrgocoin-${VERSION}-aarch64-linux-gnu.tar.gz
+bwrgocoin-${VERSION}-arm-linux-gnueabihf.tar.gz
+bwrgocoin-${VERSION}-i686-pc-linux-gnu.tar.gz
+bwrgocoin-${VERSION}-x86_64-linux-gnu.tar.gz
+bwrgocoin-${VERSION}-osx64.tar.gz
+bwrgocoin-${VERSION}-osx.dmg
+bwrgocoin-${VERSION}.tar.gz
+bwrgocoin-${VERSION}-win32-setup.exe
+bwrgocoin-${VERSION}-win32.zip
+bwrgocoin-${VERSION}-win64-setup.exe
+bwrgocoin-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
 in debugging can run gitian to generate the files for themselves. To avoid
 end-user confusion about which file to pick, as well as save storage
-space *do not upload these to the nwonetwork.org server*.
+space *do not upload these to the bwrgocoinnetwork.org server*.
 
 - GPG-sign it, delete the unsigned file:
 ```
@@ -262,7 +262,7 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
   - bitcointalk announcement thread
 
-  - Optionally twitter, reddit /r/nwo, ... but this will usually sort out itself
+  - Optionally twitter, reddit /r/bwrgocoin, ... but this will usually sort out itself
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 

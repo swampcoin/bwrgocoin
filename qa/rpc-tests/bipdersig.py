@@ -73,7 +73,7 @@ class BIP66Test(BitcoinTestFramework):
         # Mine 1 old-version blocks
         try:
             self.nodes[1].setgenerate(True, 1)
-            raise AssertionError("Snwoeeded to mine a version=2 block after 950 version=3 blocks")
+            raise AssertionError("Sbwrgocoineeded to mine a version=2 block after 950 version=3 blocks")
         except JSONRPCException:
             pass
         self.sync_all()

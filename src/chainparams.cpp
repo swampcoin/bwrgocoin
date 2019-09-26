@@ -309,9 +309,9 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("nwonetwork.org", "seednode1.nwonetwork.org"));     // Primary DNS Seeder
-	    vSeeds.push_back(CDNSSeedData("nwonetwork.org", "seednode2.nwonetwork.org"));
-        vSeeds.push_back(CDNSSeedData("nwonetwork.org", "seednode3.nwonetwork.org"));
+        vSeeds.push_back(CDNSSeedData("bwrgocoinnetwork.org", "seednode1.bwrgocoinnetwork.org"));     // Primary DNS Seeder
+	    vSeeds.push_back(CDNSSeedData("bwrgocoinnetwork.org", "seednode2.bwrgocoinnetwork.org"));
+        vSeeds.push_back(CDNSSeedData("bwrgocoinnetwork.org", "seednode3.bwrgocoinnetwork.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 128); // Testnet NWO addresses start with 't'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 11);

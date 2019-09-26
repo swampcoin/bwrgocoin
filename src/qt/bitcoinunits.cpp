@@ -42,11 +42,11 @@ QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
     case NWO:
-        return QString("nwo");
+        return QString("bwrgocoin");
     case mNWO:
-        return QString("mnwo");
+        return QString("mbwrgocoin");
     case uNWO:
-        return QString::fromUtf8("unwo");
+        return QString::fromUtf8("ubwrgocoin");
     default:
         return QString("???");
     }

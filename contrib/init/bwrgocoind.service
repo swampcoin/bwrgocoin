@@ -1,0 +1,26 @@
+[Unit]
+Description=NWO's distributed currency daemon
+After=network.target
+
+[Service]
+User=bwrgocoin
+Group=bwrgocoin
+
+Type=forking
+PIDFile=/var/lib/bwrgocoind/bwrgocoind.pid
+
+ExecStart=/usr/bin/bwrgocoind -daemon -pid=/var/lib/bwrgocoind/bwrgocoind.pid \
+          -conf=/etc/bwrgocoin/bwrgocoin.conf -datadir=/var/lib/bwrgocoind
+
+ExecStop=-/usr/bin/bwrgocoin-cli -conf=/etc/bwrgocoin/bwrgocoin.conf \
+         -datadir=/var/lib/bwrgocoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

@@ -184,8 +184,8 @@ bool Intro::pickDataDirectory()
         settings.setValue("strDataDir", dataDir);
     }
     /* Only override -datadir if different from the default, to make it possible to
-     * override -datadir in the nwo.conf file in the default data directory
-     * (to be consistent with nwod behavior)
+     * override -datadir in the bwrgocoin.conf file in the default data directory
+     * (to be consistent with bwrgocoind behavior)
      */
     if (dataDir != getDefaultDataDirectory())
         SoftSetArg("-datadir", GUIUtil::qstringToBoostPath(dataDir).string()); // use OS locale for path setting

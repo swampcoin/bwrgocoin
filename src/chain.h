@@ -531,7 +531,7 @@ public:
         return (*this)[pindex->nHeight] == pindex;
     }
 
-    /** Find the snwoessor of a block in this chain, or NULL if the given index is not found or is the tip. */
+    /** Find the sbwrgocoinessor of a block in this chain, or NULL if the given index is not found or is the tip. */
     CBlockIndex* Next(const CBlockIndex* pindex) const
     {
         if (Contains(pindex))

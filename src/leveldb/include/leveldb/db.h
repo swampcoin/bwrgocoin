@@ -45,7 +45,7 @@ class DB {
  public:
   // Open the database with the specified "name".
   // Stores a pointer to a heap-allocated database in *dbptr and returns
-  // OK on snwoess.
+  // OK on sbwrgocoiness.
   // Stores NULL in *dbptr and returns a non-OK status on error.
   // Caller should delete *dbptr when it is no longer needed.
   static Status Open(const Options& options,
@@ -55,7 +55,7 @@ class DB {
   DB() { }
   virtual ~DB();
 
-  // Set the database entry for "key" to "value".  Returns OK on snwoess,
+  // Set the database entry for "key" to "value".  Returns OK on sbwrgocoiness,
   // and a non-OK status on error.
   // Note: consider setting options.sync = true.
   virtual Status Put(const WriteOptions& options,
@@ -63,13 +63,13 @@ class DB {
                      const Slice& value) = 0;
 
   // Remove the database entry (if any) for "key".  Returns OK on
-  // snwoess, and a non-OK status on error.  It is not an error if "key"
+  // sbwrgocoiness, and a non-OK status on error.  It is not an error if "key"
   // did not exist in the database.
   // Note: consider setting options.sync = true.
   virtual Status Delete(const WriteOptions& options, const Slice& key) = 0;
 
   // Apply the specified updates to the database.
-  // Returns OK on snwoess, non-OK on failure.
+  // Returns OK on sbwrgocoiness, non-OK on failure.
   // Note: consider setting options.sync = true.
   virtual Status Write(const WriteOptions& options, WriteBatch* updates) = 0;
 

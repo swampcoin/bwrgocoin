@@ -12,7 +12,7 @@
 #   (Warnings, however, are ignored)
 #
 #   ACTION-SNWOESS/ACTION-FAILURE are shell commands to execute on
-#   snwoess/failure.
+#   sbwrgocoiness/failure.
 #
 #   If EXTRA-FLAGS is defined, it is added to the linker's default flags
 #   when the check is done.  The check is thus made with the flags: "LDFLAGS

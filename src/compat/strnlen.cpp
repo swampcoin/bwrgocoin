@@ -3,12 +3,12 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/nwo-config.h"
+#include "config/bwrgocoin-config.h"
 #endif
 
 #include <cstring>
 // OSX 10.6 is missing strnlen at runtime, but builds targetting it will still
-// snwoeed. Define our own version here to avoid a crash.
+// sbwrgocoineed. Define our own version here to avoid a crash.
 size_t strnlen_int( const char *start, size_t max_len)
 {
     const char *end = (const char *)memchr(start, '\0', max_len);

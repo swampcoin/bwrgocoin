@@ -162,12 +162,12 @@ private:
     struct fail {
         char dummy[2];
     };
-    struct snwoeed {
+    struct sbwrgocoineed {
         char dummy;
     };
     // Try to convert a T1 to a T2 by plugging into tryConvert
     static fail tryConvert(...);
-    static snwoeed tryConvert(const T2&);
+    static sbwrgocoineed tryConvert(const T2&);
     static const T1& makeT1();
 
 public:
@@ -182,7 +182,7 @@ public:
     // Then we compare the sizes of the return types to check which
     // function matched.  Very neat, in a disgusting kind of way :)
     static const bool value =
-        sizeof(tryConvert(makeT1())) == sizeof(snwoeed);
+        sizeof(tryConvert(makeT1())) == sizeof(sbwrgocoineed);
 #ifdef _MSC_VER
 #pragma warning(pop)
 #endif

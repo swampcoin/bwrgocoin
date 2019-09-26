@@ -32,7 +32,7 @@ int nCompleteTXLocks;
 //step 1.) Broadcast intention to lock transaction inputs, "txlreg", CTransaction
 //step 2.) Top SWIFTTX_SIGNATURES_TOTAL masternodes, open connect to top 1 masternode.
 //         Send "txvote", CTransaction, Signature, Approve
-//step 3.) Top 1 masternode, waits for SWIFTTX_SIGNATURES_REQUIRED messages. Upon snwoess, sends "txlock'
+//step 3.) Top 1 masternode, waits for SWIFTTX_SIGNATURES_REQUIRED messages. Upon sbwrgocoiness, sends "txlock'
 
 void ProcessMessageSwiftTX(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
 {

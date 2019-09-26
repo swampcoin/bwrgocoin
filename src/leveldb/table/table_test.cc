@@ -54,9 +54,9 @@ class ReverseKeyComparator : public Comparator {
     *start = Reverse(s);
   }
 
-  virtual void FindShortSnwoessor(std::string* key) const {
+  virtual void FindShortSbwrgocoinessor(std::string* key) const {
     std::string s = Reverse(*key);
-    BytewiseComparator()->FindShortSnwoessor(&s);
+    BytewiseComparator()->FindShortSbwrgocoinessor(&s);
     *key = Reverse(s);
   }
 };

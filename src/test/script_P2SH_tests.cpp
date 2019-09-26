@@ -140,7 +140,7 @@ BOOST_AUTO_TEST_CASE(norecurse)
     BOOST_CHECK(!Verify(scriptSig, p2sh, true, err));
     BOOST_CHECK_MESSAGE(err == SCRIPT_ERR_BAD_OPCODE, ScriptErrorString(err));
 
-    // Try to recur, and verification should snwoeed because
+    // Try to recur, and verification should sbwrgocoineed because
     // the inner HASH160 <> EQUAL should only check the hash:
     CScript p2sh2 = GetScriptForDestination(CScriptID(p2sh));
     CScript scriptSig2;
@@ -250,7 +250,7 @@ BOOST_AUTO_TEST_CASE(switchover)
     CScript fund = GetScriptForDestination(CScriptID(notValid));
 
 
-    // Validation should snwoeed under old rules (hash is correct):
+    // Validation should sbwrgocoineed under old rules (hash is correct):
     BOOST_CHECK(Verify(scriptSig, fund, false, err));
     BOOST_CHECK_MESSAGE(err == SCRIPT_ERR_OK, ScriptErrorString(err));
     // Fail under new:

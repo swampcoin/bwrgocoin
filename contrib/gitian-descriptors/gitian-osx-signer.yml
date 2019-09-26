@@ -1,5 +1,5 @@
 ---
-name: "nwo-dmg-signer"
+name: "bwrgocoin-dmg-signer"
 suites:
 - "trusty"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/nwonetwork/nwo-detached-sigs.git"
+- "url": "https://github.com/bwrgocoinnetwork/bwrgocoin-detached-sigs.git"
   "dir": "signature"
 files:
-- "nwo-osx-unsigned.tar.gz"
+- "bwrgocoin-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -27,8 +27,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=nwo-osx-unsigned.tar.gz
-  SIGNED=nwo-osx-signed.dmg
+  UNSIGNED=bwrgocoin-osx-unsigned.tar.gz
+  SIGNED=bwrgocoin-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

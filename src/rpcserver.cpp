@@ -326,24 +326,24 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
         /* NWO features */
-        {"nwo", "masternode", &masternode, true, true, false},
-        {"nwo", "listmasternodes", &listmasternodes, true, true, false},
-        {"nwo", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"nwo", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"nwo", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"nwo", "masternodedebug", &masternodedebug, true, true, false},
-        {"nwo", "startmasternode", &startmasternode, true, true, false},
-        {"nwo", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"nwo", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"nwo", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"nwo", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"nwo", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"nwo", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"nwo", "mnsync", &mnsync, true, true, false},
-        {"nwo", "spork", &spork, true, true, false},
-        {"nwo", "getpoolinfo", &getpoolinfo, true, true, false},
+        {"bwrgocoin", "masternode", &masternode, true, true, false},
+        {"bwrgocoin", "listmasternodes", &listmasternodes, true, true, false},
+        {"bwrgocoin", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"bwrgocoin", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"bwrgocoin", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"bwrgocoin", "masternodedebug", &masternodedebug, true, true, false},
+        {"bwrgocoin", "startmasternode", &startmasternode, true, true, false},
+        {"bwrgocoin", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"bwrgocoin", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"bwrgocoin", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"bwrgocoin", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"bwrgocoin", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"bwrgocoin", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"bwrgocoin", "mnsync", &mnsync, true, true, false},
+        {"bwrgocoin", "spork", &spork, true, true, false},
+        {"bwrgocoin", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
-        {"nwo", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
+        {"bwrgocoin", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -609,10 +609,10 @@ void StartRPCThreads()
         unsigned char rand_pwd[32];
         GetRandBytes(rand_pwd, 32);
         uiInterface.ThreadSafeMessageBox(strprintf(
-                                             _("To use nwod, or the -server option to nwo-qt, you must set an rpcpassword in the configuration file:\n"
+                                             _("To use bwrgocoind, or the -server option to bwrgocoin-qt, you must set an rpcpassword in the configuration file:\n"
                                                "%s\n"
                                                "It is recommended you use the following random password:\n"
-                                               "rpcuser=nworpc\n"
+                                               "rpcuser=bwrgocoinrpc\n"
                                                "rpcpassword=%s\n"
                                                "(you do not need to remember this password)\n"
                                                "The username and password MUST NOT be the same.\n"
@@ -1069,7 +1069,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> nwo-cli " + methodname + " " + args + "\n";
+    return "> bwrgocoin-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

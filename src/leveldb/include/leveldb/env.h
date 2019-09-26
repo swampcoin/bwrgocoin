@@ -41,7 +41,7 @@ class Env {
   static Env* Default();
 
   // Create a brand new sequentially-readable file with the specified name.
-  // On snwoess, stores a pointer to the new file in *result and returns OK.
+  // On sbwrgocoiness, stores a pointer to the new file in *result and returns OK.
   // On failure stores NULL in *result and returns non-OK.  If the file does
   // not exist, returns a non-OK status.
   //
@@ -50,7 +50,7 @@ class Env {
                                    SequentialFile** result) = 0;
 
   // Create a brand new random access read-only file with the
-  // specified name.  On snwoess, stores a pointer to the new file in
+  // specified name.  On sbwrgocoiness, stores a pointer to the new file in
   // *result and returns OK.  On failure stores NULL in *result and
   // returns non-OK.  If the file does not exist, returns a non-OK
   // status.
@@ -61,7 +61,7 @@ class Env {
 
   // Create an object that writes to a new file with the specified
   // name.  Deletes any existing file with the same name and creates a
-  // new file.  On snwoess, stores a pointer to the new file in
+  // new file.  On sbwrgocoiness, stores a pointer to the new file in
   // *result and returns OK.  On failure stores NULL in *result and
   // returns non-OK.
   //
@@ -98,7 +98,7 @@ class Env {
   // the same db by multiple processes.  On failure, stores NULL in
   // *lock and returns non-OK.
   //
-  // On snwoess, stores a pointer to the object that represents the
+  // On sbwrgocoiness, stores a pointer to the object that represents the
   // acquired lock in *lock and returns OK.  The caller should call
   // UnlockFile(*lock) to release the lock.  If the process exits,
   // the lock will be automatically released.

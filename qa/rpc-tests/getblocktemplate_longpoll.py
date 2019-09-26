@@ -54,7 +54,7 @@ class GetBlockTemplateLPTest(BitcoinTestFramework):
         self.nodes[0].setgenerate(True, 10)
         templat = self.nodes[0].getblocktemplate()
         longpollid = templat['longpollid']
-        # longpollid should not change between snwoessive invocations if nothing else happens
+        # longpollid should not change between sbwrgocoinessive invocations if nothing else happens
         templat2 = self.nodes[0].getblocktemplate()
         assert(templat2['longpollid'] == longpollid)
 

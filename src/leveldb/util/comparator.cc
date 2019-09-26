@@ -50,7 +50,7 @@ class BytewiseComparatorImpl : public Comparator {
     }
   }
 
-  virtual void FindShortSnwoessor(std::string* key) const {
+  virtual void FindShortSbwrgocoinessor(std::string* key) const {
     // Find first character that can be incremented
     size_t n = key->size();
     for (size_t i = 0; i < n; i++) {

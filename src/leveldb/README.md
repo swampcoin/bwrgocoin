@@ -128,7 +128,7 @@ updates to a database.
 length into some other byte array.
 
 * **include/status.h**: Status is returned from many of the public interfaces
-and is used to report snwoess and various kinds of errors.
+and is used to report sbwrgocoiness and various kinds of errors.
 
 * **include/env.h**: 
 Abstraction of the OS environment.  A posix implementation of this interface is

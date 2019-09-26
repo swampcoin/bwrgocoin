@@ -78,7 +78,7 @@ extern double NSAppKitVersionNumber;
 #endif
 #endif
 
-#define URI_SCHEME "nwo"
+#define URI_SCHEME "bwrgocoin"
 
 namespace GUIUtil
 {
@@ -180,9 +180,9 @@ bool parseBitcoinURI(const QUrl& uri, SendCoinsRecipient* out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient* out)
 {
-    // Convert nwo:// to nwo:
+    // Convert bwrgocoin:// to bwrgocoin:
     //
-    //    Cannot handle this later, because nwo:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because bwrgocoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
     if (uri.startsWith(URI_SCHEME "://", Qt::CaseInsensitive)) {
         uri.replace(0, std::strlen(URI_SCHEME) + 3, URI_SCHEME ":");
@@ -360,7 +360,7 @@ void openConfigfile()
 {
     boost::filesystem::path pathConfig = GetConfigFile();
 
-    /* Open nwo.conf with the associated application */
+    /* Open bwrgocoin.conf with the associated application */
     if (boost::filesystem::exists(pathConfig))
         QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 }
@@ -661,7 +661,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "nwo.desktop";
+    return GetAutostartDir() / "bwrgocoin.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -697,7 +697,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         boost::filesystem::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out | std::ios_base::trunc);
         if (!optionFile.good())
             return false;
-        // Write a nwo.desktop file to the autostart directory:
+        // Write a bwrgocoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         optionFile << "Name=NWO Wallet\n";

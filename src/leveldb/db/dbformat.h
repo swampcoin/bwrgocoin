@@ -87,7 +87,7 @@ inline size_t InternalKeyEncodingLength(const ParsedInternalKey& key) {
 extern void AppendInternalKey(std::string* result,
                               const ParsedInternalKey& key);
 
-// Attempt to parse an internal key from "internal_key".  On snwoess,
+// Attempt to parse an internal key from "internal_key".  On sbwrgocoiness,
 // stores the parsed data in "*result", and returns true.
 //
 // On error, returns false, leaves "*result" in an undefined state.
@@ -120,7 +120,7 @@ class InternalKeyComparator : public Comparator {
   virtual void FindShortestSeparator(
       std::string* start,
       const Slice& limit) const;
-  virtual void FindShortSnwoessor(std::string* key) const;
+  virtual void FindShortSbwrgocoinessor(std::string* key) const;
 
   const Comparator* user_comparator() const { return user_comparator_; }
 

@@ -229,7 +229,7 @@ Status TableBuilder::Finish() {
   // Write index block
   if (ok()) {
     if (r->pending_index_entry) {
-      r->options.comparator->FindShortSnwoessor(&r->last_key);
+      r->options.comparator->FindShortSbwrgocoinessor(&r->last_key);
       std::string handle_encoding;
       r->pending_handle.EncodeTo(&handle_encoding);
       r->index_block.Add(r->last_key, Slice(handle_encoding));

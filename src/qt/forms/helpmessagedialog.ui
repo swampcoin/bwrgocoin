@@ -28,7 +28,7 @@
       </sizepolicy>
      </property>
      <property name="pixmap">
-      <pixmap resource="../nwo.qrc">:/images/about</pixmap>
+      <pixmap resource="../bwrgocoin.qrc">:/images/about</pixmap>
      </property>
     </widget>
    </item>
@@ -97,7 +97,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../nwo.qrc"/>
+  <include location="../bwrgocoin.qrc"/>
  </resources>
  <connections>
   <connection>

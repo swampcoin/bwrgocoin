@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=NWO
+Comment=NWO P2P Cryptocurrency
+Exec=bwrgocoin-qt %u
+Terminal=false
+Type=Application
+Icon=bwrgocoin128
+MimeType=x-scheme-handler/bwrgocoin;
+Categories=Office;Finance;
+Name[ru]=bwrgocoin-qt.desktop.desktop

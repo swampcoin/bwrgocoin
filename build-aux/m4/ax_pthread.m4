@@ -150,7 +150,7 @@ case ${host_os} in
 
         # On Solaris (at least, for some versions), libc contains stubbed
         # (non-functional) versions of the pthreads routines, so link-based
-        # tests will erroneously snwoeed.  (We need to link with -pthreads/-mt/
+        # tests will erroneously sbwrgocoineed.  (We need to link with -pthreads/-mt/
         # -lpthread.)  (The stubs are missing pthread_cleanup_push, or rather
         # a function called by this macro, so we could check for that, but
         # who knows whether they'll stub that too in a future libc.)  So,

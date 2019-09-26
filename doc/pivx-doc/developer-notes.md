@@ -31,7 +31,7 @@ class Class
             ...
         }
 
-        // Snwoess return is usually at the end
+        // Sbwrgocoiness return is usually at the end
         return true;
     }
 }

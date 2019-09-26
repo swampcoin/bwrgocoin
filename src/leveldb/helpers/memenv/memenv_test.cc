@@ -129,7 +129,7 @@ TEST(MemEnvTest, ReadWrite) {
 TEST(MemEnvTest, Locks) {
   FileLock* lock;
 
-  // These are no-ops, but we test they return snwoess.
+  // These are no-ops, but we test they return sbwrgocoiness.
   ASSERT_OK(env_->LockFile("some file", &lock));
   ASSERT_OK(env_->UnlockFile(lock));
 }
@@ -142,7 +142,7 @@ TEST(MemEnvTest, Misc) {
   WritableFile* writable_file;
   ASSERT_OK(env_->NewWritableFile("/a/b", &writable_file));
 
-  // These are no-ops, but we test they return snwoess.
+  // These are no-ops, but we test they return sbwrgocoiness.
   ASSERT_OK(writable_file->Sync());
   ASSERT_OK(writable_file->Flush());
   ASSERT_OK(writable_file->Close());

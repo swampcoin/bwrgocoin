@@ -40,7 +40,7 @@ include/slice.h
 
 include/status.h
     Status is returned from many of the public interfaces and is used
-    to report snwoess and various kinds of errors.
+    to report sbwrgocoiness and various kinds of errors.
 
 include/env.h
     Abstraction of the OS environment.  A posix implementation of

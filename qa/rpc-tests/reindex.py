@@ -28,7 +28,7 @@ class ReindexTest(BitcoinTestFramework):
         wait_bitcoinds()
         self.nodes[0]=start_node(0, self.options.tmpdir, ["-debug", "-reindex", "-checkblockindex=1"])
         assert_equal(self.nodes[0].getblockcount(), 3)
-        print "Snwoess"
+        print "Sbwrgocoiness"
 
 if __name__ == '__main__':
     ReindexTest().main()

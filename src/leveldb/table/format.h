@@ -90,7 +90,7 @@ struct BlockContents {
 };
 
 // Read the block identified by "handle" from "file".  On failure
-// return non-OK.  On snwoess fill *result and return OK.
+// return non-OK.  On sbwrgocoiness fill *result and return OK.
 extern Status ReadBlock(RandomAccessFile* file,
                         const ReadOptions& options,
                         const BlockHandle& handle,

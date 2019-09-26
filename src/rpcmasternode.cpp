@@ -66,8 +66,8 @@ UniValue obfuscation(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() == 0)
         throw runtime_error(
-            "obfuscation <nwoaddress> <amount>\n"
-            "nwoaddress, reset, or auto (AutoDenominate)"
+            "obfuscation <bwrgocoinaddress> <amount>\n"
+            "bwrgocoinaddress, reset, or auto (AutoDenominate)"
             "<amount> is a real and will be rounded to the next 0.1" +
             HelpRequiringPassphrase());
 
@@ -88,8 +88,8 @@ UniValue obfuscation(const UniValue& params, bool fHelp)
 
     if (params.size() != 2)
         throw runtime_error(
-            "obfuscation <nwoaddress> <amount>\n"
-            "nwoaddress, denominate, or auto (AutoDenominate)"
+            "obfuscation <bwrgocoinaddress> <amount>\n"
+            "bwrgocoinaddress, denominate, or auto (AutoDenominate)"
             "<amount> is a real and will be rounded to the next 0.1" +
             HelpRequiringPassphrase());
 
@@ -167,7 +167,7 @@ UniValue masternode(const UniValue& params, bool fHelp)
             "  debug        - Print masternode status\n"
             "  genkey       - Generate new masternodeprivkey\n"
             "  outputs      - Print masternode compatible outputs\n"
-            "  start        - Start masternode configured in nwo.conf\n"
+            "  start        - Start masternode configured in bwrgocoin.conf\n"
             "  start-alias  - Start single masternode by assigned alias configured in masternode.conf\n"
             "  start-<mode> - Start masternodes configured in masternode.conf (<mode>: 'all', 'missing', 'disabled')\n"
             "  status       - Print masternode status information\n"
@@ -607,7 +607,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
             "  \"detail\": [\n"
             "    {\n"
             "      \"node\": \"xxxx\",    (string) Node name or alias\n"
-            "      \"result\": \"xxxx\",  (string) 'snwoess' or 'failed'\n"
+            "      \"result\": \"xxxx\",  (string) 'sbwrgocoiness' or 'failed'\n"
             "      \"error\": \"xxxx\"    (string) Error message, if failed\n"
             "    }\n"
             "    ,...\n"
@@ -669,7 +669,7 @@ UniValue startmasternode (const UniValue& params, bool fHelp)
 
             UniValue statusObj(UniValue::VOBJ);
             statusObj.push_back(Pair("alias", mne.getAlias()));
-            statusObj.push_back(Pair("result", result ? "snwoess" : "failed"));
+            statusObj.push_back(Pair("result", result ? "sbwrgocoiness" : "failed"));
 
             if (result) {
                 successful++;

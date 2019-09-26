@@ -50,7 +50,7 @@ class Comparator {
   // Changes *key to a short string >= *key.
   // Simple comparator implementations may return with *key unchanged,
   // i.e., an implementation of this method that does nothing is correct.
-  virtual void FindShortSnwoessor(std::string* key) const = 0;
+  virtual void FindShortSbwrgocoinessor(std::string* key) const = 0;
 };
 
 // Return a builtin comparator that uses lexicographic byte-wise

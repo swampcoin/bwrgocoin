@@ -6,9 +6,9 @@ Utility to generate the seeds.txt list that is compiled into the client
 Be sure to update `PATTERN_AGENT` in `makeseeds.py` to include the current version,
 and remove old versions as necessary.
 
-The seeds compiled into the release are created from nwonetwork.org DNS seed data, like this:
+The seeds compiled into the release are created from bwrgocoinnetwork.org DNS seed data, like this:
 
-    curl -s http://seed01.nwonetwork.org/nwo-mainnet.txt > seeds_main.txt
+    curl -s http://seed01.bwrgocoinnetwork.org/bwrgocoin-mainnet.txt > seeds_main.txt
     python3 makeseeds.py < seeds_main.txt > nodes_main.txt
     python3 generate-seeds.py . > ../../src/chainparamsseeds.h
 

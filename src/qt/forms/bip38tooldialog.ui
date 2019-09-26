@@ -74,7 +74,7 @@
             <string/>
            </property>
            <property name="icon">
-            <iconset resource="../nwo.qrc">
+            <iconset resource="../bwrgocoin.qrc">
              <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
            </property>
            <property name="shortcut">
@@ -94,7 +94,7 @@
             <string/>
            </property>
            <property name="icon">
-            <iconset resource="../nwo.qrc">
+            <iconset resource="../bwrgocoin.qrc">
              <normaloff>:/icons/editpaste</normaloff>:/icons/editpaste</iconset>
            </property>
            <property name="shortcut">
@@ -170,7 +170,7 @@
             <string/>
            </property>
            <property name="icon">
-            <iconset resource="../nwo.qrc">
+            <iconset resource="../bwrgocoin.qrc">
              <normaloff>:/icons/editcopy</normaloff>:/icons/editcopy</iconset>
            </property>
            <property name="autoDefault">
@@ -191,7 +191,7 @@
             <string>Encrypt &amp;Key</string>
            </property>
            <property name="icon">
-            <iconset resource="../nwo.qrc">
+            <iconset resource="../bwrgocoin.qrc">
              <normaloff>:/icons/edit</normaloff>:/icons/edit</iconset>
            </property>
            <property name="autoDefault">
@@ -208,7 +208,7 @@
             <string>Clear &amp;All</string>
            </property>
            <property name="icon">
-            <iconset resource="../nwo.qrc">
+            <iconset resource="../bwrgocoin.qrc">
              <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
            </property>
            <property name="autoDefault">
@@ -348,7 +348,7 @@
             <string>Decrypt &amp;Key</string>
            </property>
            <property name="icon">
-            <iconset resource="../nwo.qrc">
+            <iconset resource="../bwrgocoin.qrc">
              <normaloff>:/icons/transaction_0</normaloff>:/icons/transaction_0</iconset>
            </property>
            <property name="autoDefault">
@@ -365,7 +365,7 @@
             <string>Clear &amp;All</string>
            </property>
            <property name="icon">
-            <iconset resource="../nwo.qrc">
+            <iconset resource="../bwrgocoin.qrc">
              <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
            </property>
            <property name="autoDefault">
@@ -469,7 +469,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../nwo.qrc"/>
+  <include location="../bwrgocoin.qrc"/>
  </resources>
  <connections/>
 </ui>

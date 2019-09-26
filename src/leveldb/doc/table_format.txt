@@ -38,7 +38,7 @@ BlockHandle pointing to that meta block.
 
 (4) An "index" block.  This block contains one entry per data block,
 where the key is a string >= last key in that data block and before
-the first key in the snwoessive data block.  The value is the
+the first key in the sbwrgocoinessive data block.  The value is the
 BlockHandle for the data block.
 
 (6) At the very end of the file is a fixed length footer that contains

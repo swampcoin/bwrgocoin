@@ -132,7 +132,7 @@ void AskPassphraseDialog::accept()
                     QMessageBox::critical(this, tr("Wallet encryption failed"),
                         tr("Wallet encryption failed due to an internal error. Your wallet was not encrypted."));
                 }
-                QDialog::accept(); // Snwoess
+                QDialog::accept(); // Sbwrgocoiness
             } else {
                 QMessageBox::critical(this, tr("Wallet encryption failed"),
                     tr("The supplied passphrases do not match."));
@@ -147,7 +147,7 @@ void AskPassphraseDialog::accept()
             QMessageBox::critical(this, tr("Wallet unlock failed"),
                 tr("The passphrase entered for the wallet decryption was incorrect."));
         } else {
-            QDialog::accept(); // Snwoess
+            QDialog::accept(); // Sbwrgocoiness
         }
         break;
     case Decrypt:
@@ -155,7 +155,7 @@ void AskPassphraseDialog::accept()
             QMessageBox::critical(this, tr("Wallet decryption failed"),
                 tr("The passphrase entered for the wallet decryption was incorrect."));
         } else {
-            QDialog::accept(); // Snwoess
+            QDialog::accept(); // Sbwrgocoiness
         }
         break;
     case ChangePass:
@@ -163,7 +163,7 @@ void AskPassphraseDialog::accept()
             if (model->changePassphrase(oldpass, newpass1)) {
                 QMessageBox::information(this, tr("Wallet encrypted"),
                     tr("Wallet passphrase was successfully changed."));
-                QDialog::accept(); // Snwoess
+                QDialog::accept(); // Sbwrgocoiness
             } else {
                 QMessageBox::critical(this, tr("Wallet encryption failed"),
                     tr("The passphrase entered for the wallet decryption was incorrect."));
