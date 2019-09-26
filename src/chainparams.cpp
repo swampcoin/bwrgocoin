@@ -169,7 +169,7 @@ public:
         };
         assert(subsidySwitchPoints.size());
 
-        nMaxReorganizationDepth = 100;
+        nMaxReorganizationDepth = 1001;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
