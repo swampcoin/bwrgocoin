@@ -12,7 +12,7 @@ First, let's get the acronym out of the way:<br>
  <b>O</b> - Orange <br>
 These are the standard chip colors used in Thursday night poker.<br><br>
 
-BWRGO is an experimental digital currency used exclusively to fund and forever enshrine the legacy of Thursday night poker. Thursday night poker is famous for such titles as "Atlanta" and Cocktail Cove (a.k.a. tha cock) and yes even the controversial fame "Big A". More information can be found on these revolutionary games at https://mike.skott.us/2018/atlanta-cocktail-cove/
+BWRGO is an experimental digital currency used exclusively to fund and forever enshrine the legacy of Thursday night poker. Thursday night poker is famous for such titles as "Atlanta" and Cocktail Cove (a.k.a. tha cock) and yes even the controversial game "Big A". More information can be found on these revolutionary games at https://mike.skott.us/2018/atlanta-cocktail-cove/
 
 BWRGO uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network. bwrgo Core is the name of open source software which enables the use of this currency.
 
