@@ -44,7 +44,7 @@ Instructions: Homebrew
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/BWRGONetwork/bwrgocoin.git
+        git clone https://github.com/swampcoin/bwrgocoin.git
         cd bwrgocoin
 
 2.  Build bwrgocoind:
