@@ -7,7 +7,7 @@ BWRGO Currency
 First, let's get the acronym out of the way:<br>
  <b>B</b> - Blue <br>
  <b>W</b> - White <br>
- <b>R</b> - Red <br> 
+ <b>R</b> - Red <br>
  <b>G</b> - Green <br>
  <b>O</b> - Orange <br>
 These are the standard chip colors used in Thursday night poker.<br><br>
@@ -26,7 +26,7 @@ BWRGO is a digital currency building up a global community to be united against 
 - Instant send and recieve funds globally without boarders or middle men
 - Transparancy with a built in block explorer
 - Permissionless access to YOUR money... unlike banks
-- Optional private sent features 
+- Optional private sent features
 - Proof of Stake to eliminate the costly need for GPUs or ASICS to power the chain
 
 If you like the idea of owning and controlling your own money, feel free to contact us and work with us. For Discussions we use Discord: [Click here to follow invite Link](https://discord.gg/R4FAu6b).  Seek out the BWRGO channel
@@ -99,7 +99,7 @@ The first step is to install the mingw-w64 cross-compilation tool chain. Due to 
 Common steps to install mingw32 cross compiler tool chain:
 
     sudo apt install g++-mingw-w64-x86-64
-    
+
 Ubuntu Xenial 16.04 and Windows Subsystem for Linux
 
     sudo apt install software-properties-common
@@ -107,7 +107,7 @@ Ubuntu Xenial 16.04 and Windows Subsystem for Linux
     sudo apt update
     sudo apt upgrade
     sudo update-alternatives --config x86_64-w64-mingw32-g++ # Set the default mingw32 g++ compiler option to posix.
-    
+
 Once the tool chain is installed the build steps are common:
 
 Note that for WSL the tragocoin Core source path MUST be somewhere in the default mount file system, for example /usr/src/tragocoin, AND not under /mnt/d/. If this is not the case the dependency autoconf scripts will fail. This means you cannot use a directory that located directly on the host Windows file system to perform the build.
@@ -117,7 +117,7 @@ The next three steps are an example of how to acquire the source in an appropria
     cd /usr/src
     sudo git clone https://github.com/swampcoin/bwrgocoin.git
     sudo chmod -R a+rw BWRGO
-    
+
 Once the source code is ready the build steps are below.
 
     PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g') # strip out problematic Windows %PATH% imported var
@@ -125,7 +125,7 @@ Once the source code is ready the build steps are below.
     make HOST=x86_64-w64-mingw32 -j4
     cd ..
     ./autogen.sh # not required when building from tarball
-    CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site 
+    CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site
     ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32
     make
 
@@ -141,7 +141,7 @@ Once the source code is ready the build steps are below.
     sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
 
     git clone https://github.com/swampcoin/bwrgocoin.git --recursive
-    
+
     cd CHIPS
 
     # Note autogen will prompt to install some more dependencies if needed
@@ -172,10 +172,11 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
 #### Build BWRGO Core
 
-1. Clone the tragocoin source code and cd into `tragocoin`
+1. Clone the BWRGO source code and cd into `bwrgocoin`
 
         git clone --recursive https://github.com/swampcoin/bwrgocoin.git
-        cd BWRGO
+        cd bwrgocoin
+
 
 2.  Build bwrgocoin Core:
 
@@ -199,12 +200,13 @@ For in-depth description of Sparknet and how to use CHIPS for interacting with c
 
 Method 1
 
+
 Headlesss - ./bwrgocoin-cli generate 1
     Change 1 to the number of blocks you want to attempt to mine. 
 
 QT - Go to Help --> Debug COnsole and enter generate 1
     Change 1 to the number of blocks you want to attempt to mine.
-    
+
 Method 2
 
 Create an bwrgocoin Wallet. Setup your bwrgocoin.conf file. download miner software (cpuminer)
