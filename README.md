@@ -5,7 +5,7 @@ BWRGO Currency
 <h2>What is BWRGO?</h2>
 <br>
 First, let's get the acronym out of the way:<br>
- <b>B</b> - Blue <br>
+ <b>B</b> - Black <br>
  <b>W</b> - White <br>
  <b>R</b> - Red <br>
  <b>G</b> - Green <br>
